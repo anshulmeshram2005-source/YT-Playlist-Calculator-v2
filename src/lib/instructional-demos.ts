@@ -1,6 +1,7 @@
 // src/lib/instructional-demos.ts
 // Robust, continuous animated slideshow for "How to Use the Calculator"
 // Supports 5 realistic steps, smooth transitions, manual tab selection, and auto-play resume.
+// Solves horizontal scroll offset clipping, keeping Tab 1 completely visible on load & restart.
 
 export function initInstructionalDemos(): void {
   if (typeof window === 'undefined') return;
@@ -18,6 +19,10 @@ export function initInstructionalDemos(): void {
   let timer: any = null;
   const STEP_DURATION_MS = 4500;
 
+  let typingInterval: any = null;
+  let stepTimeouts: any[] = [];
+
+  const tabList = container.querySelector('#demo-tab-list') as HTMLElement | null;
   const tabs = container.querySelectorAll<HTMLButtonElement>('[data-demo-step-btn]');
   const slides = container.querySelectorAll<HTMLElement>('[data-demo-slide]');
   const prevBtn = document.getElementById('demo-prev-btn');
@@ -27,8 +32,67 @@ export function initInstructionalDemos(): void {
   const autoPlayIcon = document.getElementById('demo-autoplay-icon');
   const progressBar = document.getElementById('demo-progress-bar');
 
+  function clearActiveStepAnimations() {
+    if (typingInterval) {
+      clearInterval(typingInterval);
+      typingInterval = null;
+    }
+    stepTimeouts.forEach((t) => clearTimeout(t));
+    stepTimeouts = [];
+  }
+
+  function scrollTabIntoView(step: number, smooth = true) {
+    if (!tabList) return;
+
+    const isRtl = document.documentElement.dir === 'rtl' || document.body.dir === 'rtl';
+
+    // If the tabs fit within the container width, ensure no offset
+    if (tabList.scrollWidth <= tabList.clientWidth + 4) {
+      tabList.scrollLeft = 0;
+      return;
+    }
+
+    const behavior: ScrollBehavior = smooth ? 'smooth' : 'auto';
+
+    // When returning to step 1 (load, restart, or manual click)
+    if (step === 1) {
+      tabList.scrollTo({
+        left: isRtl ? (tabList.scrollWidth - tabList.clientWidth) : 0,
+        behavior,
+      });
+      return;
+    }
+
+    // When on the last step (step 5)
+    if (step === totalSteps) {
+      tabList.scrollTo({
+        left: isRtl ? 0 : (tabList.scrollWidth - tabList.clientWidth),
+        behavior,
+      });
+      return;
+    }
+
+    // Intermediate steps (2, 3, 4): center the active tab smoothly without window scroll jumping
+    const activeTab = tabList.querySelector(`[data-demo-step-btn="${step}"]`) as HTMLElement | null;
+    if (activeTab) {
+      const tabRect = activeTab.getBoundingClientRect();
+      const containerRect = tabList.getBoundingClientRect();
+      const currentScroll = tabList.scrollLeft;
+      const offsetLeftInContainer = tabRect.left - containerRect.left;
+      const targetScroll = currentScroll + offsetLeftInContainer - (containerRect.width / 2) + (tabRect.width / 2);
+
+      tabList.scrollTo({
+        left: Math.max(0, Math.min(targetScroll, tabList.scrollWidth - tabList.clientWidth)),
+        behavior,
+      });
+    }
+  }
+
   function renderStep(step: number, animate = true) {
     currentStep = ((step - 1 + totalSteps) % totalSteps) + 1;
+
+    // Clear any previous running step animations
+    clearActiveStepAnimations();
 
     // Update tab styles and aria attributes
     tabs.forEach((tab) => {
@@ -48,6 +112,9 @@ export function initInstructionalDemos(): void {
         tab.classList.remove('font-semibold');
       }
     });
+
+    // Keep active tab visible smoothly in the tab bar without clipping
+    scrollTabIntoView(currentStep, animate);
 
     // Update slides with smooth transition
     slides.forEach((slide) => {
@@ -75,10 +142,12 @@ export function initInstructionalDemos(): void {
     // Trigger step-specific mini-animations
     triggerStepAnimation(currentStep);
 
-    // Reset progress bar animation
+    // Reset and trigger progress bar animation cleanly
     if (progressBar) {
       progressBar.style.transition = 'none';
       progressBar.style.width = '0%';
+      // Force DOM reflow so transition starts from 0% reliably
+      void progressBar.offsetWidth;
       if (isAutoPlaying) {
         requestAnimationFrame(() => {
           progressBar.style.transition = `width ${STEP_DURATION_MS}ms linear`;
@@ -90,17 +159,25 @@ export function initInstructionalDemos(): void {
 
   function triggerStepAnimation(step: number) {
     if (step === 1) {
-      // Step 1: Typing text animation
+      // Step 1: Typing text animation & detected playlist badge
       const typingEl = document.getElementById('demo-typing-url');
+      const badgeEl = document.getElementById('demo-detected-badge');
+      if (badgeEl) {
+        badgeEl.style.opacity = '0';
+      }
       if (typingEl) {
         const fullUrl = 'https://www.youtube.com/playlist?list=PLBDA2E52FB1EF80C9';
         let idx = 0;
         typingEl.textContent = '';
-        const typeInterval = setInterval(() => {
+        typingInterval = setInterval(() => {
           idx += 3;
           if (idx >= fullUrl.length) {
             typingEl.textContent = fullUrl;
-            clearInterval(typeInterval);
+            clearInterval(typingInterval);
+            typingInterval = null;
+            if (badgeEl) {
+              badgeEl.style.opacity = '1';
+            }
           } else {
             typingEl.textContent = fullUrl.slice(0, idx);
           }
@@ -113,15 +190,18 @@ export function initInstructionalDemos(): void {
         document.getElementById('demo-calc-step-2'),
         document.getElementById('demo-calc-step-3'),
       ];
+      steps.forEach((el) => {
+        if (el) el.style.opacity = '0.3';
+      });
       steps.forEach((el, i) => {
         if (!el) return;
-        el.style.opacity = '0.3';
-        setTimeout(() => {
+        const t = setTimeout(() => {
           if (currentStep === 2) {
             el.style.transition = 'opacity 0.3s ease';
             el.style.opacity = '1';
           }
-        }, (i + 1) * 400);
+        }, (i + 1) * 380);
+        stepTimeouts.push(t);
       });
     }
   }
@@ -135,8 +215,13 @@ export function initInstructionalDemos(): void {
     }, STEP_DURATION_MS);
 
     if (progressBar) {
-      progressBar.style.transition = `width ${STEP_DURATION_MS}ms linear`;
-      progressBar.style.width = '100%';
+      progressBar.style.transition = 'none';
+      progressBar.style.width = '0%';
+      void progressBar.offsetWidth;
+      requestAnimationFrame(() => {
+        progressBar.style.transition = `width ${STEP_DURATION_MS}ms linear`;
+        progressBar.style.width = '100%';
+      });
     }
   }
 
@@ -152,7 +237,7 @@ export function initInstructionalDemos(): void {
   }
 
   function userInteraction() {
-    // When user manually selects a tab, show step immediately, then resume auto-play smoothly
+    // When user manually selects a tab or navigates, show step immediately and restart slideshow timer
     if (isAutoPlaying) {
       startSlideshow();
     }
@@ -212,18 +297,42 @@ export function initInstructionalDemos(): void {
     });
   });
 
-  // Re-translate dynamic labels on language change
+  // Re-translate dynamic labels and adjust tab scroll on language change
   window.addEventListener('yt:languagechange', () => {
     if (autoPlayLabel && window.i18n) {
       autoPlayLabel.textContent = isAutoPlaying
         ? window.i18n.t('demonstrations.autoPlayOn')
         : window.i18n.t('demonstrations.autoPlayPaused');
     }
+    // Re-verify tab alignment after translated text alters button widths
+    requestAnimationFrame(() => {
+      scrollTabIntoView(currentStep, false);
+    });
   });
 
-  // Initial render
+  // Handle window resize gracefully to maintain tab alignment
+  let resizeTimer: any = null;
+  window.addEventListener('resize', () => {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(() => {
+      scrollTabIntoView(currentStep, false);
+    }, 100);
+  });
+
+  // Initial render: Ensure tab container strictly starts at position 0 with no offset
+  if (tabList) {
+    tabList.scrollLeft = 0;
+  }
   renderStep(1, false);
   startSlideshow();
+
+  // Secondary verification pass to ensure layout has computed and Tab 1 is 100% visible
+  requestAnimationFrame(() => {
+    scrollTabIntoView(1, false);
+    setTimeout(() => {
+      scrollTabIntoView(1, false);
+    }, 60);
+  });
 }
 
 // Auto-run if script is loaded
@@ -234,4 +343,3 @@ if (typeof window !== 'undefined') {
     initInstructionalDemos();
   }
 }
-

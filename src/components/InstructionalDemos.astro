@@ -40,34 +40,39 @@ import Icon from './Icon.astro';
 
   <!-- Step Tab Buttons (5 Required Steps) -->
   <div
-    class="flex items-center justify-start sm:justify-center gap-1.5 overflow-x-auto pb-2 mb-4 scrollbar-none"
+    id="demo-tab-list"
+    class="overflow-x-auto pb-2 mb-4 scrollbar-none w-full scroll-smooth"
     role="tablist"
     aria-label="Demonstration steps"
   >
-    {[
-      { step: 1, tabKey: 'demonstrations.tab1', defaultLabel: '1. Paste URL' },
-      { step: 2, tabKey: 'demonstrations.tab2', defaultLabel: '2. Calculate' },
-      { step: 3, tabKey: 'demonstrations.tab3', defaultLabel: '3. Total Duration' },
-      { step: 4, tabKey: 'demonstrations.tab4', defaultLabel: '4. Video Stats' },
-      { step: 5, tabKey: 'demonstrations.tab5', defaultLabel: '5. Speed Settings' },
-    ].map(({ step, tabKey, defaultLabel }) => (
-      <button
-        type="button"
-        role="tab"
-        id={`demo-tab-${step}`}
-        aria-controls={`demo-slide-${step}`}
-        aria-selected={step === 1 ? 'true' : 'false'}
-        data-demo-step-btn={step}
-        class="shrink-0 px-3 py-1.5 rounded-lg text-xs font-medium transition-all duration-150 border"
-        style={step === 1
-          ? 'background-color: var(--color-text); color: var(--color-bg); border-color: var(--color-text);'
-          : 'background-color: var(--color-surface-2); color: var(--color-text-muted); border-color: var(--color-border);'
-        }
-        data-i18n={tabKey}
-      >
-        {defaultLabel}
-      </button>
-    ))}
+    <div
+      class="flex items-center gap-1.5 w-max min-w-full justify-start sm:justify-center px-1"
+    >
+      {[
+        { step: 1, tabKey: 'demonstrations.tab1', defaultLabel: '1. Paste URL' },
+        { step: 2, tabKey: 'demonstrations.tab2', defaultLabel: '2. Calculate' },
+        { step: 3, tabKey: 'demonstrations.tab3', defaultLabel: '3. Total Duration' },
+        { step: 4, tabKey: 'demonstrations.tab4', defaultLabel: '4. Video Stats' },
+        { step: 5, tabKey: 'demonstrations.tab5', defaultLabel: '5. Speed Settings' },
+      ].map(({ step, tabKey, defaultLabel }) => (
+        <button
+          type="button"
+          role="tab"
+          id={`demo-tab-${step}`}
+          aria-controls={`demo-slide-${step}`}
+          aria-selected={step === 1 ? 'true' : 'false'}
+          data-demo-step-btn={step}
+          class="shrink-0 px-3 py-1.5 rounded-lg text-xs font-medium transition-all duration-150 border whitespace-nowrap cursor-pointer select-none"
+          style={step === 1
+            ? 'background-color: var(--color-text); color: var(--color-bg); border-color: var(--color-text);'
+            : 'background-color: var(--color-surface-2); color: var(--color-text-muted); border-color: var(--color-border);'
+          }
+          data-i18n={tabKey}
+        >
+          {defaultLabel}
+        </button>
+      ))}
+    </div>
   </div>
 
   <!-- Smooth Auto-Play Progress Bar -->
@@ -131,7 +136,7 @@ import Icon from './Icon.astro';
           <span id="demo-typing-url" class="truncate font-mono">https://www.youtube.com/playlist?list=PLBDA2E52FB1EF80C9</span>
           <span class="w-1.5 h-3.5 ml-1 inline-block animate-pulse shrink-0" style="background-color: var(--color-accent);"></span>
         </div>
-        <p class="text-[10px] mt-1.5" style="color: var(--color-text-subtle);" data-i18n="demonstrations.detectedBadge">
+        <p id="demo-detected-badge" class="text-[10px] mt-1.5 transition-opacity duration-300" style="color: var(--color-text-subtle);" data-i18n="demonstrations.detectedBadge">
           ✓ Playlist detected: 42 videos
         </p>
       </div>
