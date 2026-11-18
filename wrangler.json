@@ -1,0 +1,19 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "visible-velocity",
+  "compatibility_date": "2026-10-01",
+  "compatibility_flags": [
+    "nodejs_compat"
+  ],
+  "kv_namespaces": [
+    {
+      "binding": "SESSION",
+      "id": "863c36b9d9624d04b9f924b0d82878d9"
+    }
+  ],
+  "vars": {
+    "YOUTUBE_API_KEY": "AIzaSyBP5xPkGHWY2wfLzOurfd031iGDTZqMi3w",
+    "PUBLIC_SITE_URL": "https://ytplaylistcal.com",
+    "PUBLIC_GA_ID": "G-08CV9EBBPD"
+  }
+}

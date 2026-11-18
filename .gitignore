@@ -25,3 +25,6 @@ pnpm-debug.log*
 
 # temporary audit scratch files
 scratch/
+
+# wrangler state
+.wrangler/
