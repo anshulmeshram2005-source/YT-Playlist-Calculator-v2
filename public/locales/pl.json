@@ -103,7 +103,8 @@
     "modeLabel": "Tryb obliczeń",
     "videosUnavailable": "{count} filmów niedostępnych (prywatne, usunięte lub z blokadą regionalną)",
     "byChannel": "autor: {channel}",
-    "tryDemoBtn": "Wypróbuj przykładową playlistę →"
+    "tryDemoBtn": "Wypróbuj przykładową playlistę →",
+    "loading": "Ładowanie…"
   },
   "features": {
     "title": "Wszystko, czego potrzebujesz do planowania playlist YouTube",
@@ -138,6 +139,16 @@
         "icon": "flag",
         "title": "Cel z terminem",
         "desc": "Ustal termin końcowy i otrzymaj wyliczenie niezbędnego czasu na każdy dzień."
+      },
+      {
+        "icon": "clipboard-list",
+        "title": "Podział na poszczególne filmy",
+        "desc": "Rozwijana lista każdego filmu, jego czasu trwania przy wybranej prędkości i bezpośredniego linku."
+      },
+      {
+        "icon": "share",
+        "title": "Eksportuj i udostępnij",
+        "desc": "Eksportuj wyniki jako CSV lub TXT. Skopiuj link, aby udostępnić swoje obliczenia."
       }
     ]
   },
@@ -149,17 +160,20 @@
       {
         "number": "1",
         "title": "Skopiuj link do playlisty",
-        "desc": "Na YouTube skopiuj link z paska adresu przeglądarki lub poprzez przycisk Udostępnij."
+        "desc": "Na YouTube skopiuj link z paska adresu przeglądarki lub poprzez przycisk Udostępnij.",
+        "num": "1"
       },
       {
         "number": "2",
         "title": "Wklej w kalkulatorze",
-        "desc": "Wklej adres w pole wyszukiwania, wybierz zakres filmów lub preferowaną prędkość."
+        "desc": "Wklej adres w pole wyszukiwania, wybierz zakres filmów lub preferowaną prędkość.",
+        "num": "2"
       },
       {
         "number": "3",
         "title": "Zobacz czasy i harmonogram",
-        "desc": "Otrzymaj natychmiast łączny czas, tabelę prędkości i wyliczoną datę ukończenia."
+        "desc": "Otrzymaj natychmiast łączny czas, tabelę prędkości i wyliczoną datę ukończenia.",
+        "num": "3"
       }
     ],
     "supportedBadge": "Obsługiwane formaty",
@@ -305,7 +319,8 @@
       "infoTitle": "Informacje kontaktowe",
       "hoursLabel": "Czas odpowiedzi",
       "hoursValue": "Zazwyczaj odpowiadamy w ciągu 24–48 godzin roboczych.",
-      "faqNotice": "Masz szybkie pytanie dotyczące działania kalkulatora?"
+      "faqNotice": "Masz szybkie pytanie dotyczące działania kalkulatora?",
+      "sending": "Wysyłanie…"
     },
     "tools": {
       "breadcrumb": "Wszystkie narzędzia",
@@ -427,7 +442,8 @@
       "needMoreHelp": "Potrzebujesz dodatkowej pomocy?",
       "needMoreHelpDesc": "Napisz do nas bezpośrednio, aby uzyskać wsparcie.",
       "backToHome": "Powrót do strony głównej",
-      "tryAnotherPlaylist": "Oblicz inną playlistę"
+      "tryAnotherPlaylist": "Oblicz inną playlistę",
+      "openTool": "Otwórz narzędzie"
     },
     "howItWorksDetail": {
       "breadcrumb": "Jak to działa",
@@ -899,5 +915,12 @@
     "teachers": "Nauczycieli",
     "creators": "Twórców",
     "bingeWatchers": "Maratończyków wideo"
+  },
+  "relatedTools": {
+    "durationDesc": "Dedykowane narzędzie do obliczania całkowitego czasu trwania playlisty.",
+    "watchTimeDesc": "Oblicz całkowity czas oglądania z dostosowaniem prędkości.",
+    "speed15xDesc": "Dokładnie oblicz czas oglądania przy prędkości 1.5x.",
+    "speed2xDesc": "Ile czasu zajmie playlista przy podwójnej prędkości 2x?",
+    "remainingTimeDesc": "Dowiedz się, ile czasu pozostało do obejrzenia z playlisty."
   }
 }

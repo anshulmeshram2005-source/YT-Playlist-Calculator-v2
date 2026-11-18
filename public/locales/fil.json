@@ -103,7 +103,8 @@
     "modeLabel": "Mode ng Pagkalkula",
     "videosUnavailable": "{count} video ang hindi available (pribado, tinanggal, o may paghihigpit sa rehiyon)",
     "byChannel": "ni {channel}",
-    "tryDemoBtn": "Subukan ang demo playlist →"
+    "tryDemoBtn": "Subukan ang demo playlist →",
+    "loading": "Naglo-load…"
   },
   "features": {
     "title": "Lahat ng kailangan mo para planuhin ang iyong YouTube playlist",
@@ -138,6 +139,16 @@
         "icon": "flag",
         "title": "Layunin sa Takdang Petsa",
         "desc": "Magtakda ng deadline at kunin ang kailangang oras ng panonood bawat araw."
+      },
+      {
+        "icon": "clipboard-list",
+        "title": "Detalyadong Listahan ng Bawat Video",
+        "desc": "Maaaring buksang listahan na nagpapakita ng bawat video, tagal sa napiling bilis, at direktang link."
+      },
+      {
+        "icon": "share",
+        "title": "I-export at Ibahagi",
+        "desc": "I-export ang mga resulta bilang CSV o TXT. Kopyahin ang maibabahaging link upang ipadala ang iyong kalkulasyon."
       }
     ]
   },
@@ -149,17 +160,20 @@
       {
         "number": "1",
         "title": "Kopyahin ang link ng playlist",
-        "desc": "Sa YouTube, kopyahin ang link mula sa address bar o sa Share button."
+        "desc": "Sa YouTube, kopyahin ang link mula sa address bar o sa Share button.",
+        "num": "1"
       },
       {
         "number": "2",
         "title": "I-paste sa calculator",
-        "desc": "I-paste ang link sa kahon at piliin ang hanay ng video o nais mong bilis."
+        "desc": "I-paste ang link sa kahon at piliin ang hanay ng video o nais mong bilis.",
+        "num": "2"
       },
       {
         "number": "3",
         "title": "Tingnan ang oras at iskedyul",
-        "desc": "Agad na makita ang kabuuang haba, paghahambing ng bilis, at petsa ng pagtatapos."
+        "desc": "Agad na makita ang kabuuang haba, paghahambing ng bilis, at petsa ng pagtatapos.",
+        "num": "3"
       }
     ],
     "supportedBadge": "Mga Suportadong Format",
@@ -305,7 +319,8 @@
       "infoTitle": "Impormasyon sa Pakikipag-ugnayan",
       "hoursLabel": "Oras ng Pagtugon",
       "hoursValue": "Karaniwan kaming tumutugon sa loob ng 24–48 oras ng trabaho.",
-      "faqNotice": "May mabilisang tanong tungkol sa paggamit ng calculator?"
+      "faqNotice": "May mabilisang tanong tungkol sa paggamit ng calculator?",
+      "sending": "Ipinapadala…"
     },
     "tools": {
       "breadcrumb": "Lahat ng Tool",
@@ -427,7 +442,8 @@
       "needMoreHelp": "Kailangan ng Karagdagang Tulong?",
       "needMoreHelpDesc": "Magpadala ng mensahe sa amin para sa tulong.",
       "backToHome": "Bumalik sa tahanan",
-      "tryAnotherPlaylist": "Magkalkula ng ibang playlist"
+      "tryAnotherPlaylist": "Magkalkula ng ibang playlist",
+      "openTool": "Buksan ang tool"
     },
     "howItWorksDetail": {
       "breadcrumb": "Paano Gumagana",
@@ -899,5 +915,12 @@
     "teachers": "Mga Guro",
     "creators": "Mga Creator",
     "bingeWatchers": "Mga Mahilig sa Binge-watch"
+  },
+  "relatedTools": {
+    "durationDesc": "Nakatuong tool para sa pagkalkula ng kabuuang tagal ng playlist.",
+    "watchTimeDesc": "Kalkulahin ang kabuuang oras ng panonood na may pagsasaayos ng bilis.",
+    "speed15xDesc": "Espesipikong kalkulahin ang oras ng panonood sa bilis na 1.5x.",
+    "speed2xDesc": "Gaano katagal aabutin ang iyong playlist sa 2x bilis?",
+    "remainingTimeDesc": "Alamin kung gaano karaming oras ng playlist ang natitira pang panoorin."
   }
 }

@@ -103,7 +103,8 @@
     "modeLabel": "計算模式",
     "videosUnavailable": "{count} 个影片不可用（私享、已刪除或地区受限）",
     "byChannel": "创作者：{channel}",
-    "tryDemoBtn": "试用演示播放清單 →"
+    "tryDemoBtn": "试用演示播放清單 →",
+    "loading": "載入中…"
   },
   "features": {
     "title": "規劃 YouTube 学习与观看的一切所需",
@@ -138,6 +139,16 @@
         "icon": "flag",
         "title": "截止日期倒推",
         "desc": "设定您的 Deadline，获知每天需要打卡的具体分鐘数。"
+      },
+      {
+        "icon": "clipboard-list",
+        "title": "個別影片明細",
+        "desc": "可展開清單顯示每部影片、所選倍速下的播放時間與直接連結。"
+      },
+      {
+        "icon": "share",
+        "title": "匯出與分享",
+        "desc": "支援匯出為 CSV 或 TXT 格式，一鍵複製分享連結發送給他人。"
       }
     ]
   },
@@ -296,7 +307,8 @@
       "faqNoteP": "關於配額、私密影片等大部分常見問題已在 FAQ 中详细解答。",
       "faqLink": "查看常見問題解答 →",
       "emailLabel": "支持邮箱",
-      "emailValue": "support@ytplaylistcal.com"
+      "emailValue": "support@ytplaylistcal.com",
+      "sending": "傳送中…"
     },
     "tools": {
       "breadcrumb": "工具箱",
@@ -397,7 +409,8 @@
       "playlistDurationCalc": "播放清單總長度計算機",
       "howItWorks": "工作原理",
       "faq": "常見問題",
-      "tryCalc": "立即体验計算機 →"
+      "tryCalc": "立即体验計算機 →",
+      "openTool": "開啟工具"
     },
     "howItWorksDetail": {
       "breadcrumb": "工作原理",
@@ -866,5 +879,12 @@
     "teachers": "教师",
     "creators": "创作者",
     "bingeWatchers": "刷剧/追剧爱好者"
+  },
+  "relatedTools": {
+    "durationDesc": "專門用於計算播放清單總長度的實用工具。",
+    "watchTimeDesc": "計算包含倍速調整的總觀看時間。",
+    "speed15xDesc": "專門計算 1.5 倍速下的觀看時間。",
+    "speed2xDesc": "以 2 倍速觀看時播放清單需要花費多久時間？",
+    "remainingTimeDesc": "查詢播放清單還剩多少時間尚未看完。"
   }
 }

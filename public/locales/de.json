@@ -103,7 +103,8 @@
     "modeLabel": "Berechnungsmodus",
     "videosUnavailable": "{count} Video{plural} nicht verfügbar (privat, gelöscht oder länderspezifisch gesperrt)",
     "byChannel": "von {channel}",
-    "tryDemoBtn": "Demo-Playlist ausprobieren →"
+    "tryDemoBtn": "Demo-Playlist ausprobieren →",
+    "loading": "Wird geladen…"
   },
   "features": {
     "title": "Alles, was du für deine YouTube-Lernplanung brauchst",
@@ -138,6 +139,16 @@
         "icon": "flag",
         "title": "Zieldatum-Rechner",
         "desc": "Setze deine Frist und erfahre, wie viele Minuten du pro Tag einplanen musst."
+      },
+      {
+        "icon": "clipboard-list",
+        "title": "Aufschlüsselung nach Videos",
+        "desc": "Aufklappbare Liste mit jedem Video, seiner Dauer bei der gewählten Geschwindigkeit und direktem Link."
+      },
+      {
+        "icon": "share",
+        "title": "Exportieren & Teilen",
+        "desc": "Ergebnisse als CSV oder TXT exportieren. Kopieren Sie einen teilbaren Link für Ihre Berechnung."
       }
     ]
   },
@@ -296,7 +307,8 @@
       "faqNoteP": "Viele Antworten findest du bereits in unseren FAQs.",
       "faqLink": "Zu den FAQs →",
       "emailLabel": "Support-E-Mail",
-      "emailValue": "support@ytplaylistcal.com"
+      "emailValue": "support@ytplaylistcal.com",
+      "sending": "Wird gesendet…"
     },
     "tools": {
       "breadcrumb": "Alle Tools",
@@ -397,7 +409,8 @@
       "playlistDurationCalc": "Playlist-Dauer-Rechner",
       "howItWorks": "So funktioniert es",
       "faq": "Häufig gestellte Fragen",
-      "tryCalc": "Rechner ausprobieren →"
+      "tryCalc": "Rechner ausprobieren →",
+      "openTool": "Tool öffnen"
     },
     "howItWorksDetail": {
       "breadcrumb": "So funktioniert es",
@@ -866,5 +879,12 @@
     "teachers": "Lehrern & Dozenten",
     "creators": "Content Creators",
     "bingeWatchers": "Serienfans & Binge-Watchern"
+  },
+  "relatedTools": {
+    "durationDesc": "Spezialisiertes Tool zur Berechnung der Gesamtdauer von Playlists.",
+    "watchTimeDesc": "Gesamte Wiedergabezeit mit Geschwindigkeitsanpassung berechnen.",
+    "speed15xDesc": "Wiedergabezeit bei 1,5-facher Geschwindigkeit gezielt berechnen.",
+    "speed2xDesc": "Wie lange dauert Ihre Playlist bei 2-facher Geschwindigkeit?",
+    "remainingTimeDesc": "Finden Sie heraus, wie viel von einer Playlist noch zu sehen ist."
   }
 }

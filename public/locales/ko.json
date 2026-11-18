@@ -103,7 +103,8 @@
     "modeLabel": "계산 모드",
     "videosUnavailable": "{count}개 영상 재생 불가 (비공개, 삭제됨 또는 지역 제한)",
     "byChannel": "채널: {channel}",
-    "tryDemoBtn": "데모 재생목록 체험하기 →"
+    "tryDemoBtn": "데모 재생목록 체험하기 →",
+    "loading": "로딩 중…"
   },
   "features": {
     "title": "유튜브 시청 계획을 위한 완벽한 도구",
@@ -138,6 +139,16 @@
         "icon": "flag",
         "title": "목표일 역산",
         "desc": "마감 기한을 입력하면 매일 들어야 하는 필수 시청 시간 제시."
+      },
+      {
+        "icon": "clipboard-list",
+        "title": "영상별 세부 정보",
+        "desc": "선택한 배속에서의 재생 시간과 바로가기 링크가 포함된 각 영상별 펼침 목록입니다."
+      },
+      {
+        "icon": "share",
+        "title": "내보내기 및 공유",
+        "desc": "결과를 CSV 또는 TXT로 내보내거나 공유 링크를 복사하여 전송할 수 있습니다."
       }
     ]
   },
@@ -302,7 +313,8 @@
       "faqNoteP": "문의하기 전에 {faqLink}를 먼저 확인해 보세요. 이미 질문에 대한 답변이 등록되어 있을 수 있습니다.",
       "faqLink": "자주 묻는 질문 (FAQ)",
       "emailLabel": "직접 이메일 문의",
-      "emailValue": "support@ytplaylistcal.com"
+      "emailValue": "support@ytplaylistcal.com",
+      "sending": "전송 중…"
     },
     "tools": {
       "breadcrumb": "도구 목록",
@@ -403,7 +415,8 @@
       "playlistDurationCalc": "재생 시간 계산기",
       "howItWorks": "작동 원리",
       "faq": "자주 묻는 질문 (FAQ)",
-      "tryCalc": "계산기 사용하기"
+      "tryCalc": "계산기 사용하기",
+      "openTool": "도구 열기"
     },
     "howItWorksDetail": {
       "breadcrumb": "작동 원리",
@@ -872,5 +885,12 @@
     "teachers": "교사 및 강사",
     "creators": "콘텐츠 크리에이터",
     "bingeWatchers": "몰아보기 시청자"
+  },
+  "relatedTools": {
+    "durationDesc": "재생목록 총 재생 시간을 계산하는 전용 도구입니다.",
+    "watchTimeDesc": "배속 조절을 적용한 총 시청 시간을 계산합니다.",
+    "speed15xDesc": "1.5배속 시청 시간을 집중적으로 계산합니다.",
+    "speed2xDesc": "2배속으로 시청할 때 재생목록에 얼마나 걸릴까요?",
+    "remainingTimeDesc": "재생목록에서 남은 시청 시간을 확인하세요."
   }
 }

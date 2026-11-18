@@ -103,7 +103,8 @@
     "modeLabel": "Beräkningsläge",
     "videosUnavailable": "{count} video(r) otillgängliga (privata, borttagna eller regionsbegränsade)",
     "byChannel": "av {channel}",
-    "tryDemoBtn": "Prova en demospellista →"
+    "tryDemoBtn": "Prova en demospellista →",
+    "loading": "Laddar…"
   },
   "features": {
     "title": "Allt du behöver för att planera dina YouTube-spellistor",
@@ -138,6 +139,16 @@
         "icon": "flag",
         "title": "Mål med deadline",
         "desc": "Sätt ett slutdatum och få en rekommenderad daglig visningstid."
+      },
+      {
+        "icon": "clipboard-list",
+        "title": "Uppdelning per video",
+        "desc": "Expanderbar lista som visar varje video, dess längd vid vald hastighet och en direktlänk."
+      },
+      {
+        "icon": "share",
+        "title": "Exportera & dela",
+        "desc": "Exportera resultat som CSV eller TXT. Kopiera en delbar länk för att skicka dina beräkningar."
       }
     ]
   },
@@ -149,17 +160,20 @@
       {
         "number": "1",
         "title": "Kopiera länken till spellistan",
-        "desc": "På YouTube kopierar du spellistans länk från adressfältet eller via Dela-knappen."
+        "desc": "På YouTube kopierar du spellistans länk från adressfältet eller via Dela-knappen.",
+        "num": "1"
       },
       {
         "number": "2",
         "title": "Klistra in i kalkylatorn",
-        "desc": "Klistra in adressen i sökfältet och välj eventuellt intervall eller hastighet."
+        "desc": "Klistra in adressen i sökfältet och välj eventuellt intervall eller hastighet.",
+        "num": "2"
       },
       {
         "number": "3",
         "title": "Se tider och schema",
-        "desc": "Få omedelbar tillgång till total längd, hastighetstabell och beräknat slutdatum."
+        "desc": "Få omedelbar tillgång till total längd, hastighetstabell och beräknat slutdatum.",
+        "num": "3"
       }
     ],
     "supportedBadge": "Format som stöds",
@@ -305,7 +319,8 @@
       "infoTitle": "Kontaktinformation",
       "hoursLabel": "Svarstid",
       "hoursValue": "Vi svarar vanligtvis inom 24–48 arbetstimmar.",
-      "faqNotice": "Har du en snabb fråga om hur kalkylatorn fungerar?"
+      "faqNotice": "Har du en snabb fråga om hur kalkylatorn fungerar?",
+      "sending": "Skickar…"
     },
     "tools": {
       "breadcrumb": "Alla verktyg",
@@ -427,7 +442,8 @@
       "needMoreHelp": "Behöver du mer hjälp?",
       "needMoreHelpDesc": "Skicka ett meddelande till oss för personlig assistans.",
       "backToHome": "Tillbaka till hem",
-      "tryAnotherPlaylist": "Beräkna en annan spellista"
+      "tryAnotherPlaylist": "Beräkna en annan spellista",
+      "openTool": "Öppna verktyg"
     },
     "howItWorksDetail": {
       "breadcrumb": "Hur det fungerar",
@@ -899,5 +915,12 @@
     "teachers": "Lärare",
     "creators": "Kreatörer",
     "bingeWatchers": "Maratontittare"
+  },
+  "relatedTools": {
+    "durationDesc": "Dedikerat verktyg för att beräkna spellistans totala längd.",
+    "watchTimeDesc": "Beräkna total tittartid med hastighetsjusteringar.",
+    "speed15xDesc": "Beräkna specifikt tittartiden vid 1,5x uppspelningshastighet.",
+    "speed2xDesc": "Hur lång tid tar din spellista i 2x hastighet?",
+    "remainingTimeDesc": "Ta reda på hur mycket som återstår att titta på i en spellista."
   }
 }

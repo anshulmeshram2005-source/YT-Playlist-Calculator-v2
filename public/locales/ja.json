@@ -103,7 +103,8 @@
     "modeLabel": "計算モード",
     "videosUnavailable": "{count} 本の動画が利用不可（非公開、削除済み、または地域制限）",
     "byChannel": "チャンネル: {channel}",
-    "tryDemoBtn": "デモ用プレイリストを試す →"
+    "tryDemoBtn": "デモ用プレイリストを試す →",
+    "loading": "読み込み中…"
   },
   "features": {
     "title": "YouTubeの学習・視聴計画に必要なすべてがここに",
@@ -138,6 +139,16 @@
         "icon": "flag",
         "title": "目標期日から逆算",
         "desc": "締め切り日までに終わらせるための1日の必要視聴時間を計算。"
+      },
+      {
+        "icon": "clipboard-list",
+        "title": "動画ごとの詳細",
+        "desc": "各動画、選択した速度での再生時間、直接リンクを表示する展開可能なリスト。"
+      },
+      {
+        "icon": "share",
+        "title": "エクスポートと共有",
+        "desc": "結果をCSVまたはTXTとして書き出し可能。計算結果を共有するリンクをコピーできます。"
       }
     ]
   },
@@ -302,7 +313,8 @@
       "faqNoteP": "お問い合わせの前に、{faqLink}をご確認ください。よくあるご質問の回答が掲載されている場合があります。",
       "faqLink": "よくある質問 (FAQ)",
       "emailLabel": "サポートメール",
-      "emailValue": "support@ytplaylistcal.com"
+      "emailValue": "support@ytplaylistcal.com",
+      "sending": "送信中…"
     },
     "tools": {
       "breadcrumb": "ツール一覧",
@@ -403,7 +415,8 @@
       "playlistDurationCalc": "再生時間計算機",
       "howItWorks": "仕組み・使い方",
       "faq": "よくある質問 (FAQ)",
-      "tryCalc": "計算機を使ってみる"
+      "tryCalc": "計算機を使ってみる",
+      "openTool": "ツールを開く"
     },
     "howItWorksDetail": {
       "breadcrumb": "仕組みと解説",
@@ -872,5 +885,12 @@
     "teachers": "講師・教員",
     "creators": "動画クリエイター",
     "bingeWatchers": "一気見リスナー"
+  },
+  "relatedTools": {
+    "durationDesc": "再生リストの合計再生時間を計算するための専用ツール。",
+    "watchTimeDesc": "再生速度の調整を適用した合計視聴時間を計算します。",
+    "speed15xDesc": "1.5倍速での視聴時間をピンポイントで計算します。",
+    "speed2xDesc": "2倍速で再生した場合、再生リストにどれくらい時間がかかりますか？",
+    "remainingTimeDesc": "再生リストの残りの視聴時間を調べます。"
   }
 }

@@ -103,7 +103,8 @@
     "modeLabel": "Calculation Mode",
     "videosUnavailable": "{count} video{plural} unavailable (private, deleted, or region-restricted)",
     "byChannel": "by {channel}",
-    "tryDemoBtn": "Try a demo playlist →"
+    "tryDemoBtn": "Try a demo playlist →",
+    "loading": "Loading…"
   },
   "features": {
     "title": "Everything You Need to Plan Your YouTube Viewing",
@@ -306,7 +307,8 @@
       "faqNoteP": "Many common questions about playlist limits, unavailable videos, and API keys are answered in our FAQ.",
       "faqLink": "View FAQ →",
       "emailLabel": "Support Email",
-      "emailValue": "support@ytplaylistcal.com"
+      "emailValue": "support@ytplaylistcal.com",
+      "sending": "Sending…"
     },
     "tools": {
       "breadcrumb": "Tools",
@@ -407,7 +409,8 @@
       "playlistDurationCalc": "Playlist Duration Calculator",
       "howItWorks": "How It Works",
       "faq": "FAQ",
-      "tryCalc": "Try the calculator →"
+      "tryCalc": "Try the calculator →",
+      "openTool": "Open tool"
     },
     "howItWorksDetail": {
       "breadcrumb": "How It Works",
@@ -876,5 +879,12 @@
     "teachers": "Teachers",
     "creators": "Creators",
     "bingeWatchers": "Binge watchers"
+  },
+  "relatedTools": {
+    "durationDesc": "Dedicated tool for calculating total playlist duration.",
+    "watchTimeDesc": "Calculate total watch time with speed adjustments.",
+    "speed15xDesc": "Specifically calculate 1.5x speed watch time.",
+    "speed2xDesc": "How long will your playlist take at 2x speed?",
+    "remainingTimeDesc": "Find out how much of a playlist is left to watch."
   }
 }

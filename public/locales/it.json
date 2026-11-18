@@ -103,7 +103,8 @@
     "modeLabel": "Modalità di calcolo",
     "videosUnavailable": "{count} video non disponibile/i (privati, eliminati o con limitazioni regionali)",
     "byChannel": "da {channel}",
-    "tryDemoBtn": "Prova una playlist dimostrativa →"
+    "tryDemoBtn": "Prova una playlist dimostrativa →",
+    "loading": "Caricamento…"
   },
   "features": {
     "title": "Tutto ciò che serve per pianificare le tue playlist YouTube",
@@ -138,6 +139,16 @@
         "icon": "flag",
         "title": "Obiettivo con scadenza",
         "desc": "Stabilisci una scadenza e scopri quanto tempo devi dedicare ogni giorno."
+      },
+      {
+        "icon": "clipboard-list",
+        "title": "Dettaglio per video",
+        "desc": "Elenco espandibile con ogni video, la sua durata alla velocità scelta e un link diretto."
+      },
+      {
+        "icon": "share",
+        "title": "Esporta e condividi",
+        "desc": "Esporta i risultati in CSV o TXT. Copia un link condivisibile per inviare il tuo calcolo."
       }
     ]
   },
@@ -149,17 +160,20 @@
       {
         "number": "1",
         "title": "Copia l’URL della playlist",
-        "desc": "Su YouTube, copia il link della playlist dalla barra degli indirizzi o dal pulsante di condivisione."
+        "desc": "Su YouTube, copia il link della playlist dalla barra degli indirizzi o dal pulsante di condivisione.",
+        "num": "1"
       },
       {
         "number": "2",
         "title": "Incollalo nello strumento",
-        "desc": "Incolla il link nel modulo di ricerca e seleziona l’eventuale intervallo o velocità desiderata."
+        "desc": "Incolla il link nel modulo di ricerca e seleziona l’eventuale intervallo o velocità desiderata.",
+        "num": "2"
       },
       {
         "number": "3",
         "title": "Visualizza tempi e programma",
-        "desc": "Scopri subito la durata complessiva, la tabella di confronto e la stima per concludere il percorso."
+        "desc": "Scopri subito la durata complessiva, la tabella di confronto e la stima per concludere il percorso.",
+        "num": "3"
       }
     ],
     "supportedBadge": "Formati supportati",
@@ -305,7 +319,8 @@
       "infoTitle": "Informazioni di contatto",
       "hoursLabel": "Tempi di risposta",
       "hoursValue": "Solitamente rispondiamo entro 24-48 ore lavorative.",
-      "faqNotice": "Hai una domanda rapida sul funzionamento dello strumento?"
+      "faqNotice": "Hai una domanda rapida sul funzionamento dello strumento?",
+      "sending": "Invio in corso…"
     },
     "tools": {
       "breadcrumb": "Tutti gli strumenti",
@@ -427,7 +442,8 @@
       "needMoreHelp": "Hai bisogno di ulteriore supporto?",
       "needMoreHelpDesc": "Scrivici direttamente per ricevere assistenza personalizzata.",
       "backToHome": "Torna alla home",
-      "tryAnotherPlaylist": "Calcola un'altra playlist"
+      "tryAnotherPlaylist": "Calcola un'altra playlist",
+      "openTool": "Apri strumento"
     },
     "howItWorksDetail": {
       "breadcrumb": "Come funziona",
@@ -939,5 +955,12 @@
     "teachers": "Docenti",
     "creators": "Creator",
     "bingeWatchers": "Appassionati di maratone video"
+  },
+  "relatedTools": {
+    "durationDesc": "Strumento dedicato per calcolare la durata totale della playlist.",
+    "watchTimeDesc": "Calcola il tempo di visualizzazione totale con regolazioni di velocità.",
+    "speed15xDesc": "Calcola specificamente il tempo di visualizzazione a velocità 1.5x.",
+    "speed2xDesc": "Quanto tempo richiederà la tua playlist a velocità 2x?",
+    "remainingTimeDesc": "Scopri quanto tempo ti rimane da guardare in una playlist."
   }
 }

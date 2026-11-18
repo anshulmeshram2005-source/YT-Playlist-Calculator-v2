@@ -103,7 +103,8 @@
     "modeLabel": "Mode Perhitungan",
     "videosUnavailable": "{count} video tidak tersedia (pribadi, dihapus, atau dibatasi wilayah)",
     "byChannel": "oleh {channel}",
-    "tryDemoBtn": "Coba playlist demo →"
+    "tryDemoBtn": "Coba playlist demo →",
+    "loading": "Memuat…"
   },
   "features": {
     "title": "Semua yang Anda butuhkan untuk merencanakan playlist YouTube",
@@ -138,6 +139,16 @@
         "icon": "flag",
         "title": "Target Deadline",
         "desc": "Tentukan batas tanggal selesai dan dapatkan target tontonan harian."
+      },
+      {
+        "icon": "clipboard-list",
+        "title": "Rincian per Video",
+        "desc": "Daftar yang dapat diperluas menampilkan setiap video, durasi pada kecepatan pilihan, dan tautan langsung."
+      },
+      {
+        "icon": "share",
+        "title": "Ekspor & Bagikan",
+        "desc": "Ekspor hasil sebagai CSV atau TXT. Salin tautan yang dapat dibagikan untuk mengirim perhitungan Anda."
       }
     ]
   },
@@ -149,17 +160,20 @@
       {
         "number": "1",
         "title": "Salin URL Playlist",
-        "desc": "Di YouTube, salin link playlist dari bilah browser atau tombol bagikan."
+        "desc": "Di YouTube, salin link playlist dari bilah browser atau tombol bagikan.",
+        "num": "1"
       },
       {
         "number": "2",
         "title": "Tempel ke Kalkulator",
-        "desc": "Masukkan link ke kolom input dan tentukan rentang atau kecepatan yang Anda inginkan."
+        "desc": "Masukkan link ke kolom input dan tentukan rentang atau kecepatan yang Anda inginkan.",
+        "num": "2"
       },
       {
         "number": "3",
         "title": "Lihat Durasi & Jadwal",
-        "desc": "Dapatkan rincian total durasi, tabel kecepatan, dan tanggal selesai secara otomatis."
+        "desc": "Dapatkan rincian total durasi, tabel kecepatan, dan tanggal selesai secara otomatis.",
+        "num": "3"
       }
     ],
     "supportedBadge": "Format yang Didukung",
@@ -305,7 +319,8 @@
       "infoTitle": "Informasi Kontak",
       "hoursLabel": "Waktu Respons",
       "hoursValue": "Biasanya kami membalas dalam waktu 24–48 jam kerja.",
-      "faqNotice": "Punya pertanyaan singkat tentang cara kerja kalkulator?"
+      "faqNotice": "Punya pertanyaan singkat tentang cara kerja kalkulator?",
+      "sending": "Mengirim…"
     },
     "tools": {
       "breadcrumb": "Semua Alat",
@@ -427,7 +442,8 @@
       "needMoreHelp": "Butuh Bantuan Lain?",
       "needMoreHelpDesc": "Kirim pesan kepada kami untuk mendapatkan bantuan.",
       "backToHome": "Kembali ke beranda",
-      "tryAnotherPlaylist": "Hitung playlist lain"
+      "tryAnotherPlaylist": "Hitung playlist lain",
+      "openTool": "Buka alat"
     },
     "howItWorksDetail": {
       "breadcrumb": "Cara Kerja",
@@ -899,5 +915,12 @@
     "teachers": "Guru & Dosen",
     "creators": "Kreator konten",
     "bingeWatchers": "Penonton maraton"
+  },
+  "relatedTools": {
+    "durationDesc": "Alat khusus untuk menghitung durasi total daftar putar.",
+    "watchTimeDesc": "Hitung total waktu tonton dengan penyesuaian kecepatan.",
+    "speed15xDesc": "Hitung waktu tonton secara khusus pada kecepatan 1.5x.",
+    "speed2xDesc": "Berapa lama daftar putar Anda akan selesai pada kecepatan 2x?",
+    "remainingTimeDesc": "Ketahui berapa banyak waktu yang tersisa untuk menonton daftar putar."
   }
 }

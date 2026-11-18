@@ -100,7 +100,7 @@ import Footer from '../../components/Footer.astro';
   form?.addEventListener('submit', async (e) => {
     e.preventDefault();
     const btn = document.getElementById('contact-submit') as HTMLButtonElement;
-    if (btn) { btn.disabled = true; btn.textContent = window.i18n ? window.i18n.t('calculator.loading') : 'Sending…'; }
+    if (btn) { btn.disabled = true; btn.textContent = window.i18n ? window.i18n.t('pages.contact.sending') : 'Sending…'; }
 
     // Client-side submission placeholder
     await new Promise((r) => setTimeout(r, 600));

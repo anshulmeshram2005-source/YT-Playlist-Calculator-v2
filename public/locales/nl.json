@@ -103,7 +103,8 @@
     "modeLabel": "Berekeningsmodus",
     "videosUnavailable": "{count} video('s) niet beschikbaar (privé, verwijderd of regiogebonden)",
     "byChannel": "door {channel}",
-    "tryDemoBtn": "Probeer een voorbeeld afspeellijst →"
+    "tryDemoBtn": "Probeer een voorbeeld afspeellijst →",
+    "loading": "Laden…"
   },
   "features": {
     "title": "Alles wat je nodig hebt om je YouTube-afspeellijsten te plannen",
@@ -138,6 +139,16 @@
         "icon": "flag",
         "title": "Deadline-doel",
         "desc": "Stel een einddatum in en ontdek hoeveel minuten je per dag moet kijken."
+      },
+      {
+        "icon": "clipboard-list",
+        "title": "Uitsplitsing per video",
+        "desc": "Uitklapbare lijst met elke video, de duur bij de gekozen snelheid en een directe link."
+      },
+      {
+        "icon": "share",
+        "title": "Exporteren & delen",
+        "desc": "Exporteer resultaten als CSV of TXT. Kopieer een deelbare link om je berekening te versturen."
       }
     ]
   },
@@ -149,17 +160,20 @@
       {
         "number": "1",
         "title": "Kopieer de afspeellijstlink",
-        "desc": "Kopieer op YouTube de link van de afspeellijst uit de adresbalk of via de knop Delen."
+        "desc": "Kopieer op YouTube de link van de afspeellijst uit de adresbalk of via de knop Delen.",
+        "num": "1"
       },
       {
         "number": "2",
         "title": "Plak in de calculator",
-        "desc": "Plak de URL in het invoerveld en kies optioneel een videobereik of gewenste afspeelsnelheid."
+        "desc": "Plak de URL in het invoerveld en kies optioneel een videobereik of gewenste afspeelsnelheid.",
+        "num": "2"
       },
       {
         "number": "3",
         "title": "Bekijk tijden & schema",
-        "desc": "Bekijk direct de totale duur, de snelheidstabel en de berekende afrondingsdatum."
+        "desc": "Bekijk direct de totale duur, de snelheidstabel en de berekende afrondingsdatum.",
+        "num": "3"
       }
     ],
     "supportedBadge": "Ondersteunde formaten",
@@ -305,7 +319,8 @@
       "infoTitle": "Contactgegevens",
       "hoursLabel": "Reactietijd",
       "hoursValue": "We reageren gewoonlijk binnen 24–48 werkuren.",
-      "faqNotice": "Heb je een korte vraag over hoe de calculator werkt?"
+      "faqNotice": "Heb je een korte vraag over hoe de calculator werkt?",
+      "sending": "Verzenden…"
     },
     "tools": {
       "breadcrumb": "Alle tools",
@@ -427,7 +442,8 @@
       "needMoreHelp": "Meer hulp nodig?",
       "needMoreHelpDesc": "Stuur ons een bericht voor persoonlijke ondersteuning.",
       "backToHome": "Terug naar home",
-      "tryAnotherPlaylist": "Bereken een andere afspeellijst"
+      "tryAnotherPlaylist": "Bereken een andere afspeellijst",
+      "openTool": "Tool openen"
     },
     "howItWorksDetail": {
       "breadcrumb": "Hoe het werkt",
@@ -899,5 +915,12 @@
     "teachers": "Docenten",
     "creators": "Contentmakers & Docenten",
     "bingeWatchers": "Binge-kijkers"
+  },
+  "relatedTools": {
+    "durationDesc": "Speciaal hulpmiddel voor het berekenen van de totale afspeellijstduur.",
+    "watchTimeDesc": "Bereken de totale kijktijd met snelheidsaanpassingen.",
+    "speed15xDesc": "Bereken specifiek de kijktijd bij 1,5x afspeelsnelheid.",
+    "speed2xDesc": "Hoe lang duurt je afspeellijst bij 2x snelheid?",
+    "remainingTimeDesc": "Ontdek hoeveel tijd er nog over is om te bekijken in een afspeellijst."
   }
 }

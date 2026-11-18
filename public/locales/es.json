@@ -103,7 +103,8 @@
     "modeLabel": "Modo de cálculo",
     "videosUnavailable": "{count} video{plural} no disponible(s) (privados, eliminados o con restricción regional)",
     "byChannel": "por {channel}",
-    "tryDemoBtn": "Probar lista de demostración →"
+    "tryDemoBtn": "Probar lista de demostración →",
+    "loading": "Cargando…"
   },
   "features": {
     "title": "Todo lo que necesitas para planificar tus listas de YouTube",
@@ -138,6 +139,16 @@
         "icon": "flag",
         "title": "Fecha límite",
         "desc": "Establece tu meta y descubre cuántos minutos diarios necesitas dedicar."
+      },
+      {
+        "icon": "clipboard-list",
+        "title": "Desglose por video",
+        "desc": "Lista desplegable que muestra cada video, su duración a la velocidad elegida y un enlace directo."
+      },
+      {
+        "icon": "share",
+        "title": "Exportar y compartir",
+        "desc": "Exporta los resultados como CSV o TXT. Copia un enlace compartible para enviar tu cálculo a otra persona."
       }
     ]
   },
@@ -296,7 +307,8 @@
       "faqNoteP": "Muchas preguntas comunes están respondidas en nuestra sección de preguntas frecuentes.",
       "faqLink": "Ver preguntas frecuentes →",
       "emailLabel": "Correo de Soporte",
-      "emailValue": "support@ytplaylistcal.com"
+      "emailValue": "support@ytplaylistcal.com",
+      "sending": "Enviando…"
     },
     "tools": {
       "breadcrumb": "Herramientas",
@@ -397,7 +409,8 @@
       "playlistDurationCalc": "Calculadora de duración de listas",
       "howItWorks": "Cómo funciona",
       "faq": "Preguntas frecuentes",
-      "tryCalc": "Probar la calculadora →"
+      "tryCalc": "Probar la calculadora →",
+      "openTool": "Abrir herramienta"
     },
     "howItWorksDetail": {
       "breadcrumb": "Cómo funciona",
@@ -866,5 +879,12 @@
     "teachers": "Profesores",
     "creators": "Creadores",
     "bingeWatchers": "Espectadores de maratones"
+  },
+  "relatedTools": {
+    "durationDesc": "Herramienta especializada para calcular la duración total de listas de reproducción.",
+    "watchTimeDesc": "Calcula el tiempo total de visualización con ajustes de velocidad.",
+    "speed15xDesc": "Calcula específicamente el tiempo de visualización a velocidad 1.5x.",
+    "speed2xDesc": "¿Cuánto tardarás en ver tu lista de reproducción a velocidad 2x?",
+    "remainingTimeDesc": "Descubre cuánto te falta por ver de una lista de reproducción."
   }
 }

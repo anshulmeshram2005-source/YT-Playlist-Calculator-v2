@@ -103,7 +103,8 @@
     "modeLabel": "Mode de calcul",
     "videosUnavailable": "{count} vidéo{plural} indisponible(s) (privée, supprimée ou géo-bloquée)",
     "byChannel": "par {channel}",
-    "tryDemoBtn": "Essayer une playlist de démo →"
+    "tryDemoBtn": "Essayer une playlist de démo →",
+    "loading": "Chargement…"
   },
   "features": {
     "title": "Tout pour planifier vos visionnages sur YouTube",
@@ -138,6 +139,16 @@
         "icon": "flag",
         "title": "Date d’échéance",
         "desc": "Définissez votre date limite et trouvez combien de minutes visionner par jour."
+      },
+      {
+        "icon": "clipboard-list",
+        "title": "Détail par vidéo",
+        "desc": "Liste déroulante affichant chaque vidéo, sa durée à la vitesse choisie et un lien direct."
+      },
+      {
+        "icon": "share",
+        "title": "Exporter et partager",
+        "desc": "Exportez les résultats au format CSV ou TXT. Copiez un lien partageable pour envoyer votre calcul."
       }
     ]
   },
@@ -296,7 +307,8 @@
       "faqNoteP": "De nombreuses réponses figurent déjà dans notre foire aux questions.",
       "faqLink": "Consulter la FAQ →",
       "emailLabel": "Email de Support",
-      "emailValue": "support@ytplaylistcal.com"
+      "emailValue": "support@ytplaylistcal.com",
+      "sending": "Envoi en cours…"
     },
     "tools": {
       "breadcrumb": "Outils",
@@ -397,7 +409,8 @@
       "playlistDurationCalc": "Calculateur de durée YouTube",
       "howItWorks": "Comment ça marche",
       "faq": "Foire aux questions",
-      "tryCalc": "Essayer le calculateur →"
+      "tryCalc": "Essayer le calculateur →",
+      "openTool": "Ouvrir l'outil"
     },
     "howItWorksDetail": {
       "breadcrumb": "Comment ça marche",
@@ -866,5 +879,12 @@
     "teachers": "Enseignants",
     "creators": "Créateurs",
     "bingeWatchers": "Binge-watchers"
+  },
+  "relatedTools": {
+    "durationDesc": "Outil dédié au calcul de la durée totale d'une playlist.",
+    "watchTimeDesc": "Calculez le temps de visionnage total avec ajustements de vitesse.",
+    "speed15xDesc": "Calculez précisément le temps de visionnage à vitesse 1.5x.",
+    "speed2xDesc": "Combien de temps prendra votre playlist à vitesse 2x ?",
+    "remainingTimeDesc": "Découvrez combien de temps il vous reste à regarder dans une playlist."
   }
 }

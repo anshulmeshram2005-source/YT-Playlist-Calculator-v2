@@ -103,7 +103,8 @@
     "modeLabel": "Chế độ tính toán",
     "videosUnavailable": "{count} video không khả dụng (riêng tư, đã xóa hoặc giới hạn quốc gia)",
     "byChannel": "bởi {channel}",
-    "tryDemoBtn": "Thử danh sách phát mẫu →"
+    "tryDemoBtn": "Thử danh sách phát mẫu →",
+    "loading": "Đang tải…"
   },
   "features": {
     "title": "Mọi tính năng bạn cần để lập kế hoạch xem YouTube",
@@ -138,6 +139,16 @@
         "icon": "flag",
         "title": "Mục tiêu theo hạn chót",
         "desc": "Đặt mục tiêu ngày hoàn thành để nhận lịch phân bổ thời gian xem mỗi ngày."
+      },
+      {
+        "icon": "clipboard-list",
+        "title": "Chi tiết từng video",
+        "desc": "Danh sách mở rộng hiển thị từng video, thời lượng theo tốc độ đã chọn và liên kết trực tiếp."
+      },
+      {
+        "icon": "share",
+        "title": "Xuất & chia sẻ",
+        "desc": "Xuất kết quả dưới dạng CSV hoặc TXT. Sao chép liên kết có thể chia sẻ để gửi tính toán của bạn."
       }
     ]
   },
@@ -149,17 +160,20 @@
       {
         "number": "1",
         "title": "Sao chép liên kết danh sách phát",
-        "desc": "Trên YouTube, sao chép liên kết từ thanh địa chỉ trình duyệt hoặc nút Chia sẻ."
+        "desc": "Trên YouTube, sao chép liên kết từ thanh địa chỉ trình duyệt hoặc nút Chia sẻ.",
+        "num": "1"
       },
       {
         "number": "2",
         "title": "Dán vào công cụ",
-        "desc": "Dán liên kết vào ô tìm kiếm, chọn khoảng video hoặc tốc độ phát bạn muốn."
+        "desc": "Dán liên kết vào ô tìm kiếm, chọn khoảng video hoặc tốc độ phát bạn muốn.",
+        "num": "2"
       },
       {
         "number": "3",
         "title": "Xem thời lượng & lịch biểu",
-        "desc": "Xem ngay tổng thời lượng, bảng tốc độ và kế hoạch kết thúc danh sách phát."
+        "desc": "Xem ngay tổng thời lượng, bảng tốc độ và kế hoạch kết thúc danh sách phát.",
+        "num": "3"
       }
     ],
     "supportedBadge": "Định dạng được hỗ trợ",
@@ -305,7 +319,8 @@
       "infoTitle": "Thông tin liên hệ",
       "hoursLabel": "Thời gian phản hồi",
       "hoursValue": "Chúng tôi thường phản hồi trong vòng 24–48 giờ làm việc.",
-      "faqNotice": "Bạn có câu hỏi nhanh về cách sử dụng công cụ tính?"
+      "faqNotice": "Bạn có câu hỏi nhanh về cách sử dụng công cụ tính?",
+      "sending": "Đang gửi…"
     },
     "tools": {
       "breadcrumb": "Tất cả công cụ",
@@ -427,7 +442,8 @@
       "needMoreHelp": "Cần thêm trợ giúp?",
       "needMoreHelpDesc": "Gửi tin nhắn trực tiếp cho chúng tôi để được hỗ trợ.",
       "backToHome": "Về trang chủ",
-      "tryAnotherPlaylist": "Tính danh sách phát khác"
+      "tryAnotherPlaylist": "Tính danh sách phát khác",
+      "openTool": "Mở công cụ"
     },
     "howItWorksDetail": {
       "breadcrumb": "Cách hoạt động",
@@ -899,5 +915,12 @@
     "teachers": "Giáo viên & Giảng viên",
     "creators": "Nhà sáng tạo nội dung",
     "bingeWatchers": "Người thích xem liên tục"
+  },
+  "relatedTools": {
+    "durationDesc": "Công cụ chuyên dụng để tính tổng thời lượng danh sách phát.",
+    "watchTimeDesc": "Tính tổng thời gian xem với các mức điều chỉnh tốc độ.",
+    "speed15xDesc": "Tính toán cụ thể thời gian xem ở tốc độ 1.5x.",
+    "speed2xDesc": "Danh sách phát của bạn sẽ mất bao lâu ở tốc độ 2x?",
+    "remainingTimeDesc": "Tìm hiểu xem còn bao nhiêu thời gian chưa xem trong danh sách phát."
   }
 }

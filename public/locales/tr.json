@@ -103,7 +103,8 @@
     "modeLabel": "Hesaplama Modu",
     "videosUnavailable": "{count} video kullanılamıyor (gizli, silinmiş veya bölge kısıtlı)",
     "byChannel": "Kanal: {channel}",
-    "tryDemoBtn": "Örnek bir oynatma listesi deneyin →"
+    "tryDemoBtn": "Örnek bir oynatma listesi deneyin →",
+    "loading": "Yükleniyor…"
   },
   "features": {
     "title": "YouTube oynatma listelerinizi planlamak için ihtiyacınız olan her şey",
@@ -138,6 +139,16 @@
         "icon": "flag",
         "title": "Hedef Tarih",
         "desc": "Bir bitiş tarihi belirleyin ve günde kaç dakika ayırmanız gerektiğini öğrenin."
+      },
+      {
+        "icon": "clipboard-list",
+        "title": "Video Başına Döküm",
+        "desc": "Her videoyu, seçtiğiniz hızdaki süresini ve doğrudan bağlantısını gösteren genişletilebilir liste."
+      },
+      {
+        "icon": "share",
+        "title": "Dışa Aktar ve Paylaş",
+        "desc": "Sonuçları CSV veya TXT olarak dışa aktarın. Hesaplamanızı paylaşmak için bağlantıyı kopyalayın."
       }
     ]
   },
@@ -149,17 +160,20 @@
       {
         "number": "1",
         "title": "Oynatma listesi bağlantısını kopyalayın",
-        "desc": "YouTube’da adres çubuğundan veya paylaş düğmesinden oynatma listesi bağlantısını kopyalayın."
+        "desc": "YouTube’da adres çubuğundan veya paylaş düğmesinden oynatma listesi bağlantısını kopyalayın.",
+        "num": "1"
       },
       {
         "number": "2",
         "title": "Hesaplayıcıya yapıştırın",
-        "desc": "Bağlantıyı giriş alanına yapıştırın, gerekirse video aralığını veya hızı seçin."
+        "desc": "Bağlantıyı giriş alanına yapıştırın, gerekirse video aralığını veya hızı seçin.",
+        "num": "2"
       },
       {
         "number": "3",
         "title": "Süreleri ve planı görüntüleyin",
-        "desc": "Toplam süre, hız karşılaştırma tablosu ve bitiş tarihlerine anında ulaşın."
+        "desc": "Toplam süre, hız karşılaştırma tablosu ve bitiş tarihlerine anında ulaşın.",
+        "num": "3"
       }
     ],
     "supportedBadge": "Desteklenen Formatlar",
@@ -305,7 +319,8 @@
       "infoTitle": "İletişim Bilgileri",
       "hoursLabel": "Yanıt Süresi",
       "hoursValue": "Genellikle 24–48 iş saati içinde yanıt veriyoruz.",
-      "faqNotice": "Hesaplayıcının çalışmasıyla ilgili hızlı bir sorunuz mu var?"
+      "faqNotice": "Hesaplayıcının çalışmasıyla ilgili hızlı bir sorunuz mu var?",
+      "sending": "Gönderiliyor…"
     },
     "tools": {
       "breadcrumb": "Tüm Araçlar",
@@ -427,7 +442,8 @@
       "needMoreHelp": "Daha Fazla Yardıma mı İhtiyacınız Var?",
       "needMoreHelpDesc": "Bize doğrudan mesaj göndererek destek alabilirsiniz.",
       "backToHome": "Ana sayfaya dön",
-      "tryAnotherPlaylist": "Başka bir liste hesapla"
+      "tryAnotherPlaylist": "Başka bir liste hesapla",
+      "openTool": "Aracı aç"
     },
     "howItWorksDetail": {
       "breadcrumb": "Nasıl Çalışır",
@@ -899,5 +915,12 @@
     "teachers": "Öğretmenler",
     "creators": "İçerik üreticileri",
     "bingeWatchers": "Dizi ve maraton izleyicileri"
+  },
+  "relatedTools": {
+    "durationDesc": "Toplam oynatma listesi süresini hesaplamak için özel araç.",
+    "watchTimeDesc": "Hız ayarlamaları ile toplam izleme süresini hesaplayın.",
+    "speed15xDesc": "1.5x hızında izleme süresini özel olarak hesaplayın.",
+    "speed2xDesc": "Oynatma listeniz 2x hızında ne kadar sürer?",
+    "remainingTimeDesc": "Oynatma listesinde ne kadar izleme süresi kaldığını öğrenin."
   }
 }

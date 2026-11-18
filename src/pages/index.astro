@@ -211,11 +211,11 @@ const personas: { icon: IconName; label: string; i18nKey: string }[] = [
 ];
 
 const relatedTools = [
-  { href: '/youtube-playlist-duration-calculator/', title: 'Playlist Duration Calculator', desc: 'Dedicated tool for calculating total playlist duration.', i18nTitle: 'footer.links.durationCalculator' },
-  { href: '/youtube-watch-time-calculator/', title: 'Watch Time Calculator', desc: 'Calculate total watch time with speed adjustments.', i18nTitle: 'footer.links.watchTimeCalculator' },
-  { href: '/youtube-watch-time-at-1-5x/', title: 'Watch Time at 1.5×', desc: 'Specifically calculate 1.5x speed watch time.', i18nTitle: 'footer.links.watchTime15x' },
-  { href: '/youtube-watch-time-at-2x/', title: 'Watch Time at 2×', desc: 'How long will your playlist take at 2x speed?', i18nTitle: 'footer.links.watchTime2x' },
-  { href: '/youtube-playlist-remaining-time/', title: 'Remaining Time Calculator', desc: 'Find out how much of a playlist is left to watch.', i18nTitle: 'footer.links.remainingTime' },
+  { href: '/youtube-playlist-duration-calculator/', title: 'Playlist Duration Calculator', desc: 'Dedicated tool for calculating total playlist duration.', i18nTitle: 'footer.links.durationCalculator', i18nDesc: 'relatedTools.durationDesc' },
+  { href: '/youtube-watch-time-calculator/', title: 'Watch Time Calculator', desc: 'Calculate total watch time with speed adjustments.', i18nTitle: 'footer.links.watchTimeCalculator', i18nDesc: 'relatedTools.watchTimeDesc' },
+  { href: '/youtube-watch-time-at-1-5x/', title: 'Watch Time at 1.5×', desc: 'Specifically calculate 1.5x speed watch time.', i18nTitle: 'footer.links.watchTime15x', i18nDesc: 'relatedTools.speed15xDesc' },
+  { href: '/youtube-watch-time-at-2x/', title: 'Watch Time at 2×', desc: 'How long will your playlist take at 2x speed?', i18nTitle: 'footer.links.watchTime2x', i18nDesc: 'relatedTools.speed2xDesc' },
+  { href: '/youtube-playlist-remaining-time/', title: 'Remaining Time Calculator', desc: 'Find out how much of a playlist is left to watch.', i18nTitle: 'footer.links.remainingTime', i18nDesc: 'relatedTools.remainingTimeDesc' },
 ];
 ---
 
@@ -1304,7 +1304,7 @@ const relatedTools = [
 
         <!-- Professionally balanced symmetrical layout for 5 cards -->
         <div class="balanced-cards-grid">
-          {relatedTools.map(({ href, title, desc, i18nTitle }) => (
+          {relatedTools.map(({ href, title, desc, i18nTitle, i18nDesc }) => (
             <div class="balanced-card-item">
               <a
                 href={href}
@@ -1318,10 +1318,10 @@ const relatedTools = [
               >
                 <div>
                   <h3 class="text-sm font-semibold mb-1" style="color: var(--color-text);" data-i18n={i18nTitle}>{title}</h3>
-                  <p class="text-xs leading-relaxed" style="color: var(--color-text-muted);">{desc}</p>
+                  <p class="text-xs leading-relaxed" style="color: var(--color-text-muted);" data-i18n={i18nDesc}>{desc}</p>
                 </div>
                 <div class="mt-3 flex items-center gap-1 text-xs font-medium" style="color: var(--color-accent);">
-                  <span>Open tool</span>
+                  <span data-i18n="pages.common.openTool">Open tool</span>
                   <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
                 </div>
               </a>
