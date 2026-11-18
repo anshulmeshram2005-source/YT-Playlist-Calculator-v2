@@ -1,0 +1,115 @@
+---
+// /tools/ — All tools index page
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+
+const tools = [
+  {
+    href: '/',
+    title: 'YouTube Playlist Length Calculator',
+    titleKey: 'pages.common.playlistLengthCalc',
+    desc: 'Calculate total YouTube playlist duration, watch time at 1.25x–3x speeds, and plan your daily study schedule. Free, fast, and no signup needed.',
+    descKey: 'meta.home.desc',
+    badge: 'Most Popular',
+  },
+  {
+    href: '/youtube-playlist-duration-calculator/',
+    title: 'YouTube Playlist Duration Calculator',
+    titleKey: 'pages.duration.title',
+    desc: 'Instantly calculate the total duration of any YouTube playlist. Get exact hours, minutes, and seconds in seconds.',
+    descKey: 'pages.duration.subtitle',
+  },
+  {
+    href: '/youtube-watch-time-calculator/',
+    title: 'YouTube Watch Time Calculator',
+    titleKey: 'pages.watchTime.title',
+    desc: 'Calculate total YouTube watch time at normal speed or speeded up at 1.25×, 1.5×, 1.75×, and 2×.',
+    descKey: 'pages.watchTime.subtitle',
+  },
+  {
+    href: '/youtube-playlist-remaining-time/',
+    title: 'YouTube Playlist Remaining Time Calculator',
+    titleKey: 'pages.remainingTime.title',
+    desc: 'Find out exactly how much time is left in a playlist based on where you stopped watching.',
+    descKey: 'pages.remainingTime.subtitle',
+  },
+  {
+    href: '/youtube-watch-time-at-1-5x/',
+    title: 'YouTube Watch Time at 1.5× Speed',
+    titleKey: 'pages.speed15x.title',
+    desc: 'Calculate how much time you save watching playlists at 1.5x playback speed.',
+    descKey: 'pages.speed15x.subtitle',
+  },
+  {
+    href: '/youtube-watch-time-at-2x/',
+    title: 'YouTube Watch Time at 2× Speed',
+    titleKey: 'pages.speed2x.title',
+    desc: 'Cut your viewing time in half. Calculate exact watch times at 2x playback speed.',
+    descKey: 'pages.speed2x.subtitle',
+  },
+];
+---
+
+<BaseLayout
+  title="YouTube Tools — YT Playlist Cal"
+  description="Free YouTube utility tools: playlist length calculator, watch time calculator, remaining time, playback speed calculator, and more. All free, no signup required."
+  pageKey="tools"
+>
+  <Header />
+  <main class="py-12 sm:py-16">
+    <div class="container content-width">
+
+      <nav aria-label="Breadcrumb" class="mb-8">
+        <ol class="flex items-center gap-1.5 text-xs" style="color: var(--color-text-muted);">
+          <li><a href="/" style="color: var(--color-text-muted); text-decoration: none;" data-i18n="nav.home">Home</a></li>
+          <li aria-hidden="true">›</li>
+          <li aria-current="page" style="color: var(--color-text);" data-i18n="pages.tools.breadcrumb">Tools</li>
+        </ol>
+      </nav>
+
+      <h1 class="text-3xl sm:text-4xl font-bold tracking-tight mb-3" style="color: var(--color-text); letter-spacing: -0.03em;" data-i18n="pages.tools.title">
+        YouTube Tools
+      </h1>
+      <p class="text-base mb-10" style="color: var(--color-text-muted);" data-i18n="pages.tools.subtitle">
+        Free, fast YouTube utility tools. No signup required.
+      </p>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        {tools.map(({ href, title, titleKey, desc, descKey, badge }) => (
+          <a
+            href={href}
+            class="block rounded-xl border p-5 transition-colors duration-150 group"
+            style="background-color: var(--color-surface); border-color: var(--color-border); text-decoration: none;"
+          >
+            <div class="flex items-start justify-between gap-2 mb-2">
+              <h2 class="text-sm font-semibold" style="color: var(--color-text);" data-i18n={titleKey}>{title}</h2>
+              {badge && (
+                <span
+                  class="text-xs font-medium px-2 py-0.5 rounded-full shrink-0"
+                  style="background-color: var(--color-accent-soft); color: var(--color-accent);"
+                >
+                  {badge}
+                </span>
+              )}
+            </div>
+            <p class="text-xs leading-relaxed" style="color: var(--color-text-muted);" data-i18n={descKey}>{desc}</p>
+          </a>
+        ))}
+      </div>
+
+    </div>
+  </main>
+  <Footer />
+</BaseLayout>
+
+<script>
+  document.querySelectorAll('a[href]').forEach((el) => {
+    (el as HTMLElement).addEventListener('mouseenter', function (this: HTMLElement) {
+      this.style.backgroundColor = 'var(--color-surface-2)';
+    });
+    (el as HTMLElement).addEventListener('mouseleave', function (this: HTMLElement) {
+      this.style.backgroundColor = 'var(--color-surface)';
+    });
+  });
+</script>

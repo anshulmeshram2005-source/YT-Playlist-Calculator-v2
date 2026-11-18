@@ -1,0 +1,903 @@
+{
+  "brand": {
+    "name": "YT Playlist Cal",
+    "tagline": "Gratis calculator voor de duur en kijktijd van YouTube-afspeellijsten.",
+    "notAffiliated": "Niet gelieerd aan YouTube of Google."
+  },
+  "nav": {
+    "home": "Home",
+    "tools": "Alle Tools",
+    "howItWorks": "Hoe het werkt",
+    "faq": "Veelgestelde vragen",
+    "about": "Over ons",
+    "contact": "Contact",
+    "tryCalculator": "Probeer de calculator",
+    "selectLanguage": "Taal selecteren",
+    "searchLanguage": "Zoek taal…",
+    "openMenu": "Navigatiemenu openen",
+    "closeMenu": "Navigatiemenu sluiten",
+    "toggleTheme": "Donkere modus in-/uitschakelen"
+  },
+  "hero": {
+    "badge": "Snelle & gratis YouTube-tool",
+    "title": "YouTube Afspeellijst Duur Calculator",
+    "subtitle": "Bereken de totale afspeelduur, kijktijd bij afspeelsnelheden van 1.25× tot 3× en plan direct je studieschema."
+  },
+  "calculator": {
+    "modeFull": "Hele afspeellijst",
+    "modeRange": "Videobereik",
+    "modeRemaining": "Resterende tijd",
+    "urlLabel": "YouTube afspeellijst of video URL / ID",
+    "urlPlaceholder": "Plak YouTube-afspeellijstlink, videolink of lijst-ID…",
+    "pasteBtn": "Plakken",
+    "demoBtn": "Bekijk voorbeeld",
+    "rangeStart": "Startvideo",
+    "rangeEnd": "Eindvideo",
+    "watchedThrough": "Al gekeken tot video nr.",
+    "speedLabel": "Afspeelsnelheid",
+    "customSpeedPlaceholder": "Aangepast",
+    "advancedOptions": "Geavanceerde opties",
+    "userApiKey": "Eigen YouTube API-sleutel (optioneel)",
+    "userApiKeyHint": "Voer je eigen YouTube API-sleutel in om gedeelde quotalimieten te vermijden.",
+    "calculateBtn": "Afspeellijstduur berekenen",
+    "calculatingBtn": "Berekenen…",
+    "loadingTitle": "Afspeellijst analyseren…",
+    "loadingStep1": "Verbinden met YouTube API…",
+    "loadingStep2": "Afspeellijstgegevens ophalen…",
+    "loadingStep3": "Videoduurnummers verwerken…",
+    "loadingStep4": "Bijna klaar…",
+    "statTotal": "Totale duur",
+    "statCount": "Aantal video’s",
+    "statAvg": "Gemiddeld per video",
+    "statSpeed": "Bij geselecteerde snelheid",
+    "statShortest": "Kortste video",
+    "statLongest": "Langste video",
+    "speedTitle": "Snelheidsvergelijking",
+    "speedColSpeed": "Snelheid",
+    "speedColDuration": "Kijktijd",
+    "speedColSaved": "Tijd bespaard",
+    "speedSelected": "geselecteerd",
+    "watchPlannerTitle": "Dagelijkse kijkplanner",
+    "watchPlannerDesc": "Vul in hoeveel minuten je per dag kunt kijken om de exacte einddatum te zien.",
+    "plannerMinutes": "Minuten per dag",
+    "plannerStartDate": "Startdatum",
+    "plannerSpeed": "Snelheid",
+    "plannerBtn": "Schema berekenen",
+    "plannerResultText": "Bij {speed}× snelheid en {minutes} min/dag ben je klaar in {days} dag{plural}.",
+    "plannerFinishDate": "Verwachte einddatum:",
+    "finishByTitle": "Deadline calculator",
+    "finishByDesc": "Moet je op een bepaalde datum klaar zijn? Bereken hoeveel je per dag moet kijken.",
+    "finishByDate": "Klaar vóór",
+    "finishBySpeed": "Snelheid",
+    "finishByBtn": "Dagelijkse tijd berekenen",
+    "finishByResultText": "Om vóór {date} klaar te zijn op {speed}× moet je dagelijks {daily} kijken gedurende de komende {days} dag{plural}.",
+    "finishByUnfeasible": "Deze deadline vereist meer dan 23 uur per dag en is niet haalbaar. Kies een latere datum of hogere snelheid.",
+    "videoListTitle": "Videolijst",
+    "showVideos": "Video’s tonen",
+    "hideVideos": "Video’s verbergen",
+    "searchVideosPlaceholder": "Zoek op videotitel…",
+    "pageIndicator": "Pagina {current} van {total}",
+    "prevPage": "Vorige",
+    "nextPage": "Volgende",
+    "privateVideo": "Privé",
+    "liveVideo": "Live video",
+    "unavailableVideo": "Niet beschikbaar",
+    "exportTitle": "Delen & exporteren",
+    "copyLink": "Link kopiëren",
+    "copySummary": "Samenvatting kopiëren",
+    "exportCsv": "Exporteren naar CSV",
+    "exportTxt": "Exporteren naar TXT",
+    "copied": "Gekopieerd!",
+    "errors": {
+      "missingUrl": "Voer een YouTube-URL in.",
+      "invalidUrl": "Geen geldige YouTube-afspeellijst of videolink gevonden.",
+      "urlTooLong": "De ingevoerde URL is te lang.",
+      "invalidRange": "De startvideo moet kleiner of gelijk zijn aan de eindvideo.",
+      "quotaExceeded": "Het dagelijkse YouTube API-quotalimiet is bereikt. Probeer het morgen opnieuw of voer een eigen sleutel in.",
+      "rateLimited": "Te veel verzoeken tegelijk. Wacht even en probeer het opnieuw.",
+      "notFound": "Afspeellijst of video niet gevonden. Controleer of de link klopt en openbaar is.",
+      "forbidden": "Toegang geweigerd door de YouTube API.",
+      "internalError": "Er is een serverfout opgetreden bij de berekening. Probeer het opnieuw.",
+      "networkError": "Netwerkfout: kan geen verbinding maken met de calculatorserver."
+    },
+    "modeLabel": "Berekeningsmodus",
+    "videosUnavailable": "{count} video('s) niet beschikbaar (privé, verwijderd of regiogebonden)",
+    "byChannel": "door {channel}",
+    "tryDemoBtn": "Probeer een voorbeeld afspeellijst →"
+  },
+  "features": {
+    "title": "Alles wat je nodig hebt om je YouTube-afspeellijsten te plannen",
+    "subtitle": "Van uiterst nauwkeurige tijdsberekening tot versneld afspelen en dagelijkse planning.",
+    "items": [
+      {
+        "icon": "clock",
+        "title": "Exacte totale duur",
+        "desc": "Krijg direct de exacte tijdsduur van elke openbare YouTube-afspeellijst in uren, minuten en seconden."
+      },
+      {
+        "icon": "zap",
+        "title": "Snelheidstabel",
+        "desc": "Bekijk direct hoeveel tijd je bespaart bij snelheden van 0.5× tot 3×."
+      },
+      {
+        "icon": "crosshair",
+        "title": "Aangepast videobereik",
+        "desc": "Bereken de precieze afspeeltijd van een specifiek gedeelte van de afspeellijst."
+      },
+      {
+        "icon": "play",
+        "title": "Resterende tijd",
+        "desc": "Geef aan bij welke video je bent gebleven en zie hoeveel tijd er nog rest."
+      },
+      {
+        "icon": "calendar-days",
+        "title": "Dagelijkse planner",
+        "desc": "Vul je dagelijkse kijktijd in en ontdek op welke datum je de serie of cursus afrondt."
+      },
+      {
+        "icon": "flag",
+        "title": "Deadline-doel",
+        "desc": "Stel een einddatum in en ontdek hoeveel minuten je per dag moet kijken."
+      }
+    ]
+  },
+  "howItWorks": {
+    "badge": "Hoe het werkt",
+    "title": "In 3 stappen de lengte van een YouTube-afspeellijst berekenen",
+    "subtitle": "Directe berekeningen zonder software-installatie of account.",
+    "steps": [
+      {
+        "number": "1",
+        "title": "Kopieer de afspeellijstlink",
+        "desc": "Kopieer op YouTube de link van de afspeellijst uit de adresbalk of via de knop Delen."
+      },
+      {
+        "number": "2",
+        "title": "Plak in de calculator",
+        "desc": "Plak de URL in het invoerveld en kies optioneel een videobereik of gewenste afspeelsnelheid."
+      },
+      {
+        "number": "3",
+        "title": "Bekijk tijden & schema",
+        "desc": "Bekijk direct de totale duur, de snelheidstabel en de berekende afrondingsdatum."
+      }
+    ],
+    "supportedBadge": "Ondersteunde formaten",
+    "supportedTitle": "Welke YouTube-links worden ondersteund?",
+    "supportedDesc": "Onze analyse-tool ondersteunt standaard afspeellijst-links, video's met een afspeellijst-parameter, korte links (youtu.be) en directe afspeellijst-ID's nauwkeurig.",
+    "links": [
+      {
+        "label": "Standaard afspeellijstlink",
+        "example": "youtube.com/playlist?list=PL..."
+      },
+      {
+        "label": "Videolink met afspeellijst",
+        "example": "youtube.com/watch?v=...&list=PL..."
+      },
+      {
+        "label": "Korte youtu.be-link",
+        "example": "youtu.be/...&list=PL..."
+      },
+      {
+        "label": "Direct lijst-ID",
+        "example": "PLrAXtmErZgOdP_OalsLiL..."
+      }
+    ]
+  },
+  "faq": {
+    "badge": "Veelgestelde vragen",
+    "title": "Veelgestelde vragen over de afspeellijstcalculator",
+    "subtitle": "Alles wat je moet weten over berekening van kijktijd, snelheden en YouTube-limieten.",
+    "items": [
+      {
+        "q": "Hoe bereken ik de totale lengte van een YouTube-afspeellijst?",
+        "a": "Kopieer de afspeellijstlink op YouTube, plak deze in het veld op onze site en klik op \"Afspeellijstduur berekenen\". Je ziet het resultaat in twee seconden."
+      },
+      {
+        "q": "Kan ik de duur bij versneld afspelen (1.25×, 1.5×, 2×) berekenen?",
+        "a": "Jazeker! Onze snelheidstabel berekent automatisch alle snelheden van 0.5× tot 3× en toont exact hoeveel tijd je bespaart."
+      },
+      {
+        "q": "Werkt dit ook voor verborgen of privé afspeellijsten?",
+        "a": "Het werkt voor verborgen lijsten (Unlisted) zolang je de link hebt. Privélijsten zijn niet toegankelijk via de officiële YouTube API."
+      },
+      {
+        "q": "Wat is het maximale aantal video’s dat kan worden berekend?",
+        "a": "We ondersteunen afspeellijsten met honderden video’s dankzij automatische paginering via de officiële YouTube Data API v3."
+      },
+      {
+        "q": "Wat gebeurt er met verwijderde of geblokkeerde video’s?",
+        "a": "Verwijderde en niet-beschikbare video’s worden herkend en apart aangeduid, zodat de totale tijdsindicatie accuraat blijft."
+      },
+      {
+        "q": "Kan ik ook een gedeelte van een afspeellijst berekenen?",
+        "a": "Ja, kies het tabblad \"Videobereik\" en vul het begin- en eindvideonummer in."
+      },
+      {
+        "q": "Hoe berekent de dagelijkse planner de afrondingsdatum?",
+        "a": "Door de totale duur (bij de gekozen snelheid) te delen door het aantal minuten dat je dagelijks kijkt."
+      },
+      {
+        "q": "Is deze tool gratis en veilig?",
+        "a": "100% gratis, vereist geen registratie en slaat geen persoonlijke gegevens op."
+      },
+      {
+        "q": "Waarom toont YouTube zelf de totale duur niet?",
+        "a": "YouTube toont alleen het aantal video’s. Onze tool telt de individuele lengtes via de API bij elkaar op."
+      },
+      {
+        "q": "Kan ik de gegevens van de afspeellijst exporteren?",
+        "a": "Ja, je kunt een tekstoverzicht kopiëren of het complete overzicht als CSV-bestand downloaden voor Excel en Google Spreadsheets."
+      }
+    ]
+  },
+  "footer": {
+    "desc": "Gratis rekenhulpmiddel voor de totale duur en kijktijd van YouTube-afspeellijsten. Analyseer elke playlist om de totale speelduur, kijktijd op verschillende afspeelsnelheden en gedetailleerde videostatistieken direct te berekenen.",
+    "notAffiliated": "Niet gelieerd aan YouTube of Google LLC.",
+    "colTools": "Reken-tools",
+    "colResources": "Informatiebronnen",
+    "colCompany": "Bedrijf",
+    "colLegal": "Juridisch",
+    "allRightsReserved": "Alle rechten voorbehouden.",
+    "trademarkNotice": "YouTube is een geregistreerd handelsmerk van Google LLC. Deze tool is een onafhankelijk hulpmiddel en is niet verbonden met YouTube of Google.",
+    "links": {
+      "playlistCalculator": "YouTube Playlist Calculator",
+      "durationCalculator": "Playlist Duur Calculator",
+      "watchTimeCalculator": "Kijktijd Calculator",
+      "remainingTime": "Resterende Tijd Calculator",
+      "watchTime15x": "1.5x Snelheid Calculator",
+      "watchTime2x": "2x Snelheid Calculator",
+      "howItWorks": "Hoe het werkt",
+      "faq": "Veelgestelde vragen",
+      "allTools": "Alle tools",
+      "about": "Over ons",
+      "contact": "Contact opnemen",
+      "privacy": "Privacybeleid",
+      "terms": "Algemene voorwaarden",
+      "disclaimer": "Disclaimer"
+    },
+    "brandDesc": "De snelste en nauwkeurigste manier om de duur van YouTube-afspeellijsten te berekenen en je studieschema te plannen.",
+    "toolsTitle": "Tools",
+    "resourcesTitle": "Bronnen",
+    "legalTitle": "Juridisch",
+    "copyright": "© {year} YT Playlist Cal (Chrono Play). Alle rechten voorbehouden."
+  },
+  "pages": {
+    "about": {
+      "breadcrumb": "Over ons",
+      "title": "Over YT Playlist Cal",
+      "subtitle": "Ontwikkeld voor studenten, cursisten en iedereen die efficiënt met tijd omgaat.",
+      "whatWeDoTitle": "Wat we doen",
+      "whatWeDoP1": "YT Playlist Cal is een gratis en onafhankelijke webtool ontwikkeld om studenten, docenten, ontwikkelaars en seriekijkers te helpen de totale duur en kijktijd van elke openbare YouTube-afspeellijst direct te berekenen.",
+      "whatWeDoP2": "Of je nu een intensieve studiesessie plant, een videocursus organiseert of tijd wilt besparen met afspeelsnelheden van 1.25x, 1.5x, 1.75x of 2.0x, ons platform biedt binnen enkele seconden betrouwbare en nauwkeurige statistieken.",
+      "principlesTitle": "Onze kernprincipes",
+      "p1": "YT Playlist Cal is ontworpen om een eenvoudig probleem op te lossen: YouTube toont het aantal video’s, maar niet de totale tijd of hoeveel dagen een cursus in beslag neemt.",
+      "p2": "Onze missie is om razendsnelle berekeningen te leveren, zonder storende advertenties en met respect voor jouw privacy.",
+      "p3": "Snel en accuraat. Server-side API-verzoeken, nul tracking, geen opslag van persoonsgegevens. Gemaakt voor optimaal gebruiksgemak.",
+      "trademarkTitle": "Onafhankelijkheid & Handelsmerken",
+      "trademarkP": "YT Playlist Cal is een onafhankelijke webtoepassing. YouTube en het YouTube-logo zijn geregistreerde handelsmerken van Google LLC. Deze tool is niet goedgekeurd door of verbonden met Google LLC.",
+      "principlesAccuracy": "Wiskundige precisie: directe communicatie met de YouTube Data API v3 om de duur tot op de seconde nauwkeurig te sommeren.",
+      "principlesSpeed": "Snelheid en betrouwbaarheid: directe resultaten dankzij slimme caching zonder wachttijden.",
+      "principlesPrivacy": "Privacy voorop: geen tracking-cookies, geen verplichte registratie en geen opslag van ingevoerde links."
+    },
+    "contact": {
+      "breadcrumb": "Contact",
+      "title": "Neem contact met ons op",
+      "subtitle": "Heb je vragen, suggesties of een fout gevonden? Laat het ons gerust weten.",
+      "formType": "Soort bericht",
+      "formTypeBug": "Probleem melden",
+      "formTypeFeature": "Nieuwe functie voorstellen",
+      "formTypeQuestion": "Algemene vraag",
+      "formTypeOther": "Overig",
+      "formEmail": "Je e-mailadres",
+      "formEmailPlaceholder": "jouw.email@example.com",
+      "formMessage": "Je bericht",
+      "formMessagePlaceholder": "Beschrijf je vraag of opmerking zo duidelijk mogelijk...",
+      "formSubmit": "Bericht verzenden",
+      "formSuccess": "Bericht succesvol verzonden! We reageren binnen 24-48 werkuren.",
+      "faqNoteTitle": "Voordat je een bericht stuurt",
+      "faqNoteP": "Heb je een vraag over de berekeningen of API-quota? Raadpleeg dan onze Veelgestelde vragen.",
+      "faqLink": "Bekijk eerst onze Veelgestelde vragen.",
+      "emailLabel": "Direct e-mailadres",
+      "emailValue": "support@ytplaylistcal.com",
+      "formTypeFeedback": "Feedback of suggestie",
+      "formTypeBusiness": "Zakelijke vraag of samenwerking",
+      "infoTitle": "Contactgegevens",
+      "hoursLabel": "Reactietijd",
+      "hoursValue": "We reageren gewoonlijk binnen 24–48 werkuren.",
+      "faqNotice": "Heb je een korte vraag over hoe de calculator werkt?"
+    },
+    "tools": {
+      "breadcrumb": "Alle tools",
+      "title": "Alle YouTube Afspeellijst Reken-tools",
+      "subtitle": "Handige en gratis tools om je tijd op YouTube optimaal in te delen."
+    },
+    "duration": {
+      "breadcrumb": "Duur Calculator",
+      "title": "YouTube Afspeellijst Duur Calculator",
+      "subtitle": "Ontdek de exacte lengte van elke openbare YouTube-afspeellijst.",
+      "whyTitle": "Waarom een Duur Calculator gebruiken?",
+      "whyP": "YouTube toont geen geaggregeerde totale duur. Onze tool haalt elk afzonderlijk video-item op en telt alle seconden razendsnel bij elkaar op.",
+      "supportedTitle": "Ondersteunde linkformaten",
+      "beyondTitle": "Meer dan alleen speelduur: uitgebreide statistieken",
+      "ctaBtn": "Bereken afspeellijstduur",
+      "badge": "Duur Calculator",
+      "aboutTitle": "Over de Duur Calculator",
+      "aboutP1": "De YouTube Afspeellijst Duur Calculator berekent met wiskundige nauwkeurigheid de totale lengte van elke openbare video in een afspeellijst.",
+      "aboutP2": "YouTube toont zelf niet de gecombineerde duur van afspeellijsten, waardoor het lastig is in te schatten hoeveel tijd een cursus of tutorialreeks in beslag neemt.",
+      "featuresTitle": "Belangrijkste functies"
+    },
+    "watchTime": {
+      "breadcrumb": "Kijktijd Calculator",
+      "title": "YouTube Kijktijd Calculator",
+      "subtitle": "Bereken hoeveel tijd het kost om een afspeellijst daadwerkelijk uit te kijken.",
+      "ctaBtn": "Bereken kijktijd",
+      "badge": "Kijktijd",
+      "aboutTitle": "Over Kijktijd"
+    },
+    "remainingTime": {
+      "breadcrumb": "Resterende Tijd Calculator",
+      "title": "Afspeellijst Resterende Tijd Calculator",
+      "subtitle": "Bereken hoeveel uur je nog moet kijken vanaf de video waar je bent gebleven.",
+      "ctaBtn": "Bereken resterende tijd",
+      "badge": "Resterende Tijd",
+      "aboutTitle": "Over Resterende Tijd"
+    },
+    "speed15x": {
+      "breadcrumb": "1.5x Snelheid Calculator",
+      "title": "Afspeellijst op 1.5× Snelheid Berekenen",
+      "subtitle": "Ontdek hoeveel tijd je bespaart als je kijkt op 1.5× snelheid.",
+      "ctaBtn": "Bereken op 1.5x snelheid",
+      "badge": "1.5× Snelheid",
+      "aboutTitle": "Over afspelen op 1.5x snelheid"
+    },
+    "speed2x": {
+      "breadcrumb": "2x Snelheid Calculator",
+      "title": "Afspeellijst op 2× Snelheid Berekenen",
+      "subtitle": "Halveer je studietijd met de berekening op dubbele snelheid.",
+      "ctaBtn": "Bereken op 2x snelheid",
+      "badge": "2× Snelheid",
+      "aboutTitle": "Over afspelen op 2x snelheid"
+    },
+    "terms": {
+      "breadcrumb": "Algemene voorwaarden",
+      "title": "Algemene Voorwaarden",
+      "lastUpdated": "Laatst bijgewerkt: 31 oktober 2026",
+      "summary": "Samenvatting: Door YT Playlist Cal te gebruiken ga je akkoord met deze voorwaarden, ons Privacybeleid en onze Disclaimer.",
+      "subtitle": "Voorwaarden voor het gebruik van YT Playlist Cal.",
+      "intro": "Door gebruik te maken van YT Playlist Cal ga je akkoord met de onderstaande voorwaarden."
+    },
+    "privacy": {
+      "breadcrumb": "Privacybeleid",
+      "title": "Privacybeleid",
+      "lastUpdated": "Laatst bijgewerkt: 31 oktober 2026",
+      "summary": "Wij respecteren je privacy. We slaan je links niet op, volgen je identiteit niet en verkopen geen gegevens aan derden.",
+      "subtitle": "Hoe wij met jouw gegevens en privacy omgaan.",
+      "intro": "Wij respecteren jouw privacy. We verzamelen geen persoonsgegevens en slaan je zoekopdrachten niet op."
+    },
+    "disclaimer": {
+      "breadcrumb": "Disclaimer",
+      "title": "Disclaimer",
+      "lastUpdated": "Laatst bijgewerkt: 31 oktober 2026",
+      "summary": "Samenvatting: YT Playlist Cal is een onafhankelijke gratis tool. Wij zijn niet verbonden aan YouTube of Google LLC.",
+      "subtitle": "Juridische mededeling en handelsmerken.",
+      "intro": "YT Playlist Cal is een onafhankelijke tool en is niet verbonden met YouTube of Google LLC."
+    },
+    "error404": {
+      "code": "404",
+      "title": "Pagina niet gevonden",
+      "desc": "De pagina die je zoekt bestaat niet of is verplaatst.",
+      "btn": "Terug naar startpagina",
+      "allTools": "Alle tools",
+      "subtitle": "De opgevraagde pagina bestaat niet of is verplaatst.",
+      "backHome": "Terug naar startpagina",
+      "exploreTools": "Bekijk alle tools"
+    },
+    "error500": {
+      "code": "500",
+      "title": "Serverfout",
+      "desc": "Er is een onverwachte fout opgetreden bij het verwerken van je aanvraag.",
+      "btn": "Opnieuw proberen",
+      "reportBtn": "Probleem melden",
+      "allTools": "Alle tools",
+      "subtitle": "Er is een tijdelijke fout opgetreden op onze server. Probeer het over een moment opnieuw.",
+      "backHome": "Terug naar startpagina",
+      "retry": "Opnieuw proberen",
+      "tryAgain": "Probeer het over een ogenblik nogmaals"
+    },
+    "common": {
+      "related": "Gerelateerde tools",
+      "relatedTools": "Gerelateerde tools",
+      "playlistLengthCalc": "Playlist Lengte Calculator",
+      "fullPlaylistCalc": "Volledige Playlist Calculator",
+      "watchTimeAt15x": "Kijktijd op 1.5x",
+      "watchTimeAt2x": "Kijktijd op 2x",
+      "watchTimeCalc": "Kijktijd Calculator",
+      "remainingTimeCalc": "Resterende Tijd Calculator",
+      "playlistDurationCalc": "Playlist Duur Calculator",
+      "howItWorks": "Hoe het werkt",
+      "faq": "Veelgestelde vragen",
+      "tryCalc": "Probeer de calculator",
+      "calculatorBadge": "Gratis Online Reken-tool",
+      "relatedToolsDesc": "Ontdek andere gratis calculators om je YouTube-kijktijd optimaal te plannen.",
+      "faqDesc": "Duidelijke antwoorden op de meest gestelde vragen over het berekenen van YouTube-afspeellijsten.",
+      "stillHaveQuestions": "Heb je nog steeds vragen?",
+      "stillHaveQuestionsDesc": "Ons ondersteuningsteam staat voor je klaar bij eventuele problemen of vragen.",
+      "contactUs": "Neem contact op",
+      "needMoreHelp": "Meer hulp nodig?",
+      "needMoreHelpDesc": "Stuur ons een bericht voor persoonlijke ondersteuning.",
+      "backToHome": "Terug naar home",
+      "tryAnotherPlaylist": "Bereken een andere afspeellijst"
+    },
+    "howItWorksDetail": {
+      "breadcrumb": "Hoe het werkt",
+      "title": "Hoe de YouTube Afspeellijst Calculator werkt",
+      "subtitle": "Een heldere en gedetailleerde uitleg over hoe we URL's parseren, de YouTube API aanroepen en de exacte speelduur berekenen.",
+      "stepsHeading": "Het stapsgewijze berekeningsproces",
+      "s1Title": "1. URL-analyse en validatie",
+      "s1Detail": "Wanneer je een afspeellijstlink plakt, extraheert ons systeem de unieke afspeellijstcode (meestal beginnend met PL, UU, FL of RD).",
+      "s2Title": "2. Beveiligde aanroep naar YouTube Data API v3",
+      "s2Detail": "We sturen beveiligde aanvragen naar de officiële YouTube API om alle openbare video's in de afspeellijst op te halen.",
+      "s3Title": "3. Automatische paginering voor grote lijsten",
+      "s3Detail": "De YouTube API levert maximaal 50 items per pagina. Voor langere lijsten navigeert ons systeem automatisch door de paginatokens.",
+      "s4Title": "4. Duurgegevens uitlezen in ISO 8601",
+      "s4Detail": "YouTube slaat videolengtes op in het ISO 8601-formaat (bijvoorbeeld PT1H23M45S). Onze parser zet dit direct om in exacte seconden.",
+      "s5Title": "5. Wiskundige optelling en tijdweergave",
+      "s5Detail": "We tellen alle seconden bij elkaar op en zetten het totaal om in een duidelijke weergave van uren, minuten en seconden.",
+      "s6Title": "6. Berekening op verhoogde afspeelsnelheden",
+      "s6Detail": "We tonen hoe lang de afspeellijst duurt op 1.25x, 1.5x, 1.75x en 2.0x, inclusief de exacte tijdsbesparing.",
+      "s7Title": "7. Geavanceerde playlist-statistieken",
+      "s7Detail": "We berekenen de gemiddelde videoduur en detecteren direct de kortste en langste video in de afspeellijst.",
+      "speedHeading": "De wiskunde achter tijdsbesparing",
+      "speedIntro": "De effectieve kijktijd bij een hogere afspeelsnelheid wordt berekend door de totale duur te delen door de snelheidsfactor.",
+      "speedFormula": "Werkelijke Tijd = Totale Duur ÷ Afspeelsnelheid",
+      "speedExample": "Een afspeellijst van 10 uur duurt op 1.5x snelheid bijvoorbeeld slechts 6 uur en 40 minuten, wat 3 uur en 20 minuten bespaart.",
+      "missingHeading": "Hoe we omgaan met niet-beschikbare video's",
+      "missingIntro": "Niet elke video in een afspeellijst levert geldige duurgegevens op via de API:",
+      "missing1": "Privé- of verwijderde video's: leveren geen duurgegevens en worden geteld als 0 seconden.",
+      "missing2": "Regio- of leeftijdsgebonden video's: kunnen afgeschermd zijn voor openbare API-toegang.",
+      "missing3": "Actieve livestreams en premières: hebben geen vaste speelduur totdat de uitzending is verwerkt.",
+      "missing4": "API-quotumlimieten: als het dagelijkse openbare quotum op is, kun je optioneel een eigen gratis API-sleutel invoeren.",
+      "missing5": "Tijdelijke netwerkstoringen: worden opgevangen met automatische herpogingen.",
+      "missingOutro": "Het aantal niet-beschikbare video's wordt altijd duidelijk vermeld in het resultatenoverzicht.",
+      "cachingHeading": "Geavanceerde slimme caching",
+      "cachingDetail": "Om overbelasting van de YouTube-servers te voorkomen en supersnelle laadtijden te bieden, cachen we afspeellijstgegevens tijdelijk in het geheugen.",
+      "tryCalc": "Test de calculator nu met een eigen afspeellijst"
+    },
+    "faqDetailed": {
+      "breadcrumb": "Veelgestelde vragen",
+      "title": "Veelgestelde vragen",
+      "subtitle": "Alles wat je moet weten over het berekenen van YouTube-afspeellijsten, snelheidsinstellingen en technische vragen.",
+      "catBasics": "Basisbeginselen van de calculator",
+      "catSpeed": "Afspeelsnelheden",
+      "catModes": "Rekenmodi",
+      "catMissing": "Niet-beschikbare video's en limieten",
+      "catPlanner": "Studieplanning",
+      "catPrivacy": "Privacy en beveiliging",
+      "catAbout": "Over de tool",
+      "notFoundPrompt": "Geen antwoord gevonden op je vraag?",
+      "contactUs": "Neem contact op met ons team",
+      "or": "of",
+      "tryCalc": "Bereken nu een afspeellijst",
+      "q1": "Hoe berekent deze tool de totale duur?",
+      "a1": "Onze calculator maakt verbinding met de officiële YouTube Data API v3 om de exacte duur van elke afzonderlijke video op te halen en tot op de seconde nauwkeurig op te tellen.",
+      "q2": "Is deze service volledig gratis?",
+      "a2": "Ja, YT Playlist Cal is 100% gratis, zonder abonnementen, verborgen kosten of accountverplichting.",
+      "q3": "Hoeveel video's kan een afspeellijst maximaal bevatten?",
+      "a3": "Je kunt lijsten met honderden video's berekenen. Onze tool navigeert automatisch door alle pagina's van de YouTube API.",
+      "q4": "Waarom kan de totale duur afwijken van wat YouTube toont?",
+      "a4": "YouTube rondt vaak af en telt privévideo's, verwijderde clips of actieve livestreams soms anders mee.",
+      "q5": "Werkt de tool goed op mobiele apparaten?",
+      "a5": "Jazeker. Het ontwerp is volledig geoptimaliseerd voor smartphones, tablets en computers van elk formaat.",
+      "q6": "Moet ik inloggen met mijn Google-account?",
+      "a6": "Nee, inloggen is niet nodig. Plak simpelweg de openbare link van de afspeellijst.",
+      "q7": "Hoe wordt tijdsbesparing op 1.25x, 1.5x of 2x berekend?",
+      "a7": "We delen het totale aantal seconden door de gekozen snelheidsfactor en trekken dat af van de originele tijd om de tijdwinst te tonen.",
+      "q8": "Wat doet de functie Resterende Tijd?",
+      "a8": "Hiermee kun je aangeven bij welke video je gebleven bent, zodat reeds bekeken video's niet worden meegerekend.",
+      "q9": "Kan ik een specifiek bereik van een afspeellijst berekenen?",
+      "a9": "Ja, via Geavanceerde Opties kun je een begin- en eindvideo instellen om alleen dat deel te berekenen.",
+      "q10": "Wat kan ik doen bij een API-quotumfout?",
+      "a10": "Op piekmomenten kan het gedeelde openbare quotum vol raken. Je kunt in de geavanceerde instellingen gratis je eigen YouTube Data API-sleutel opgeven.",
+      "q11": "Hoe worden verwijderde of privévideo's verwerkt?",
+      "a11": "Deze video's geven geen speelduur door en worden geteld als 0 seconden, met een duidelijke melding in het resultaat.",
+      "q12": "Worden mijn gezochte afspeellijsten opgeslagen?",
+      "a12": "Nee. We registreren geen zoekgeschiedenis en koppelen zoekopdrachten nooit aan jouw identiteit.",
+      "q13": "Waarom toont de calculator minder video's dan op YouTube?",
+      "a13": "YouTube telt verwijderde en niet-beschikbare video's vaak mee in het totaalaantal, maar de API kan deze niet uitlezen.",
+      "q14": "Wat gebeurt er met livestreams in een afspeellijst?",
+      "a14": "Livestreams hebben geen vaste duur en worden daarom uitgesloten van de totale speelduur.",
+      "q15": "Kunnen automatisch gegenereerde lijsten (zoals Mix) berekend worden?",
+      "a15": "Ja, zolang de link een geldige openbare playlist-ID bevat (zoals voorvoegsel PL of RD).",
+      "q16": "Wat is de besparingsformule voor 1.25x snelheid?",
+      "a16": "Originele Duur - (Originele Duur / 1.25). Je bespaart precies 20% van je tijd.",
+      "q17": "Wat is de formule voor 1.75x snelheid?",
+      "a17": "Originele Duur - (Originele Duur / 1.75), wat neerkomt op 42.8% tijdsbesparing.",
+      "q18": "Hoe bereken ik alleen aflevering 10 tot en met 30?",
+      "a18": "Kies in Geavanceerde Opties voor 'Startvideo: 10' en 'Eindvideo: 30'.",
+      "q19": "Hoe werkt de studieplanner?",
+      "a19": "De planner deelt de totale duur door het aantal beschikbare dagen of minuten per dag om een realistisch schema te maken.",
+      "q20": "Worden mijn gegevens verkocht of doorgegeven?",
+      "a20": "Beslist niet. We delen, bewaren of verkopen nooit gebruikersgegevens.",
+      "q21": "Waarom wordt gevraagd om een eigen API-sleutel?",
+      "a21": "Met een eigen gratis sleutel kun je altijd direct rekenen, zelfs als het openbare dagelijkse quotum tijdelijk is uitgeput.",
+      "q22": "Hoe kom ik aan een gratis YouTube Data API v3 sleutel?",
+      "a22": "Ga naar Google Cloud Console, maak een gratis project aan, activeer de YouTube Data API v3 en genereer een sleutel binnen 2 minuten.",
+      "q23": "Slaat jullie tool mijn persoonlijke API-sleutel op?",
+      "a23": "Nee. Je sleutel wordt alleen vluchtig in het geheugen gebruikt voor je directe berekening en nooit opgeslagen in een database.",
+      "q24": "Kan ik de berekeningsresultaten delen?",
+      "a24": "Ja, met één klik kopieer je de samenvatting om te delen met studiegenoten of collega's.",
+      "generalTitle": "Algemene vragen",
+      "speedTitle": "Afspeelsnelheid en planning",
+      "techTitle": "Technische vragen en probleemoplossing"
+    },
+    "durationDetail": {
+      "beyondP": "YT Playlist Cal biedt veel meer dan een simpele optelsom:",
+      "b1": "Exacte totale tijd in uren, minuten en seconden",
+      "b2": "Gemiddelde duur berekend over alle beschikbare video's",
+      "b3": "Directe weergave van de kortste en langste video",
+      "b4": "Kijktijden op 1.25x, 1.5x, 1.75x en 2.0x met bespaarde uren",
+      "b5": "Transparante weergave van niet-beschikbare of privévideo's",
+      "b6": "Ondersteuning voor aangepaste bereiken van afleveringen",
+      "b7": "Handige dagelijkse planner voor studiemarathons"
+    },
+    "watchTimeDetail": {
+      "whatTitle": "Wat is YouTube Kijktijd?",
+      "whatP": "Kijktijd is de werkelijke hoeveelheid tijd die je nodig hebt om een afspeellijst te bekijken op de gekozen afspeelsnelheid.",
+      "featuresTitle": "Functies om je tijd optimaal te benutten",
+      "f1": "Vergelijking van 4 afspeelsnelheden naast elkaar",
+      "f2": "Exacte berekening van bespaarde uren per snelheid",
+      "f3": "Studieplanning opgedeeld in dagen of weken",
+      "f4": "Verwachte afrondingsdatum op basis van jouw dagelijkse tempo",
+      "f5": "Mogelijkheid om reeds bekeken video's over te slaan",
+      "f6": "Geen registratie of persoonsgegevens nodig"
+    },
+    "speed15xDetail": {
+      "ctaPrompt": "Wil je weten hoeveel tijd je bespaart op 1.5x?",
+      "ctaBtn": "Open 1.5× Speed Calculator",
+      "ctaHint": "Plak je afspeellijst-URL om direct de besparing op 1.5x snelheid te zien.",
+      "savingsTitle": "Hoeveel tijd bespaar je op 1.5x snelheid?",
+      "savingsP": "Op 1.5x snelheid duurt elk uur aan videomateriaal slechts 40 minuten, wat een tijdsbesparing van 33.3% oplevert.",
+      "colOriginal": "Origineel (1.0x)",
+      "colAtSpeed": "Op 1.5x snelheid",
+      "colSaved": "Tijdsbesparing",
+      "formula": "Formule: Tijd = Totale Duur ÷ 1.5",
+      "whoTitle": "Voor wie is 1.5x snelheid ideaal?",
+      "whoP": "De 1.5x afspeelsnelheid is de populairste keuze om snel te leren zonder verlies van concentratie:",
+      "w1": "Studenten die opgenomen colleges en hoorcolleges doornemen",
+      "w2": "Ontwikkelaars die programmeertutorials en tech talks bekijken",
+      "w3": "Luisteraars van langdurige podcasts en interviews",
+      "w4": "Professionals die online certificeringen volgen",
+      "whoOutro": "Bereken vandaag nog je playlist op 1.5x met onze gratis tool."
+    },
+    "speed2xDetail": {
+      "ctaPrompt": "Wil je je kijktijd halveren met 2x snelheid?",
+      "ctaBtn": "Open 2× Speed Calculator",
+      "savingsTitle": "Hoeveel tijd bespaar je op 2x snelheid?",
+      "savingsP": "Op 2x snelheid wordt de kijktijd precies gehalveerd. Een afspeellijst van 10 uur kijk je in slechts 5 uur uit.",
+      "colOriginal": "Origineel (1.0x)",
+      "colAtSpeed": "Op 2x snelheid",
+      "colSaved": "Tijdsbesparing",
+      "whoTitle": "Wanneer is 2x snelheid aan te raden?",
+      "whoP": "Dubbele snelheid biedt maximale tijdwinst in geschikte situaties:",
+      "w1": "Snelle herhaling van bekende stof voor een examen",
+      "w2": "Presentaties en lezingen met een traag spreektempo",
+      "w3": "Video's met veel stiltes en lange pauzes",
+      "w4": "Het scannen van lange videoreeksen naar specifieke onderdelen",
+      "whoOutro": "Bereken direct de exacte duur van je afspeellijst op 2x snelheid."
+    },
+    "remainingTimeDetail": {
+      "ctaPrompt": "Wil je alleen de tijd van de resterende video's berekenen?",
+      "ctaBtn": "Open Remaining Time Calculator",
+      "ctaHint": "Plak de URL en kies de video vanaf waar je wilt doorgaan.",
+      "howTitle": "Bereken resterende tijd in 5 eenvoudige stappen",
+      "s1": "Plak de YouTube-afspeellijstlink in het invoerveld.",
+      "s2": "Open het paneel Geavanceerde Opties.",
+      "s3": "Vul bij 'Startvideo' het nummer in van de volgende video die je gaat kijken.",
+      "s4": "Klik op Berekenen.",
+      "s5": "Bekijk de resterende tijd op normale en versnelde kijksnelheden.",
+      "whyTitle": "Waarom resterende tijd berekenen?",
+      "whyP": "Weten hoeveel tijd er nog rest helpt je planning realistisch en motiverend te houden:",
+      "w1": "Houd je studievoortgang van dag tot dag bij",
+      "w2": "Stel haalbare doelen voor elke avond",
+      "w3": "Benut vrije uren zonder cursussen halverwege te verlaten",
+      "w4": "Stem je kijksnelheid af op naderende deadlines",
+      "whyOutro": "Gebruik de Resterende Tijd-modus telkens wanneer je een cursus hervat."
+    },
+    "privacyDetail": {
+      "intro": "YT Playlist Cal (\"wij\", \"onze\", \"de tool\") is een onafhankelijke webtoepassing die de lengte en kijktijden van YouTube-afspeellijsten berekent. Dit Privacybeleid legt uit welke informatie we verwerken wanneer je de tool gebruikt, hoe deze wordt gebruikt en hoe we je privacy waarborgen.",
+      "s1Title": "1. Informatie die we verwerken",
+      "s1P1Title": "YouTube URL's",
+      "s1P1Text": "Wanneer je een YouTube-link invoert, wordt deze naar onze server gestuurd om geverifieerde verzoeken te doen aan de officiële YouTube Data API v3. We slaan de ingevoerde links niet permanent op buiten het tijdelijke geheugencache dat nodig is om je aanvraag te verwerken.",
+      "s1P2Title": "YouTube API-sleutels (Optioneel)",
+      "s1P2Text": "Als je een eigen YouTube API-sleutel invoert via de geavanceerde instellingen, wordt deze via een versleutelde HTTPS-verbinding verzonden en uitsluitend gebruikt om jouw berekening uit te voeren onder je eigen Google Cloud-quotum. We slaan je API-sleutel nooit op in een database.",
+      "s1P3Title": "Gebruiksstatistieken",
+      "s1P3Text": "We kunnen privacyvriendelijke analyses gebruiken om algemene trends zoals paginaweergaven en technische fouten te begrijpen. We gebruiken geen invasieve tracking-cookies en verzamelen geen persoonlijk identificeerbare informatie (PII).",
+      "s1P4Title": "Lokale opslag (Local Storage)",
+      "s1P4Text": "We gebruiken de localStorage van je browser uitsluitend om je voorkeur voor donkere/lichte modus en taalinstelling tussen bezoeken te onthouden. Deze gegevens verlaten je apparaat nooit.",
+      "s1P5Title": "Serverlogboeken",
+      "s1P5Text": "Onze hostingprovider (Cloudflare) kan technische serverlogboeken bijhouden met IP-adressen en metagegevens ter bescherming tegen DDoS-aanvallen en voor netwerkprestaties.",
+      "s2Title": "2. Cookies",
+      "s2Text": "YT Playlist Cal plaatst geen cookies voor tracking of advertentiedoeleinden. Alleen essentiële technische cookies kunnen worden gebruikt door ons hostingnetwerk (Cloudflare) om schadelijk verkeer tegen te houden.",
+      "s3Title": "3. Diensten van derden",
+      "s3Text1": "YouTube Data API v3: We gebruiken de YouTube Data API om metagegevens op te halen. Je aanvragen vallen onder de YouTube-gebruiksvoorwaarden en het Google Privacybeleid.",
+      "s3Text2": "Cloudflare: Onze website wordt gehost en beveiligd via Cloudflare, dat verzoekmetagegevens kan verwerken voor netwerkbeveiliging en CDN-optimalisatie.",
+      "s3Text3": "Lettertypen: We gebruiken Bunny Fonts (een AVG/GDPR-conform alternatief voor Google Fonts) om het Inter-lettertype te laden zonder IP-adressen te registreren.",
+      "s4Title": "4. Advertenties",
+      "s4Text": "De website kan advertenties tonen via Google AdSense. Advertentienetwerken kunnen niet-gepersonaliseerde identifiers gebruiken in overeenstemming met de wetgeving en gebruikersvoorkeuren.",
+      "s5Title": "5. Privacy van kinderen",
+      "s5Text": "YT Playlist Cal is niet gericht op kinderen jonger dan 13 jaar. We verzamelen niet bewust persoonlijke gegevens van minderjarigen.",
+      "s6Title": "6. Jouw rechten",
+      "s6Text": "Omdat we geen persoonsgegevens opslaan buiten de tijdelijke verwerking van je verzoek, bewaren we over het algemeen geen identificeerbare gegevens over jou.",
+      "s7Title": "7. Wijzigingen in dit beleid",
+      "s7Text": "We kunnen dit Privacybeleid van tijd tot tijd bijwerken. Wijzigingen worden direct van kracht na publicatie op deze pagina.",
+      "s8Title": "8. Contact",
+      "s8Text": "Voor vragen over dit Privacybeleid kun je contact opnemen via de Contactpagina."
+    },
+    "termsDetail": {
+      "summary": "Samenvatting: Door YT Playlist Cal te gebruiken ga je akkoord met deze voorwaarden, ons Privacybeleid en onze Disclaimer. Dit is een gratis, onafhankelijke tool om afspeellijstlengtes te berekenen.",
+      "s1Title": "1. Aanvaarding van voorwaarden",
+      "s1Text": "Door toegang te nemen tot of gebruik te maken van YT Playlist Cal (\"de Dienst\", \"de Website\", \"wij\"), ga je akkoord met deze Algemene voorwaarden. Als je niet akkoord gaat met deze voorwaarden, dien je het gebruik van de site te staken.",
+      "s2Title": "2. Beschrijving van de dienst",
+      "s2Text1": "YT Playlist Cal biedt een gratis webgebaseerde rekensuite om openbare YouTube-afspeellijsten te analyseren, speelduur op te tellen en kijktijden op verschillende snelheden te berekenen.",
+      "s2Text2": "De Dienst wordt kosteloos aangeboden voor educatieve, informatieve en persoonlijke planningsdoeleinden.",
+      "s3Title": "3. YouTube API & voorwaarden van derden",
+      "s3Text": "YT Playlist Cal maakt gebruik van de YouTube Data API v3 voor het ophalen van video-informatie. Door deze tool te gebruiken:",
+      "s3Li1": "Ben je gebonden aan de Servicevoorwaarden van YouTube.",
+      "s3Li2": "Worden YouTube-gegevens verwerkt volgens het Google Privacybeleid.",
+      "s3Li3": "Hebben wij geen controle over YouTube-servers, quotumlimieten of de nauwkeurigheid van gegevens van derden.",
+      "s4Title": "4. Beleid voor acceptabel gebruik",
+      "s4Text": "Je stemt ermee in YT Playlist Cal uitsluitend voor rechtmatige doeleinden te gebruiken. Je verbindt je ertoe:",
+      "s4Li1": "Geen overmatige geautomatiseerde verzoeken, bots of scripts te sturen die onze servers of de YouTube API overbelasten.",
+      "s4Li2": "Niet te proberen snelheidslimieten of beveiligingsmaatregelen van de server te omzeilen of te manipuleren.",
+      "s4Li3": "De website niet te gebruiken voor het verzenden van schadelijke of onrechtmatige invoer.",
+      "s4Li4": "Je identiteit niet te vervalsen en geen ongeautoriseerde toegang te zoeken tot onze serveromgeving.",
+      "s4Outro": "Wij behouden ons het recht voor om IP-adressen die deze regels overtreden tijdelijk of permanent te blokkeren.",
+      "s5Title": "5. Door de gebruiker verstrekte API-sleutels (Optioneel)",
+      "s5Text": "Gebruikers kunnen optioneel hun eigen YouTube Data API v3-sleutel invoeren in de geavanceerde instellingen:",
+      "s5Li1": "Je sleutel wordt via beveiligd HTTPS rechtstreeks naar de server verzonden en uitsluitend gebruikt om je actuele berekening uit te voeren.",
+      "s5Li2": "Wij slaan je API-sleutel nooit op, registreren deze niet en delen hem met niemand.",
+      "s5Li3": "Je blijft zelf volledig verantwoordelijk voor het beheer en de quotumconsumptie van je Google Cloud-project.",
+      "s6Title": "6. Intellectueel eigendom",
+      "s6Text1": "YouTube™, het YouTube-logo en gerelateerde merken zijn geregistreerde handelsmerken van Google LLC. YT Playlist Cal is een onafhankelijk hulpmiddel en is niet gelieerd aan Google LLC.",
+      "s6Text2": "De broncode van de website, het grafische ontwerp, het logo (\"Chrono Play\") en de hulpgidsen zijn intellectueel eigendom van YT Playlist Cal.",
+      "s7Title": "7. Nauwkeurigheid van berekeningen & Disclaimer",
+      "s7Text": "Alle berekeningen en tijdsinschattingen worden \"zoals ze zijn\" geleverd voor indicatieve planningsdoeleinden. Afwijkingen kunnen ontstaan door:",
+      "s7Li1": "Niet-beschikbare video's (privé-, verwijderde of regio-beperkte video's geven 0 seconden aan).",
+      "s7Li2": "Lopende livestreams en premières zonder definitieve speelduur.",
+      "s7Li3": "Afrondingsverschillen in de ISO 8601 tijdstempels van YouTube.",
+      "s7Li4": "Lokale afspeelvariabelen zoals buffering, advertenties en browservertragingen.",
+      "s7Outro": "Raadpleeg onze volledige Disclaimer voor meer details.",
+      "s8Title": "8. Beperking van aansprakelijkheid",
+      "s8Text": "Voor zover wettelijk toegestaan zijn YT Playlist Cal en haar beheerders niet aansprakelijk voor enige directe of indirecte schade die voortvloeit uit het gebruik van deze tool.",
+      "s9Title": "9. Wijziging van voorwaarden",
+      "s9Text": "Wij kunnen deze voorwaarden op elk moment zonder voorafgaande kennisgeving wijzigen. Wijzigingen worden van kracht zodra ze op deze pagina worden gepubliceerd.",
+      "s10Title": "10. Contactinformatie",
+      "s10Text": "Voor vragen over deze Algemene voorwaarden kun je contact opnemen via onze Contactpagina."
+    },
+    "disclaimerDetail": {
+      "summary": "Samenvatting: YT Playlist Cal is een gratis en onafhankelijk hulpmiddel. We zijn niet verbonden aan YouTube of Google LLC. Alle berekeningen worden geleverd \"zoals ze zijn\" uitsluitend ter indicatie.",
+      "s1Title": "1. Handelsmerken en onafhankelijkheid",
+      "s1Text1": "YouTube™, het YouTube-logo en aanverwante merknamen zijn geregistreerde handelsmerken van Google LLC. Alle handelsmerken op deze site behoren toe aan hun respectieve eigenaren.",
+      "s1Text2": "YT Playlist Cal is een onafhankelijke webtoepassing en heeft geen officiële band met YouTube, Google LLC of gelieerde ondernemingen.",
+      "s2Title": "2. Aard van de tool & uitsluitend ter informatie",
+      "s2Text1": "De berekeningen, kijktijdinschattingen en studieplanners van YT Playlist Cal worden uitsluitend aangeboden voor persoonlijk gemak en educatieve doeleinden.",
+      "s2Text2": "De resultaten mogen niet worden beschouwd als een officiële audit of contractueel bindende bevestiging van YouTube.",
+      "s3Title": "3. Nauwkeurigheid en volledigheid",
+      "s3Text1": "Hoewel we wiskundige precisie nastreven, zijn de uitkomsten volledig gebaseerd op de gegevens die worden aangeleverd door de YouTube Data API v3.",
+      "s3Text2": "Verschillen in totale duur kunnen ontstaan door factoren buiten onze controle:",
+      "s3Li1": "Niet-beschikbare video's: privé-, verwijderde of regio-geblokkeerde video's leveren vaak geen geldige speelduur.",
+      "s3Li2": "Livestreams en premières: actieve uitzendingen hebben geen definitieve duur totdat de opname is voltooid.",
+      "s3Li3": "Dynamische updates: aanpassingen die de auteur van de lijst doet tijdens of tussen berekeningen door.",
+      "s3Li4": "Snelheidsbenaderingen: wiskundige delingen houden geen rekening met buffertijden in de browser.",
+      "s3Li5": "ISO 8601-specificaties: kleine seconde-afrondingen kunnen zich opstapelen bij afspeellijsten met honderden video's.",
+      "s4Title": "4. API-gebruik en diensten van derden",
+      "s4Text": "YT Playlist Cal maakt gebruik van de YouTube Data API v3 voor openbare gegevens. Door de tool te gebruiken erken je dat:",
+      "s4Li1": "Je verzoeken vallen onder de richtlijnen voor YouTube-ontwikkelaars en de voorwaarden van Google.",
+      "s4Li2": "De werking afhangt van de serverstatus en quotumlimieten van YouTube.",
+      "s4Li3": "Persoonlijke API-sleutels uitsluitend worden gebruikt voor jouw actuele berekening en nooit worden bewaard.",
+      "s5Title": "5. Externe links",
+      "s5Text": "YT Playlist Cal kan links naar externe websites bevatten. Wij dragen geen verantwoordelijkheid voor de inhoud van deze externe sites.",
+      "s6Title": "6. Uitsluiting van garanties \"Zoals het is\"",
+      "s6Text1": "YT PLAYLIST CAL EN ALLE HULPMIDDELEN WORDEN AANGEBODEN \"ZOALS ZE ZIJN\" EN \"ZOALS BESCHIKBAAR\", ZONDER ENIGE EXPLICIETE OF IMPLICIETE GARANTIE.",
+      "s6Text2": "VOOR ZOVER WETTELIJK TOEGESTAAN WIJZEN WIJ ALLE GARANTIES VAN VERKOOPBAARHEID OF GESCHIKTHEID VOOR EEN BEPAALD DOEL AF.",
+      "s7Title": "7. Beperking van aansprakelijkheid",
+      "s7Text": "IN GEEN GEVAL IS YT PLAYLIST CAL AANSPRAKELIJK VOOR SCHADE DIE VOORTVLOEIT UIT:",
+      "s7Li1": "Het gebruik of het niet kunnen gebruiken van deze website of rekenhulpmiddelen;",
+      "s7Li2": "Eventuele onnauwkeurigheden of vertragingen in duurresultaten of schema's;",
+      "s7Li3": "Beslissingen genomen op basis van de uitkomsten van deze calculator;",
+      "s7Li4": "Technische storingen of serveruitval.",
+      "s7Outro": "Je enige remedie bij ontevredenheid is het staken van het gebruik van de tool.",
+      "s8Title": "8. Wijzigingen",
+      "s8Text": "Wij kunnen deze Disclaimer te allen tijde zonder voorafgaande kennisgeving herzien.",
+      "s9Title": "9. Vragen",
+      "s9Text": "Voor vragen over deze Disclaimer kun je contact opnemen via de Contactpagina."
+    }
+  },
+  "meta": {
+    "home": {
+      "title": "YouTube Afspeellijst Duur Calculator | YT Playlist Cal",
+      "desc": "Bereken nauwkeurig de duur van elke YouTube-afspeellijst. Ondersteunt afspeelsnelheden van 1.25× tot 3×, videobereik, resterende tijd en studieplanning."
+    },
+    "tools": {
+      "title": "YouTube Afspeellijst Tools | YT Playlist Cal",
+      "desc": "Gratis tools voor het berekenen van speelduur, tijdsbesparing op snelheid en studieplanning voor YouTube."
+    },
+    "duration": {
+      "title": "YouTube Afspeellijst Duur Calculator | YT Playlist Cal",
+      "desc": "Bereken in enkele seconden de totale duur van een YouTube-afspeellijst in uren, minuten en seconden."
+    },
+    "watchTime": {
+      "title": "YouTube Kijktijd Calculator | YT Playlist Cal",
+      "desc": "Bereken de werkelijke kijktijd voor het bekijken van een YouTube-afspeellijst op normale en verhoogde snelheid."
+    },
+    "remainingTime": {
+      "title": "Afspeellijst Resterende Tijd Calculator | YT Playlist Cal",
+      "desc": "Ontdek hoeveel uur je nog moet kijken om een YouTube-afspeellijst af te ronden."
+    },
+    "speed15x": {
+      "title": "Afspeellijst op 1.5× Snelheid Berekenen | YT Playlist Cal",
+      "desc": "Bereken de tijdsduur van een YouTube-afspeellijst op 1.5× snelheid en ontdek de tijdsbesparing."
+    },
+    "speed2x": {
+      "title": "Afspeellijst op 2× Snelheid Berekenen | YT Playlist Cal",
+      "desc": "Halveer je studietijd. Bereken de duur van YouTube-afspeellijsten op 2× snelheid."
+    },
+    "howItWorks": {
+      "title": "Hoe de Afspeellijst Calculator werkt | YT Playlist Cal",
+      "desc": "Stap-voor-stap uitleg hoe we YouTube-afspeellijsten analyseren via de officiële API."
+    },
+    "faq": {
+      "title": "Veelgestelde vragen over YouTube-afspeellijsten | YT Playlist Cal",
+      "desc": "Antwoorden op veelgestelde vragen over berekeningen, snelheden en API-beperkingen."
+    },
+    "about": {
+      "title": "Over YT Playlist Cal — YouTube Calculator",
+      "desc": "Lees meer over YT Playlist Cal: snelle, privacyvriendelijke en gratis YouTube-tool."
+    },
+    "contact": {
+      "title": "Contact opnemen — YT Playlist Cal",
+      "desc": "Neem contact op voor vragen, feedback of ondersteuning."
+    },
+    "privacy": {
+      "title": "Privacybeleid | YT Playlist Cal",
+      "desc": "Lees hoe wij gebruikersgegevens beschermen op YT Playlist Cal."
+    },
+    "terms": {
+      "title": "Algemene Voorwaarden | YT Playlist Cal",
+      "desc": "Gebruiksvoorwaarden en richtlijnen voor de YT Playlist Cal calculator."
+    },
+    "disclaimer": {
+      "title": "Disclaimer — YT Playlist Cal",
+      "desc": "Juridische mededelingen en merkrechten van YT Playlist Cal."
+    },
+    "error404": {
+      "title": "Pagina niet gevonden — YT Playlist Cal",
+      "desc": "De gezochte pagina kon niet worden gevonden op YT Playlist Cal."
+    },
+    "error500": {
+      "title": "Serverfout — YT Playlist Cal",
+      "desc": "Er is een fout opgetreden bij het laden van de pagina."
+    }
+  },
+  "seo": {
+    "home": {
+      "title": "YouTube Afspeellijst Duur Calculator | YT Playlist Cal",
+      "desc": "Bereken nauwkeurig de duur van elke YouTube-afspeellijst. Ondersteunt afspeelsnelheden van 1.25× tot 3×, videobereik, resterende tijd en studieplanning."
+    },
+    "tools": {
+      "title": "YouTube Afspeellijst Tools | YT Playlist Cal",
+      "desc": "Gratis tools voor het berekenen van speelduur, tijdsbesparing op snelheid en studieplanning voor YouTube."
+    },
+    "duration": {
+      "title": "YouTube Afspeellijst Duur Calculator | YT Playlist Cal",
+      "desc": "Bereken in enkele seconden de totale duur van een YouTube-afspeellijst in uren, minuten en seconden."
+    },
+    "watchTime": {
+      "title": "YouTube Kijktijd Calculator | YT Playlist Cal",
+      "desc": "Bereken de werkelijke kijktijd voor het bekijken van een YouTube-afspeellijst op normale en verhoogde snelheid."
+    },
+    "remainingTime": {
+      "title": "Afspeellijst Resterende Tijd Calculator | YT Playlist Cal",
+      "desc": "Ontdek hoeveel uur je nog moet kijken om een YouTube-afspeellijst af te ronden."
+    },
+    "speed15x": {
+      "title": "Afspeellijst op 1.5× Snelheid Berekenen | YT Playlist Cal",
+      "desc": "Bereken de tijdsduur van een YouTube-afspeellijst op 1.5× snelheid en ontdek de tijdsbesparing."
+    },
+    "speed2x": {
+      "title": "Afspeellijst op 2× Snelheid Berekenen | YT Playlist Cal",
+      "desc": "Halveer je studietijd. Bereken de duur van YouTube-afspeellijsten op 2× snelheid."
+    },
+    "howItWorks": {
+      "title": "Hoe de Afspeellijst Calculator werkt | YT Playlist Cal",
+      "desc": "Stap-voor-stap uitleg hoe we YouTube-afspeellijsten analyseren via de officiële API."
+    },
+    "faq": {
+      "title": "Veelgestelde vragen over YouTube-afspeellijsten | YT Playlist Cal",
+      "desc": "Antwoorden op veelgestelde vragen over berekeningen, snelheden en API-beperkingen."
+    },
+    "about": {
+      "title": "Over YT Playlist Cal — YouTube Calculator",
+      "desc": "Lees meer over YT Playlist Cal: snelle, privacyvriendelijke en gratis YouTube-tool."
+    },
+    "contact": {
+      "title": "Contact opnemen — YT Playlist Cal",
+      "desc": "Neem contact op voor vragen, feedback of ondersteuning."
+    },
+    "privacy": {
+      "title": "Privacybeleid | YT Playlist Cal",
+      "desc": "Lees hoe wij gebruikersgegevens beschermen op YT Playlist Cal."
+    },
+    "terms": {
+      "title": "Algemene Voorwaarden | YT Playlist Cal",
+      "desc": "Gebruiksvoorwaarden en richtlijnen voor de YT Playlist Cal calculator."
+    },
+    "disclaimer": {
+      "title": "Disclaimer — YT Playlist Cal",
+      "desc": "Juridische mededelingen en merkrechten van YT Playlist Cal."
+    },
+    "error404": {
+      "title": "Pagina niet gevonden — YT Playlist Cal",
+      "desc": "De gezochte pagina kon niet worden gevonden op YT Playlist Cal."
+    },
+    "error500": {
+      "title": "Serverfout — YT Playlist Cal",
+      "desc": "Er is een fout opgetreden bij het laden van de pagina."
+    }
+  },
+  "demonstrations": {
+    "badge": "Interactieve Demonstratie",
+    "title": "Hoe de Calculator Werkt",
+    "subtitle": "Stapsgewijze interactieve voorbeelden om afspeellijstlengtes te berekenen en je planning te maken.",
+    "tab1": "1. Plak URL",
+    "tab2": "2. Bereken",
+    "tab3": "3. Totale Duur",
+    "tab4": "4. Statistieken",
+    "tab5": "5. Tijdsbesparing",
+    "step1Title": "Plak een YouTube-link",
+    "step1Desc": "Kopieer de link van een YouTube-afspeellijst of video en plak deze in het invoerveld.",
+    "step2Title": "Klik op Berekenen",
+    "step2Desc": "Klik op Berekenen om de speelduur en gegevens van alle video's op te halen via de YouTube Data API.",
+    "step3Title": "Directe weergave van totale duur",
+    "step3Desc": "Krijg direct de exacte totale afspeelduur netjes weergegeven in uren, minuten en seconden.",
+    "step4Title": "Bekijk aantal video's en statistieken",
+    "step4Desc": "Controleer het aantal beschikbare video's, de gemiddelde lengte en de kortste en langste video.",
+    "step5Title": "Ontdek tijdwinst bij hogere snelheid",
+    "step5Desc": "Vergelijk afspeeltijden op 1.25×, 1.5×, 1.75× en 2× om te zien hoeveel uur je bespaart.",
+    "prev": "Vorige",
+    "next": "Volgende",
+    "stepOf": "Stap {current} van {total}",
+    "samplePlaylistTitle": "Webontwikkeling Masterclass",
+    "sampleChannel": "Code Academy",
+    "sampleDuration": "14 uur 28 minuten 45 seconden",
+    "sampleCount": "42 Video's",
+    "sampleAvg": "20 min 41 sec",
+    "sampleShortest": "Inleiding — 3 min 12 sec",
+    "sampleLongest": "Verdieping — 1 uur 05 min 20 sec",
+    "sampleAt15x": "9 uur 39 min 10 sec",
+    "sampleSaved15x": "4u 49m bespaard",
+    "sampleAt2x": "7 uur 14 min 22 sec",
+    "sampleSaved2x": "7u 14m bespaard",
+    "step1Badge": "Stap 1 van 5",
+    "step2Badge": "Stap 2 van 5",
+    "step3Badge": "Stap 3 van 5",
+    "step4Badge": "Stap 4 van 5",
+    "step5Badge": "Stap 5 van 5",
+    "pasteHint": "Ctrl+V / Plakken",
+    "detectedBadge": "✓ Afspeellijst herkend: 42 video's",
+    "autoPlayOn": "Automatisch afspelen aan",
+    "autoPlayPaused": "Gepauzeerd"
+  },
+  "personas": {
+    "title": "Gebruikt door",
+    "students": "Studenten",
+    "onlineLearners": "Online cursisten",
+    "courseBuyers": "Cursuskopers",
+    "developers": "Ontwikkelaars",
+    "certCandidates": "Examenkandidaten",
+    "teachers": "Docenten",
+    "creators": "Contentmakers & Docenten",
+    "bingeWatchers": "Binge-kijkers"
+  }
+}

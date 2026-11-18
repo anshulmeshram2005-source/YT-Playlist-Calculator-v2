@@ -1,0 +1,178 @@
+---
+// /how-it-works/ — How It Works page
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+---
+
+<BaseLayout
+  title="How It Works — YouTube Playlist Length Calculator | YT Playlist Cal"
+  description="Learn how the YouTube Playlist Length Calculator works — fetching durations via the YouTube Data API, speed adjustments, and daily watch scheduling."
+  pageKey="howItWorks"
+>
+  <Header />
+  <main class="py-12 sm:py-16">
+    <div class="container content-width">
+
+      <nav aria-label="Breadcrumb" class="mb-8">
+        <ol class="flex items-center gap-1.5 text-xs" style="color: var(--color-text-muted);">
+          <li><a href="/" style="color: var(--color-text-muted); text-decoration: none;" data-i18n="nav.home">Home</a></li>
+          <li aria-hidden="true">›</li>
+          <li aria-current="page" style="color: var(--color-text);" data-i18n="pages.howItWorksDetail.breadcrumb">How It Works</li>
+        </ol>
+      </nav>
+
+      <h1 class="text-3xl font-bold tracking-tight mb-3" style="color: var(--color-text); letter-spacing: -0.03em;" data-i18n="pages.howItWorksDetail.title">
+        How the YouTube Playlist Calculator Works
+      </h1>
+      <p class="text-base leading-relaxed mb-10" style="color: var(--color-text-muted);" data-i18n="pages.howItWorksDetail.subtitle">
+        A transparent explanation of how YT Playlist Cal fetches data, calculates durations, and handles edge cases.
+      </p>
+
+      <div class="space-y-10 text-sm leading-relaxed" style="color: var(--color-text-muted);">
+
+        <section>
+          <h2 class="text-base font-semibold mb-4" style="color: var(--color-text);" data-i18n="pages.howItWorksDetail.stepsHeading">Step-by-Step Process</h2>
+          <ol class="space-y-6">
+            <li class="flex gap-4">
+              <div
+                class="w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold shrink-0 mt-0.5"
+                style="background-color: var(--color-surface-2); color: var(--color-text); border: 1px solid var(--color-border);"
+                aria-hidden="true"
+              >
+                1
+              </div>
+              <div>
+                <h3 class="text-sm font-semibold mb-1" style="color: var(--color-text);" data-i18n="pages.howItWorksDetail.s1Title">You paste a YouTube URL</h3>
+                <p data-i18n="pages.howItWorksDetail.s1Detail">You paste any YouTube URL into the input — a playlist link, a video URL with a list parameter, a youtu.be link, or a raw playlist ID. The tool validates the URL format on the client side before making any request.</p>
+              </div>
+            </li>
+            <li class="flex gap-4">
+              <div
+                class="w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold shrink-0 mt-0.5"
+                style="background-color: var(--color-surface-2); color: var(--color-text); border: 1px solid var(--color-border);"
+                aria-hidden="true"
+              >
+                2
+              </div>
+              <div>
+                <h3 class="text-sm font-semibold mb-1" style="color: var(--color-text);" data-i18n="pages.howItWorksDetail.s2Title">The URL is parsed server-side</h3>
+                <p data-i18n="pages.howItWorksDetail.s2Detail">Your browser sends the URL to our secure server endpoint. The server parses the URL to extract the playlist ID. The YouTube Data API key is stored securely in server environment variables — it is never exposed to the browser.</p>
+              </div>
+            </li>
+            <li class="flex gap-4">
+              <div
+                class="w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold shrink-0 mt-0.5"
+                style="background-color: var(--color-surface-2); color: var(--color-text); border: 1px solid var(--color-border);"
+                aria-hidden="true"
+              >
+                3
+              </div>
+              <div>
+                <h3 class="text-sm font-semibold mb-1" style="color: var(--color-text);" data-i18n="pages.howItWorksDetail.s3Title">Playlist metadata is fetched</h3>
+                <p data-i18n="pages.howItWorksDetail.s3Detail">The server calls the YouTube Data API v3 playlists.list endpoint to retrieve the playlist title, channel name, thumbnail, and total item count.</p>
+              </div>
+            </li>
+            <li class="flex gap-4">
+              <div
+                class="w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold shrink-0 mt-0.5"
+                style="background-color: var(--color-surface-2); color: var(--color-text); border: 1px solid var(--color-border);"
+                aria-hidden="true"
+              >
+                4
+              </div>
+              <div>
+                <h3 class="text-sm font-semibold mb-1" style="color: var(--color-text);" data-i18n="pages.howItWorksDetail.s4Title">Video IDs are retrieved (paginated)</h3>
+                <p data-i18n="pages.howItWorksDetail.s4Detail">The server then calls playlistItems.list, which returns up to 50 items per request. For playlists with more than 50 videos, the API is called repeatedly using page tokens until all video IDs in the requested range have been collected.</p>
+              </div>
+            </li>
+            <li class="flex gap-4">
+              <div
+                class="w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold shrink-0 mt-0.5"
+                style="background-color: var(--color-surface-2); color: var(--color-text); border: 1px solid var(--color-border);"
+                aria-hidden="true"
+              >
+                5
+              </div>
+              <div>
+                <h3 class="text-sm font-semibold mb-1" style="color: var(--color-text);" data-i18n="pages.howItWorksDetail.s5Title">Video durations are fetched in batches</h3>
+                <p data-i18n="pages.howItWorksDetail.s5Detail">With all video IDs collected, the server calls videos.list in batches of 50 (the maximum per request). For each video, it retrieves the ISO 8601 duration string (e.g., PT1H2M30S = 1 hour, 2 minutes, 30 seconds).</p>
+              </div>
+            </li>
+            <li class="flex gap-4">
+              <div
+                class="w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold shrink-0 mt-0.5"
+                style="background-color: var(--color-surface-2); color: var(--color-text); border: 1px solid var(--color-border);"
+                aria-hidden="true"
+              >
+                6
+              </div>
+              <div>
+                <h3 class="text-sm font-semibold mb-1" style="color: var(--color-text);" data-i18n="pages.howItWorksDetail.s6Title">Durations are summed and formatted</h3>
+                <p data-i18n="pages.howItWorksDetail.s6Detail">The server converts each ISO duration string to seconds, sums them, and formats the total as hours, minutes, and seconds. Videos that are unavailable (private, deleted, region-restricted) are counted separately and excluded from the total.</p>
+              </div>
+            </li>
+            <li class="flex gap-4">
+              <div
+                class="w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold shrink-0 mt-0.5"
+                style="background-color: var(--color-surface-2); color: var(--color-text); border: 1px solid var(--color-border);"
+                aria-hidden="true"
+              >
+                7
+              </div>
+              <div>
+                <h3 class="text-sm font-semibold mb-1" style="color: var(--color-text);" data-i18n="pages.howItWorksDetail.s7Title">Results are returned and displayed</h3>
+                <p data-i18n="pages.howItWorksDetail.s7Detail">The structured result (playlist info, video list, total duration, unavailable count) is returned as JSON. The browser renders the result dashboard, speed table, video list, and watch planner tools.</p>
+              </div>
+            </li>
+          </ol>
+        </section>
+
+        <section>
+          <h2 class="text-base font-semibold mb-3" style="color: var(--color-text);" data-i18n="pages.howItWorksDetail.speedHeading">Speed Calculation</h2>
+          <p data-i18n="pages.howItWorksDetail.speedIntro">
+            Adjusted watch time at a given playback speed is calculated as:
+          </p>
+          <div
+            class="mt-3 p-4 rounded-lg font-mono text-sm"
+            style="background-color: var(--color-surface-2); border: 1px solid var(--color-border); color: var(--color-text);"
+            data-i18n="pages.howItWorksDetail.speedFormula"
+          >
+            adjusted_seconds = total_seconds ÷ playback_speed
+          </div>
+          <p class="mt-3" data-i18n="pages.howItWorksDetail.speedExample">
+            For example, a 10-hour playlist at 1.5× speed: 36,000 ÷ 1.5 = 24,000 seconds = 6 hours 40 minutes.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="text-base font-semibold mb-3" style="color: var(--color-text);" data-i18n="pages.howItWorksDetail.missingHeading">Why Some Videos Are Missing</h2>
+          <p data-i18n="pages.howItWorksDetail.missingIntro">The YouTube Data API cannot return information about:</p>
+          <ul class="mt-2 space-y-1 ml-4">
+            <li data-i18n="pages.howItWorksDetail.missing1"><strong style="color: var(--color-text);">Private videos</strong> — marked private by the uploader after being added to the playlist.</li>
+            <li data-i18n="pages.howItWorksDetail.missing2"><strong style="color: var(--color-text);">Deleted videos</strong> — removed from YouTube entirely.</li>
+            <li data-i18n="pages.howItWorksDetail.missing3"><strong style="color: var(--color-text);">Region-restricted videos</strong> — unavailable in the server's geographic region.</li>
+            <li data-i18n="pages.howItWorksDetail.missing4"><strong style="color: var(--color-text);">Age-restricted videos</strong> — some may require authentication to access metadata.</li>
+            <li data-i18n="pages.howItWorksDetail.missing5"><strong style="color: var(--color-text);">Active live streams</strong> — no fixed duration until the stream ends.</li>
+          </ul>
+          <p class="mt-3" data-i18n="pages.howItWorksDetail.missingOutro">
+            These videos are counted and labeled in the results so you understand exactly what was and wasn't included.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="text-base font-semibold mb-3" style="color: var(--color-text);" data-i18n="pages.howItWorksDetail.cachingHeading">Caching</h2>
+          <p data-i18n="pages.howItWorksDetail.cachingDetail">
+            To minimize YouTube API quota usage and improve response speed, playlist results are cached for one hour on the server. Video metadata is cached for 24 hours. If you calculate the same playlist within this window, results are served from cache instantly.
+          </p>
+        </section>
+
+        <div class="pt-6" style="border-top: 1px solid var(--color-border);">
+          <a href="/" class="text-sm font-medium" style="color: var(--color-text);" data-i18n="pages.howItWorksDetail.tryCalc">Try the calculator →</a>
+        </div>
+
+      </div>
+    </div>
+  </main>
+  <Footer />
+</BaseLayout>

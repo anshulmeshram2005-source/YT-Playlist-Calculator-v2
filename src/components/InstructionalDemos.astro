@@ -1,0 +1,335 @@
+---
+// InstructionalDemos.astro — 5 realistic animated instructional calculator demonstrations
+import Icon from './Icon.astro';
+---
+
+<div
+  id="instructional-demos"
+  class="calculator-width mt-10 rounded-2xl border p-5 sm:p-7 transition-all duration-200"
+  style="
+    background-color: var(--color-surface);
+    border-color: var(--color-border);
+    box-shadow: 0 4px 20px -2px rgb(0 0 0 / 0.05);
+  "
+  aria-label="Instructional animated demonstrations"
+>
+  <!-- Header -->
+  <div class="text-center mb-6">
+    <span
+      class="inline-flex items-center gap-1.5 text-[11px] font-semibold uppercase tracking-wider px-2.5 py-1 rounded-full mb-2.5"
+      style="background-color: var(--color-accent-soft); color: var(--color-accent);"
+      data-i18n="demonstrations.badge"
+    >
+      Instructional Walkthrough
+    </span>
+    <h3
+      class="text-xl sm:text-2xl font-bold tracking-tight mb-1.5"
+      style="color: var(--color-text); letter-spacing: -0.02em;"
+      data-i18n="demonstrations.title"
+    >
+      How to Use the Calculator
+    </h3>
+    <p
+      class="text-xs sm:text-sm max-w-md mx-auto leading-relaxed"
+      style="color: var(--color-text-muted);"
+      data-i18n="demonstrations.subtitle"
+    >
+      Interactive step-by-step demonstrations showing how to calculate playlist durations and plan your watch schedule.
+    </p>
+  </div>
+
+  <!-- Step Tab Buttons (5 Required Steps) -->
+  <div
+    class="flex items-center justify-start sm:justify-center gap-1.5 overflow-x-auto pb-2 mb-4 scrollbar-none"
+    role="tablist"
+    aria-label="Demonstration steps"
+  >
+    {[
+      { step: 1, tabKey: 'demonstrations.tab1', defaultLabel: '1. Paste URL' },
+      { step: 2, tabKey: 'demonstrations.tab2', defaultLabel: '2. Calculate' },
+      { step: 3, tabKey: 'demonstrations.tab3', defaultLabel: '3. Total Duration' },
+      { step: 4, tabKey: 'demonstrations.tab4', defaultLabel: '4. Video Stats' },
+      { step: 5, tabKey: 'demonstrations.tab5', defaultLabel: '5. Speed Settings' },
+    ].map(({ step, tabKey, defaultLabel }) => (
+      <button
+        type="button"
+        role="tab"
+        id={`demo-tab-${step}`}
+        aria-controls={`demo-slide-${step}`}
+        aria-selected={step === 1 ? 'true' : 'false'}
+        data-demo-step-btn={step}
+        class="shrink-0 px-3 py-1.5 rounded-lg text-xs font-medium transition-all duration-150 border"
+        style={step === 1
+          ? 'background-color: var(--color-text); color: var(--color-bg); border-color: var(--color-text);'
+          : 'background-color: var(--color-surface-2); color: var(--color-text-muted); border-color: var(--color-border);'
+        }
+        data-i18n={tabKey}
+      >
+        {defaultLabel}
+      </button>
+    ))}
+  </div>
+
+  <!-- Smooth Auto-Play Progress Bar -->
+  <div
+    class="w-full h-1 rounded-full mb-4 overflow-hidden"
+    style="background-color: var(--color-surface-2);"
+    aria-hidden="true"
+  >
+    <div
+      id="demo-progress-bar"
+      class="h-full rounded-full"
+      style="width: 0%; background-color: var(--color-accent);"
+    ></div>
+  </div>
+
+  <!-- Interactive Stage Container -->
+  <div
+    class="rounded-xl border p-4 sm:p-5 relative overflow-hidden"
+    style="
+      background-color: var(--color-surface-2);
+      border-color: var(--color-border);
+      min-height: 290px;
+    "
+  >
+    <!-- Step 1 Demonstration: Paste URL -->
+    <div
+      id="demo-slide-1"
+      data-demo-slide="1"
+      class="demo-slide transition-opacity duration-200"
+    >
+      <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 mb-3">
+        <div>
+          <span class="text-[10px] font-bold uppercase tracking-wider" style="color: var(--color-accent);" data-i18n="demonstrations.step1Badge">Step 1 of 5</span>
+          <h4 class="text-sm font-semibold" style="color: var(--color-text);" data-i18n="demonstrations.step1Title">Paste Any YouTube URL</h4>
+        </div>
+        <button
+          type="button"
+          data-demo-apply="paste"
+          class="text-xs px-2.5 py-1 rounded-md font-medium transition-colors border"
+          style="background-color: var(--color-surface); color: var(--color-accent); border-color: var(--color-border);"
+        >
+          <span data-i18n="calculator.pasteBtn">Try in Calculator ↑</span>
+        </button>
+      </div>
+      <p class="text-xs leading-relaxed mb-4" style="color: var(--color-text-muted);" data-i18n="demonstrations.step1Desc">
+        Copy any YouTube playlist link, video link with a list parameter, or playlist ID and paste it into the calculator input.
+      </p>
+
+      <!-- Mockup UI: Animated Input Box -->
+      <div class="rounded-lg border p-3 bg-surface relative" style="background-color: var(--color-surface); border-color: var(--color-border);">
+        <div class="flex items-center justify-between mb-1.5">
+          <span class="text-[11px] font-medium" style="color: var(--color-text-muted);" data-i18n="calculator.urlLabel">YouTube URL</span>
+          <span class="text-[10px] px-2 py-0.5 rounded font-mono font-medium animate-pulse" style="background-color: var(--color-accent-soft); color: var(--color-accent);" data-i18n="demonstrations.pasteHint">
+            Ctrl+V / Paste
+          </span>
+        </div>
+        <div
+          class="font-mono text-xs p-2.5 rounded border flex items-center justify-between overflow-hidden"
+          style="background-color: var(--color-surface-2); border-color: var(--color-border); color: var(--color-text);"
+        >
+          <span id="demo-typing-url" class="truncate font-mono">https://www.youtube.com/playlist?list=PLBDA2E52FB1EF80C9</span>
+          <span class="w-1.5 h-3.5 ml-1 inline-block animate-pulse shrink-0" style="background-color: var(--color-accent);"></span>
+        </div>
+        <p class="text-[10px] mt-1.5" style="color: var(--color-text-subtle);" data-i18n="demonstrations.detectedBadge">
+          ✓ Playlist detected: 42 videos
+        </p>
+      </div>
+    </div>
+
+    <!-- Step 2 Demonstration: Calculate -->
+    <div
+      id="demo-slide-2"
+      data-demo-slide="2"
+      class="demo-slide hidden transition-opacity duration-200"
+    >
+      <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 mb-3">
+        <div>
+          <span class="text-[10px] font-bold uppercase tracking-wider" style="color: var(--color-accent);" data-i18n="demonstrations.step2Badge">Step 2 of 5</span>
+          <h4 class="text-sm font-semibold" style="color: var(--color-text);" data-i18n="demonstrations.step2Title">Click Calculate</h4>
+        </div>
+      </div>
+      <p class="text-xs leading-relaxed mb-4" style="color: var(--color-text-muted);" data-i18n="demonstrations.step2Desc">
+        Hit the Calculate button to fetch complete video durations and metadata via the YouTube Data API.
+      </p>
+
+      <!-- Mockup UI: Button Press & Progress -->
+      <div class="space-y-3">
+        <div
+          class="w-full py-2.5 px-4 rounded-lg text-xs font-semibold text-center flex items-center justify-center gap-2 shadow-sm transition-transform active:scale-95"
+          style="background-color: var(--color-accent); color: #ffffff;"
+        >
+          <svg class="w-3.5 h-3.5 animate-spin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path d="M21 12a9 9 0 1 1-6.219-8.56"/>
+          </svg>
+          <span data-i18n="calculator.calculatingBtn">Calculating…</span>
+        </div>
+        <div class="rounded-lg border p-3 space-y-2 text-xs" style="background-color: var(--color-surface); border-color: var(--color-border);">
+          <div id="demo-calc-step-1" class="flex items-center gap-2" style="color: var(--color-success);">
+            <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            <span data-i18n="calculator.loadingStep1">Connecting to YouTube API…</span>
+          </div>
+          <div id="demo-calc-step-2" class="flex items-center gap-2" style="color: var(--color-success);">
+            <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            <span data-i18n="calculator.loadingStep2">Fetching playlist information…</span>
+          </div>
+          <div id="demo-calc-step-3" class="flex items-center gap-2" style="color: var(--color-text);">
+            <svg class="w-3.5 h-3.5 animate-spin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 12a9 9 0 1 1-6.219-8.56"/></svg>
+            <span data-i18n="calculator.loadingStep3">Processing video data…</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Step 3 Demonstration: Instant Total Duration -->
+    <div
+      id="demo-slide-3"
+      data-demo-slide="3"
+      class="demo-slide hidden transition-opacity duration-200"
+    >
+      <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 mb-3">
+        <div>
+          <span class="text-[10px] font-bold uppercase tracking-wider" style="color: var(--color-accent);" data-i18n="demonstrations.step3Badge">Step 3 of 5</span>
+          <h4 class="text-sm font-semibold" style="color: var(--color-text);" data-i18n="demonstrations.step3Title">View Total Duration</h4>
+        </div>
+      </div>
+      <p class="text-xs leading-relaxed mb-4" style="color: var(--color-text-muted);" data-i18n="demonstrations.step3Desc">
+        Get the exact total runtime displayed clearly in hours, minutes, and seconds at normal playback speed.
+      </p>
+
+      <!-- Mockup UI: Total Duration Card -->
+      <div class="rounded-xl border p-4 space-y-3" style="background-color: var(--color-surface); border-color: var(--color-border);">
+        <div class="flex items-center justify-between">
+          <span class="text-xs uppercase tracking-wider font-semibold" style="color: var(--color-text-subtle);" data-i18n="calculator.statTotal">
+            Total Duration
+          </span>
+          <span class="text-[10px] px-2 py-0.5 rounded-full font-medium" style="background-color: var(--color-success-soft); color: var(--color-success);">
+            1.0× Speed
+          </span>
+        </div>
+        <div class="flex items-baseline gap-2">
+          <span class="text-3xl sm:text-4xl font-bold font-mono tracking-tight" style="color: var(--color-text);" data-i18n="demonstrations.sampleDuration">
+            14h 28m 45s
+          </span>
+        </div>
+        <p class="text-xs flex items-center gap-1.5" style="color: var(--color-text-muted);">
+          <span class="w-2 h-2 rounded-full" style="background-color: var(--color-success);"></span>
+          <span data-i18n="demonstrations.samplePlaylistTitle">Web Development Masterclass</span>
+          <span>·</span>
+          <span data-i18n="demonstrations.sampleChannel">Code Academy</span>
+        </p>
+      </div>
+    </div>
+
+    <!-- Step 4 Demonstration: Video Count & Stats -->
+    <div
+      id="demo-slide-4"
+      data-demo-slide="4"
+      class="demo-slide hidden transition-opacity duration-200"
+    >
+      <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 mb-3">
+        <div>
+          <span class="text-[10px] font-bold uppercase tracking-wider" style="color: var(--color-accent);" data-i18n="demonstrations.step4Badge">Step 4 of 5</span>
+          <h4 class="text-sm font-semibold" style="color: var(--color-text);" data-i18n="demonstrations.step4Title">Review Video Count & Statistics</h4>
+        </div>
+      </div>
+      <p class="text-xs leading-relaxed mb-4" style="color: var(--color-text-muted);" data-i18n="demonstrations.step4Desc">
+        Check the total number of available videos, average video length, and the shortest and longest videos.
+      </p>
+
+      <!-- Mockup UI: Grid of 4 Metric Cards -->
+      <div class="grid grid-cols-2 gap-2.5">
+        <div class="rounded-lg border p-3" style="background-color: var(--color-surface); border-color: var(--color-border);">
+          <span class="text-[10px] font-semibold uppercase tracking-wider block mb-1" style="color: var(--color-text-subtle);" data-i18n="calculator.statCount">Videos</span>
+          <span class="text-lg font-bold font-mono" style="color: var(--color-text);" data-i18n="demonstrations.sampleCount">42 Videos</span>
+        </div>
+        <div class="rounded-lg border p-3" style="background-color: var(--color-surface); border-color: var(--color-border);">
+          <span class="text-[10px] font-semibold uppercase tracking-wider block mb-1" style="color: var(--color-text-subtle);" data-i18n="calculator.statAvg">Average Video</span>
+          <span class="text-lg font-bold font-mono" style="color: var(--color-text);" data-i18n="demonstrations.sampleAvg">20m 41s</span>
+        </div>
+        <div class="rounded-lg border p-2.5" style="background-color: var(--color-surface); border-color: var(--color-border);">
+          <span class="text-[10px] font-semibold uppercase tracking-wider block" style="color: var(--color-text-subtle);" data-i18n="calculator.statShortest">Shortest Video</span>
+          <span class="text-xs font-mono font-medium truncate block mt-0.5" style="color: var(--color-text);" data-i18n="demonstrations.sampleShortest">Intro — 3m 12s</span>
+        </div>
+        <div class="rounded-lg border p-2.5" style="background-color: var(--color-surface); border-color: var(--color-border);">
+          <span class="text-[10px] font-semibold uppercase tracking-wider block" style="color: var(--color-text-subtle);" data-i18n="calculator.statLongest">Longest Video</span>
+          <span class="text-xs font-mono font-medium truncate block mt-0.5" style="color: var(--color-text);" data-i18n="demonstrations.sampleLongest">Deep Dive — 1h 05m 20s</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Step 5 Demonstration: Playback Speeds -->
+    <div
+      id="demo-slide-5"
+      data-demo-slide="5"
+      class="demo-slide hidden transition-opacity duration-200"
+    >
+      <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 mb-3">
+        <div>
+          <span class="text-[10px] font-bold uppercase tracking-wider" style="color: var(--color-accent);" data-i18n="demonstrations.step5Badge">Step 5 of 5</span>
+          <h4 class="text-sm font-semibold" style="color: var(--color-text);" data-i18n="demonstrations.step5Title">Explore Speed Settings</h4>
+        </div>
+      </div>
+      <p class="text-xs leading-relaxed mb-3" style="color: var(--color-text-muted);" data-i18n="demonstrations.step5Desc">
+        Compare watch times at 1.25×, 1.5×, 1.75×, and 2× speeds to see exactly how much time you save.
+      </p>
+
+      <!-- Mockup UI: Speed comparison preview -->
+      <div class="space-y-1.5 font-mono text-xs">
+        <div class="flex items-center justify-between p-2 rounded border" style="background-color: var(--color-surface); border-color: var(--color-border);">
+          <span class="font-semibold" style="color: var(--color-text);">1.25× Speed</span>
+          <span style="color: var(--color-text);">11h 35m</span>
+          <span class="font-medium" style="color: var(--color-success);">-2h 53m</span>
+        </div>
+        <div class="flex items-center justify-between p-2 rounded border" style="background-color: var(--color-accent-soft); border-color: var(--color-accent); color: var(--color-text);">
+          <span class="font-semibold" style="color: var(--color-accent);">1.5× Speed (Popular)</span>
+          <span class="font-bold" style="color: var(--color-text);" data-i18n="demonstrations.sampleAt15x">9h 39m 10s</span>
+          <span class="font-bold" style="color: var(--color-success);" data-i18n="demonstrations.sampleSaved15x">-4h 49m</span>
+        </div>
+        <div class="flex items-center justify-between p-2 rounded border" style="background-color: var(--color-surface); border-color: var(--color-border);">
+          <span class="font-semibold" style="color: var(--color-text);">2.0× Speed (50% Off)</span>
+          <span class="font-bold" style="color: var(--color-text);" data-i18n="demonstrations.sampleAt2x">7h 14m 22s</span>
+          <span class="font-bold" style="color: var(--color-success);" data-i18n="demonstrations.sampleSaved2x">-7h 14m</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer controls (Previous / Play-Pause / Next) -->
+  <div class="flex items-center justify-between mt-4 pt-3 border-t" style="border-color: var(--color-border);">
+    <div class="flex items-center gap-1.5">
+      <button
+        type="button"
+        id="demo-prev-btn"
+        class="text-xs px-2.5 py-1 rounded-md border font-medium transition-colors"
+        style="background-color: var(--color-surface-2); border-color: var(--color-border); color: var(--color-text-muted);"
+        data-i18n="demonstrations.prev"
+      >
+        ← Previous
+      </button>
+      <button
+        type="button"
+        id="demo-next-btn"
+        class="text-xs px-2.5 py-1 rounded-md border font-medium transition-colors"
+        style="background-color: var(--color-surface-2); border-color: var(--color-border); color: var(--color-text-muted);"
+        data-i18n="demonstrations.next"
+      >
+        Next →
+      </button>
+    </div>
+
+    <!-- Auto Play / Pause Toggle -->
+    <button
+      type="button"
+      id="demo-autoplay-btn"
+      class="flex items-center gap-1.5 text-xs px-2.5 py-1 rounded-md border transition-colors cursor-pointer"
+      style="background-color: var(--color-surface-2); border-color: var(--color-border); color: var(--color-text-muted);"
+      aria-label="Toggle Demonstration Auto-Play"
+    >
+      <span id="demo-autoplay-icon">⏸</span>
+      <span id="demo-autoplay-label" data-i18n="demonstrations.autoPlayOn">Auto-Play On</span>
+    </button>
+  </div>
+</div>
+
+<script src="../lib/instructional-demos.ts"></script>

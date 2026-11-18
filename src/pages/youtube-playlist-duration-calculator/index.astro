@@ -1,0 +1,81 @@
+---
+// /youtube-playlist-duration-calculator/ — SEO landing page
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import Icon from '../../components/Icon.astro';
+---
+
+<BaseLayout
+  title="YouTube Playlist Duration Calculator — Total Playlist Length | YT Playlist Cal"
+  description="Calculate the total duration of any YouTube playlist instantly. Get exact hours, minutes, and seconds for any public playlist. Free and fast."
+  pageKey="duration"
+>
+  <Header />
+  <main class="py-12 sm:py-16">
+    <div class="container content-width">
+      <nav aria-label="Breadcrumb" class="mb-8">
+        <ol class="flex items-center gap-1.5 text-xs" style="color: var(--color-text-muted);">
+          <li><a href="/" style="color: var(--color-text-muted); text-decoration: none;" data-i18n="nav.home">Home</a></li>
+          <li aria-hidden="true">›</li>
+          <li><a href="/tools/" style="color: var(--color-text-muted); text-decoration: none;" data-i18n="pages.tools.breadcrumb">Tools</a></li>
+          <li aria-hidden="true">›</li>
+          <li aria-current="page" style="color: var(--color-text);" data-i18n="pages.duration.breadcrumb">Duration Calculator</li>
+        </ol>
+      </nav>
+
+      <h1 class="text-3xl sm:text-4xl font-bold tracking-tight mb-3" style="color: var(--color-text); letter-spacing: -0.03em;" data-i18n="pages.duration.title">
+        YouTube Playlist Duration Calculator
+      </h1>
+      <p class="text-base leading-relaxed mb-8" style="color: var(--color-text-muted);" data-i18n="pages.duration.subtitle">
+        Instantly calculate the total duration of any YouTube playlist. Get exact hours, minutes, and seconds in seconds — and plan your viewing with speed adjustments and a daily watch schedule.
+      </p>
+
+      <div class="rounded-xl border p-5 mb-10" style="background-color: var(--color-surface); border-color: var(--color-border);">
+        <a href="/" class="inline-flex items-center gap-2 py-2.5 px-5 rounded-lg text-sm font-semibold" style="background-color: var(--color-text); color: var(--color-bg);">
+          <Icon name="play" size={14} fill="currentColor" strokeWidth={0} /> <span data-i18n="pages.duration.ctaBtn">Calculate Playlist Duration Now</span>
+        </a>
+      </div>
+
+      <div class="space-y-6 text-sm leading-relaxed" style="color: var(--color-text-muted);">
+        <section>
+          <h2 class="text-base font-semibold mb-2" style="color: var(--color-text);" data-i18n="pages.duration.whyTitle">Why Doesn't YouTube Show Playlist Duration?</h2>
+          <p data-i18n="pages.duration.whyP">
+            YouTube does not display the total length of a playlist by default. You can see each video individual duration in the playlist view, but there is no native sum. YT Playlist Cal calculates this instantly via the YouTube Data API.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="text-base font-semibold mb-2" style="color: var(--color-text);" data-i18n="pages.duration.supportedTitle">Supported URL Types</h2>
+          <ul class="space-y-1 ml-4 list-disc">
+            <li><code class="font-mono text-xs" style="color: var(--color-text);">https://www.youtube.com/playlist?list=PLxxxxxx</code></li>
+            <li><code class="font-mono text-xs" style="color: var(--color-text);">https://www.youtube.com/watch?v=xxxx&list=PLxxxxxx</code></li>
+            <li><code class="font-mono text-xs" style="color: var(--color-text);">https://youtu.be/xxxx?list=PLxxxxxx</code></li>
+            <li>Raw playlist ID: <code class="font-mono text-xs" style="color: var(--color-text);">PLxxxxxx</code></li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 class="text-base font-semibold mb-2" style="color: var(--color-text);" data-i18n="pages.duration.beyondTitle">Beyond Just Duration</h2>
+          <p data-i18n="pages.durationDetail.beyondP">YT Playlist Cal goes beyond a simple duration sum. After calculating, you also get:</p>
+          <ul class="space-y-1 ml-4 list-disc mt-2">
+            <li data-i18n="pages.durationDetail.b1">Watch time at 0.5×, 0.75×, 1×, 1.25×, 1.5×, 1.75×, 2×, 2.5×, 3× speed</li>
+            <li data-i18n="pages.durationDetail.b2">Shortest and longest video in the playlist</li>
+            <li data-i18n="pages.durationDetail.b3">Average video length</li>
+            <li data-i18n="pages.durationDetail.b4">Per-video breakdown with individual durations</li>
+            <li data-i18n="pages.durationDetail.b5">Daily Watch Planner and Finish-By Calculator</li>
+            <li data-i18n="pages.durationDetail.b6">Export to CSV or TXT</li>
+            <li data-i18n="pages.durationDetail.b7">Shareable result URL</li>
+          </ul>
+        </section>
+
+        <div class="pt-4" style="border-top: 1px solid var(--color-border);">
+          <p class="text-xs" style="color: var(--color-text-subtle);">
+            <span data-i18n="pages.common.related">Related:</span> <a href="/youtube-watch-time-calculator/" style="color: var(--color-text-muted);" data-i18n="pages.common.watchTimeCalc">Watch Time Calculator</a> · <a href="/youtube-playlist-remaining-time/" style="color: var(--color-text-muted);" data-i18n="pages.common.remainingTimeCalc">Remaining Time</a> · <a href="/how-it-works/" style="color: var(--color-text-muted);" data-i18n="pages.common.howItWorks">How It Works</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </main>
+  <Footer />
+</BaseLayout>

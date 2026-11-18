@@ -1,0 +1,57 @@
+---
+// 404.astro — Custom 404 page
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Icon from '../components/Icon.astro';
+---
+
+<BaseLayout
+  title="Page Not Found — YT Playlist Cal"
+  description="The page you're looking for doesn't exist. Try using the YouTube Playlist Length Calculator on the homepage."
+  noindex={true}
+  pageKey="error404"
+>
+  <Header />
+  <main class="flex-1 py-24 text-center">
+    <div class="container" style="max-width: 480px;">
+      <div
+        class="text-6xl font-bold mb-4"
+        style="color: var(--color-border-strong); letter-spacing: -0.05em;"
+        aria-hidden="true"
+        data-i18n="pages.error404.code"
+      >
+        404
+      </div>
+      <h1
+        class="text-xl font-semibold mb-2"
+        style="color: var(--color-text);"
+        data-i18n="pages.error404.title"
+      >
+        Page Not Found
+      </h1>
+      <p class="text-sm mb-8" style="color: var(--color-text-muted);" data-i18n="pages.error404.desc">
+        The page you're looking for doesn't exist. It may have been moved, renamed, or never existed.
+      </p>
+      <a
+        href="/"
+        class="inline-flex items-center gap-2 py-2.5 px-5 rounded-lg text-sm font-semibold transition-all duration-150"
+        style="background-color: var(--color-text); color: var(--color-bg);"
+      >
+        <Icon name="play" size={14} fill="currentColor" strokeWidth={0} />
+        <span data-i18n="pages.error404.btn">Go to the Calculator</span>
+      </a>
+      <div class="mt-6">
+        <a
+          href="/tools/"
+          class="text-sm transition-colors duration-150"
+          style="color: var(--color-text-muted);"
+          data-i18n="pages.error404.allTools"
+        >
+          Browse all tools →
+        </a>
+      </div>
+    </div>
+  </main>
+  <Footer />
+</BaseLayout>

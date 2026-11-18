@@ -1,0 +1,870 @@
+{
+  "brand": {
+    "name": "YT Playlist Cal",
+    "tagline": "免费的 YouTube 播放列表总时长与观看时间计算器。",
+    "notAffiliated": "与 YouTube 或 Google 无任何关联。"
+  },
+  "nav": {
+    "home": "首页",
+    "tools": "工具箱",
+    "howItWorks": "工作原理",
+    "faq": "常见问题",
+    "about": "关于我们",
+    "contact": "联系我们",
+    "tryCalculator": "体验计算器",
+    "selectLanguage": "选择语言",
+    "searchLanguage": "搜索语言…",
+    "openMenu": "打开导航菜单",
+    "closeMenu": "关闭导航菜单",
+    "toggleTheme": "切换深色模式"
+  },
+  "hero": {
+    "badge": "快速免费的 YouTube 工具",
+    "title": "YouTube 播放列表时长计算器",
+    "subtitle": "计算播放列表总时长、1.25倍至3倍速播放时间，并即时规划您的每日学习或观看日程。"
+  },
+  "calculator": {
+    "modeFull": "完整播放列表",
+    "modeRange": "指定视频范围",
+    "modeRemaining": "剩余时间",
+    "urlLabel": "YouTube 播放列表或视频链接",
+    "urlPlaceholder": "在此粘贴 YouTube 播放列表链接、视频网址或列表 ID…",
+    "pasteBtn": "粘贴",
+    "demoBtn": "示例演示",
+    "rangeStart": "起始视频",
+    "rangeEnd": "结束视频",
+    "watchedThrough": "我已观看到第几集",
+    "speedLabel": "播放倍速",
+    "customSpeedPlaceholder": "自定义",
+    "advancedOptions": "高级设置",
+    "userApiKey": "自定义 YouTube API 密钥（可选）",
+    "userApiKeyHint": "输入您自己的 API 密钥以突破每日公共配额限制。",
+    "calculateBtn": "计算播放列表时长",
+    "calculatingBtn": "正在计算…",
+    "loadingTitle": "正在分析播放列表…",
+    "loadingStep1": "正在连接 YouTube API…",
+    "loadingStep2": "正在获取播放列表信息…",
+    "loadingStep3": "正在处理视频数据…",
+    "loadingStep4": "即将完成…",
+    "statTotal": "总时长",
+    "statCount": "视频总数",
+    "statAvg": "平均时长",
+    "statSpeed": "当前倍速耗时",
+    "statShortest": "最短视频",
+    "statLongest": "最长视频",
+    "speedTitle": "倍速对比表",
+    "speedColSpeed": "倍速",
+    "speedColDuration": "观看时长",
+    "speedColSaved": "节省时间",
+    "speedSelected": "当前选择",
+    "watchPlannerTitle": "每日观看计划器",
+    "watchPlannerDesc": "输入您每天可观看的时长（分钟），即可计算精确的学完日期。",
+    "plannerMinutes": "每天观看分钟数",
+    "plannerStartDate": "开始日期",
+    "plannerSpeed": "倍速",
+    "plannerBtn": "计算时间表",
+    "plannerResultText": "以 {speed}× 倍速、每天观看 {minutes} 分钟，您将在 {days} 天后全部看完。",
+    "plannerFinishDate": "预计完结日期：",
+    "finishByTitle": "目标截止日期计算器",
+    "finishByDesc": "有学习截止时间？选择目标日期，即可得出每天需要观看的时长。",
+    "finishByDate": "目标截止日期",
+    "finishBySpeed": "倍速",
+    "finishByBtn": "计算每日时间预算",
+    "finishByResultText": "要在 {date} 前以 {speed}× 倍速看完，接下来的 {days} 天您每天需观看 {daily}。",
+    "finishByUnfeasible": "该日期要求每天观看超过 23 小时，这在现实中不可行。请选择更晚的日期或提高倍速。",
+    "videoListTitle": "视频列表",
+    "showVideos": "展开视频列表",
+    "hideVideos": "收起视频列表",
+    "searchVideosPlaceholder": "搜索视频标题…",
+    "pageIndicator": "第 {current} 页 / 共 {total} 页",
+    "prevPage": "上一页",
+    "nextPage": "下一页",
+    "privateVideo": "私享",
+    "liveVideo": "直播",
+    "unavailableVideo": "已下架/不可用",
+    "exportTitle": "分享与导出",
+    "copyLink": "复制分享链接",
+    "copySummary": "复制摘要",
+    "exportCsv": "导出 CSV",
+    "exportTxt": "导出 TXT",
+    "copied": "已复制！",
+    "errors": {
+      "missingUrl": "请粘贴 YouTube 链接。",
+      "invalidUrl": "无法识别有效的 YouTube 播放列表或视频链接。",
+      "urlTooLong": "链接过长。",
+      "invalidRange": "起始视频序号必须小于或等于结束视频序号。",
+      "quotaExceeded": "YouTube API 今日配额已耗尽。请明天再试，或在高级设置中输入您自己的 API 密钥。",
+      "rateLimited": "请求过于频繁，请稍候再试。",
+      "notFound": "未找到播放列表或视频。请确认链接正确且播放列表设置为公开。",
+      "forbidden": "YouTube API 拒绝访问。",
+      "internalError": "服务器处理异常，请重试。",
+      "networkError": "网络错误，无法连接到计算服务器。"
+    },
+    "modeLabel": "计算模式",
+    "videosUnavailable": "{count} 个视频不可用（私享、已删除或地区受限）",
+    "byChannel": "创作者：{channel}",
+    "tryDemoBtn": "试用演示播放列表 →"
+  },
+  "features": {
+    "title": "规划 YouTube 学习与观看的一切所需",
+    "subtitle": "从简单的播放时长求和，到多倍速换算和每日学习计划规划。",
+    "items": [
+      {
+        "icon": "clock",
+        "title": "总时长统计",
+        "desc": "精确获取任何公开 YouTube 播放列表的小时、分钟和秒数总长。"
+      },
+      {
+        "icon": "zap",
+        "title": "倍速对比表",
+        "desc": "一览 0.5× 至 3× 倍速下的实际耗时以及节省的时间。"
+      },
+      {
+        "icon": "crosshair",
+        "title": "指定视频范围",
+        "desc": "仅计算播放列表中某一段视频的时长，适合阶段性课程复习。"
+      },
+      {
+        "icon": "play",
+        "title": "剩余观看时间",
+        "desc": "输入上次看到的集数，立即获知剩下多少时间。"
+      },
+      {
+        "icon": "calendar-days",
+        "title": "每日计划器",
+        "desc": "根据您每天可投入的时间，推算完结课程的具体日期。"
+      },
+      {
+        "icon": "flag",
+        "title": "截止日期倒推",
+        "desc": "设定您的 Deadline，获知每天需要打卡的具体分钟数。"
+      }
+    ]
+  },
+  "howItWorks": {
+    "badge": "工作原理",
+    "title": "计算器如何运作",
+    "subtitle": "轻松三步，即可计算任意 YouTube 播放列表时长。",
+    "steps": [
+      {
+        "num": "1",
+        "title": "粘贴 YouTube 链接",
+        "desc": "在上方输入框粘贴播放列表网址、带有 list 参数的视频链接或纯列表 ID。"
+      },
+      {
+        "num": "2",
+        "title": "安全抓取时长数据",
+        "desc": "我们的服务端调用官方 YouTube Data API v3 接口，快速获取每段视频的时长信息。"
+      },
+      {
+        "num": "3",
+        "title": "即时呈现多维度分析",
+        "desc": "立即查看时长总和、倍速耗时对比表，并生成您的每日观看安排。"
+      }
+    ],
+    "supportedBadge": "支持的格式",
+    "supportedTitle": "支持哪些 YouTube 链接？",
+    "supportedDesc": "我们的分析器准确支持标准播放列表链接、带有列表参数的视频、youtu.be 链接以及纯播放列表 ID。",
+    "links": [
+      {
+        "label": "Standard playlist URL",
+        "example": "youtube.com/playlist?list=PL..."
+      },
+      {
+        "label": "Video URL with playlist",
+        "example": "youtube.com/watch?v=...&list=PL..."
+      },
+      {
+        "label": "Short youtu.be link",
+        "example": "youtu.be/...&list=PL..."
+      },
+      {
+        "label": "Direct playlist ID",
+        "example": "PLrAXtmErZgOdP_OalsLiL..."
+      }
+    ]
+  },
+  "faq": {
+    "badge": "常见问题",
+    "title": "常见问题解答",
+    "subtitle": "关于 YouTube 播放列表时长计算的所有疑问与解答。",
+    "items": [
+      {
+        "q": "如何计算 YouTube 播放列表的总时长？",
+        "a": "只需将播放列表链接粘贴到上方的输入框中并点击“计算播放列表时长”。工具将调用官方 API 逐个视频获取时长并求和，精确返回总小时、分钟与秒数。"
+      },
+      {
+        "q": "可以计算 1.5 倍或 2 倍速下的观看时间吗？",
+        "a": "可以。计算完成后，倍速对比表会展示 0.5x、0.75x、1x、1.25x、1.5x、1.75x、2x、2.5x、3x 以及任意自定义倍速下的实际耗时。"
+      },
+      {
+        "q": "可以只计算播放列表中的一部分视频吗？",
+        "a": "可以。切换到“指定视频范围”模式并设置起始与结束序号即可；也可以用“剩余时间”模式从中断处接着算。"
+      },
+      {
+        "q": "为什么结果里的视频数量与列表显示不同？",
+        "a": "已设为私享、被删除或受到地区限制的视频无法通过 API 获取有效时长。这些视频会被单独标注并统计。"
+      },
+      {
+        "q": "计算结果精确吗？",
+        "a": "结果极其精确，完全基于 YouTube 官方 API 接口返回的 ISO 8601 时长元数据计算。"
+      },
+      {
+        "q": "工具会保存我的播放列表链接吗？",
+        "a": "不会。输入的链接仅在请求 API 时临时使用，我们不会存储或记录任何用户的输入网址。"
+      },
+      {
+        "q": "使用这个工具需要我自己的 API Key 吗？",
+        "a": "普通用户完全不需要，平台已内置接口额度。高级用户可选用自己的密钥以避免公共配额用尽。"
+      },
+      {
+        "q": "支持单个 YouTube 视频的时长计算吗？",
+        "a": "支持。粘贴单个视频链接即可查看其总长与各倍速播放耗时。"
+      },
+      {
+        "q": "这个工具收费吗？",
+        "a": "完全免费，无需注册账号，无使用次数限制。"
+      },
+      {
+        "q": "该工具与 YouTube 或 Google 官方有合作关系吗？",
+        "a": "没有。YT Playlist Cal 为独立开发者工具，与 YouTube 或 Google LLC 无任何商业附属关系。"
+      }
+    ]
+  },
+  "footer": {
+    "desc": "免费的 YouTube 播放列表长度与观看时间计算器，支持多倍速对比与日程规划。",
+    "notAffiliated": "与 YouTube 或 Google 无任何关联。",
+    "colTools": "实用工具",
+    "colResources": "资源导航",
+    "colCompany": "关于我们",
+    "colLegal": "法律条款",
+    "allRightsReserved": "版权所有。",
+    "trademarkNotice": "YouTube™ 是 Google LLC 的注册商标。本工具为独立第三方应用，与 Google 无关。",
+    "links": {
+      "playlistCalculator": "播放列表时长计算器",
+      "durationCalculator": "总时长工具",
+      "watchTimeCalculator": "观看时间换算",
+      "remainingTime": "剩余时长计算",
+      "watchTime15x": "1.5倍速耗时",
+      "watchTime2x": "2倍速耗时",
+      "howItWorks": "工作原理",
+      "faq": "常见问题",
+      "allTools": "所有工具",
+      "about": "关于我们",
+      "contact": "联系我们",
+      "privacy": "隐私政策",
+      "terms": "服务条款",
+      "disclaimer": "免责声明"
+    },
+    "brandDesc": "免费的 YouTube 播放列表时长与观看时间计算器。计算总时长、倍速播放时间与每日观看计划。",
+    "toolsTitle": "工具",
+    "resourcesTitle": "资源",
+    "legalTitle": "法律信息",
+    "copyright": "© {year} YT Playlist Cal。保留所有权利。"
+  },
+  "pages": {
+    "about": {
+      "breadcrumb": "关于我们",
+      "title": "关于 YT Playlist Cal",
+      "subtitle": "一款免费、快速且注重用户隐私的 YouTube 播放列表长度与学习计划工具。",
+      "whatWeDoTitle": "我们的初衷",
+      "whatWeDoP1": "YouTube 原生并不提供播放列表的累积总时长。当您打算学习一门编程教程或刷完一个系列视频时，往往需要预先了解总共需要花费多少时间。",
+      "whatWeDoP2": "YT Playlist Cal 为解决这一痛点而生：粘贴链接即可秒获总长、倍速耗时并推算每日完成进度。",
+      "principlesTitle": "我们的准则",
+      "p1": "永久免费，无需注册账户。",
+      "p2": "隐私至上，绝不持久化存储您的网址与浏览足迹。",
+      "p3": "边缘加速，高效精准。",
+      "trademarkTitle": "独立声明与商标",
+      "trademarkP": "YT Playlist Cal 是独立应用。YouTube™ 为 Google LLC 商标。"
+    },
+    "contact": {
+      "breadcrumb": "联系我们",
+      "title": "联系我们",
+      "subtitle": "有任何 Bug 反馈、功能想法或使用疑问？欢迎随时与我们取得联系。",
+      "formType": "反馈类别",
+      "formTypeBug": "问题反馈",
+      "formTypeFeature": "功能建议",
+      "formTypeQuestion": "使用咨询",
+      "formTypeOther": "其他事宜",
+      "formEmail": "电子邮箱（选填）",
+      "formEmailPlaceholder": "yourname@example.com",
+      "formMessage": "详细内容",
+      "formMessagePlaceholder": "请详细描述您的问题或建议…",
+      "formSubmit": "发送消息",
+      "formSuccess": "感谢您的反馈！消息已成功送达。",
+      "faqNoteTitle": "联系之前",
+      "faqNoteP": "关于配额、私密视频等大部分常见问题已在 FAQ 中详细解答。",
+      "faqLink": "查看常见问题解答 →",
+      "emailLabel": "支持邮箱",
+      "emailValue": "support@ytplaylistcal.com"
+    },
+    "tools": {
+      "breadcrumb": "工具箱",
+      "title": "YouTube 实用工具箱",
+      "subtitle": "一系列专为 YouTube 打造的免费计算工具：时长求和、倍速换算、进度规划。"
+    },
+    "duration": {
+      "breadcrumb": "时长计算器",
+      "title": "YouTube 播放列表总时长计算器",
+      "subtitle": "快速测算任意公开播放列表的时间总长，以时、分、秒清晰展示。",
+      "whyTitle": "为什么 YouTube 不直接显示总时长？",
+      "whyP": "YouTube 仅展示每个单独视频的时长，并未对整个列表进行汇总。本工具通过官方 API 解决了这道数学题。",
+      "supportedTitle": "支持的链接格式",
+      "beyondTitle": "不止于单纯的时长累加",
+      "ctaBtn": "立即开始计算",
+      "badge": "时长计算器"
+    },
+    "watchTime": {
+      "breadcrumb": "观看时间",
+      "title": "YouTube 观看时间换算工具",
+      "subtitle": "根据 1× 原速、1.25×、1.5×、1.75× 或 2× 倍速精准得出真正的播放时长。",
+      "ctaBtn": "开始换算观看时间",
+      "badge": "观看时间"
+    },
+    "remainingTime": {
+      "breadcrumb": "剩余时间",
+      "title": "YouTube 播放列表剩余时间计算器",
+      "subtitle": "输入已看过的集数，立即获知距离通关该系列还需要多少时间。",
+      "ctaBtn": "计算剩余时长",
+      "badge": "剩余时间"
+    },
+    "speed15x": {
+      "breadcrumb": "1.5倍速",
+      "title": "YouTube 1.5× 倍速播放耗时计算器",
+      "subtitle": "测算在 1.5 倍速播放下观看完整播放列表能为您节省多少宝贵时间。",
+      "ctaBtn": "以 1.5 倍速计算",
+      "badge": "1.5× 倍速"
+    },
+    "speed2x": {
+      "breadcrumb": "2倍速",
+      "title": "YouTube 2× 倍速播放耗时计算器",
+      "subtitle": "将观看时间直接缩短一半，计算 2 倍速播放下的具体所需时间。",
+      "ctaBtn": "以 2 倍速计算",
+      "badge": "2× 倍速"
+    },
+    "terms": {
+      "breadcrumb": "服务条款",
+      "title": "服务条款",
+      "lastUpdated": "最后更新日期：2026年10月31日",
+      "summary": "使用 YT Playlist Cal 即代表您同意本服务条款、隐私政策及免责声明。",
+      "subtitle": "YT Playlist Cal 服务条款。",
+      "intro": "使用本网站即表示您同意以下条款与条件。"
+    },
+    "privacy": {
+      "breadcrumb": "隐私政策",
+      "title": "隐私政策",
+      "lastUpdated": "最后更新日期：2026年10月31日",
+      "summary": "我们非常注重保护您的隐私安全，不会持久保存您提交的播放列表链接。",
+      "subtitle": "保护您在 YT Playlist Cal 上的隐私。",
+      "intro": "我们尊重您的隐私。我们不收集个人数据，也不保存您的搜索历史。"
+    },
+    "disclaimer": {
+      "breadcrumb": "免责声明",
+      "title": "免责声明",
+      "lastUpdated": "最后更新日期：2026年10月31日",
+      "summary": "YT Playlist Cal 是第三方独立工具，非 YouTube 或 Google 官方附属产品。",
+      "subtitle": "法律免责声明与商标声明。",
+      "intro": "YT Playlist Cal 是一项独立工具，与 YouTube 或 Google LLC 无任何隶属关系。"
+    },
+    "error404": {
+      "code": "404",
+      "title": "页面未找到",
+      "desc": "您访问的页面不存在或已被移除。",
+      "btn": "返回计算器首页",
+      "allTools": "查看所有工具 →",
+      "subtitle": "您查找的页面不存在或已被移动。",
+      "backHome": "返回首页"
+    },
+    "error500": {
+      "code": "500",
+      "title": "服务器处理错误",
+      "desc": "服务器在处理该请求时遇到了问题，请稍后刷新重试。",
+      "btn": "返回计算器首页",
+      "reportBtn": "反馈该问题",
+      "allTools": "查看所有工具 →",
+      "subtitle": "服务器发生临时错误，请稍后重试。",
+      "backHome": "返回首页"
+    },
+    "common": {
+      "related": "相关链接：",
+      "relatedTools": "相关工具",
+      "playlistLengthCalc": "播放列表长度计算器",
+      "fullPlaylistCalc": "完整播放列表计算器",
+      "watchTimeAt15x": "1.5× 倍速观看时长",
+      "watchTimeAt2x": "2× 倍速观看时长",
+      "watchTimeCalc": "观看时长计算器",
+      "remainingTimeCalc": "剩余时长计算器",
+      "playlistDurationCalc": "播放列表总时长计算器",
+      "howItWorks": "工作原理",
+      "faq": "常见问题",
+      "tryCalc": "立即体验计算器 →"
+    },
+    "howItWorksDetail": {
+      "breadcrumb": "工作原理",
+      "title": "YouTube 播放列表计算器的工作原理",
+      "subtitle": "全面透明地介绍 YT Playlist Cal 如何获取数据、计算播放时长并处理各种特殊情况。",
+      "stepsHeading": "详细计算流程",
+      "s1Title": "1. 粘贴任意 YouTube 链接",
+      "s1Detail": "支持播放列表链接、带列表参数的视频、短链接 youtu.be 或纯播放列表 ID。系统会在客户端预先校验格式。",
+      "s2Title": "2. 云端安全解析",
+      "s2Detail": "请求发送至云端安全节点，提取播放列表 ID。官方 API 密钥受到企业级加密保护，绝不对外暴露。",
+      "s3Title": "3. 获取列表基本信息",
+      "s3Detail": "调用 YouTube Data API v3 获取列表标题、频道名称、封面与总视频数。",
+      "s4Title": "4. 分页拉取所有视频",
+      "s4Detail": "通过分页令牌每次获取多达 50 个视频信息，完整覆盖指定范围内的所有视频。",
+      "s5Title": "5. 批量获取视频时长",
+      "s5Detail": "以 50 个为一组批量调取 ISO 8601 时长数据，保障极速响应。",
+      "s6Title": "6. 精确求和与格式转换",
+      "s6Detail": "将各视频秒数精确累加，并换算为标准时分秒格式。私密或失效视频单独统计。",
+      "s7Title": "7. 呈现多维结果与规划",
+      "s7Detail": "即时展示总时长看板、倍速对照表、分视频详情与每日学习计划表。",
+      "speedHeading": "倍速换算公式",
+      "speedIntro": "不同播放速度下的实际观看时长换算公式如下：",
+      "speedFormula": "折算秒数 = 原始总秒数 ÷ 播放速度",
+      "speedExample": "例如：10 小时的列表以 1.5× 播放：36,000 ÷ 1.5 = 24,000 秒 = 6 小时 40 分钟。",
+      "missingHeading": "为何部分视频未计入？",
+      "missingIntro": "YouTube Data API 无法读取以下视频的时长：",
+      "missing1": "私享视频 — 创作者设置为私密状态。",
+      "missing2": "已删除视频 — 已从平台完全移除。",
+      "missing3": "地区受限视频 — 当前服务器所在地区不可用。",
+      "missing4": "年龄限制视频 — 需要登录账号才能校验。",
+      "missing5": "正在进行的直播 — 尚未生成固定时长。",
+      "missingOutro": "系统会详细标注这些视频的数量，确保统计完全真实客观。",
+      "cachingHeading": "高性能智能缓存",
+      "cachingDetail": "为节约配额并实现秒开，计算结果在服务端缓存 1 小时。同一列表再次查询无需等待。",
+      "tryCalc": "立即体验计算器 →"
+    },
+    "faqDetailed": {
+      "breadcrumb": "常见问题",
+      "title": "常见问题与解答",
+      "subtitle": "关于 YouTube 播放列表时长计算、倍速节约与学习规划的完整解答。",
+      "catBasics": "计算器基础",
+      "catSpeed": "播放速度",
+      "catModes": "计算模式",
+      "catMissing": "不可用视频",
+      "catPlanner": "学习计划与日程",
+      "catPrivacy": "隐私与安全",
+      "catAbout": "关于本工具",
+      "notFoundPrompt": "没找到您需要的问题？",
+      "contactUs": "联系我们",
+      "or": "或",
+      "tryCalc": "体验计算器",
+      "q1": "如何计算 YouTube 播放列表的总时长？",
+      "a1": "只需将播放列表链接粘贴到首页输入框并点击“计算”，工具会自动拉取各视频时长并秒级计算出准确总和。",
+      "q2": "支持哪些链接格式？",
+      "a2": "支持全功能列表链接、含 list= 的视频链接、短链接 youtu.be、纯列表 ID 以及单视频链接。",
+      "q3": "可以计算单个视频的时长吗？",
+      "a3": "可以，粘贴单个视频链接即可查看其准确时长以及各倍速下的观看时间。",
+      "q4": "计算结果精确吗？",
+      "a4": "100% 精确，基于官方 YouTube API 提供的毫秒级时长元数据。",
+      "q5": "支持私密（Private）播放列表吗？",
+      "a5": "不支持，API 仅能读取公开（Public）或不公开列出（Unlisted）的列表。",
+      "q6": "可以计算 1.5 倍或 2 倍速的时长吗？",
+      "a6": "可以，系统提供 0.5× 至 3× 的完整对照表，并支持任意自定义倍速输入。",
+      "q7": "2 倍速能节省多少时间？",
+      "a7": "2 倍速正好节省 50% 的时间，例如 10 小时的课程只需 5 小时即可看完。",
+      "q8": "支持的最大倍速是多少？",
+      "a8": "快捷按钮最高至 3×，自定义输入框支持高达 5× 的理论计算。",
+      "q9": "可以只计算播放列表的其中一部分吗？",
+      "a9": "可以，选择“视频范围”模式，输入起始和结束视频编号即可。",
+      "q10": "“剩余时长”模式如何使用？",
+      "a10": "输入您上次看过的视频序号，系统将自动汇总其后所有未看视频的时长。",
+      "q11": "可以同时比较多个播放列表吗？",
+      "a11": "目前单次支持计算一个列表，多列表对比功能即将推出。",
+      "q12": "为什么会有视频未统计入内？",
+      "a12": "被创作者设为私密、已删除或有地区限制的视频无法返回时长数据。",
+      "q13": "为何统计数量可能少于 YouTube 页面显示？",
+      "a13": "YouTube 前端会统计已失效的占位项，而 API 无法访问这些项目。",
+      "q14": "直播视频如何处理？",
+      "a14": "未结束的直播没有固定时长，会记为 0 秒并在转为录播后恢复正常。",
+      "q15": "每日学习规划表如何工作？",
+      "a15": "输入您每日可支配的学习分钟数与开始日期，系统将精确计算出学完所需的总天数与预估结课日期。",
+      "q16": "目标日期倒推功能如何使用？",
+      "a16": "输入您的考试或截止日期，工具将自动倒推您每天需要观看的分钟数。",
+      "q17": "可以排除特定周末或日期吗？",
+      "a17": "目前按每日连续观看计算，自定义周日程功能将在近期更新。",
+      "q18": "网站会保存我查询的播放列表吗？",
+      "a18": "绝不保存。链接仅在请求当时在内存中处理，绝无日志或数据库持久化。",
+      "q19": "需要登录谷歌或 YouTube 账号吗？",
+      "a19": "完全不需要，无任何注册门槛与付费限制。",
+      "q20": "必须输入自己的 API 密钥吗？",
+      "a20": "不需要，平台自带官方服务额度；高频用户可在高级选项自行填写私有密钥。",
+      "q21": "自行输入的 API 密钥安全吗？",
+      "a21": "经 HTTPS 安全传输，请求完成后立即销毁，绝无二次利用。",
+      "q22": "YT Playlist Cal 是免费的吗？",
+      "a22": "是的，完全免费、没有付费套餐或广告强插。",
+      "q23": "该工具与 YouTube 或 Google 官方有关联吗？",
+      "a23": "没有。这是第三方独立工具。YouTube™ 是 Google LLC 的注册商标。",
+      "q24": "如何反馈错误或提出新功能建议？",
+      "a24": "请通过“联系我们”页面留言，团队会认真阅读每一条反馈。"
+    },
+    "durationDetail": {
+      "beyondP": "YT Playlist Cal 不仅计算总时长，更为您提供全维度的深度分析：",
+      "b1": "0.5× 至 3× 的多倍速对比明细",
+      "b2": "整套列表中最短与最长的单集视频",
+      "b3": "单视频平均时长指标",
+      "b4": "逐个视频的单独时长列表与标题",
+      "b5": "每日学习进度规划与目标结课倒推器",
+      "b6": "一键导出 CSV 或纯文本表格",
+      "b7": "生成永久分享链接，便捷同步给学习伙伴"
+    },
+    "watchTimeDetail": {
+      "whatTitle": "什么是 YouTube 观看时长？",
+      "whatP": "它是指作为观众按特定倍速学完一套课程或系列视频所实际需要投入的时间总量。",
+      "featuresTitle": "功能特色",
+      "f1": "支持任何公开 YouTube 播放列表",
+      "f2": "支持 0.5× 至 3× 及任意自定义播放倍速",
+      "f3": "支持按选定集数区间（如第 10 至 40 集）计算",
+      "f4": "支持自上次进度计算后续剩余时间",
+      "f5": "智能每日计划表，自动推算结课日期",
+      "f6": "目标日期倒推，科学分配每日时间"
+    },
+    "speed15xDetail": {
+      "ctaPrompt": "在首页使用全功能计算器：",
+      "ctaBtn": "开启 1.5× 倍速计算",
+      "ctaHint": "粘贴您的列表链接 → 系统已自动预设为 1.5× 倍速",
+      "savingsTitle": "1.5× 倍速究竟能节省多少时间？",
+      "savingsP": "在 1.5 倍速下，观看效率提升 50%：原本需要 3 小时的课程，只需 2 小时即可学完。",
+      "colOriginal": "原始时长",
+      "colAtSpeed": "1.5× 播放",
+      "colSaved": "节省时间",
+      "formula": "计算公式：实际耗时 = 原始总时长 ÷ 1.5",
+      "whoTitle": "哪些人群适合 1.5× 倍速？",
+      "whoP": "1.5× 是全球公认兼顾速度与理解力的黄金倍速，特别适合：",
+      "w1": "高校学生：快速浏览课程录像，保持清晰听感与笔记节奏。",
+      "w2": "职场与在线学习者：成倍缩短编程、设计或商业管理课程的周期。",
+      "w3": "播客与访谈听众：加速原声语速较慢的交流节目。",
+      "w4": "考前复习者：在冲刺阶段快速通关已知重点知识。",
+      "whoOutro": "多项认知科学研究表明，1.5× 语速下大脑信息吸收率几乎不受损。"
+    },
+    "speed2xDetail": {
+      "ctaPrompt": "以双倍速度计算播放列表：",
+      "ctaBtn": "开启 2× 倍速计算",
+      "savingsTitle": "2× 倍速时间节省对照表",
+      "savingsP": "在 2× 倍速下，耗时直降 50%，10 小时的内容仅需 5 小时即可通关。",
+      "colOriginal": "原长",
+      "colAtSpeed": "2× 播放",
+      "colSaved": "立省",
+      "whoTitle": "何时适合开启 2× 倍速？",
+      "whoP": "2× 倍速信息密度极高，最适合以下场景：",
+      "w1": "已经学习过的复习内容或二次强化回顾",
+      "w2": "语速极为缓慢的讲师或演讲",
+      "w3": "包含大量操作停顿与代码敲写过程的技术教程",
+      "w4": "以文字幻灯片为主的大纲速览",
+      "whoOutro": "对于全新的复杂理论，建议先从 1.25× 或 1.5× 循序渐进。"
+    },
+    "remainingTimeDetail": {
+      "ctaPrompt": "在计算器中切换至“剩余时长”模式：",
+      "ctaBtn": "开启剩余时长计算",
+      "ctaHint": "选择剩余模式 → 输入上次看过的集数 → 点击计算",
+      "howTitle": "如何计算播放列表剩余时间",
+      "s1": "打开 YouTube 播放列表，记下您最后看过的视频集数编号。",
+      "s2": "将该列表链接粘贴至 YT Playlist Cal。",
+      "s3": "在模式栏选择“剩余时长（Remaining）”。",
+      "s4": "在输入框中填入该集数编号（例如 12）。",
+      "s5": "点击“计算”，即可获得剩余视频的净时长及倍速预估。",
+      "whyTitle": "为什么这项功能如此实用？",
+      "whyP": "YouTube 官方从不显示剩下还有多少时长：",
+      "w1": "学到 40 小时编程大课中途时，清楚掌握还要投入几周时间。",
+      "w2": "在紧凑的时间表里科学安排追剧节奏。",
+      "w3": "在大考来临前合理分配各科视频的剩余复习时间。",
+      "w4": "在证书考核截止日期前确保能准时学完。",
+      "whyOutro": "内附每日学习排程器，助您告别拖延症。"
+    },
+    "privacyDetail": {
+      "intro": "YT Playlist Cal（\"我们\"、\"本工具\"）是一个独立的实用工具网站，用于计算 YouTube 播放列表长度和观看时间。本隐私政策说明了您在使用本工具时我们处理哪些信息、如何使用这些信息以及我们如何保护您的隐私。",
+      "s1Title": "1. 我们处理的信息",
+      "s1P1Title": "YouTube 网址",
+      "s1P1Text": "当您提交 YouTube 网址进行计算时，该网址会被发送到我们的服务器，服务器使用该网址向 YouTube Data API v3 发出请求。在 API 请求处理完毕后，我们不会存储、记录或保留您的 YouTube 网址。",
+      "s1P2Title": "YouTube API 密钥（可选）",
+      "s1P2Text": "如果您在高级选项中提供自己的 YouTube API 密钥，它将通过安全的 HTTPS 传输并仅用于您的特定请求。我们绝不会存储、记录或向任何第三方传输您的 API 密钥。请求完成后它会立即被丢弃。",
+      "s1P3Title": "使用情况分析",
+      "s1P3Text": "我们可能会使用注重隐私的分析服务来了解一般的总体使用模式，例如页面访问量、工具使用事件和地理分布。这些数据是聚合的，绝不与任何个人身份相关联。我们绝不向分析服务发送 YouTube 网址或 API 密钥。",
+      "s1P4Title": "本地存储 (Local Storage)",
+      "s1P4Text": "我们仅使用您浏览器的 localStorage 来记住您的深色/浅色模式外观偏好及语言选择。localStorage 中不存储任何个人敏感数据。",
+      "s1P5Title": "服务器日志",
+      "s1P5Text": "作为正常网络服务运营的一部分，我们的托管服务商（Cloudflare）可能会维护包含 IP 地址和请求时间戳的服务器访问日志。这些日志受 Cloudflare 隐私政策管辖。我们不会额外记录您的网址或 API 密钥。",
+      "s2Title": "2. Cookie 政策",
+      "s2Text": "YT Playlist Cal 不会为了跟踪或定向广告目的设置 Cookie。我们不使用任何第三方跨站跟踪 Cookie。语言偏好使用基本的本地 Cookie 进行保持。",
+      "s3Title": "3. 第三方服务",
+      "s3Text1": "YouTube Data API v3：我们使用 YouTube Data API 检索播放列表和视频元数据。您的计算请求通过我们的服务器代理，我们的服务端 API 密钥绝不会泄露给前端客户端。YouTube 的数据使用受 Google 隐私权政策管辖。",
+      "s3Text2": "Cloudflare：我们的网站由 Cloudflare 提供全球 CDN 加速、代理与安全防护，其可能会在网络安全服务中处理部分请求元数据。",
+      "s3Text3": "字体加载：我们使用 Bunny Fonts（遵循欧盟 GDPR 的隐私友好型字体服务）加载 Inter 字体。没有任何个人数据会被发送给 Bunny Fonts。",
+      "s4Title": "4. 广告展示",
+      "s4Text": "本网站可能会通过 Google AdSense 或类似广告网络展示赞助广告。广告网络可能会设置 Cookie 并跨站点分析广告效果。您可以通过 Google 广告设置随时停用个性化广告。",
+      "s5Title": "5. 儿童隐私保护",
+      "s5Text": "YT Playlist Cal 不面向 13 岁以下的儿童。我们不会故意收集儿童的个人信息。",
+      "s6Title": "6. 您的权利",
+      "s6Text": "由于除了瞬时请求处理之外我们不收集或存储个人数据，因此通常不存在需要访问、更正或删除的个人记录。如果您对我们可能持有的数据有任何疑问，请通过联系页面与我们取得联系。",
+      "s7Title": "7. 政策变更",
+      "s7Text": "我们可能会不时更新本隐私政策。任何变更都将在本页面顶部标明最新的\"更新日期\"。在政策修订后继续使用本工具即表示您接受更新后的政策。",
+      "s8Title": "8. 联系方式",
+      "s8Text": "如果您对本隐私政策有任何问题或疑问，请使用联系页面与我们取得联系。"
+    },
+    "termsDetail": {
+      "summary": "概要：使用 YT Playlist Cal 即表示您同意这些条款、我们的隐私政策和免责声明。这是一个用于估算 YouTube 播放列表时长的免费独立实用工具。",
+      "s1Title": "1. 接受条款",
+      "s1Text": "通过访问或使用 ytplaylistcal.com 上的 YT Playlist Cal（\"服务\"、\"本网站\"、\"我们\"），即表示您同意遵守这些服务条款（\"条款\"）以及所有适用的法律法规。如果您不同意这些条款的任何部分，您将被禁止使用或访问本网站。",
+      "s2Title": "2. 服务说明",
+      "s2Text1": "YT Playlist Cal 提供了一个基于 Web 的免费计算套件，旨在分析公开的 YouTube 播放列表和视频链接。该服务计算播放列表总时长、计算不同倍速下的观看时间、提供范围/剩余模式，并提供每日观看计划工具。",
+      "s2Text2": "该服务免费提供，仅供参考、教育和个人时间规划使用。我们保留随时修改、暂停或终止服务任何部分的权利，恕不另行通知。",
+      "s3Title": "3. YouTube API 与第三方条款",
+      "s3Text": "YT Playlist Cal 依靠 YouTube Data API v3 获取播放列表元数据、视频标题和视频时长。使用此服务即表示您知悉并同意：",
+      "s3Li1": "您受 YouTube 服务条款的约束。",
+      "s3Li2": "YouTube 数据依据 Google 隐私权政策进行处理。",
+      "s3Li3": "我们无法控制 YouTube 的服务器、API 配额分配、速率限制或元数据的准确性。",
+      "s4Title": "4. 合理使用守则",
+      "s4Text": "您同意仅出于合法目的使用 YT Playlist Cal。您同意绝不：",
+      "s4Li1": "发送过度的自动化请求、机器人查询或高频 API 调用，从而导致我们的服务器或基础设施降级、过载或中断。",
+      "s4Li2": "试图对速率限制、服务器安全控件或 Cloudflare 保护进行逆向工程、反编译、破解或绕过。",
+      "s4Li3": "使用本网站提交滥用、非法、侵权或恶意的输入字符串。",
+      "s4Li4": "虚假陈述您的身份或试图获得对我们服务器环境或内部端点的未经授权访问。",
+      "s4Outro": "我们保留暂时或永久阻止违反此合理使用守则的 IP 地址或对请求进行限流的权利。",
+      "s5Title": "5. 用户提供的 API 密钥（可选）",
+      "s5Text": "高级用户可以选择在计算器的高级选项部分提供他们自己的 YouTube Data API v3 密钥。",
+      "s5Li1": "您的 API 密钥通过安全 HTTPS 直接传输到我们的服务器，并仅用于执行您的即时播放列表请求。",
+      "s5Li2": "我们不会存储、记录、跟踪或与任何第三方共享您的 API 密钥。",
+      "s5Li3": "您对您自己的 Google Cloud 项目、其安全性以及与您凭证相关的任何 API 配额使用情况承担全部责任。",
+      "s6Title": "6. 知识产权与商标声明",
+      "s6Text1": "YouTube™、YouTube 徽标和相关品牌是 Google LLC 的注册商标。YT Playlist Cal 是一个独立项目，与 Google LLC 或 YouTube 没有任何隶属、认可或赞助关系。",
+      "s6Text2": "本网站上的原创源代码、视觉识别、设计系统和文档均为 YT Playlist Cal 的知识产权，受适用的版权法保护。",
+      "s7Title": "7. 计算准确性与\"按现状\"免责声明",
+      "s7Text": "所有计算结果、时长、播放速度节省估算和规划预测均\"按现状\"和\"可用状态\"提供。尽管我们追求数学上的绝对精确，但由于以下原因可能会产生差异：",
+      "s7Li1": "不可用的视频（私有、已删除、受年龄限制或受国家限制的视频返回 0 秒并被排除）。",
+      "s7Li2": "正在进行的直播或未处理的首播视频没有固定的时长元数据。",
+      "s7Li3": "YouTube ISO 8601 时长时间戳中的四舍五入差异。",
+      "s7Li4": "现实播放变量（缓冲、快进、广告播放或浏览器媒体引擎中的速度容差）。",
+      "s7Outro": "欲知完整详情，请查阅我们详尽的免责声明。",
+      "s8Title": "8. 责任限制",
+      "s8Text": "在适用法律允许的最大范围内，YT Playlist Cal 及其维护者不对因您使用或无法使用本服务而引起的任何间接、附带、特殊、从属或惩罚性损害赔偿承担任何责任，包括时间损失、错过截止日期、学业惩罚、数据丢失或系统中断。",
+      "s9Title": "9. 条款修改",
+      "s9Text": "我们可能会随时修改这些服务条款，恕不另行通知。任何修订在发布到本页面并标明最新的更新日期后立即生效。在条款修改后继续使用服务表示您接受更新后的条款。",
+      "s10Title": "10. 联系信息",
+      "s10Text": "如果您对这些服务条款有任何疑问或疑虑，请通过联系页面与我们取得联系。"
+    },
+    "disclaimerDetail": {
+      "summary": "概要：YT Playlist Cal 是一个独立的免费实用工具。我们与 YouTube 或 Google LLC 没有任何隶属、授权或认可关系。所有计算和估算均按\"现状\"提供，仅用于个人时间规划与参考。",
+      "s1Title": "1. 商标与品牌从属声明",
+      "s1Text1": "YouTube™、YouTube 徽标以及相关标记是 Google LLC（或 Alphabet Inc.）的注册商标。本网站上出现的所有其他商标、服务标记、徽标和产品名称均为其各自所有者的财产。",
+      "s1Text2": "YT Playlist Cal 是一个独立的 Web 应用程序，与 YouTube、Google LLC、Alphabet Inc. 或其任何子公司或附属公司没有任何正式隶属、关联、授权、认可或官方联系。提及任何第三方公司、产品、商标或网址均不构成其认可、推荐或赞助。",
+      "s2Title": "2. 工具性质与仅供信息参考目的",
+      "s2Text1": "YT Playlist Cal 上提供的服务、计算、时长、倍速估算、观看规划时间表和所有相关内容仅供一般信息、教育和个人时间规划使用。",
+      "s2Text2": "计算器产生的结果不应被依赖作为官方审计、具有合同约束力的衡量标准、学术完成认证或视频时长的法律技术证明。如果您有严格的考试截止日期、学业要求或商业承诺，请务必直接在 YouTube 上独立核实每个视频的时长。",
+      "s3Title": "3. 计算的准确性与完整性",
+      "s3Text1": "虽然我们努力确保所有计算在数学上准确无误，但计算依赖于第三方服务（特别是 YouTube Data API v3）返回的元数据。我们对计算结果的绝对准确性、完整性、及时性或可靠性不作任何明示或暗示的保证。",
+      "s3Text2": "由于以下不受我们控制的客观因素，总时长、视频数量或调整后的观看时间可能会出现偏差：",
+      "s3Li1": "不可用的视频：播放列表中私有、已删除、受国家/地区限制、受年龄限制或版权受限的视频无法从 API 获取时长元数据，因此排除在计算总额之外。",
+      "s3Li2": "直播与首映：直播或进行中的广播在流式传输期间或在 YouTube 后台处理期间不会报告确定的视频时长。",
+      "s3Li3": "播放列表动态更新：在计算过程中或计算之间由创作者修改或重新排序的播放列表可能会产生不同的总数。",
+      "s3Li4": "倍速播放近似值：按倍速因子（例如 1.25×、1.5×、2×）进行的数学除法提供的是理论观看时间。实际耗时可能因播放器缓冲、跳过片头片尾、暂停、广告或可变帧率而有所不同。",
+      "s3Li5": "API 元数据舍入：YouTube Data API 提供 ISO 8601 格式的视频时长。YouTube 自身系统内的任何舍入差异都会直接反映在我们的输出中。",
+      "s4Title": "4. 第三方服务与 API 规范",
+      "s4Text": "YT Playlist Cal 依靠 YouTube Data API v3 来检索公开的播放列表和视频元数据。使用本工具即表示您知悉：",
+      "s4Li1": "您计算播放列表的请求受 YouTube 条款和开发者政策的约束。与源自 YouTube 的内容互动可能受 YouTube 服务条款和 Google 政策的管辖。",
+      "s4Li2": "工具可用性取决于 YouTube API 配额、速率限制和服务器运行状态。我们不保证服务不间断运行或 100% 的可用时间。",
+      "s4Li3": "如果您在高级设置中选择使用个人 YouTube API 密钥，它仅用于促进您的单次请求，并在执行后立即丢弃，绝不会被存储或记录。您全权负责根据 Google Cloud 服务条款管理自己的 API 配额与凭据安全。",
+      "s5Title": "5. 外部链接免责声明",
+      "s5Text": "YT Playlist Cal 可能包含指向不受我们提供、维护或以任何方式控制的第三方外部网站、文档和资源的链接。我们不对外部网站上任何信息的准确性、相关性、及时性或完整性承担责任或进行保证。点击外部链接的风险完全由您自行承担。",
+      "s6Title": "6. \"按现状\"与\"按可用状态\"免责声明",
+      "s6Text1": "YT PLAYLIST CAL 及其包含的所有内容、计算器、工具和功能均按\"现状\"和\"可用状态\"分发，不提供任何明示、暗示、法定或其他形式的保证。",
+      "s6Text2": "在适用法律允许的最大范围内，我们明确否认所有保证，包括但不限于适销性、特定用途适用性、非侵权性、准确性以及无计算机病毒或其他有害组件的保证。我们不保证服务将不间断、及时、安全或无错误。",
+      "s7Title": "7. 责任限制条款",
+      "s7Text": "在任何情况下，YT PLAYLIST CAL、其作者、维护人员、关联实体或托管提供商均不对由于以下原因导致的任何直接、间接、附带、特殊、从属或惩罚性损害承担责任：",
+      "s7Li1": "您使用或无法使用本网站或其计算工具；",
+      "s7Li2": "时长结果、观看计划或元数据中的任何不准确、错误、遗漏或延迟；",
+      "s7Li3": "依赖本工具产生的输出做出的任何决定、错过的截止日期或采取的任何行动；",
+      "s7Li4": "任何未经授权的访问、技术故障、服务器停机或服务中断。",
+      "s7Outro": "如果您对本网站或其服务有任何不满意，您唯一的救济手段就是停止使用本网站。",
+      "s8Title": "8. 条款修订与变更",
+      "s8Text": "我们可能会随时更新、修改或修订本免责声明，恕不另行通知。任何更新在发布到本页面后立即生效，修订日期显示在顶部。在发布更改后您继续使用 YT Playlist Cal 即构成您对这些修改的接受。",
+      "s9Title": "9. 联系与咨询",
+      "s9Text": "如果您对本免责声明或本工具的操作有任何疑问、反馈或疑虑，请通过我们的联系页面与我们联系，或查阅我们的常见问题解答 (FAQ)。"
+    }
+  },
+  "meta": {
+    "home": {
+      "title": "YouTube 播放列表时长计算器 — YT Playlist Cal",
+      "desc": "快速计算 YouTube 播放列表总时长、1.25至3倍速播放时间，并制定每日学习打卡计划。免费无需注册。"
+    },
+    "duration": {
+      "title": "YouTube 播放列表总时长计算器 | YT Playlist Cal",
+      "desc": "秒速获取任意公开 YouTube 播放列表的精确总时长（时、分、秒），免费无门槛。"
+    },
+    "watchTime": {
+      "title": "YouTube 观看时间换算工具 | YT Playlist Cal",
+      "desc": "对比 1.25x、1.5x 及 2x 等倍速下的实际耗时，算一算能帮你节省多少时间。"
+    },
+    "remainingTime": {
+      "title": "YouTube 播放列表剩余时间计算器 | YT Playlist Cal",
+      "desc": "基于您当前看过的集数，计算播放列表还剩余多少观看时间。"
+    },
+    "speed15x": {
+      "title": "YouTube 1.5倍速播放耗时计算 | YT Playlist Cal",
+      "desc": "计算 1.5 倍速播放 YouTube 视频或播放列表的实际耗时与节省时间。"
+    },
+    "speed2x": {
+      "title": "YouTube 2倍速播放耗时计算 | YT Playlist Cal",
+      "desc": "将视频观看时长缩短一半，计算 2 倍速播放下的具体时长。"
+    },
+    "tools": {
+      "title": "YouTube 实用工具箱 — YT Playlist Cal",
+      "desc": "探索专为 YouTube 打造的实用计算工具：时长累加、倍速估算、剩余进度规划。"
+    },
+    "howItWorks": {
+      "title": "工作原理 — YouTube 播放列表时长计算器 | YT Playlist Cal",
+      "desc": "了解我们如何通过 YouTube Data API 接口安全准确地计算列表总长与倍速。"
+    },
+    "faq": {
+      "title": "常见问题解答 | YT Playlist Cal",
+      "desc": "解答关于 YouTube 播放列表时长求和、多倍速计算和 API 限制的一切疑问。"
+    },
+    "about": {
+      "title": "关于我们 — YT Playlist Cal 播放列表计算器",
+      "desc": "了解 YT Playlist Cal：一款专注速度、免费好用且无隐私泄露风险的播放列表工具。"
+    },
+    "contact": {
+      "title": "联系我们 — YT Playlist Cal",
+      "desc": "联系 YT Playlist Cal 开发团队，提交 Bug 反馈或新功能想法。"
+    },
+    "privacy": {
+      "title": "隐私政策 | YT Playlist Cal",
+      "desc": "了解 YT Playlist Cal 如何守护您的浏览隐私与数据安全。"
+    },
+    "terms": {
+      "title": "服务条款 | YT Playlist Cal",
+      "desc": "YT Playlist Cal 播放列表时长计算器的服务使用协议与条款说明。"
+    },
+    "disclaimer": {
+      "title": "免责声明 | YT Playlist Cal",
+      "desc": "YT Playlist Cal 独立工具声明与第三方商标归属说明。"
+    },
+    "error404": {
+      "title": "页面未找到 — YT Playlist Cal",
+      "desc": "您所请求的页面不存在。"
+    },
+    "error500": {
+      "title": "服务器处理错误 — YT Playlist Cal",
+      "desc": "服务器发生异常，请稍后再试。"
+    }
+  },
+  "seo": {
+    "home": {
+      "title": "YouTube 播放列表时长计算器 — YT Playlist Cal",
+      "desc": "快速计算 YouTube 播放列表总时长、1.25至3倍速播放时间，并制定每日学习打卡计划。免费无需注册。"
+    },
+    "duration": {
+      "title": "YouTube 播放列表总时长计算器 | YT Playlist Cal",
+      "desc": "秒速获取任意公开 YouTube 播放列表的精确总时长（时、分、秒），免费无门槛。"
+    },
+    "watchTime": {
+      "title": "YouTube 观看时间换算工具 | YT Playlist Cal",
+      "desc": "对比 1.25x、1.5x 及 2x 等倍速下的实际耗时，算一算能帮你节省多少时间。"
+    },
+    "remainingTime": {
+      "title": "YouTube 播放列表剩余时间计算器 | YT Playlist Cal",
+      "desc": "基于您当前看过的集数，计算播放列表还剩余多少观看时间。"
+    },
+    "speed15x": {
+      "title": "YouTube 1.5倍速播放耗时计算 | YT Playlist Cal",
+      "desc": "计算 1.5 倍速播放 YouTube 视频或播放列表的实际耗时与节省时间。"
+    },
+    "speed2x": {
+      "title": "YouTube 2倍速播放耗时计算 | YT Playlist Cal",
+      "desc": "将视频观看时长缩短一半，计算 2 倍速播放下的具体时长。"
+    },
+    "tools": {
+      "title": "YouTube 实用工具箱 — YT Playlist Cal",
+      "desc": "探索专为 YouTube 打造的实用计算工具：时长累加、倍速估算、剩余进度规划。"
+    },
+    "howItWorks": {
+      "title": "工作原理 — YouTube 播放列表时长计算器 | YT Playlist Cal",
+      "desc": "了解我们如何通过 YouTube Data API 接口安全准确地计算列表总长与倍速。"
+    },
+    "faq": {
+      "title": "常见问题解答 | YT Playlist Cal",
+      "desc": "解答关于 YouTube 播放列表时长求和、多倍速计算和 API 限制的一切疑问。"
+    },
+    "about": {
+      "title": "关于我们 — YT Playlist Cal 播放列表计算器",
+      "desc": "了解 YT Playlist Cal：一款专注速度、免费好用且无隐私泄露风险的播放列表工具。"
+    },
+    "contact": {
+      "title": "联系我们 — YT Playlist Cal",
+      "desc": "联系 YT Playlist Cal 开发团队，提交 Bug 反馈或新功能想法。"
+    },
+    "privacy": {
+      "title": "隐私政策 | YT Playlist Cal",
+      "desc": "了解 YT Playlist Cal 如何守护您的浏览隐私与数据安全。"
+    },
+    "terms": {
+      "title": "服务条款 | YT Playlist Cal",
+      "desc": "YT Playlist Cal 播放列表时长计算器的服务使用协议与条款说明。"
+    },
+    "disclaimer": {
+      "title": "免责声明 | YT Playlist Cal",
+      "desc": "YT Playlist Cal 独立工具声明与第三方商标归属说明。"
+    },
+    "error404": {
+      "title": "页面未找到 — YT Playlist Cal",
+      "desc": "您所请求的页面不存在。"
+    },
+    "error500": {
+      "title": "服务器处理错误 — YT Playlist Cal",
+      "desc": "服务器发生异常，请稍后再试。"
+    }
+  },
+  "demonstrations": {
+    "badge": "操作演示",
+    "title": "如何使用计算器",
+    "subtitle": "直观的步骤演示，向您展示如何计算播放列表时长并规划观看时间表。",
+    "tab1": "1. 粘贴链接",
+    "tab2": "2. 点击计算",
+    "tab3": "3. 总时长",
+    "tab4": "4. 视频统计",
+    "tab5": "5. 倍速设置",
+    "step1Title": "粘贴任意 YouTube 链接",
+    "step1Desc": "复制任意 YouTube 播放列表链接、带有播放列表参数的视频链接或纯播放列表 ID，并将其粘贴到计算器输入框中。",
+    "step2Title": "点击计算",
+    "step2Desc": "点击计算按钮，系统将通过 YouTube Data API 获取完整的视频时长与元数据。",
+    "step3Title": "查看总播放时长",
+    "step3Desc": "在正常播放速度下，清晰获取以小时、分钟和秒为单位的精确总播放时长。",
+    "step4Title": "查看视频数量与统计数据",
+    "step4Desc": "查看可用视频总数、平均视频长度以及最短和最长的视频时长。",
+    "step5Title": "探索倍速播放节省的时间",
+    "step5Desc": "比较 1.25×、1.5×、1.75× 和 2× 倍速下的观看时长，准确了解能为您节省多少宝贵时间。",
+    "prev": "← 上一步",
+    "next": "下一步 →",
+    "stepOf": "第 {current} 步，共 {total} 步",
+    "samplePlaylistTitle": "Web 全栈开发大师课",
+    "sampleChannel": "Code Academy",
+    "sampleDuration": "14小时 28分 45秒",
+    "sampleCount": "42 个视频",
+    "sampleAvg": "20分 41秒",
+    "sampleShortest": "介绍 — 3分 12秒",
+    "sampleLongest": "深度解析 — 1小时 05分 20秒",
+    "sampleAt15x": "9小时 39分 10秒",
+    "sampleSaved15x": "节省 4小时 49分",
+    "sampleAt2x": "7小时 14分 22秒",
+    "sampleSaved2x": "节省 7小时 14分",
+    "step1Badge": "第 1 步 / 共 5 步",
+    "step2Badge": "第 2 步 / 共 5 步",
+    "step3Badge": "第 3 步 / 共 5 步",
+    "step4Badge": "第 4 步 / 共 5 步",
+    "step5Badge": "第 5 步 / 共 5 步",
+    "autoPlayOn": "自动播放开启",
+    "autoPlayPaused": "已暂停",
+    "pasteHint": "Ctrl+V / 粘贴",
+    "detectedBadge": "✓ 已检测到播放列表：42 个视频"
+  },
+  "personas": {
+    "title": "适用人群",
+    "students": "在校学生",
+    "onlineLearners": "在线学员",
+    "courseBuyers": "课程购买者",
+    "developers": "开发者",
+    "certCandidates": "考证备考者",
+    "teachers": "教师",
+    "creators": "创作者",
+    "bingeWatchers": "刷剧/追剧爱好者"
+  }
+}

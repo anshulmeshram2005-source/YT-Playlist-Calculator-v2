@@ -1,0 +1,123 @@
+---
+// /youtube-watch-time-at-2x/ — SEO landing page for "youtube watch time at 2x"
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import Icon from '../../components/Icon.astro';
+---
+
+<BaseLayout
+  title="YouTube Watch Time at 2x Speed Calculator | YT Playlist Cal"
+  description="Calculate exact watch time and duration saved at 2x playback speed for any YouTube playlist or video."
+  pageKey="speed2x"
+>
+  <Header />
+  <main class="py-12 sm:py-16">
+    <div class="container content-width">
+      <nav aria-label="Breadcrumb" class="mb-8">
+        <ol class="flex items-center gap-1.5 text-xs" style="color: var(--color-text-muted);">
+          <li><a href="/" style="color: var(--color-text-muted); text-decoration: none;" data-i18n="nav.home">Home</a></li>
+          <li aria-hidden="true">›</li>
+          <li><a href="/tools/" style="color: var(--color-text-muted); text-decoration: none;" data-i18n="pages.tools.breadcrumb">Tools</a></li>
+          <li aria-hidden="true">›</li>
+          <li aria-current="page" style="color: var(--color-text);" data-i18n="pages.speed2x.breadcrumb">Watch Time at 2×</li>
+        </ol>
+      </nav>
+
+      <h1 class="text-3xl sm:text-4xl font-bold tracking-tight mb-3" style="color: var(--color-text); letter-spacing: -0.03em;" data-i18n="pages.speed2x.title">
+        YouTube Watch Time at 2× Speed
+      </h1>
+      <p class="text-base leading-relaxed mb-8" style="color: var(--color-text-muted);" data-i18n="pages.speed2x.subtitle">
+        At 2× speed, every hour becomes 30 minutes. Calculate exactly how much time you'll save on any YouTube playlist or video.
+      </p>
+
+      <div
+        class="rounded-xl border p-5 mb-10"
+        style="background-color: var(--color-surface); border-color: var(--color-border);"
+      >
+        <p class="text-sm font-medium mb-3" style="color: var(--color-text);" data-i18n="pages.speed2xDetail.ctaPrompt">Calculate your playlist at 2× speed:</p>
+        <a
+          href="/?speed=2"
+          class="inline-flex items-center gap-2 py-2.5 px-5 rounded-lg text-sm font-semibold transition-all duration-150"
+          style="background-color: var(--color-text); color: var(--color-bg);"
+        >
+          <Icon name="play" size={14} fill="currentColor" strokeWidth={0} />
+          <span data-i18n="pages.speed2xDetail.ctaBtn">Open 2× Speed Calculator</span>
+        </a>
+      </div>
+
+      <div class="space-y-8 text-sm leading-relaxed" style="color: var(--color-text-muted);">
+        <section>
+          <h2 class="text-base font-semibold mb-3" style="color: var(--color-text);" data-i18n="pages.speed2xDetail.savingsTitle">2× Speed: Time Savings Reference</h2>
+          <p data-i18n="pages.speed2xDetail.savingsP">At 2× speed, you save exactly <strong style="color: var(--color-text);">50%</strong> of the original duration — the most dramatic time saving available on YouTube natively.</p>
+          <div class="mt-4 overflow-x-auto">
+            <table class="w-full text-sm" style="border: 1px solid var(--color-border); border-radius: 8px; overflow: hidden;">
+              <thead>
+                <tr style="background-color: var(--color-surface-2);">
+                  <th class="text-left px-4 py-2.5 text-xs font-semibold uppercase tracking-wider" style="color: var(--color-text-muted);" data-i18n="pages.speed2xDetail.colOriginal">Original</th>
+                  <th class="text-left px-4 py-2.5 text-xs font-semibold uppercase tracking-wider" style="color: var(--color-text-muted);" data-i18n="pages.speed2xDetail.colAtSpeed">At 2×</th>
+                  <th class="text-left px-4 py-2.5 text-xs font-semibold uppercase tracking-wider" style="color: var(--color-text-muted);" data-i18n="pages.speed2xDetail.colSaved">Saved</th>
+                </tr>
+              </thead>
+              <tbody>
+                {[
+                  ['30 minutes', '15 minutes', '15 minutes'],
+                  ['1 hour', '30 minutes', '30 minutes'],
+                  ['5 hours', '2h 30m', '2h 30m'],
+                  ['10 hours', '5 hours', '5 hours'],
+                  ['20 hours', '10 hours', '10 hours'],
+                  ['40 hours', '20 hours', '20 hours'],
+                  ['100 hours', '50 hours', '50 hours'],
+                ].map(([orig, at, saved], i) => (
+                  <tr style={`border-top: 1px solid var(--color-border); ${i % 2 === 1 ? 'background-color: var(--color-surface-2);' : ''}`}>
+                    <td class="px-4 py-2.5 font-mono" style="color: var(--color-text);">{orig}</td>
+                    <td class="px-4 py-2.5 font-semibold font-mono" style="color: var(--color-text);">{at}</td>
+                    <td class="px-4 py-2.5 font-mono" style="color: var(--color-success);">-{saved}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section>
+          <h2 class="text-base font-semibold mb-3" style="color: var(--color-text);" data-i18n="pages.speed2xDetail.whoTitle">Should You Watch at 2×?</h2>
+          <p data-i18n="pages.speed2xDetail.whoP">
+            2× speed requires a higher cognitive load. It works best for:
+          </p>
+          <ul class="mt-2 space-y-1 ml-4 list-disc">
+            <li data-i18n="pages.speed2xDetail.w1">Content you're familiar with (review sessions, second watches)</li>
+            <li data-i18n="pages.speed2xDetail.w2">Slow-paced presenters</li>
+            <li data-i18n="pages.speed2xDetail.w3">Tutorial content with long pauses or filler</li>
+            <li data-i18n="pages.speed2xDetail.w4">Reading-heavy content (code walkthroughs, slide presentations)</li>
+          </ul>
+          <p class="mt-3" data-i18n="pages.speed2xDetail.whoOutro">
+            For new material requiring deep comprehension, 1.25× or 1.5× is generally more effective.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="text-base font-semibold mb-3" style="color: var(--color-text);" data-i18n="pages.common.relatedTools">Related Tools</h2>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            {[
+              { href: '/', labelKey: 'pages.common.fullPlaylistCalc', label: 'Full Playlist Calculator', descKey: 'pages.common.playlistLengthCalc', desc: 'All modes and speeds' },
+              { href: '/youtube-watch-time-at-1-5x/', labelKey: 'pages.common.watchTimeAt15x', label: 'Watch Time at 1.5×', descKey: 'pages.speed15x.subtitle', desc: 'More moderate speed' },
+              { href: '/youtube-watch-time-calculator/', labelKey: 'pages.common.watchTimeCalc', label: 'Watch Time Calculator', descKey: 'pages.watchTime.subtitle', desc: 'Any custom speed' },
+              { href: '/youtube-playlist-remaining-time/', labelKey: 'pages.common.remainingTimeCalc', label: 'Remaining Time', descKey: 'pages.remainingTime.subtitle', desc: 'How much is left?' },
+            ].map(({ href, label, labelKey, desc, descKey }) => (
+              <a
+                href={href}
+                class="block rounded-lg border p-3 transition-colors duration-150"
+                style="background-color: var(--color-surface); border-color: var(--color-border); text-decoration: none;"
+              >
+                <div class="text-sm font-semibold mb-0.5" style="color: var(--color-text);" data-i18n={labelKey}>{label}</div>
+                <div class="text-xs" style="color: var(--color-text-muted);" data-i18n={descKey}>{desc}</div>
+              </a>
+            ))}
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+  <Footer />
+</BaseLayout>

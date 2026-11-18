@@ -1,0 +1,115 @@
+---
+// /youtube-playlist-remaining-time/ — SEO landing for remaining time
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import Icon from '../../components/Icon.astro';
+---
+
+<BaseLayout
+  title="YouTube Playlist Remaining Time Calculator | YT Playlist Cal"
+  description="Calculate how much watch time is left in any YouTube playlist from where you left off. Perfect for courses, tutorials, and lecture series."
+  pageKey="remainingTime"
+>
+  <Header />
+  <main class="py-12 sm:py-16">
+    <div class="container content-width">
+      <nav aria-label="Breadcrumb" class="mb-8">
+        <ol class="flex items-center gap-1.5 text-xs" style="color: var(--color-text-muted);">
+          <li><a href="/" style="color: var(--color-text-muted); text-decoration: none;" data-i18n="nav.home">Home</a></li>
+          <li aria-hidden="true">›</li>
+          <li><a href="/tools/" style="color: var(--color-text-muted); text-decoration: none;" data-i18n="pages.tools.breadcrumb">Tools</a></li>
+          <li aria-hidden="true">›</li>
+          <li aria-current="page" style="color: var(--color-text);" data-i18n="pages.remainingTime.breadcrumb">Remaining Time</li>
+        </ol>
+      </nav>
+
+      <h1 class="text-3xl sm:text-4xl font-bold tracking-tight mb-3" style="color: var(--color-text); letter-spacing: -0.03em;" data-i18n="pages.remainingTime.title">
+        YouTube Playlist Remaining Time Calculator
+      </h1>
+      <p class="text-base leading-relaxed mb-8" style="color: var(--color-text-muted);" data-i18n="pages.remainingTime.subtitle">
+        Pick up where you left off. Enter the video number you finished and instantly see how much watch time remains in your playlist.
+      </p>
+
+      <div
+        class="rounded-xl border p-5 mb-10"
+        style="background-color: var(--color-surface); border-color: var(--color-border);"
+      >
+        <p class="text-sm font-medium mb-3" style="color: var(--color-text);" data-i18n="pages.remainingTimeDetail.ctaPrompt">Use "Remaining" mode in the calculator:</p>
+        <a
+          href="/#remaining"
+          class="inline-flex items-center gap-2 py-2.5 px-5 rounded-lg text-sm font-semibold transition-all duration-150"
+          style="background-color: var(--color-text); color: var(--color-bg);"
+        >
+          <Icon name="play" size={14} fill="currentColor" strokeWidth={0} />
+          <span data-i18n="pages.remainingTimeDetail.ctaBtn">Open Remaining Time Calculator</span>
+        </a>
+        <p class="text-xs mt-2" style="color: var(--color-text-subtle);" data-i18n="pages.remainingTimeDetail.ctaHint">Select "Remaining" mode → enter the video you watched last → calculate</p>
+      </div>
+
+      <div class="space-y-8 text-sm leading-relaxed" style="color: var(--color-text-muted);">
+        <section>
+          <h2 class="text-base font-semibold mb-3" style="color: var(--color-text);" data-i18n="pages.remainingTimeDetail.howTitle">How to Calculate Remaining Playlist Time</h2>
+          <ol class="space-y-4">
+            <li class="flex gap-3">
+              <span class="font-bold shrink-0" style="color: var(--color-text);">1.</span>
+              <span data-i18n="pages.remainingTimeDetail.s1">Go to your YouTube playlist and note the number of the last video you watched.</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="font-bold shrink-0" style="color: var(--color-text);">2.</span>
+              <span data-i18n="pages.remainingTimeDetail.s2">Paste the playlist URL into YT Playlist Cal.</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="font-bold shrink-0" style="color: var(--color-text);">3.</span>
+              <span data-i18n="pages.remainingTimeDetail.s3">Select the Remaining mode from the mode selector.</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="font-bold shrink-0" style="color: var(--color-text);">4.</span>
+              <span data-i18n="pages.remainingTimeDetail.s4">Enter the video number you finished watching (e.g. 12) in the "I've watched through video #" field.</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="font-bold shrink-0" style="color: var(--color-text);">5.</span>
+              <span data-i18n="pages.remainingTimeDetail.s5">Click Calculate and get the total remaining watch time plus speed-adjusted estimates.</span>
+            </li>
+          </ol>
+        </section>
+
+        <section>
+          <h2 class="text-base font-semibold mb-3" style="color: var(--color-text);" data-i18n="pages.remainingTimeDetail.whyTitle">Why This Is Useful</h2>
+          <p data-i18n="pages.remainingTimeDetail.whyP">YouTube playlists don't tell you how much time is left. Whether you're:</p>
+          <ul class="mt-2 space-y-1 ml-4 list-disc">
+            <li data-i18n="pages.remainingTimeDetail.w1">Halfway through a 40-hour programming course and want to know how many weeks remain</li>
+            <li data-i18n="pages.remainingTimeDetail.w2">Watching a binge-worthy series with a tight schedule</li>
+            <li data-i18n="pages.remainingTimeDetail.w3">Studying before an exam and need to plan your remaining study time</li>
+            <li data-i18n="pages.remainingTimeDetail.w4">Finishing a certification course before a deadline</li>
+          </ul>
+          <p class="mt-3" data-i18n="pages.remainingTimeDetail.whyOutro">
+            The Remaining Time Calculator gives you a precise figure plus a Daily Watch Planner to schedule your remaining viewing.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="text-base font-semibold mb-3" style="color: var(--color-text);" data-i18n="pages.common.relatedTools">Related Tools</h2>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            {[
+              { href: '/', labelKey: 'pages.common.playlistLengthCalc', label: 'Playlist Length Calculator', descKey: 'pages.common.fullPlaylistCalc', desc: 'Full playlist duration' },
+              { href: '/youtube-watch-time-at-1-5x/', labelKey: 'pages.common.watchTimeAt15x', label: 'Watch Time at 1.5×', descKey: 'pages.speed15x.subtitle', desc: 'Save time at 1.5x speed' },
+              { href: '/youtube-watch-time-at-2x/', labelKey: 'pages.common.watchTimeAt2x', label: 'Watch Time at 2×', descKey: 'pages.speed2x.subtitle', desc: 'Maximum speed savings' },
+              { href: '/youtube-watch-time-calculator/', labelKey: 'pages.common.watchTimeCalc', label: 'Watch Time Calculator', descKey: 'pages.watchTime.subtitle', desc: 'All speeds, all modes' },
+            ].map(({ href, label, labelKey, desc, descKey }) => (
+              <a
+                href={href}
+                class="p-4 rounded-xl border transition-colors duration-150 block"
+                style="background-color: var(--color-surface); border-color: var(--color-border); text-decoration: none;"
+              >
+                <div class="text-sm font-semibold mb-0.5" style="color: var(--color-text);" data-i18n={labelKey}>{label}</div>
+                <div class="text-xs" style="color: var(--color-text-muted);" data-i18n={descKey}>{desc}</div>
+              </a>
+            ))}
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+  <Footer />
+</BaseLayout>

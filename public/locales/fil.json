@@ -1,0 +1,903 @@
+{
+  "brand": {
+    "name": "YT Playlist Cal",
+    "tagline": "Libreng calculator para sa haba at oras ng panonood ng YouTube playlist.",
+    "notAffiliated": "Hindi konektado sa YouTube o Google."
+  },
+  "nav": {
+    "home": "Tahanan",
+    "tools": "Lahat ng Tool",
+    "howItWorks": "Paano Gumagana",
+    "faq": "Mga Karaniwang Tanong",
+    "about": "Tungkol sa Amin",
+    "contact": "Makipag-ugnayan",
+    "tryCalculator": "Subukan ang Calculator",
+    "selectLanguage": "Pumili ng Wika",
+    "searchLanguage": "Maghanap ng wika…",
+    "openMenu": "Buksan ang menu ng navigasyon",
+    "closeMenu": "Isara ang menu ng navigasyon",
+    "toggleTheme": "Palitan ang madilim na mode"
+  },
+  "hero": {
+    "badge": "Mabilis at Libreng YouTube Calculator",
+    "title": "YouTube Playlist Duration Calculator",
+    "subtitle": "Kalkulahin ang kabuuang haba, oras ng panonood sa 1.25× hanggang 3× bilis, at planuhin ang iyong iskedyul sa pag-aaral o panonood agad."
+  },
+  "calculator": {
+    "modeFull": "Buong Playlist",
+    "modeRange": "Hanay ng Video",
+    "modeRemaining": "Natitirang Oras",
+    "urlLabel": "URL o ID ng YouTube Playlist o Video",
+    "urlPlaceholder": "I-paste ang link ng YouTube playlist, video, o playlist ID…",
+    "pasteBtn": "I-paste",
+    "demoBtn": "Subukan ang Halimbawa",
+    "rangeStart": "Simulang Video",
+    "rangeEnd": "Pangwakas na Video",
+    "watchedThrough": "Napanood na hanggang video blg.",
+    "speedLabel": "Bilis ng Pag-play",
+    "customSpeedPlaceholder": "Pasadya",
+    "advancedOptions": "Mga Advanced na Opsyon",
+    "userApiKey": "Sariling YouTube API Key (Opsyonal)",
+    "userApiKeyHint": "Ilagay ang iyong sariling API key upang maiwasan ang limitasyon ng shared quota.",
+    "calculateBtn": "Kalkulahin ang Haba ng Playlist",
+    "calculatingBtn": "Kinakalkula…",
+    "loadingTitle": "Sinusuri ang playlist…",
+    "loadingStep1": "Kumokonekta sa YouTube API…",
+    "loadingStep2": "Kinukuha ang impormasyon ng playlist…",
+    "loadingStep3": "Pinoproseso ang haba ng mga video…",
+    "loadingStep4": "Halos tapos na…",
+    "statTotal": "Kabuuang Haba",
+    "statCount": "Bilang ng Video",
+    "statAvg": "Average bawat Video",
+    "statSpeed": "Sa Napiling Bilis",
+    "statShortest": "Pinakamaikling Video",
+    "statLongest": "Pinakamahabang Video",
+    "speedTitle": "Paghahambing ng Bilis",
+    "speedColSpeed": "Bilis",
+    "speedColDuration": "Oras ng Panonood",
+    "speedColSaved": "Oras na Natipid",
+    "speedSelected": "napili",
+    "watchPlannerTitle": "Pang-araw-araw na Plano sa Panonood",
+    "watchPlannerDesc": "Ilagay kung ilang minuto ang maaari mong ilaan bawat araw upang malaman ang eksaktong petsa ng pagtatapos.",
+    "plannerMinutes": "Minuto bawat araw",
+    "plannerStartDate": "Petsa ng Pagsisimula",
+    "plannerSpeed": "Bilis",
+    "plannerBtn": "Kalkulahin ang Iskedyul",
+    "plannerResultText": "Sa {speed}× bilis at {minutes} minuto/araw, matatapos mo ito sa loob ng {days} araw.",
+    "plannerFinishDate": "Tinatayang Petsa ng Pagtatapos:",
+    "finishByTitle": "Calculator para sa Takdang Petsa (Deadline)",
+    "finishByDesc": "May takdang araw ka bang kailangang habulin? Piliin ang petsa para malaman kung gaano katagal dapat manood bawat araw.",
+    "finishByDate": "Tapusin bago ang",
+    "finishBySpeed": "Bilis",
+    "finishByBtn": "Kalkulahin ang Oras Araw-araw",
+    "finishByResultText": "Upang matapos bago sumapit ang {date} sa bilis na {speed}×, kailangan mong manood nang {daily} araw-araw sa susunod na {days} araw.",
+    "finishByUnfeasible": "Ang target na ito ay nangangailangan ng higit sa 23 oras bawat araw na hindi praktikal. Pumili ng mas malayong petsa o lakasan ang bilis.",
+    "videoListTitle": "Talaan ng mga Video",
+    "showVideos": "Ipakita ang mga Video",
+    "hideVideos": "Itago ang mga Video",
+    "searchVideosPlaceholder": "Maghanap ayon sa pamagat ng video…",
+    "pageIndicator": "Pahina {current} ng {total}",
+    "prevPage": "Nakaraan",
+    "nextPage": "Susunod",
+    "privateVideo": "Pribado",
+    "liveVideo": "Live na video",
+    "unavailableVideo": "Hindi magagamit",
+    "exportTitle": "Ibahagi at I-export",
+    "copyLink": "Kopyahin ang Link",
+    "copySummary": "Kopyahin ang Buod",
+    "exportCsv": "I-export bilang CSV",
+    "exportTxt": "I-export bilang TXT",
+    "copied": "Nakopya na!",
+    "errors": {
+      "missingUrl": "Mangyaring maglagay ng YouTube URL.",
+      "invalidUrl": "Hindi mahanap ang wastong YouTube playlist o video link.",
+      "urlTooLong": "Masyadong mahaba ang inilagay na URL.",
+      "invalidRange": "Ang simulang video ay dapat mas mababa o kapantay ng pangwakas na video.",
+      "quotaExceeded": "Naabot na ang limitasyon sa quota ng YouTube API ngayong araw. Pakisubukan muli bukas o maglagay ng sariling key sa Advanced Options.",
+      "rateLimited": "Masyadong maraming kahilingan. Maghintay sandali at subukang muli.",
+      "notFound": "Hindi nahanap ang playlist o video. Tiyaking tama ang link at naka-public ang playlist.",
+      "forbidden": "Tinanggihan ang pag-access ng YouTube API.",
+      "internalError": "Nagkaroon ng problema sa server. Pakisubukan muli.",
+      "networkError": "Problema sa koneksyon: Hindi makakonekta sa calculator server."
+    },
+    "modeLabel": "Mode ng Pagkalkula",
+    "videosUnavailable": "{count} video ang hindi available (pribado, tinanggal, o may paghihigpit sa rehiyon)",
+    "byChannel": "ni {channel}",
+    "tryDemoBtn": "Subukan ang demo playlist →"
+  },
+  "features": {
+    "title": "Lahat ng kailangan mo para planuhin ang iyong YouTube playlist",
+    "subtitle": "Mula sa tumpak na kabuuang haba hanggang sa pagsusuri ng bilis at iskedyul ng aralin.",
+    "items": [
+      {
+        "icon": "clock",
+        "title": "Tumpak na Kabuuang Haba",
+        "desc": "Alamin ang eksaktong haba ng anumang pampublikong YouTube playlist sa oras, minuto, at segundo."
+      },
+      {
+        "icon": "zap",
+        "title": "Talaan ng Bilis",
+        "desc": "Tingnan kung gaano karaming oras ang matitipid mula 0.5× hanggang 3× bilis."
+      },
+      {
+        "icon": "crosshair",
+        "title": "Pumili ng Bahagi ng Video",
+        "desc": "Kalkulahin ang haba ng partikular na hanay ng mga video sa playlist."
+      },
+      {
+        "icon": "play",
+        "title": "Natitirang Oras",
+        "desc": "Ipasok ang huling video na natapos mo upang malaman kung ilang oras pa ang natitira."
+      },
+      {
+        "icon": "calendar-days",
+        "title": "Pang-araw-araw na Plano",
+        "desc": "Ilagay ang libreng oras mo araw-araw upang matukoy ang eksaktong araw ng pagtatapos."
+      },
+      {
+        "icon": "flag",
+        "title": "Layunin sa Takdang Petsa",
+        "desc": "Magtakda ng deadline at kunin ang kailangang oras ng panonood bawat araw."
+      }
+    ]
+  },
+  "howItWorks": {
+    "badge": "Paano Gamitin",
+    "title": "Paano kalkulahin ang haba ng YouTube playlist sa 3 hakbang",
+    "subtitle": "Mabilis na kalkulasyon nang hindi kinakailangang mag-install o mag-sign in.",
+    "steps": [
+      {
+        "number": "1",
+        "title": "Kopyahin ang link ng playlist",
+        "desc": "Sa YouTube, kopyahin ang link mula sa address bar o sa Share button."
+      },
+      {
+        "number": "2",
+        "title": "I-paste sa calculator",
+        "desc": "I-paste ang link sa kahon at piliin ang hanay ng video o nais mong bilis."
+      },
+      {
+        "number": "3",
+        "title": "Tingnan ang oras at iskedyul",
+        "desc": "Agad na makita ang kabuuang haba, paghahambing ng bilis, at petsa ng pagtatapos."
+      }
+    ],
+    "supportedBadge": "Mga Suportadong Format",
+    "supportedTitle": "Anong mga link sa YouTube ang suportado?",
+    "supportedDesc": "Tumpak na pinoproseso ng aming calculator ang mga karaniwang link ng playlist, mga video na may parameter ng playlist, mga maikling link (youtu.be), at mga direktang playlist ID.",
+    "links": [
+      {
+        "label": "Karaniwang Playlist URL",
+        "example": "youtube.com/playlist?list=PL..."
+      },
+      {
+        "label": "Video link na may Playlist",
+        "example": "youtube.com/watch?v=...&list=PL..."
+      },
+      {
+        "label": "Maikling link youtu.be",
+        "example": "youtu.be/...&list=PL..."
+      },
+      {
+        "label": "Direktang Playlist ID",
+        "example": "PLrAXtmErZgOdP_OalsLiL..."
+      }
+    ]
+  },
+  "faq": {
+    "badge": "Mga Karaniwang Tanong",
+    "title": "Mga Madalas Itanong tungkol sa Playlist Calculator",
+    "subtitle": "Lahat ng impormasyon ukol sa pagbilang ng oras, bilis, at mga limitasyon ng YouTube.",
+    "items": [
+      {
+        "q": "Paano kalkulahin ang kabuuang haba ng YouTube playlist?",
+        "a": "Kopyahin ang link ng playlist sa YouTube, i-paste ito sa input box sa aming website, at pindutin ang \"Kalkulahin ang Haba ng Playlist\". Makikita ang resulta sa loob ng ilang segundo."
+      },
+      {
+        "q": "Maaari ko bang kalkulahin ang oras sa mas mabilis na bilis (1.25×, 1.5×, 2×)?",
+        "a": "Oo naman! Awtomatikong ipinapakita ng aming talaan ng bilis ang mga pagpipilian mula 0.5× hanggang 3× kasama ang natipid na oras."
+      },
+      {
+        "q": "Gumagana ba ito sa mga unlisted o private playlist?",
+        "a": "Gumagana ito sa mga Unlisted na playlist basta nasa iyo ang link. Subalit, hindi naa-access ang mga Private playlist gamit ang YouTube API."
+      },
+      {
+        "q": "Ilang video ang pinakamaraming kayang kalkulahin?",
+        "a": "Kaya naming iproseso ang mga playlist na may daan-daang video gamit ang opisyal na YouTube Data API v3."
+      },
+      {
+        "q": "Paano ang mga binura o pribadong video sa playlist?",
+        "a": "Natutukoy at namamarkahan ang mga video na tinanggal o hindi magagamit upang manatiling wasto ang kabuuang oras."
+      },
+      {
+        "q": "Maaari ba akong pumili lamang ng bahagi ng playlist?",
+        "a": "Oo, piliin lamang ang tab na \"Hanay ng Video\" at ilagay ang simulang numero at pangwakas na numero ng video."
+      },
+      {
+        "q": "Paano kinukwenta ng Pang-araw-araw na Plano ang petsa ng pagtatapos?",
+        "a": "Hinahati nito ang kabuuang oras (sa napiling bilis) sa bilang ng mga minutong panonoorin mo araw-araw."
+      },
+      {
+        "q": "Libre ba ang serbisyong ito?",
+        "a": "Ito ay 100% libre, walang kailangang account, at pinangangalagaan ang iyong privacy."
+      },
+      {
+        "q": "Bakit hindi ipinapakita ng YouTube ang kabuuang haba?",
+        "a": "Bilang ng video lamang ang ipinapakita ng YouTube. Ginagamit ng aming tool ang API upang pagsamahin ang haba ng bawat video."
+      },
+      {
+        "q": "Maaari ko bang i-export o i-download ang listahan ng video?",
+        "a": "Oo, maaari mong kopyahin ang buod o i-download ang kumpletong CSV file para sa Excel o Google Sheets."
+      }
+    ]
+  },
+  "footer": {
+    "desc": "Libreng calculator para sa kabuuang haba at oras ng panonood ng mga playlist sa YouTube. Suriin ang anumang playlist upang malaman ang kabuuang tagal, oras ng panonood sa iba't ibang bilis, at detalyadong estadistika ng bawat video.",
+    "notAffiliated": "Hindi kaakibat ng YouTube o Google LLC.",
+    "colTools": "Mga Calculator Tool",
+    "colResources": "Mga Mapagkukunan",
+    "colCompany": "Kumpanya",
+    "colLegal": "Legal",
+    "allRightsReserved": "Lahat ng karapatan ay nakalaan.",
+    "trademarkNotice": "Ang YouTube ay rehistradong trademark ng Google LLC. Ang tool na ito ay isang independiyenteng utiliti at walang kaugnayan sa YouTube o Google.",
+    "links": {
+      "playlistCalculator": "YouTube Playlist Calculator",
+      "durationCalculator": "Kalkulator ng Haba ng Playlist",
+      "watchTimeCalculator": "Kalkulator ng Oras ng Panonood",
+      "remainingTime": "Kalkulator ng Natitirang Oras",
+      "watchTime15x": "1.5x Speed Calculator",
+      "watchTime2x": "2x Speed Calculator",
+      "howItWorks": "Paano Gumagana",
+      "faq": "Mga Karaniwang Tanong",
+      "allTools": "Lahat ng Tool",
+      "about": "Tungkol sa Amin",
+      "contact": "Makipag-ugnayan",
+      "privacy": "Patakaran sa Pagkapribado",
+      "terms": "Mga Tuntunin ng Serbisyo",
+      "disclaimer": "Pagtanggi sa Pananagutan"
+    },
+    "brandDesc": "Ang pinakamabilis at pinakatumpak na paraan upang kalkulahin ang haba ng YouTube playlist at pamahalaan ang iyong oras.",
+    "toolsTitle": "Mga Tool",
+    "resourcesTitle": "Mga Sanggunian",
+    "legalTitle": "Legal",
+    "copyright": "© {year} YT Playlist Cal (Chrono Play). Nakalaan ang lahat ng karapatan."
+  },
+  "pages": {
+    "about": {
+      "breadcrumb": "Tungkol sa Amin",
+      "title": "Tungkol sa YT Playlist Cal",
+      "subtitle": "Ginawa para sa mga mag-aaral, propesyonal, at bawat taong nagpapahalaga sa kanilang oras.",
+      "whatWeDoTitle": "Ang Aming Ginagawa",
+      "whatWeDoP1": "Ang YT Playlist Cal ay isang libre at independiyenteng web tool na nilikha upang tulungan ang mga mag-aaral, guro, developer, at masugid na manonood ng YouTube na agad na kalkulahin ang kabuuang haba at oras ng panonood ng anumang pampublikong playlist.",
+      "whatWeDoP2": "Nagpaplano ka man ng marathon sa pag-aaral, nag-aayos ng iskedyul sa video course, o nagtitipid ng oras sa bilis na 1.25x, 1.5x, 1.75x, o 2.0x, nagbibigay ang aming plataporma ng maaasahan at tumpak na datos sa loob lamang ng ilang segundo.",
+      "principlesTitle": "Aming Mga Pangunahing Simulain",
+      "p1": "Nilikha ang YT Playlist Cal upang tugunan ang isang karaniwang suliranin: ipinapakita ng YouTube ang bilang ng video ngunit hindi ang kabuuang oras o bilang ng mga araw na aabutin upang matapos ito.",
+      "p2": "Layunin naming magbigay ng mabilis na kalkulasyon nang walang nakakainis na patalastas at may paggalang sa iyong privacy.",
+      "p3": "Mabilis at tumpak. Server-side API queries, walang pagsubaybay, walang personal na datos na iniimbak. Binuo para sa kaginhawahan ng bawat gumagamit.",
+      "trademarkTitle": "Kasarinlan at Mga Trademark",
+      "trademarkP": "Ang YT Playlist Cal ay isang independiyenteng tool. Ang YouTube at ang logo nito ay mga rehistradong trademark ng Google LLC. Ang tool na ito ay hindi ineendorso o kaakibat ng Google LLC.",
+      "principlesAccuracy": "Matematikal na katumpakan: direktang kumukonekta sa YouTube Data API v3 upang kwentahin ang oras ng bawat video hanggang sa huling segundo.",
+      "principlesSpeed": "Bilis at husay: agarang resulta salamat sa matalinong caching nang walang paghihintay.",
+      "principlesPrivacy": "Pangangalaga sa pribasiya: walang mapanghimasok na cookies, walang sapilitang pagpaparehistro, at hindi iniimbak ang iyong mga link."
+    },
+    "contact": {
+      "breadcrumb": "Makipag-ugnayan",
+      "title": "Makipag-ugnayan sa Amin",
+      "subtitle": "May mga katanungan, mungkahi, o may nakitang error? Magpadala ng mensahe sa amin.",
+      "formType": "Uri ng Mensahe",
+      "formTypeBug": "Ulat ng Teknikal na Problema",
+      "formTypeFeature": "Mungkahing Bagong Feature",
+      "formTypeQuestion": "Pangkalahatang Tanong",
+      "formTypeOther": "Iba pa",
+      "formEmail": "Iyong Email",
+      "formEmailPlaceholder": "iyong.email@example.com",
+      "formMessage": "Iyong Mensahe",
+      "formMessagePlaceholder": "Ilarawan nang detalyado ang iyong tanong o suliranin...",
+      "formSubmit": "Ipadala ang Mensahe",
+      "formSuccess": "Matagumpay na naipadala ang iyong mensahe! Tutugon kami sa loob ng 24-48 oras ng trabaho.",
+      "faqNoteTitle": "Bago magpadala ng mensahe",
+      "faqNoteP": "May tanong tungkol sa kalkulasyon o API quota? Basahin ang aming FAQ bago mag-email.",
+      "faqLink": "Tingnan muna ang aming pahina ng Mga Karaniwang Tanong.",
+      "emailLabel": "Direktang Email",
+      "emailValue": "support@ytplaylistcal.com",
+      "formTypeFeedback": "Puna o Mungkahi",
+      "formTypeBusiness": "Pakikipagtulungan o Negosyo",
+      "infoTitle": "Impormasyon sa Pakikipag-ugnayan",
+      "hoursLabel": "Oras ng Pagtugon",
+      "hoursValue": "Karaniwan kaming tumutugon sa loob ng 24–48 oras ng trabaho.",
+      "faqNotice": "May mabilisang tanong tungkol sa paggamit ng calculator?"
+    },
+    "tools": {
+      "breadcrumb": "Lahat ng Tool",
+      "title": "Lahat ng YouTube Playlist Tools",
+      "subtitle": "Koleksyon ng mga libreng calculator upang masulit ang iyong oras sa YouTube."
+    },
+    "duration": {
+      "breadcrumb": "Kalkulator ng Haba",
+      "title": "YouTube Playlist Duration Calculator",
+      "subtitle": "Alamin ang eksaktong haba ng anumang pampublikong YouTube playlist.",
+      "whyTitle": "Bakit Gagamit ng Kalkulator ng Haba?",
+      "whyP": "Hindi ipinapakita ng YouTube ang kabuuang haba. Kinukuha ng aming tool ang bawat video at pinagsasama ang mga segundo nang mabilis.",
+      "supportedTitle": "Mga Suportadong Uri ng Link",
+      "beyondTitle": "Higit pa sa simpleng haba: kumpletong estadistika",
+      "ctaBtn": "Kalkulahin ang Haba ng Playlist",
+      "badge": "Calculator ng Haba",
+      "aboutTitle": "Tungkol sa Kalkulator ng Haba",
+      "aboutP1": "Kinukwenta ng YouTube Playlist Kalkulator ng Haba ang kabuuang oras ng bawat pampublikong video sa isang playlist nang may katumpakan.",
+      "aboutP2": "Hindi ipinapakita ng mismong YouTube ang kabuuang pinagsama-samang tagal ng mga playlist, kaya mahirap tantiyahin kung gaano katagal matatapos ang isang kurso o serye.",
+      "featuresTitle": "Mga Pangunahing Katangian"
+    },
+    "watchTime": {
+      "breadcrumb": "Kalkulator ng Oras ng Panonood",
+      "title": "YouTube Watch Time Calculator",
+      "subtitle": "Kalkulahin kung gaano katagal bago matapos ang isang playlist sa YouTube.",
+      "ctaBtn": "Kalkulahin ang Oras ng Panonood",
+      "badge": "Oras ng Panonood",
+      "aboutTitle": "Tungkol sa Oras ng Panonood"
+    },
+    "remainingTime": {
+      "breadcrumb": "Kalkulator ng Natitirang Oras",
+      "title": "Playlist Remaining Time Calculator",
+      "subtitle": "Alamin kung ilang oras pa ang natitira mula sa huling video na napanood mo.",
+      "ctaBtn": "Kalkulahin ang Natitirang Oras",
+      "badge": "Natitirang Oras",
+      "aboutTitle": "Tungkol sa Natitirang Oras"
+    },
+    "speed15x": {
+      "breadcrumb": "1.5x Speed Calculator",
+      "title": "Kalkulahin ang Playlist sa 1.5× Bilis",
+      "subtitle": "Tingnan kung gaano karaming oras ang matitipid kapag nanood sa bilis na 1.5×.",
+      "ctaBtn": "Kalkulahin sa 1.5x Speed",
+      "badge": "Bilis 1.5×",
+      "aboutTitle": "Tungkol sa 1.5x Speed"
+    },
+    "speed2x": {
+      "breadcrumb": "2x Speed Calculator",
+      "title": "Kalkulahin ang Playlist sa 2× Bilis",
+      "subtitle": "Bawasan ng kalahati ang iyong oras sa pag-aaral gamit ang 2× bilis.",
+      "ctaBtn": "Kalkulahin sa 2x Speed",
+      "badge": "Bilis 2×",
+      "aboutTitle": "Tungkol sa 2x Speed"
+    },
+    "terms": {
+      "breadcrumb": "Mga Tuntunin ng Serbisyo",
+      "title": "Mga Tuntunin ng Paggamit",
+      "lastUpdated": "Huling na-update: Oktubre 31, 2026",
+      "summary": "Buod: Sa paggamit ng YT Playlist Cal, sumasang-ayon ka sa mga tuntuning ito, sa aming Patakaran sa Pagkapribado, at Pagtanggi sa Pananagutan.",
+      "subtitle": "Mga tuntunin para sa paggamit ng YT Playlist Cal.",
+      "intro": "Sa paggamit ng aming website, sumasang-ayon ka sa mga sumusunod na kondisyon."
+    },
+    "privacy": {
+      "breadcrumb": "Patakaran sa Pagkapribado",
+      "title": "Patakaran sa Privacy",
+      "lastUpdated": "Huling na-update: Oktubre 31, 2026",
+      "summary": "Iginagalang namin ang iyong pribasiya. Hindi namin iniimbak ang iyong mga link, hindi sinusubaybayan ang iyong pagkakakilanlan, at hindi nagbebenta ng datos.",
+      "subtitle": "Pangangalaga sa iyong mga datos sa YT Playlist Cal.",
+      "intro": "Iginagalang namin ang iyong privacy. Hindi kami nangongolekta ng personal na datos at hindi namin iniimbak ang iyong kasaysayan ng paghahanap."
+    },
+    "disclaimer": {
+      "breadcrumb": "Pagtanggi sa Pananagutan",
+      "title": "Pagwawaksi (Disclaimer)",
+      "lastUpdated": "Huling na-update: Oktubre 31, 2026",
+      "summary": "Buod: Ang YT Playlist Cal ay isang independiyente at libreng tool. Wala kaming kaugnayan sa YouTube o Google LLC.",
+      "subtitle": "Legal na paalala at impormasyon sa trademark.",
+      "intro": "Ang YT Playlist Cal ay isang malayang tool at hindi kaanib ng YouTube o Google LLC."
+    },
+    "error404": {
+      "code": "404",
+      "title": "Hindi Nahanap ang Pahina",
+      "desc": "Ang pahinang iyong hinahanap ay hindi umiiral o inilipat na.",
+      "btn": "Bumalik sa Tahanan",
+      "allTools": "Lahat ng Tool",
+      "subtitle": "Ang pahinang hinahanap mo ay wala rito o inilipat na.",
+      "backHome": "Bumalik sa Tahanan",
+      "exploreTools": "Tingnan ang Lahat ng Tool"
+    },
+    "error500": {
+      "code": "500",
+      "title": "Problema sa Server",
+      "desc": "Nagkaroon ng hindi inaasahang problema habang pinoproseso ang iyong kahilingan.",
+      "btn": "Subukan Muli",
+      "reportBtn": "Mag-ulat ng Problema",
+      "allTools": "Lahat ng Tool",
+      "subtitle": "Nagkaroon ng pansamantalang aberya sa aming server. Pakisubukan muli maya-maya.",
+      "backHome": "Bumalik sa Tahanan",
+      "retry": "Ulitin",
+      "tryAgain": "Mangyaring subukan muli pagkaraan ng ilang sandali"
+    },
+    "common": {
+      "related": "Mga Kaugnay na Tool",
+      "relatedTools": "Mga Kaugnay na Tool",
+      "playlistLengthCalc": "Kalkulator ng Haba ng Playlist",
+      "fullPlaylistCalc": "Kumpletong Playlist Calculator",
+      "watchTimeAt15x": "Oras ng panonood sa 1.5x",
+      "watchTimeAt2x": "Oras ng panonood sa 2x",
+      "watchTimeCalc": "Kalkulator ng Oras ng Panonood",
+      "remainingTimeCalc": "Kalkulator ng Natitirang Oras",
+      "playlistDurationCalc": "Kalkulator ng Haba ng Playlist",
+      "howItWorks": "Paano Gumagana",
+      "faq": "Mga Karaniwang Tanong",
+      "tryCalc": "Subukan ang Calculator",
+      "calculatorBadge": "Libreng Online Calculator",
+      "relatedToolsDesc": "Tuklasin ang iba pang libreng calculator upang mas mapagplanuhan ang iyong panonood sa YouTube.",
+      "faqDesc": "Malinaw na mga sagot sa mga madalas itanong tungkol sa pagkalkula ng mga playlist sa YouTube.",
+      "stillHaveQuestions": "Mayroon ka pa bang mga katanungan?",
+      "stillHaveQuestionsDesc": "Nakahanda ang aming koponan na tulungan ka sa anumang katanungan o mungkahi.",
+      "contactUs": "Makipag-ugnayan sa Amin",
+      "needMoreHelp": "Kailangan ng Karagdagang Tulong?",
+      "needMoreHelpDesc": "Magpadala ng mensahe sa amin para sa tulong.",
+      "backToHome": "Bumalik sa tahanan",
+      "tryAnotherPlaylist": "Magkalkula ng ibang playlist"
+    },
+    "howItWorksDetail": {
+      "breadcrumb": "Paano Gumagana",
+      "title": "Paano Gumagana ang YouTube Playlist Calculator",
+      "subtitle": "Isang malinaw at teknikal na gabay kung paano namin sinusuri ang mga link, kinukuha ang datos sa YouTube API, at kinukwenta ang tumpak na oras.",
+      "stepsHeading": "Ang Proseso ng Pagkalkula sa Bawat Hakbang",
+      "s1Title": "1. Pagsusuri at Pagpapatunay sa Link",
+      "s1Detail": "Kapag nagdikit ka ng URL o playlist ID, kukunin ng aming system ang natatanging code ng playlist (karaniwang nagsisimula sa PL, UU, FL, o RD).",
+      "s2Title": "2. Ligtas na Koneksyon sa YouTube Data API v3",
+      "s2Detail": "Nagpapadala kami ng ligtas na kahilingan sa mga opisyal na endpoint ng YouTube API upang makuha ang kumpletong talaan ng mga video.",
+      "s3Title": "3. Awtomatikong Pagination para sa Malalaking Playlist",
+      "s3Detail": "Naglilimit ang YouTube API sa 50 video bawat tawag. Para sa mas mahahabang playlist, awtomatikong binabasa ng system ang bawat kasunod na pahina.",
+      "s4Title": "4. Pagkuha ng Tagal sa Format na ISO 8601",
+      "s4Detail": "Iniimbak ng YouTube ang tagal ng video sa pamantayang ISO 8601 (tulad ng PT1H23M45S). Isinasalin ito ng aming converter sa eksaktong segundo.",
+      "s5Title": "5. Pagsasama-sama at Pagpapakita ng Oras",
+      "s5Detail": "Pinagsasama namin ang bawat segundo at ipinapakita ang kabuuang oras sa malinaw na oras, minuto, at segundo.",
+      "s6Title": "6. Pagtatantya sa Iba't Ibang Bilis ng Panonood",
+      "s6Detail": "Ipinapakita namin ang oras kung panonoorin sa 1.25x, 1.5x, 1.75x, at 2.0x, pati na ang eksaktong oras na matitipid mo.",
+      "s7Title": "7. Kumpletong Estadistika ng Playlist",
+      "s7Detail": "Kinukwenta namin ang karaniwang haba ng video at agad na tinutukoy ang pinakamaikli at pinakamahabang video sa playlist.",
+      "speedHeading": "Ang Matematika sa Pagtitipid ng Oras",
+      "speedIntro": "Ang mabilis na oras ng panonood ay nakukuha sa pamamagitan ng paghahati sa kabuuang haba sa napiling bilis.",
+      "speedFormula": "Tunay na Oras = Kabuuang Haba ÷ Bilis",
+      "speedExample": "Halimbawa, ang isang 10-oras na playlist sa bilis na 1.5x ay matatapos sa loob lamang ng 6 na oras at 40 minuto, na nagtitipid ng 3 oras at 20 minuto.",
+      "missingHeading": "Paano Namin Hinahawakan ang Hindi Magamit na Video",
+      "missingIntro": "Maaaring hindi magbigay ng impormasyon sa tagal ang ilang video sa pamamagitan ng API:",
+      "missing1": "Pribado o binurang video: hindi nagbabalik ng tagal at binibilang bilang 0 segundo.",
+      "missing2": "May restriksyon sa bansa o edad: maaaring nakatago mula sa pampublikong API.",
+      "missing3": "Kasalukuyang live stream at premiere: walang tiyak na haba hanggang sa matapos ang pag-archive.",
+      "missing4": "Limitasyon sa quota ng API: kung maubos ang pampublikong limit, maaaring maglagay ng sariling libreng API key.",
+      "missing5": "Panandaliang problema sa network: awtomatikong inuulit ang kahilingan.",
+      "missingOutro": "Ang bilang ng mga hindi nasuring video ay laging malinaw na nakasaad sa buod ng mga resulta.",
+      "cachingHeading": "Mabilis at Matalinong Caching",
+      "cachingDetail": "Upang maiwasan ang paulit-ulit na paghingi ng datos sa YouTube at magbigay ng mabilisang sagot, pansamantala naming iniimbak sa cache ang mga sikat na playlist.",
+      "tryCalc": "Subukan ang calculator sa iyong sariling playlist ngayon"
+    },
+    "faqDetailed": {
+      "breadcrumb": "Mga Karaniwang Tanong",
+      "title": "Mga Karaniwang Tanong",
+      "subtitle": "Lahat ng kailangan mong malaman tungkol sa pagkalkula ng mga playlist sa YouTube, bilis ng panonood, at teknikal na detalye.",
+      "catBasics": "Mga Batayan ng Calculator",
+      "catSpeed": "Bilis ng Panonood",
+      "catModes": "Mga Paraan ng Pagkalkula",
+      "catMissing": "Mga Hindi Magamit na Video at Limitasyon",
+      "catPlanner": "Plano sa Pag-aaral",
+      "catPrivacy": "Pribasiya at Seguridad",
+      "catAbout": "Tungkol sa Tool",
+      "notFoundPrompt": "Hindi nahanap ang sagot sa iyong katanungan?",
+      "contactUs": "Makipag-ugnayan sa aming koponan",
+      "or": "o",
+      "tryCalc": "Magkalkula ng playlist ngayon",
+      "q1": "Paano kinukwenta ng tool na ito ang kabuuang haba?",
+      "a1": "Direktang kumukonekta ang aming calculator sa opisyal na YouTube Data API v3 upang kunin ang tamang tagal ng bawat video at tumpak na pagsamahin ang mga segundo.",
+      "q2": "Libre ba talaga ang serbisyong ito?",
+      "a2": "Oo, ang YT Playlist Cal ay 100% libre nang walang bayad, walang subscription, at hindi kailangang mag-sign up.",
+      "q3": "Ilang video ang kayang kalkulahin sa isang playlist?",
+      "a3": "Maaari kang magkalkula ng daan-daang video. Awtomatikong binabasa ng aming system ang lahat ng pahina mula sa API.",
+      "q4": "Bakit maaaring magkaiba ang kabuuang oras sa nakikita sa YouTube?",
+      "a4": "Madalas na nagra-round off ang YouTube at maaaring hindi isama ang mga pribadong video, binurang clip, o live stream.",
+      "q5": "Gumagana ba ito nang maayos sa mobile at tablet?",
+      "a5": "Oo. Ang website ay ganap na responsive at maayos na gumagana sa lahat ng uri ng smartphone, tablet, at desktop.",
+      "q6": "Kailangan ko bang mag-log in gamit ang Google account?",
+      "a6": "Hindi. Walang kinakailangang pag-log in. Idikit lamang ang link ng pampublikong playlist.",
+      "q7": "Paano kinukwenta ang natipid na oras sa 1.25x, 1.5x, o 2x?",
+      "a7": "Hinahati namin ang kabuuang segundo sa napiling bilis at ibinabawas ito sa orihinal na tagal upang ipakita ang natipid na oras.",
+      "q8": "Para saan ang function na Natitirang Oras?",
+      "a8": "Nagbibigay-daan ito na pumili kung saang video ka huling huminto upang huwag nang isama ang mga napanood mo na.",
+      "q9": "Maaari ko bang kalkulahin ang partikular na bahagi lamang ng playlist?",
+      "a9": "Oo, sa Advanced Options ay maaari mong ilagay ang panimula at pangwakas na video upang suriin lamang ang parteng iyon.",
+      "q10": "Ano ang gagawin kung lumitaw ang error na naubos ang API quota?",
+      "a10": "Maaaring mapuno ang pampublikong quota sa oras na maraming gumagamit. Maaari kang maglagay ng sarili mong libreng YouTube API key sa mga setting.",
+      "q11": "Paano pinoproseso ang mga binura o pribadong video?",
+      "a11": "Ang mga video na ito ay hindi nagbibigay ng tagal sa API kaya binibilang bilang 0 segundo, at ipinapakita ito sa resulta.",
+      "q12": "Naitatala ba ang mga playlist na aking hinahanap?",
+      "a12": "Hindi. Hindi namin itinatala ang iyong paghahanap at hindi iniuugnay ang mga playlist sa iyong pagkakakilanlan.",
+      "q13": "Bakit mas kaunting video ang ipinapakita ng calculator kumpara sa YouTube?",
+      "a13": "Kasama sa kabuuang bilang ng YouTube ang mga binura o pribadong video ngunit hindi ito mabasa ng API.",
+      "q14": "Ano ang nangyayari sa mga live stream sa playlist?",
+      "a14": "Ang mga kasalukuyang live stream ay wala pang tiyak na tagal kaya hindi isinasama sa kabuuang oras.",
+      "q15": "Maaari bang kalkulahin ang mga awtomatikong playlist (tulad ng Mix)?",
+      "a15": "Oo, basta may wastong pampublikong playlist ID ang link (tulad ng unlaping PL o RD).",
+      "q16": "Ano ang formula para sa pagtitipid sa 1.25x na bilis?",
+      "a16": "Orihinal na Oras - (Orihinal na Oras / 1.25). Eksaktong 20% ng iyong oras ang natitipid.",
+      "q17": "Ano ang formula para sa 1.75x na bilis?",
+      "a17": "Orihinal na Oras - (Orihinal na Oras / 1.75), na nagbibigay ng 42.8% na natipid na oras.",
+      "q18": "Paano ko kakalkulahin ang video 10 hanggang 30 lamang?",
+      "a18": "Sa Advanced Options, itakda ang 'Panimulang Video: 10' at 'Pangwakas na Video: 30'.",
+      "q19": "Paano gumagana ang tagaplano ng panonood?",
+      "a19": "Hinahati nito ang kabuuang tagal sa dami ng araw o minutong kaya mong ilaan araw-araw upang gumawa ng iskedyul.",
+      "q20": "Ibinibenta o ibinabahagi ba ang aking impormasyon?",
+      "a20": "Hinding-hindi. Hindi namin ibinabahagi o ibinebenta ang impormasyon ng aming mga gumagamit.",
+      "q21": "Bakit iminumungkahing maglagay ng sariling API key?",
+      "a21": "Tinitiyak ng sariling libreng key na makakapagkalkula ka anumang oras kahit maubos ang pampublikong limitasyon.",
+      "q22": "Paano kukuha ng libreng YouTube Data API v3 key?",
+      "a22": "Pumunta sa Google Cloud Console, gumawa ng libreng proyekto, i-enable ang YouTube Data API v3, at lumikha ng key sa loob ng 2 minuto.",
+      "q23": "Iniimbak ba ng inyong tool ang aking personal na API key?",
+      "a23": "Hindi. Ginagamit lamang ito pansamantala sa memorya para sa iyong kahilingan at hindi iniimbak sa database.",
+      "q24": "Maaari ko bang ibahagi ang mga resulta ng kalkulasyon?",
+      "a24": "Oo, sa isang pindot lamang ay maaari mong kopyahin ang buod upang ipadala sa iyong mga kaibigan o kaklase.",
+      "generalTitle": "Pangkalahatang Tanong",
+      "speedTitle": "Bilis ng Panonood at Pagpaplano",
+      "techTitle": "Mga Teknikal na Tanong at Solusyon"
+    },
+    "durationDetail": {
+      "beyondP": "Nag-aalok ang YT Playlist Cal ng higit pa sa simpleng pagsasama ng mga segundo:",
+      "b1": "Eksaktong kabuuang oras sa mga oras, minuto, at segundo",
+      "b2": "Karaniwang haba ng video mula sa lahat ng wastong video",
+      "b3": "Agarang pagtukoy sa pinakamaikli at pinakamahabang video",
+      "b4": "Oras ng panonood sa 1.25x, 1.5x, 1.75x, at 2.0x kasama ang natipid na oras",
+      "b5": "Malinaw na pagtukoy sa mga pribado o binurang video",
+      "b6": "Suporta para sa pasadyang saklaw ng mga episode",
+      "b7": "Kapaki-pakinabang na tagaplano para sa marathon sa pag-aaral"
+    },
+    "watchTimeDetail": {
+      "whatTitle": "Ano ang Oras ng Panonood sa YouTube?",
+      "whatP": "Ang oras ng panonood ay ang aktwal na dami ng oras na kailangan mong ilaan upang matapos ang isang playlist sa iyong napiling bilis.",
+      "featuresTitle": "Mga Katangian para sa Pagsasaayos ng Iyong Oras",
+      "f1": "Paghahambing ng 4 na magkakaibang bilis nang magkatabi",
+      "f2": "Tiyak na kwenta ng natipid na oras para sa bawat bilis",
+      "f3": "Iskedyul ng pag-aaral na hinati ayon sa araw o linggo",
+      "f4": "Tinatayang petsa ng pagtatapos batay sa iyong araw-araw na sipag",
+      "f5": "Kakayahang laktawan ang mga napanood nang video",
+      "f6": "Walang kinakailangang pagpaparehistro o personal na datos"
+    },
+    "speed15xDetail": {
+      "ctaPrompt": "Nais mo bang malaman kung gaano karaming oras ang matitipid mo sa 1.5x?",
+      "ctaBtn": "Open 1.5× Speed Calculator",
+      "ctaHint": "Idikit ang link ng playlist upang agad makita ang bilis sa 1.5x.",
+      "savingsTitle": "Gaano karaming oras ang matitipid sa bilis na 1.5x?",
+      "savingsP": "Sa bilis na 1.5x, ang bawat isang oras na video ay natatapos sa loob lamang ng 40 minuto, na nagbibigay ng 33.3% na tipid sa oras.",
+      "colOriginal": "Orihinal (1.0x)",
+      "colAtSpeed": "Sa bilis na 1.5x",
+      "colSaved": "Natipid na Oras",
+      "formula": "Formula: Oras = Kabuuang Haba ÷ 1.5",
+      "whoTitle": "Para kanino nababagay ang bilis na 1.5x?",
+      "whoP": "Ang 1.5x na bilis ang pinakapaboritong opsyon upang matuto nang mabilis nang hindi nawawala ang pokus:",
+      "w1": "Mga mag-aaral na nanonood ng mga lektyur at webinar",
+      "w2": "Mga developer na nag-aaral ng coding tutorials at tech talks",
+      "w3": "Mga tagapakinig ng mahahabang podcast at panayam na mabagal magsalita",
+      "w4": "Mga propesyonal na kumukuha ng mga online certification",
+      "whoOutro": "Kalkulahin ang iyong playlist sa 1.5x gamit ang aming libreng tool ngayon."
+    },
+    "speed2xDetail": {
+      "ctaPrompt": "Gusto mo bang hatiin sa kalahati ang oras ng panonood sa 2x?",
+      "ctaBtn": "Open 2× Speed Calculator",
+      "savingsTitle": "Gaano karaming oras ang matitipid sa 2x?",
+      "savingsP": "Sa 2x na bilis, ang oras ng panonood ay nahahati sa eksaktong kalahati. Ang 10-oras na playlist ay matatapos sa loob lamang ng 5 oras.",
+      "colOriginal": "Orihinal (1.0x)",
+      "colAtSpeed": "Sa bilis na 2x",
+      "colSaved": "Natipid na Oras",
+      "whoTitle": "Kailan mainam gamitin ang bilis na 2x?",
+      "whoP": "Nagbibigay ang dobleng bilis ng pinakamataas na kahusayan sa mga tamang pagkakataon:",
+      "w1": "Mabilisang pagbabalik-aral sa mga pamilyar na paksa bago mag-exam",
+      "w2": "Panonood ng mga presentasyong mabagal magsalita",
+      "w3": "Mga video na maraming patlang at mahahabang hinto",
+      "w4": "Mabilisang pagsusuri ng mahahabang video upang hanapin ang mahahalagang bahagi",
+      "whoOutro": "Kalkulahin ang eksaktong oras ng iyong playlist sa 2x ngayon din."
+    },
+    "remainingTimeDetail": {
+      "ctaPrompt": "Nais mo bang kalkulahin lamang ang natitirang mga video?",
+      "ctaBtn": "Open Remaining Time Calculator",
+      "ctaHint": "Idikit ang link at piliin ang video kung saan ka magpapatuloy.",
+      "howTitle": "Paano Kalkulahin ang Natitirang Oras sa 5 Madaling Hakbang",
+      "s1": "Idikit ang URL ng YouTube playlist sa kahon.",
+      "s2": "Buksan ang seksyon ng Advanced Options.",
+      "s3": "Sa patlang na 'Panimulang Video', ilagay ang numero ng susunod na panonoorin.",
+      "s4": "Pindutin ang Kalkulahin.",
+      "s5": "Tingnan ang natitirang oras sa normal at mabilis na bilis.",
+      "whyTitle": "Bakit Mahalagang Kalkulahin ang Natitirang Oras?",
+      "whyP": "Ang pagkakaroon ng kaalaman sa natitirang oras ay nagbibigay ng sigla upang tapusin ang kurso:",
+      "w1": "Subaybayan ang iyong progreso sa pag-aaral araw-araw",
+      "w2": "Magtakda ng mga layuning kayang abutin gabi-gabi",
+      "w3": "Gamitin nang maayos ang bakanteng oras nang hindi iniiwan sa gitna ang mga kurso",
+      "w4": "Isaayos ang bilis ng panonood upang umabot sa itinakdang oras",
+      "whyOutro": "Gamitin ang Natitirang Oras sa tuwing magpapatuloy ka sa isang playlist."
+    },
+    "privacyDetail": {
+      "intro": "Ang YT Playlist Cal (\"kami\", \"aming\", \"ang tool\") ay isang independiyenteng website na nagkakalkula ng haba at oras ng panonood ng mga playlist sa YouTube. Ipinapaliwanag ng Patakaran sa Pagkapribado na ito kung anong impormasyon ang aming pinoproseso kapag ginagamit mo ang tool, paano ito ginagamit, at paano namin pinangangalagaan ang iyong pribasiya.",
+      "s1Title": "1. Impormasyong Aming Pinoproseso",
+      "s1P1Title": "Mga YouTube URL",
+      "s1P1Text": "Kapag nagsumite ka ng YouTube link para kalkulahin, ang link na iyon ay ipinapadala sa aming server upang gumawa ng kahilingan sa opisyal na YouTube Data API v3. Hindi namin iniimbak o ibinabahagi ang mga link na ito maliban sa pansamantalang memory cache na kinakailangan upang tugunan ang iyong hiling.",
+      "s1P2Title": "Mga YouTube API Key (Opsyonal)",
+      "s1P2Text": "Kung maglalagay ka ng sarili mong YouTube API key sa Advanced Options, ito ay ipinapadala sa pamamagitan ng ligtas na koneksyon na HTTPS at ginagamit lamang para sa iyong sariling Google Cloud quota. Hindi namin kailanman iniimbak ang iyong API key sa database.",
+      "s1P3Title": "Estadistika ng Paggamit",
+      "s1P3Text": "Maaari kaming gumamit ng ligtas na analytics upang maunawaan ang pangkalahatang paggamit tulad ng pagbisita sa pahina at mga teknikal na problema. Hindi kami gumagamit ng mapanghimasok na cookies at hindi nangongolekta ng personal na pagkakakilanlan (PII).",
+      "s1P4Title": "Lokal na Imbakan (Local Storage)",
+      "s1P4Text": "Ginagamit lamang namin ang localStorage ng iyong browser upang tandaan ang iyong tema (madilim/maliwanag) at piniling wika sa pagitan ng mga pagbisita. Ang impormasyong ito ay hindi umaalis sa iyong aparato.",
+      "s1P5Title": "Server Logs",
+      "s1P5Text": "Maaaring magtala ang aming hosting provider (Cloudflare) ng mga teknikal na log kabilang ang mga IP address para sa seguridad sa network at pag-iwas sa DDoS attacks.",
+      "s2Title": "2. Mga Cookie",
+      "s2Text": "Hindi nagtatakda ang YT Playlist Cal ng cookies para sa pagsubaybay o patalastas. Ang mga teknikal na cookie lamang ang maaaring gamitin ng Cloudflare upang hadlangan ang masamang trapiko.",
+      "s3Title": "3. Mga Serbisyong Mula sa Ibang Partido",
+      "s3Text1": "YouTube Data API v3: Gumagamit kami ng YouTube API upang kumuha ng metadata. Ang iyong mga kahilingan ay sumasailalim sa Mga Tuntunin ng Serbisyo ng YouTube at Patakaran sa Pagkapribado ng Google.",
+      "s3Text2": "Cloudflare: Ang aming website ay pinangangasiwaan at pinoprotektahan sa pamamagitan ng Cloudflare para sa seguridad at mabilis na paghahatid ng nilalaman.",
+      "s3Text3": "Font: Gumagamit kami ng Bunny Fonts (isang GDPR-compliant na alternatibo sa Google Fonts) para ipakita ang Inter font nang hindi nagtatala ng IP address.",
+      "s4Title": "4. Patalastas",
+      "s4Text": "Maaaring magpakita ang website ng mga patalastas sa pamamagitan ng Google AdSense. Maaaring gumamit ang mga ad network ng mga di-personal na tagatukoy alinsunod sa batas at pahintulot ng gumagamit.",
+      "s5Title": "5. Pribasiya ng mga Bata",
+      "s5Text": "Ang YT Playlist Cal ay hindi nakadirekta sa mga batang wala pang 13 taong gulang. Hindi kami sadyang nangongolekta ng impormasyon mula sa mga bata.",
+      "s6Title": "6. Iyong Mga Karapatan",
+      "s6Text": "Dahil hindi kami nangongolekta o nag-iimbak ng personal na datos bukod sa panandaliang pagpoproseso, sa pangkalahatan ay wala kaming anumang maituturing na talaan tungkol sa iyo.",
+      "s7Title": "7. Mga Pagbabago sa Patakarang Ito",
+      "s7Text": "Maaari naming i-update ang Patakaran sa Pagkapribado na ito paminsan-minsan. Ang mga pagbabago ay magkakabisa kapag nai-post na sa pahinang ito.",
+      "s8Title": "8. Makipag-ugnayan",
+      "s8Text": "Kung mayroon kang mga tanong tungkol sa Patakarang ito, mangyaring gamitin ang aming pahina sa Pakikipag-ugnayan."
+    },
+    "termsDetail": {
+      "summary": "Buod: Sa paggamit ng YT Playlist Cal, sumasang-ayon ka sa mga tuntuning ito, sa aming Patakaran sa Pagkapribado, at Pagtanggi sa Pananagutan. Ito ay isang libre at independiyenteng tool para sa pagtatantya ng oras ng mga playlist sa YouTube.",
+      "s1Title": "1. Pagtanggap sa Mga Tuntunin",
+      "s1Text": "Sa pag-access o paggamit ng YT Playlist Cal (\"Serbisyo\", \"Website\", \"kami\"), sumasang-ayon kang sumunod sa Mga Tuntunin ng Serbisyo na ito. Kung hindi ka sumasang-ayon, itigil agad ang paggamit sa Serbisyo.",
+      "s2Title": "2. Paglalarawan ng Serbisyo",
+      "s2Text1": "Nagbibigay ang YT Playlist Cal ng libreng web tools upang suriin ang mga pampublikong playlist sa YouTube, pagsamahin ang haba ng mga video, at tantiyahin ang oras sa iba't ibang bilis.",
+      "s2Text2": "Ipinagkakaloob ang Serbisyo nang walang bayad para lamang sa impormasyon, edukasyon, at personal na pagpaplano.",
+      "s3Title": "3. YouTube API at Mga Tuntunin ng Iba",
+      "s3Text": "Umaasa ang YT Playlist Cal sa YouTube Data API v3 upang kumuha ng impormasyon. Sa paggamit ng serbisyong ito:",
+      "s3Li1": "Ikaw ay sumasailalim sa Mga Tuntunin ng Serbisyo ng YouTube.",
+      "s3Li2": "Ang datos ng YouTube ay pinoproseso alinsunod sa Patakaran sa Pagkapribado ng Google.",
+      "s3Li3": "Wala kaming kontrol sa mga server ng YouTube, quota ng API, o katumpakan ng datos ng iba.",
+      "s4Title": "4. Patakaran sa Wastong Paggamit",
+      "s4Text": "Sumasang-ayon kang gamitin ang serbisyong ito para sa mga legal na layunin lamang. Nangangako kang hindi:",
+      "s4Li1": "Magpapadala ng labis na awtomatikong kahilingan, bot, o script na nagpapabigat sa aming server o sa YouTube API.",
+      "s4Li2": "Susubok na i-hack, i-reverse engineer, o labagin ang mga kontrol sa seguridad at limitasyon ng server.",
+      "s4Li3": "Gagamitin ang site para magpadala ng mapanganib o labag sa batas na datos.",
+      "s4Li4": "Magsisinungaling sa pagkakakilanlan o susubok na pumasok nang walang pahintulot sa aming server.",
+      "s4Outro": "Inilalaan namin ang karapatang i-block pansamantala o permanente ang mga IP address na lumalabag sa mga alituntuning ito.",
+      "s5Title": "5. Mga API Key ng Gumagamit (Opsyonal)",
+      "s5Text": "Maaaring maglagay ang mga advanced user ng sarili nilang YouTube Data API v3 key sa mga setting:",
+      "s5Li1": "Ang iyong key ay ligtas na ipinapadala sa pamamagitan ng HTTPS at ginagamit lamang para sa iyong kasalukuyang kahilingan.",
+      "s5Li2": "Hindi namin kailanman iniimbak o ibinabahagi ang iyong pribadong key sa iba.",
+      "s5Li3": "Ikaw ang tanging responsable sa seguridad at paggamit ng quota sa iyong Google Cloud project.",
+      "s6Title": "6. Karapatang Intelektwal",
+      "s6Text1": "Ang YouTube™, logo ng YouTube, at mga kaugnay na tatak ay mga rehistradong trademark ng Google LLC. Ang YT Playlist Cal ay independiyente at walang kaugnayan sa Google LLC.",
+      "s6Text2": "Ang orihinal na source code, disenyo, logo (\"Chrono Play\"), at mga artikulong gabay ay pag-aari ng YT Playlist Cal.",
+      "s7Title": "7. Katumpakan ng Kalkulasyon at Pagtanggi \"Gaya ng Naririto\"",
+      "s7Text": "Ang lahat ng kalkulasyon at taya ng oras ay ibinibigay \"gaya ng naririto\" para sa praktikal na pagpaplano. Maaaring magkaroon ng kaunting pagkakaiba dahil sa:",
+      "s7Li1": "Mga video na hindi magamit (ang mga pribado o bawal sa bansa ay nagbibigay ng 0 segundo).",
+      "s7Li2": "Mga live stream na wala pang permanenteng haba.",
+      "s7Li3": "Pag-round off ng mga segundo sa ISO 8601 format ng YouTube.",
+      "s7Li4": "Mga salik sa panonood tulad ng buffering o mga ad.",
+      "s7Outro": "Basahin ang aming kumpletong Pagtanggi sa Pananagutan para sa karagdagang detalye.",
+      "s8Title": "8. Limitasyon ng Pananagutan",
+      "s8Text": "Hangga't ipinapahintulot ng batas, ang mga tagapamahala ng YT Playlist Cal ay hindi mananagot para sa anumang pinsalang idinulot ng paggamit sa tool na ito.",
+      "s9Title": "9. Mga Pagbabago sa Tuntunin",
+      "s9Text": "Maaari naming baguhin ang Mga Tuntuning ito anumang oras nang walang abiso. Magkakabisa ang mga pagbabago kapag nai-post na sa pahinang ito.",
+      "s10Title": "10. Impormasyon sa Pakikipag-ugnayan",
+      "s10Text": "Para sa mga katanungan tungkol sa Mga Tuntuning ito, mangyaring makipag-ugnayan sa amin sa pahina ng Kontak."
+    },
+    "disclaimerDetail": {
+      "summary": "Buod: Ang YT Playlist Cal ay isang libre at independiyenteng tool. Wala kaming kaugnayan sa YouTube o Google LLC. Lahat ng kalkulasyon ay ibinibigay \"gaya ng naririto\" para lamang sa sanggunian.",
+      "s1Title": "1. Mga Trademark at Kasarinlan",
+      "s1Text1": "Ang YouTube™, logo ng YouTube, at kaugnay na disenyo ay mga rehistradong trademark ng Google LLC. Lahat ng trademark sa site na ito ay pag-aari ng kani-kanilang may-ari.",
+      "s1Text2": "Ang YT Playlist Cal ay isang independiyenteng web app at walang opisyal na kaugnayan, pag-endorso, o pakikipagtulungan sa YouTube o Google LLC.",
+      "s2Title": "2. Katangian ng Tool at Layuning Impormasyon Lamang",
+      "s2Text1": "Ang mga serbisyo at kalkulasyon ng YT Playlist Cal ay inilaan lamang para sa personal na kaginhawahan at edukasyon.",
+      "s2Text2": "Ang mga resulta ay hindi dapat ituring na opisyal na audit o sertipikasyon mula sa YouTube.",
+      "s3Title": "3. Katumpakan at Saklaw ng Datos",
+      "s3Text1": "Kahit ginagawa namin ang lahat upang maging wasto ang matematika, ang mga resulta ay lubos na nakadepende sa datos mula sa YouTube Data API v3.",
+      "s3Text2": "Maaaring magkaroon ng kaunting pagkakaiba dahil sa mga salik na hindi namin kontrolado:",
+      "s3Li1": "Hindi magamit na video: ang mga pribado o binurang video ay madalas na walang datos ng tagal.",
+      "s3Li2": "Mga live stream: walang tiyak na haba hanggang sa matapos ang pag-archive.",
+      "s3Li3": "Mga dinamikong pagbabago: mga pagbabagong ginawa ng may-ari ng playlist habang nagkakalkula.",
+      "s3Li4": "Taya sa bilis: hindi isinasaalang-alang ng simpleng pagkalkula ang loading time ng browser.",
+      "s3Li5": "Format na ISO 8601: maaaring maipon ang kaunting pag-round off sa daan-daang video.",
+      "s4Title": "4. Paggamit ng API at Ibang Partido",
+      "s4Text": "Gumagamit ang YT Playlist Cal ng YouTube Data API v3 para sa pampublikong datos. Sa paggamit ng tool, kinikilala mo na:",
+      "s4Li1": "Ang iyong mga kahilingan ay pinamamahalaan ng mga panuntunan sa developer ng YouTube at ng Google.",
+      "s4Li2": "Ang serbisyo ay nakasalalay sa katayuan at quota ng mga server ng YouTube.",
+      "s4Li3": "Ang sariling API key ay ginagamit lamang para sa iyong kasalukuyang kahilingan at hindi iniimbak.",
+      "s5Title": "5. Mga Panlabas na Link",
+      "s5Text": "Maaaring maglaman ang YT Playlist Cal ng mga link sa ibang website. Wala kaming pananagutan sa nilalaman ng mga panlabas na site na ito.",
+      "s6Title": "6. Pagtanggi sa Garantiya \"Gaya ng Naririto\"",
+      "s6Text1": "ANG YT PLAYLIST CAL AT ANG LAHAT NG FEATURE NITO AY IBINIBIGAY \"GAYA NG NARIRITO\" NANG WALANG ANUMANG URI NG HAYAG O IPINAHIWATIG NA GARANTIYA.",
+      "s6Text2": "HANGGA'T IPINAPAHINTULOT NG BATAS, ITINATANGGI NAMIN ANG LAHAT NG GARANTIYA NG KAANGKUPAN PARA SA ISANG PARTIKULAR NA LAYUNIN.",
+      "s7Title": "7. Limitasyon ng Pananagutan",
+      "s7Text": "HINDI KAILANMAN MANANAGOT ANG YT PLAYLIST CAL O ANG MGA MAY-ARI NITO PARA SA ANUMANG PINSALANG DULOT NG:",
+      "s7Li1": "Paggamit o hindi paggamit sa website o sa mga calculator nito;",
+      "s7Li2": "Anumang kamalian o pagkaantala sa resulta ng tagal ng oras;",
+      "s7Li3": "Mga desisyong ginawa batay sa mga resulta ng calculator na ito;",
+      "s7Li4": "Mga teknikal na aberya o pagkawala ng koneksyon sa server.",
+      "s7Outro": "Ang tanging lunas sa kaso ng kawalang-kasiyahan ay ang pagtigil sa paggamit ng tool na ito.",
+      "s8Title": "8. Mga Pagbabago sa Pagtanggi",
+      "s8Text": "Maaari naming baguhin ang Pagtangging ito anumang oras nang walang abiso.",
+      "s9Title": "9. Mga Katanungan",
+      "s9Text": "Kung mayroon kang mga katanungan tungkol sa Pagtangging ito, mangyaring gamitin ang aming pahina ng Kontak."
+    }
+  },
+  "meta": {
+    "home": {
+      "title": "YouTube Playlist Duration Calculator | YT Playlist Cal",
+      "desc": "Kalkulahin ang kabuuang haba ng YouTube playlist nang mabilis at tumpak. Suportado ang 1.25×-3× bilis, hanay ng video, natitirang oras, at plano sa pag-aaral."
+    },
+    "tools": {
+      "title": "Mga Tool para sa YouTube Playlist | YT Playlist Cal",
+      "desc": "Mga libreng calculator para sa haba ng playlist, pagtitipid ng oras sa bilis, at plano sa panonood sa YouTube."
+    },
+    "duration": {
+      "title": "YouTube Playlist Duration Calculator | YT Playlist Cal",
+      "desc": "Alamin agad ang kabuuang haba ng anumang YouTube playlist sa oras, minuto, at segundo."
+    },
+    "watchTime": {
+      "title": "YouTube Watch Time Calculator | YT Playlist Cal",
+      "desc": "Kalkulahin ang tunay na oras ng panonood ng YouTube playlist sa karaniwan at pinabilis na bilis."
+    },
+    "remainingTime": {
+      "title": "Playlist Remaining Time Calculator | YT Playlist Cal",
+      "desc": "Alamin kung ilang oras pa ang natitira upang matapos ang iyong YouTube playlist mula sa huling napanood."
+    },
+    "speed15x": {
+      "title": "Kalkulahin ang Playlist sa 1.5× Bilis | YT Playlist Cal",
+      "desc": "Kalkulahin ang haba ng YouTube playlist sa bilis na 1.5× at tingnan ang kabuuang oras na matitipid."
+    },
+    "speed2x": {
+      "title": "Kalkulahin ang Playlist sa 2× Bilis | YT Playlist Cal",
+      "desc": "Bawasan ng kalahati ang oras ng panonood. Kalkulahin ang haba ng YouTube playlist sa 2× bilis."
+    },
+    "howItWorks": {
+      "title": "Paano Gumagana ang Playlist Calculator | YT Playlist Cal",
+      "desc": "Alamin ang sunod-sunod na paraan ng pagkuha ng haba ng playlist gamit ang opisyal na YouTube Data API."
+    },
+    "faq": {
+      "title": "Mga Madalas Itanong tungkol sa YouTube Playlist | YT Playlist Cal",
+      "desc": "Mga sagot sa karaniwang tanong ukol sa pagbilang ng haba ng video, bilis, at quota ng YouTube API."
+    },
+    "about": {
+      "title": "Tungkol sa Amin — YT Playlist Cal",
+      "desc": "Alamin ang tungkol sa YT Playlist Cal: mabilis, ligtas, at libreng calculator para sa mga YouTube playlist."
+    },
+    "contact": {
+      "title": "Makipag-ugnayan — YT Playlist Cal",
+      "desc": "Makipag-ugnayan sa YT Playlist Cal para sa mga tanong, mungkahi, o suporta."
+    },
+    "privacy": {
+      "title": "Patakaran sa Privacy | YT Playlist Cal",
+      "desc": "Alamin kung paano pinangangalagaan ang iyong impormasyon at privacy sa YT Playlist Cal."
+    },
+    "terms": {
+      "title": "Mga Tuntunin ng Serbisyo | YT Playlist Cal",
+      "desc": "Mga panuntunan at tuntunin sa paggamit ng libreng YT Playlist Cal calculator."
+    },
+    "disclaimer": {
+      "title": "Pagwawaksi (Disclaimer) | YT Playlist Cal",
+      "desc": "Legal na impormasyon at patakaran sa trademark ng YT Playlist Cal."
+    },
+    "error404": {
+      "title": "Hindi Nahanap ang Pahina — YT Playlist Cal",
+      "desc": "Hindi mahanap ang hiniling na pahina sa YT Playlist Cal."
+    },
+    "error500": {
+      "title": "May Problema sa Server — YT Playlist Cal",
+      "desc": "Nagkaroon ng problema sa pag-load ng pahina. Pakisubukan muli sa ibang pagkakataon."
+    }
+  },
+  "seo": {
+    "home": {
+      "title": "YouTube Playlist Duration Calculator | YT Playlist Cal",
+      "desc": "Kalkulahin ang kabuuang haba ng YouTube playlist nang mabilis at tumpak. Suportado ang 1.25×-3× bilis, hanay ng video, natitirang oras, at plano sa pag-aaral."
+    },
+    "tools": {
+      "title": "Mga Tool para sa YouTube Playlist | YT Playlist Cal",
+      "desc": "Mga libreng calculator para sa haba ng playlist, pagtitipid ng oras sa bilis, at plano sa panonood sa YouTube."
+    },
+    "duration": {
+      "title": "YouTube Playlist Duration Calculator | YT Playlist Cal",
+      "desc": "Alamin agad ang kabuuang haba ng anumang YouTube playlist sa oras, minuto, at segundo."
+    },
+    "watchTime": {
+      "title": "YouTube Watch Time Calculator | YT Playlist Cal",
+      "desc": "Kalkulahin ang tunay na oras ng panonood ng YouTube playlist sa karaniwan at pinabilis na bilis."
+    },
+    "remainingTime": {
+      "title": "Playlist Remaining Time Calculator | YT Playlist Cal",
+      "desc": "Alamin kung ilang oras pa ang natitira upang matapos ang iyong YouTube playlist mula sa huling napanood."
+    },
+    "speed15x": {
+      "title": "Kalkulahin ang Playlist sa 1.5× Bilis | YT Playlist Cal",
+      "desc": "Kalkulahin ang haba ng YouTube playlist sa bilis na 1.5× at tingnan ang kabuuang oras na matitipid."
+    },
+    "speed2x": {
+      "title": "Kalkulahin ang Playlist sa 2× Bilis | YT Playlist Cal",
+      "desc": "Bawasan ng kalahati ang oras ng panonood. Kalkulahin ang haba ng YouTube playlist sa 2× bilis."
+    },
+    "howItWorks": {
+      "title": "Paano Gumagana ang Playlist Calculator | YT Playlist Cal",
+      "desc": "Alamin ang sunod-sunod na paraan ng pagkuha ng haba ng playlist gamit ang opisyal na YouTube Data API."
+    },
+    "faq": {
+      "title": "Mga Madalas Itanong tungkol sa YouTube Playlist | YT Playlist Cal",
+      "desc": "Mga sagot sa karaniwang tanong ukol sa pagbilang ng haba ng video, bilis, at quota ng YouTube API."
+    },
+    "about": {
+      "title": "Tungkol sa Amin — YT Playlist Cal",
+      "desc": "Alamin ang tungkol sa YT Playlist Cal: mabilis, ligtas, at libreng calculator para sa mga YouTube playlist."
+    },
+    "contact": {
+      "title": "Makipag-ugnayan — YT Playlist Cal",
+      "desc": "Makipag-ugnayan sa YT Playlist Cal para sa mga tanong, mungkahi, o suporta."
+    },
+    "privacy": {
+      "title": "Patakaran sa Privacy | YT Playlist Cal",
+      "desc": "Alamin kung paano pinangangalagaan ang iyong impormasyon at privacy sa YT Playlist Cal."
+    },
+    "terms": {
+      "title": "Mga Tuntunin ng Serbisyo | YT Playlist Cal",
+      "desc": "Mga panuntunan at tuntunin sa paggamit ng libreng YT Playlist Cal calculator."
+    },
+    "disclaimer": {
+      "title": "Pagwawaksi (Disclaimer) | YT Playlist Cal",
+      "desc": "Legal na impormasyon at patakaran sa trademark ng YT Playlist Cal."
+    },
+    "error404": {
+      "title": "Hindi Nahanap ang Pahina — YT Playlist Cal",
+      "desc": "Hindi mahanap ang hiniling na pahina sa YT Playlist Cal."
+    },
+    "error500": {
+      "title": "May Problema sa Server — YT Playlist Cal",
+      "desc": "Nagkaroon ng problema sa pag-load ng pahina. Pakisubukan muli sa ibang pagkakataon."
+    }
+  },
+  "demonstrations": {
+    "badge": "Interactive na Gabay",
+    "title": "Paano Gamitin ang Calculator",
+    "subtitle": "Mga sunud-sunod na halimbawa na nagpapakita kung paano kalkulahin ang haba ng playlist at iplano ang iyong oras.",
+    "tab1": "1. I-paste ang URL",
+    "tab2": "2. Kalkulahin",
+    "tab3": "3. Kabuuang Oras",
+    "tab4": "4. Estadistika ng Video",
+    "tab5": "5. Tipid sa Oras",
+    "step1Title": "I-paste ang anumang YouTube link",
+    "step1Desc": "Kopyahin ang link ng anumang YouTube playlist o video at i-paste ito sa input box.",
+    "step2Title": "I-click ang Kalkulahin",
+    "step2Desc": "Pindutin ang pindutan upang kunin ang haba at detalye ng lahat ng video sa pamamagitan ng YouTube Data API.",
+    "step3Title": "Makita agad ang kabuuang haba",
+    "step3Desc": "Tingnan ang eksaktong kabuuang tagal sa oras, minuto, at segundo sa normal na bilis.",
+    "step4Title": "Suriin ang bilang ng video at estadistika",
+    "step4Desc": "Alamin ang kabuuang bilang ng mga video, average na haba, at ang pinakamaikli at pinakamahabang video.",
+    "step5Title": "Ihambing ang natipid na oras sa bilis",
+    "step5Desc": "Ihambing ang oras sa 1.25×, 1.5×, 1.75×, at 2× na bilis para makita kung ilang oras ang iyong matitipid.",
+    "prev": "Nakaraan",
+    "next": "Susunod",
+    "stepOf": "Hakbang {current} ng {total}",
+    "samplePlaylistTitle": "Masterclass sa Web Development",
+    "sampleChannel": "Code Academy",
+    "sampleDuration": "14 na oras 28 minuto 45 segundo",
+    "sampleCount": "42 Video",
+    "sampleAvg": "20 min 41 seg",
+    "sampleShortest": "Panimula — 3 min 12 seg",
+    "sampleLongest": "Malalimang Aralin — 1 oras 05 min 20 seg",
+    "sampleAt15x": "9 na oras 39 min 10 seg",
+    "sampleSaved15x": "Nakatipid ng 4o 49m",
+    "sampleAt2x": "7 oras 14 min 22 seg",
+    "sampleSaved2x": "Nakatipid ng 7o 14m",
+    "step1Badge": "Hakbang 1 ng 5",
+    "step2Badge": "Hakbang 2 ng 5",
+    "step3Badge": "Hakbang 3 ng 5",
+    "step4Badge": "Hakbang 4 ng 5",
+    "step5Badge": "Hakbang 5 ng 5",
+    "pasteHint": "Ctrl+V / Idikit",
+    "detectedBadge": "✓ Natukoy ang playlist: 42 video",
+    "autoPlayOn": "Naka-on ang Auto-Play",
+    "autoPlayPaused": "Naka-pause"
+  },
+  "personas": {
+    "title": "Ginagamit ng",
+    "students": "Mga Mag-aaral",
+    "onlineLearners": "Mga Online Learner",
+    "courseBuyers": "Mga Bumibili ng Kurso",
+    "developers": "Mga Developer",
+    "certCandidates": "Mga Kumukuha ng Sertipikasyon",
+    "teachers": "Mga Guro",
+    "creators": "Mga Creator",
+    "bingeWatchers": "Mga Mahilig sa Binge-watch"
+  }
+}

@@ -1,0 +1,903 @@
+{
+  "brand": {
+    "name": "YT Playlist Cal",
+    "tagline": "Darmowy kalkulator długości i czasu odtwarzania playlist YouTube.",
+    "notAffiliated": "Niezwiązany z YouTube ani Google."
+  },
+  "nav": {
+    "home": "Strona główna",
+    "tools": "Wszystkie narzędzia",
+    "howItWorks": "Jak to działa",
+    "faq": "Często zadawane pytania",
+    "about": "O nas",
+    "contact": "Kontakt",
+    "tryCalculator": "Otwórz kalkulator",
+    "selectLanguage": "Wybierz język",
+    "searchLanguage": "Szukaj języka…",
+    "openMenu": "Otwórz menu nawigacji",
+    "closeMenu": "Zamknij menu nawigacji",
+    "toggleTheme": "Przełącz tryb ciemny"
+  },
+  "hero": {
+    "badge": "Szybki i darmowy kalkulator YouTube",
+    "title": "Kalkulator długości playlisty YouTube",
+    "subtitle": "Oblicz łączny czas trwania playlisty, czas oglądania przy prędkościach od 1.25× do 3× i natychmiast zaplanuj swój harmonogram nauki."
+  },
+  "calculator": {
+    "modeFull": "Cała playlista",
+    "modeRange": "Zakres filmów",
+    "modeRemaining": "Pozostały czas",
+    "urlLabel": "Adres URL lub identyfikator playlisty / filmu YouTube",
+    "urlPlaceholder": "Wklej link do playlisty, filmu lub ID playlisty…",
+    "pasteBtn": "Wklej",
+    "demoBtn": "Zobacz przykład",
+    "rangeStart": "Film początkowy",
+    "rangeEnd": "Film końcowy",
+    "watchedThrough": "Obejrzano do filmu nr",
+    "speedLabel": "Prędkość odtwarzania",
+    "customSpeedPlaceholder": "Własna",
+    "advancedOptions": "Opcje zaawansowane",
+    "userApiKey": "Własny klucz YouTube API (opcjonalnie)",
+    "userApiKeyHint": "Podaj własny klucz API YouTube, aby ominąć ograniczenia współdzielonego limitu zapytań.",
+    "calculateBtn": "Oblicz długość playlisty",
+    "calculatingBtn": "Obliczanie…",
+    "loadingTitle": "Analizowanie playlisty…",
+    "loadingStep1": "Łączenie z YouTube API…",
+    "loadingStep2": "Pobieranie metadanych playlisty…",
+    "loadingStep3": "Przetwarzanie długości filmów…",
+    "loadingStep4": "Prawie gotowe…",
+    "statTotal": "Łączny czas trwania",
+    "statCount": "Liczba filmów",
+    "statAvg": "Średnia na film",
+    "statSpeed": "Przy wybranej prędkości",
+    "statShortest": "Najkrótszy film",
+    "statLongest": "Najdłuższy film",
+    "speedTitle": "Porównanie prędkości",
+    "speedColSpeed": "Prędkość",
+    "speedColDuration": "Czas oglądania",
+    "speedColSaved": "Zaoszczędzony czas",
+    "speedSelected": "wybrana",
+    "watchPlannerTitle": "Dzienny plan oglądania",
+    "watchPlannerDesc": "Podaj, ile minut dziennie możesz poświęcić, aby poznać dokładną datę ukończenia.",
+    "plannerMinutes": "Minut dziennie",
+    "plannerStartDate": "Data rozpoczęcia",
+    "plannerSpeed": "Prędkość",
+    "plannerBtn": "Oblicz harmonogram",
+    "plannerResultText": "Przy prędkości {speed}× i {minutes} min/dzień ukończysz oglądanie za {days} dni.",
+    "plannerFinishDate": "Przewidywana data ukończenia:",
+    "finishByTitle": "Kalkulator terminu końcowego",
+    "finishByDesc": "Masz określony termin? Wybierz docelową datę, aby dowiedzieć się, ile minut musisz oglądać każdego dnia.",
+    "finishByDate": "Ukończ do",
+    "finishBySpeed": "Prędkość",
+    "finishByBtn": "Oblicz dzienny czas",
+    "finishByResultText": "Aby ukończyć przed {date} przy prędkości {speed}×, musisz oglądać {daily} dziennie przez kolejne {days} dni.",
+    "finishByUnfeasible": "Taki termin wymaga ponad 23 godzin oglądania na dobę, co jest niewykonalne. Wybierz późniejszą datę lub zwiększ prędkość.",
+    "videoListTitle": "Lista filmów",
+    "showVideos": "Pokaż filmy",
+    "hideVideos": "Ukryj filmy",
+    "searchVideosPlaceholder": "Szukaj tytułów filmów…",
+    "pageIndicator": "Strona {current} z {total}",
+    "prevPage": "Poprzednia",
+    "nextPage": "Następna",
+    "privateVideo": "Prywatny",
+    "liveVideo": "Na żywo",
+    "unavailableVideo": "Niedostępny",
+    "exportTitle": "Udostępnij i eksportuj",
+    "copyLink": "Kopiuj link",
+    "copySummary": "Kopiuj podsumowanie",
+    "exportCsv": "Eksportuj CSV",
+    "exportTxt": "Eksportuj TXT",
+    "copied": "Skopiowano!",
+    "errors": {
+      "missingUrl": "Wklej poprawny adres URL z YouTube.",
+      "invalidUrl": "Nie znaleziono poprawnej playlisty ani filmu na YouTube.",
+      "urlTooLong": "Wprowadzony adres URL jest zbyt długi.",
+      "invalidRange": "Numer filmu początkowego musi być mniejszy lub równy filmowi końcowemu.",
+      "quotaExceeded": "Dzienny limit zapytań do YouTube API został wyczerpany. Spróbuj ponownie jutro lub wprowadź własny klucz w opcjach zaawansowanych.",
+      "rateLimited": "Zbyt wiele zapytań naraz. Poczekaj chwilę i spróbuj ponownie.",
+      "notFound": "Playlista lub film nie został znaleziony. Upewnij się, że link jest poprawny, a playlista jest publiczna.",
+      "forbidden": "Dostęp został zablokowany przez YouTube API.",
+      "internalError": "Wystąpił błąd serwera. Spróbuj ponownie za chwilę.",
+      "networkError": "Błąd sieci: Nie udało się połączyć z kalkulatorem."
+    },
+    "modeLabel": "Tryb obliczeń",
+    "videosUnavailable": "{count} filmów niedostępnych (prywatne, usunięte lub z blokadą regionalną)",
+    "byChannel": "autor: {channel}",
+    "tryDemoBtn": "Wypróbuj przykładową playlistę →"
+  },
+  "features": {
+    "title": "Wszystko, czego potrzebujesz do planowania playlist YouTube",
+    "subtitle": "Od dokładnego czasu trwania po analizę przyspieszonego odtwarzania i harmonogram nauki.",
+    "items": [
+      {
+        "icon": "clock",
+        "title": "Precyzyjny czas całkowity",
+        "desc": "Uzyskaj dokładny czas dowolnej publicznej playlisty YouTube w godzinach, minutach i sekundach."
+      },
+      {
+        "icon": "zap",
+        "title": "Tabela prędkości",
+        "desc": "Zobacz faktyczną oszczędność czasu przy prędkościach od 0.5× do 3×."
+      },
+      {
+        "icon": "crosshair",
+        "title": "Zakres wybranych filmów",
+        "desc": "Oblicz dokładny czas wybranego fragmentu filmów z playlisty."
+      },
+      {
+        "icon": "play",
+        "title": "Pozostały czas",
+        "desc": "Wskaż ostatnio obejrzany film i dowiedz się, ile godzin zostało do końca."
+      },
+      {
+        "icon": "calendar-days",
+        "title": "Dzienny planer",
+        "desc": "Wpisz swój wolny czas dziennie, a poznasz dokładną datę ukończenia kursu."
+      },
+      {
+        "icon": "flag",
+        "title": "Cel z terminem",
+        "desc": "Ustal termin końcowy i otrzymaj wyliczenie niezbędnego czasu na każdy dzień."
+      }
+    ]
+  },
+  "howItWorks": {
+    "badge": "Jak to działa",
+    "title": "Jak obliczyć czas playlisty na YouTube w 3 krokach",
+    "subtitle": "Błyskawiczne obliczenia bez instalacji oprogramowania czy logowania.",
+    "steps": [
+      {
+        "number": "1",
+        "title": "Skopiuj link do playlisty",
+        "desc": "Na YouTube skopiuj link z paska adresu przeglądarki lub poprzez przycisk Udostępnij."
+      },
+      {
+        "number": "2",
+        "title": "Wklej w kalkulatorze",
+        "desc": "Wklej adres w pole wyszukiwania, wybierz zakres filmów lub preferowaną prędkość."
+      },
+      {
+        "number": "3",
+        "title": "Zobacz czasy i harmonogram",
+        "desc": "Otrzymaj natychmiast łączny czas, tabelę prędkości i wyliczoną datę ukończenia."
+      }
+    ],
+    "supportedBadge": "Obsługiwane formaty",
+    "supportedTitle": "Jakie linki YouTube są obsługiwane?",
+    "supportedDesc": "Nasz analizator precyzyjnie przetwarza standardowe linki do playlist, filmy z parametrem listy, skrócone linki (youtu.be) oraz bezpośrednie identyfikatory playlist.",
+    "links": [
+      {
+        "label": "Standardowy link playlisty",
+        "example": "youtube.com/playlist?list=PL..."
+      },
+      {
+        "label": "Link do filmu z playlistą",
+        "example": "youtube.com/watch?v=...&list=PL..."
+      },
+      {
+        "label": "Krótki link youtu.be",
+        "example": "youtu.be/...&list=PL..."
+      },
+      {
+        "label": "Sam identyfikator playlisty",
+        "example": "PLrAXtmErZgOdP_OalsLiL..."
+      }
+    ]
+  },
+  "faq": {
+    "badge": "Często zadawane pytania",
+    "title": "Często zadawane pytania o kalkulator playlist",
+    "subtitle": "Odpowiedzi na najczęstsze pytania o czas trwania, przyspieszone odtwarzanie i limity YouTube.",
+    "items": [
+      {
+        "q": "Jak obliczyć łączny czas trwania playlisty na YouTube?",
+        "a": "Skopiuj link do playlisty na YouTube, wklej go w pole na naszej stronie i kliknij „Oblicz długość playlisty”. Wynik pojawi się w ułamku sekundy."
+      },
+      {
+        "q": "Czy mogę obliczyć czas przy przyspieszonym odtwarzaniu (1.25×, 1.5×, 2×)?",
+        "a": "Tak! Tabela prędkości automatycznie oblicza czas trwania dla prędkości od 0.5× do 3× i pokazuje zaoszczędzone godziny."
+      },
+      {
+        "q": "Czy narzędzie działa z playlistami niepublicznymi lub prywatnymi?",
+        "a": "Działa z playlistami niepublicznymi (z dostępem przez link). Playlisty prywatne są niedostępne dla oficjalnego API."
+      },
+      {
+        "q": "Jaki jest maksymalny limit filmów w playliście?",
+        "a": "Obsługujemy playlisty liczące nawet setki filmów dzięki automatycznemu stronicowaniu przez YouTube Data API v3."
+      },
+      {
+        "q": "Co z filmami usuniętymi lub prywatnymi w playliście?",
+        "a": "Niedostępne filmy są wykrywane i oznaczane na liście, dzięki czemu łączny czas pozostaje rzetelny."
+      },
+      {
+        "q": "Czy mogę obliczyć tylko fragment playlisty?",
+        "a": "Oczywiście. Wybierz zakładkę „Zakres filmów” i wskaż numer początkowy oraz końcowy."
+      },
+      {
+        "q": "Jak Dzienny Planer wylicza datę zakończenia?",
+        "a": "Dzieli całkowity czas przy wybranej prędkości przez planowany dzienny czas w minutach i wyznacza dzień w kalendarzu."
+      },
+      {
+        "q": "Czy korzystanie z kalkulatora jest bezpłatne?",
+        "a": "Narzędzie jest w 100% darmowe, nie wymaga logowania i szanuje Twoją prywatność."
+      },
+      {
+        "q": "Dlaczego YouTube sam nie pokazuje łącznego czasu playlisty?",
+        "a": "YouTube wyświetla jedynie liczbę filmów. Nasze narzędzie sumuje czasy poszczególnych materiałów za pośrednictwem API."
+      },
+      {
+        "q": "Czy mogę pobrać dane wyliczonej playlisty?",
+        "a": "Tak, możesz skopiować podsumowanie do schowka lub wyeksportować dane do pliku CSV dla Excela czy Arkuszy Google."
+      }
+    ]
+  },
+  "footer": {
+    "desc": "Darmowy kalkulator długości i czasu oglądania playlist YouTube. Przeanalizuj dowolną playlistę, aby poznać łączny czas trwania, czas odtwarzania przy różnych prędkościach i szczegółowe statystyki filmów.",
+    "notAffiliated": "Niezwiązany z YouTube ani Google LLC.",
+    "colTools": "Kalkulatory",
+    "colResources": "Zasoby",
+    "colCompany": "Informacje",
+    "colLegal": "Kwestie prawne",
+    "allRightsReserved": "Wszelkie prawa zastrzeżone.",
+    "trademarkNotice": "YouTube jest zastrzeżonym znakiem towarowym Google LLC. To narzędzie jest niezależną aplikacją i nie jest powiązane z YouTube ani Google.",
+    "links": {
+      "playlistCalculator": "Kalkulator playlisty YouTube",
+      "durationCalculator": "Kalkulator długości playlisty",
+      "watchTimeCalculator": "Kalkulator czasu oglądania",
+      "remainingTime": "Kalkulator pozostałego czasu",
+      "watchTime15x": "Kalkulator prędkości 1.5x",
+      "watchTime2x": "Kalkulator prędkości 2x",
+      "howItWorks": "Jak to działa",
+      "faq": "Często zadawane pytania",
+      "allTools": "Wszystkie narzędzia",
+      "about": "O nas",
+      "contact": "Kontakt",
+      "privacy": "Polityka prywatności",
+      "terms": "Regulamin serwisu",
+      "disclaimer": "Zastrzeżenia prawne"
+    },
+    "brandDesc": "Najszybszy i najwygodniejszy sposób na obliczanie czasu trwania playlist na YouTube i planowanie harmonogramu nauki.",
+    "toolsTitle": "Narzędzia",
+    "resourcesTitle": "Zasoby",
+    "legalTitle": "Prawo",
+    "copyright": "© {year} YT Playlist Cal (Chrono Play). Wszelkie prawa zastrzeżone."
+  },
+  "pages": {
+    "about": {
+      "breadcrumb": "O nas",
+      "title": "O projekcie YT Playlist Cal",
+      "subtitle": "Stworzone dla studentów, samouków i wszystkich szanujących swój czas.",
+      "whatWeDoTitle": "Czym się zajmujemy",
+      "whatWeDoP1": "YT Playlist Cal to bezpłatne i niezależne narzędzie online stworzone, aby pomóc uczniom, studentom, twórcom i widzom natychmiast obliczać całkowity czas trwania oraz czas oglądania dowolnej publicznej playlisty YouTube.",
+      "whatWeDoP2": "Niezależnie od tego, czy planujesz maraton nauki, organizujesz harmonogram kursu wideo, czy optymalizujesz czas oglądania przy prędkościach 1.25x, 1.5x, 1.75x lub 2.0x, nasza platforma zapewnia dokładne statystyki w kilka sekund.",
+      "principlesTitle": "Nasze główne zasady",
+      "p1": "YT Playlist Cal powstał, aby rozwiązać powszechny problem: YouTube pokazuje liczbę filmów w playliście, ale nie informuje, ile godzin zajmie ukończenie całego kursu.",
+      "p2": "Naszym celem jest zapewnienie błyskawicznych obliczeń, bez natrętnych reklam i rejestracji, przy pełnym poszanowaniu prywatności.",
+      "p3": "Szybko i precyzyjnie. Zapytania do API po stronie serwera, brak śledzenia, brak gromadzenia danych osobowych. Stworzone dla wygody użytkowników.",
+      "trademarkTitle": "Niezależność i znaki towarowe",
+      "trademarkP": "YT Playlist Cal jest niezależnym narzędziem. YouTube oraz logo YouTube są zarejestrowanymi znakami towarowymi Google LLC. Narzędzie nie jest wspierane ani powiązane z Google LLC.",
+      "principlesAccuracy": "Matematyczna precyzja: bezpośrednie połączenie z YouTube Data API v3 w celu zliczania czasu z dokładnością co do sekundy.",
+      "principlesSpeed": "Szybkość i wydajność: natychmiastowe wyniki dzięki zaawansowanemu buforowaniu bez zbędnego czekania.",
+      "principlesPrivacy": "Prywatność na pierwszym miejscu: żadnych inwazyjnych plików cookie, brak wymogu logowania i brak zapisywania wprowadzanych linków."
+    },
+    "contact": {
+      "breadcrumb": "Kontakt",
+      "title": "Kontakt z nami",
+      "subtitle": "Masz pytania, sugestie lub znalazłeś błąd? Skontaktuj się z nami.",
+      "formType": "Rodzaj wiadomości",
+      "formTypeBug": "Zgłoszenie błędu",
+      "formTypeFeature": "Propozycja nowej funkcji",
+      "formTypeQuestion": "Pytanie ogólne",
+      "formTypeOther": "Inne",
+      "formEmail": "Twój adres e-mail",
+      "formEmailPlaceholder": "twoj.email@example.com",
+      "formMessage": "Twoja wiadomość",
+      "formMessagePlaceholder": "Opisz szczegółowo swoje pytanie lub problem...",
+      "formSubmit": "Wyślij wiadomość",
+      "formSuccess": "Wiadomość została wysłana! Odpowiemy w ciągu 24-48 godzin roboczych.",
+      "faqNoteTitle": "Zanim wyślesz wiadomość",
+      "faqNoteP": "Masz pytanie dotyczące obliczeń lub limitów API? Zajrzyj do sekcji Często zadawane pytania.",
+      "faqLink": "Sprawdź najpierw sekcję Często zadawanych pytań.",
+      "emailLabel": "Bezpośredni e-mail",
+      "emailValue": "support@ytplaylistcal.com",
+      "formTypeFeedback": "Opinia lub sugestia",
+      "formTypeBusiness": "Współpraca biznesowa",
+      "infoTitle": "Informacje kontaktowe",
+      "hoursLabel": "Czas odpowiedzi",
+      "hoursValue": "Zazwyczaj odpowiadamy w ciągu 24–48 godzin roboczych.",
+      "faqNotice": "Masz szybkie pytanie dotyczące działania kalkulatora?"
+    },
+    "tools": {
+      "breadcrumb": "Wszystkie narzędzia",
+      "title": "Wszystkie narzędzia do playlist YouTube",
+      "subtitle": "Kompletny zestaw bezpłatnych kalkulatorów do optymalizacji Twojego czasu na YouTube."
+    },
+    "duration": {
+      "breadcrumb": "Kalkulator długości",
+      "title": "Kalkulator długości playlisty YouTube",
+      "subtitle": "Poznaj dokładny czas trwania dowolnej publicznej playlisty na YouTube.",
+      "whyTitle": "Dlaczego warto korzystać z kalkulatora długości?",
+      "whyP": "YouTube nie podaje łącznego czasu playlist. Nasze narzędzie pobiera każdy film i sumuje sekundy w mgnieniu oka.",
+      "supportedTitle": "Obsługiwane formaty linków",
+      "beyondTitle": "Więcej niż prosty czas: zaawansowane statystyki",
+      "ctaBtn": "Oblicz czas playlisty",
+      "badge": "Kalkulator Długości",
+      "aboutTitle": "O kalkulatorze długości",
+      "aboutP1": "Kalkulator długości playlisty YouTube sumuje czas każdego publicznego filmu na playliście z matematyczną dokładnością.",
+      "aboutP2": "YouTube nie wyświetla łącznego czasu trwania playlist, co utrudnia zaplanowanie nauki całego kursu lub serii filmów.",
+      "featuresTitle": "Główne funkcje"
+    },
+    "watchTime": {
+      "breadcrumb": "Kalkulator czasu oglądania",
+      "title": "Kalkulator czasu oglądania YouTube",
+      "subtitle": "Oblicz realny czas potrzebny na obejrzenie playlisty z uwzględnieniem tempa.",
+      "ctaBtn": "Oblicz czas oglądania",
+      "badge": "Czas Oglądania",
+      "aboutTitle": "O czasie oglądania"
+    },
+    "remainingTime": {
+      "breadcrumb": "Kalkulator pozostałego czasu",
+      "title": "Kalkulator pozostałego czasu playlisty",
+      "subtitle": "Sprawdź, ile godzin pozostało do ukończenia playlisty od ostatniego filmu.",
+      "ctaBtn": "Oblicz pozostały czas",
+      "badge": "Pozostały Czas",
+      "aboutTitle": "O pozostałym czasie"
+    },
+    "speed15x": {
+      "breadcrumb": "Kalkulator prędkości 1.5x",
+      "title": "Kalkulator playlisty przy prędkości 1.5×",
+      "subtitle": "Sprawdź, ile czasu zaoszczędzisz, oglądając materiały z prędkością 1.5×.",
+      "ctaBtn": "Oblicz dla prędkości 1.5x",
+      "badge": "Prędkość 1.5×",
+      "aboutTitle": "O oglądaniu w tempie 1.5x"
+    },
+    "speed2x": {
+      "breadcrumb": "Kalkulator prędkości 2x",
+      "title": "Kalkulator playlisty przy prędkości 2×",
+      "subtitle": "Skróć czas nauki o połowę dzięki wyliczeniu czasu przy prędkości 2×.",
+      "ctaBtn": "Oblicz dla prędkości 2x",
+      "badge": "Prędkość 2×",
+      "aboutTitle": "O oglądaniu w tempie 2x"
+    },
+    "terms": {
+      "breadcrumb": "Regulamin serwisu",
+      "title": "Warunki korzystania z usługi",
+      "lastUpdated": "Ostatnia aktualizacja: 31 października 2026 r.",
+      "summary": "Podsumowanie: Korzystając z YT Playlist Cal, akceptujesz niniejszy Regulamin, Politykę prywatności oraz Zastrzeżenia prawne.",
+      "subtitle": "Zasady i warunki korzystania z serwisu YT Playlist Cal.",
+      "intro": "Korzystając z naszego serwisu, akceptujesz poniższe warunki użytkowania."
+    },
+    "privacy": {
+      "breadcrumb": "Polityka prywatności",
+      "title": "Polityka prywatności",
+      "lastUpdated": "Ostatnia aktualizacja: 31 października 2026 r.",
+      "summary": "Szanujemy Twoją prywatność. Nie przechowujemy wprowadzanych linków, nie śledzimy Twojej tożsamości i nie sprzedajemy danych.",
+      "subtitle": "Ochrona Twoich danych w serwisie YT Playlist Cal.",
+      "intro": "Szanujemy Twoją prywatność. Nie gromadzimy danych osobowych ani nie przechowujemy historii Twoich wyszukiwań."
+    },
+    "disclaimer": {
+      "breadcrumb": "Zastrzeżenia prawne",
+      "title": "Zastrzeżenia prawne",
+      "lastUpdated": "Ostatnia aktualizacja: 31 października 2026 r.",
+      "summary": "Podsumowanie: YT Playlist Cal jest niezależnym darmowym narzędziem. Nie jesteśmy powiązani z YouTube ani Google LLC.",
+      "subtitle": "Informacje prawne i znaki towarowe.",
+      "intro": "YT Playlist Cal jest niezależnym narzędziem i nie jest powiązany z YouTube ani firmą Google LLC."
+    },
+    "error404": {
+      "code": "404",
+      "title": "Strona nie została znaleziona",
+      "desc": "Strona, której szukasz, nie istnieje lub została przeniesiona.",
+      "btn": "Wróć na stronę główną",
+      "allTools": "Wszystkie narzędzia",
+      "subtitle": "Strona, której szukasz, nie istnieje lub została przeniesiona.",
+      "backHome": "Wróć na stronę główną",
+      "exploreTools": "Przeglądaj wszystkie narzędzia"
+    },
+    "error500": {
+      "code": "500",
+      "title": "Błąd serwera",
+      "desc": "Wystąpił nieoczekiwany błąd podczas przetwarzania żądania.",
+      "btn": "Spróbuj ponownie",
+      "reportBtn": "Zgłoś błąd",
+      "allTools": "Wszystkie narzędzia",
+      "subtitle": "Wystąpił nieoczekiwany błąd po stronie serwera. Spróbuj ponownie za chwilę.",
+      "backHome": "Wróć na stronę główną",
+      "retry": "Ponów próbę",
+      "tryAgain": "Spróbuj ponownie za chwilę"
+    },
+    "common": {
+      "related": "Powiązane narzędzia",
+      "relatedTools": "Powiązane narzędzia",
+      "playlistLengthCalc": "Kalkulator Długości Playlisty",
+      "fullPlaylistCalc": "Kompleksowy Kalkulator Playlist",
+      "watchTimeAt15x": "Czas oglądania przy 1.5x",
+      "watchTimeAt2x": "Czas oglądania przy 2x",
+      "watchTimeCalc": "Kalkulator Czasu Oglądania",
+      "remainingTimeCalc": "Kalkulator Pozostałego Czasu",
+      "playlistDurationCalc": "Kalkulator Długości Playlisty",
+      "howItWorks": "Jak to działa",
+      "faq": "Często zadawane pytania",
+      "tryCalc": "Wypróbuj kalkulator",
+      "calculatorBadge": "Darmowy Kalkulator Online",
+      "relatedToolsDesc": "Odkryj inne bezpłatne kalkulatory, aby lepiej zaplanować czas spędzany na YouTube.",
+      "faqDesc": "Przejrzyste odpowiedzi na najczęściej zadawane pytania dotyczące obliczania playlist YouTube.",
+      "stillHaveQuestions": "Nadal masz pytania?",
+      "stillHaveQuestionsDesc": "Nasz zespół pomocy technicznej chętnie odpowie na wszelkie pytania lub sugestie.",
+      "contactUs": "Skontaktuj się z nami",
+      "needMoreHelp": "Potrzebujesz dodatkowej pomocy?",
+      "needMoreHelpDesc": "Napisz do nas bezpośrednio, aby uzyskać wsparcie.",
+      "backToHome": "Powrót do strony głównej",
+      "tryAnotherPlaylist": "Oblicz inną playlistę"
+    },
+    "howItWorksDetail": {
+      "breadcrumb": "Jak to działa",
+      "title": "Jak działa Kalkulator Playlist YouTube",
+      "subtitle": "Szczegółowy przewodnik techniczny wyjaśniający, jak przetwarzamy linki, komunikujemy się z API YouTube i obliczamy precyzyjny czas.",
+      "stepsHeading": "Etapy procesu obliczeniowego krok po kroku",
+      "s1Title": "1. Analiza i walidacja linku",
+      "s1Detail": "Gdy wklejasz link lub identyfikator playlisty, nasz system wyodrębnia unikalny kod listy (najczęściej rozpoczynający się od PL, UU, FL lub RD).",
+      "s2Title": "2. Bezpieczna komunikacja z YouTube Data API v3",
+      "s2Detail": "Wysyłamy szyfrowane zapytania do oficjalnych punktów końcowych API YouTube w celu pobrania listy wszystkich filmów.",
+      "s3Title": "3. Automatyczna paginacja dla długich playlist",
+      "s3Detail": "API zwraca maksymalnie 50 filmów na zapytanie. W przypadku większych playlist automatycznie przechodzimy przez kolejne strony wyników.",
+      "s4Title": "4. Ekstrakcja długości w standardzie ISO 8601",
+      "s4Detail": "YouTube przechowuje czas trwania filmów w formacie ISO 8601 (np. PT1H23M45S). Nasz algorytm przelicza ten zapis na dokładną liczbę sekund.",
+      "s5Title": "5. Matematyczne sumowanie i formatowanie",
+      "s5Detail": "Sumujemy sekundy wszystkich filmów i przekształcamy wynik końcowy w czytelną postać godzin, minut i sekund.",
+      "s6Title": "6. Szacowanie czasu przy wyższych prędkościach",
+      "s6Detail": "Obliczamy czas trwania przy prędkościach 1.25x, 1.5x, 1.75x i 2.0x, dokładnie wskazując zaoszczędzone godziny.",
+      "s7Title": "7. Zaawansowane statystyki playlisty",
+      "s7Detail": "Wyliczamy średni czas trwania filmu oraz błyskawicznie wskazujemy najkrótszy i najdłuższy materiał na playliście.",
+      "speedHeading": "Matematyka oszczędności czasu",
+      "speedIntro": "Rzeczywisty czas oglądania przy przyspieszeniu oblicza się, dzieląc całkowity czas trwania przez wybrany mnożnik prędkości.",
+      "speedFormula": "Rzeczywisty Czas = Całkowita Długość ÷ Prędkość",
+      "speedExample": "Na przykład playlista o długości 10 godzin odtwarzana z prędkością 1.5x zajmie tylko 6 godzin i 40 minut, co oznacza oszczędność 3 godzin i 20 minut.",
+      "missingHeading": "Jak postępujemy z niedostępnymi filmami",
+      "missingIntro": "Niektóre filmy na playliście mogą nie zwracać informacji o długości za pośrednictwem API:",
+      "missing1": "Filmy prywatne lub usunięte: nie udostępniają metadanych i są liczone jako 0 sekund.",
+      "missing2": "Filmy z ograniczeniami regionalnymi lub wiekowymi: mogą być niedostępne w publicznym API.",
+      "missing3": "Transmisje na żywo i premiery: nie mają ustalonej długości, dopóki nagranie nie zostanie zarchiwizowane.",
+      "missing4": "Limity zapytań API: jeśli dzienny limit publiczny zostanie wyczerpany, użytkownik może podać własny darmowy klucz API.",
+      "missing5": "Chwilowe zakłócenia sieci: są obsługiwane przez automatyczne ponawianie zapytań.",
+      "missingOutro": "Liczba niedostępnych filmów jest zawsze wyraźnie zaznaczona w podsumowaniu wyników.",
+      "cachingHeading": "Zaawansowane buforowanie danych",
+      "cachingDetail": "Aby nie przeciążać serwerów YouTube i zapewnić natychmiastowe ładowanie, tymczasowo zapisujemy dane popularnych playlist w pamięci podręcznej.",
+      "tryCalc": "Sprawdź kalkulator na własnej playliście już teraz"
+    },
+    "faqDetailed": {
+      "breadcrumb": "Często zadawane pytania",
+      "title": "Często zadawane pytania",
+      "subtitle": "Wszystko, co musisz wiedzieć o obliczaniu czasu trwania playlist YouTube, ustawieniach prędkości i kwestiach technicznych.",
+      "catBasics": "Podstawy kalkulatora",
+      "catSpeed": "Prędkości odtwarzania",
+      "catModes": "Tryby obliczeń",
+      "catMissing": "Niedostępne filmy i limity",
+      "catPlanner": "Planer nauki",
+      "catPrivacy": "Prywatność i bezpieczeństwo",
+      "catAbout": "O narzędziu",
+      "notFoundPrompt": "Nie znalazłeś odpowiedzi na swoje pytanie?",
+      "contactUs": "Skontaktuj się z naszym zespołem",
+      "or": "lub",
+      "tryCalc": "Oblicz playlistę teraz",
+      "q1": "Jak to narzędzie oblicza całkowity czas trwania?",
+      "a1": "Nasz kalkulator łączy się bezpośrednio z oficjalnym YouTube Data API v3, pobiera dokładny czas każdego filmu, sumuje sekundy i przekształca je w godziny oraz minuty.",
+      "q2": "Czy ta usługa jest w pełni bezpłatna?",
+      "a2": "Tak, YT Playlist Cal jest w 100% darmowy, bez subskrypcji, ukrytych opłat i konieczności rejestracji.",
+      "q3": "Ile filmów może maksymalnie zawierać playlista?",
+      "a3": "Możesz obliczać playlisty zawierające setki filmów. System automatycznie obsługuje stronicowanie API.",
+      "q4": "Dlaczego całkowity czas może różnić się od tego na YouTube?",
+      "a4": "YouTube zaokrągla czasy pojedynczych filmów i może nie uwzględniać filmów prywatnych, usuniętych lub nieprzetworzonych transmisji.",
+      "q5": "Czy narzędzie działa na smartfonach i tabletach?",
+      "a5": "Tak. Strona jest w pełni responsywna i doskonale działa na telefonach, tabletach i komputerach.",
+      "q6": "Czy muszę logować się na konto Google lub YouTube?",
+      "a6": "Nie. Logowanie nie jest wymagane. Wystarczy wkleić publiczny link do playlisty.",
+      "q7": "Jak obliczana jest oszczędność czasu przy prędkości 1.25x, 1.5x lub 2x?",
+      "a7": "Dzielimy łączną liczbę sekund przez wybrany mnożnik i odejmujemy wynik od czasu wyjściowego, uzyskując dokładną oszczędność.",
+      "q8": "Do czego służy funkcja Pozostały Czas?",
+      "a8": "Pozwala wskazać numer filmu, na którym skończyłeś, aby pominąć obejrzane już materiały i poznać czas potrzebny na dokończenie listy.",
+      "q9": "Czy mogę obliczyć tylko określony fragment playlisty?",
+      "a9": "Tak, w Opcjach zaawansowanych możesz ustawić film początkowy i końcowy, aby sprawdzić czas tylko wybranego odcinka.",
+      "q10": "Co zrobić w przypadku błędu przekroczenia limitu API?",
+      "a10": "W godzinach szczytu wspólny limit publiczny może ulec wyczerpaniu. W ustawieniach zaawansowanych możesz bezpłatnie wprowadzić własny klucz YouTube API.",
+      "q11": "Jak traktowane są filmy usunięte lub prywatne?",
+      "a11": "Filmy te nie zwracają długości przez API i są liczone jako 0 sekund, o czym informujemy w wynikach.",
+      "q12": "Czy wyszukiwane playlisty są zapisywane na serwerze?",
+      "a12": "Nie. Nie gromadzimy historii Twoich wyszukiwań ani nie powiązujemy zapytań z Twoją tożsamością.",
+      "q13": "Dlaczego kalkulator pokazuje mniej filmów niż YouTube?",
+      "a13": "YouTube uwzględnia usunięte i prywatne filmy w ogólnym liczniku, ale API nie ma do nich dostępu.",
+      "q14": "Co dzieje się z transmisjami na żywo na playliście?",
+      "a14": "Trwające lub zaplanowane transmisje nie mają ustalonego czasu trwania i nie są wliczane do sumy.",
+      "q15": "Czy można obliczać automatyczne playlisty (np. Mix lub Muzyka)?",
+      "a15": "Tak, jeśli link zawiera prawidłowy identyfikator playlisty (np. prefiks PL lub RD).",
+      "q16": "Jaki jest wzór na oszczędność czasu przy 1.25x?",
+      "a16": "Czas początkowy - (Czas początkowy / 1.25). Oszczędzasz dokładnie 20% czasu.",
+      "q17": "Jaki jest wzór dla prędkości 1.75x?",
+      "a17": "Czas początkowy - (Czas początkowy / 1.75), co daje 42.8% zaoszczędzonego czasu.",
+      "q18": "Jak obliczyć czas od filmu 10 do filmu 30?",
+      "a18": "W opcjach zaawansowanych wpisz 'Film początkowy: 10' oraz 'Film końcowy: 30'.",
+      "q19": "Jak działa planer czasu oglądania?",
+      "a19": "Dzieli całkowity czas przez liczbę dostępnych dni lub minut dziennie, tworząc wygodny harmonogram.",
+      "q20": "Czy moje dane są sprzedawane lub udostępniane?",
+      "a20": "Absolutnie nie. Nie udostępniamy ani nie sprzedajemy danych użytkowników.",
+      "q21": "Dlaczego warto wprowadzić własny klucz API?",
+      "a21": "Własny bezpłatny klucz gwarantuje nieograniczone obliczenia, niezależnie od obciążenia naszego serwera.",
+      "q22": "Jak zdobyć darmowy klucz YouTube Data API v3?",
+      "a22": "W Google Cloud Console utwórz bezpłatny projekt, włącz YouTube Data API v3 i wygeneruj klucz w 2 minuty.",
+      "q23": "Czy narzędzie przechowuje mój prywatny klucz API?",
+      "a23": "Nie. Klucz jest używany wyłącznie w pamięci operacyjnej na czas Twojego zapytania i nie trafia do bazy danych.",
+      "q24": "Czy mogę zapisać lub udostępnić wyniki?",
+      "a24": "Tak, możesz jednym kliknięciem skopiować podsumowanie i przesłać je znajomym lub współpracownikom.",
+      "generalTitle": "Pytania ogólne",
+      "speedTitle": "Prędkość odtwarzania i planowanie",
+      "techTitle": "Kwestie techniczne i rozwiązywanie problemów"
+    },
+    "durationDetail": {
+      "beyondP": "YT Playlist Cal oferuje znacznie więcej niż zwykłe dodawanie sekund:",
+      "b1": "Precyzyjny łączny czas w godzinach, minutach i sekundach",
+      "b2": "Średnia długość pojedynczego filmu na playliście",
+      "b3": "Natychmiastowe wskazanie najkrótszego i najdłuższego filmu",
+      "b4": "Czas oglądania przy 1.25x, 1.5x, 1.75x i 2.0x z wyliczeniem oszczędności",
+      "b5": "Przejrzyste wykrywanie filmów niedostępnych i prywatnych",
+      "b6": "Obsługa niestandardowych zakresów odcinków",
+      "b7": "Planer codziennej nauki do maratonów wideo"
+    },
+    "watchTimeDetail": {
+      "whatTitle": "Czym jest czas oglądania na YouTube?",
+      "whatP": "Czas oglądania to rzeczywista liczba godzin i minut potrzebna do ukończenia playlisty przy wybranym przyspieszeniu.",
+      "featuresTitle": "Funkcje ułatwiające zarządzanie czasem",
+      "f1": "Zestawienie 4 prędkości odtwarzania obok siebie",
+      "f2": "Dokładne wyliczenie zaoszczędzonych godzin dla każdej prędkości",
+      "f3": "Planer nauki podzielony na dni lub tygodnie",
+      "f4": "Prognoza daty ukończenia kursu w Twoim tempie",
+      "f5": "Elastyczność pomijania obejrzanych już materiałów",
+      "f6": "Brak konieczności rejestracji i podawania danych"
+    },
+    "speed15xDetail": {
+      "ctaPrompt": "Chcesz wiedzieć, ile czasu zaoszczędzisz przy 1.5x?",
+      "ctaBtn": "Open 1.5× Speed Calculator",
+      "ctaHint": "Wklej link do playlisty, aby sprawdzić czas przy prędkości 1.5x.",
+      "savingsTitle": "Ile czasu oszczędzasz przy prędkości 1.5x?",
+      "savingsP": "Przy prędkości 1.5x każda godzina filmu zajmuje tylko 40 minut, co daje czystą oszczędność 33.3% Twojego czasu.",
+      "colOriginal": "Oryginał (1.0x)",
+      "colAtSpeed": "Przy prędkości 1.5x",
+      "colSaved": "Zaoszczędzony czas",
+      "formula": "Wzór: Czas = Całkowita Długość ÷ 1.5",
+      "whoTitle": "Dla kogo prędkość 1.5x jest idealna?",
+      "whoP": "Prędkość 1.5x to najpopularniejszy wybór do efektywnej nauki bez utraty zrozumienia:",
+      "w1": "Studenci oglądający nagrania wykładów i webinarów",
+      "w2": "Programiści przeglądający poradniki i wystąpienia techniczne",
+      "w3": "Słuchacze długich podcastów i wywiadów z wolnym tempem mowy",
+      "w4": "Specjaliści przechodzący obszerne kursy zawodowe",
+      "whoOutro": "Sprawdź swoją playlistę przy 1.5x już teraz za pomocą naszego darmowego narzędzia."
+    },
+    "speed2xDetail": {
+      "ctaPrompt": "Chcesz skrócić czas oglądania o połowę dzięki 2x?",
+      "ctaBtn": "Open 2× Speed Calculator",
+      "savingsTitle": "Ile czasu oszczędzasz przy prędkości 2x?",
+      "savingsP": "Przy prędkości 2x czas odtwarzania skraca się dokładnie o połowę. 10-godzinną playlistę obejrzysz w zaledwie 5 godzin.",
+      "colOriginal": "Oryginał (1.0x)",
+      "colAtSpeed": "Przy prędkości 2x",
+      "colSaved": "Zaoszczędzony czas",
+      "whoTitle": "Kiedy warto wybrać prędkość 2x?",
+      "whoP": "Podwójna prędkość daje największe korzyści w odpowiednich sytuacjach:",
+      "w1": "Szybka powtórka znanego materiału przed egzaminem",
+      "w2": "Przeglądanie prezentacji slajdów o wolnym tempie",
+      "w3": "Materiały z licznymi pauzami i powolnym sposobem mówienia",
+      "w4": "Szybkie wyszukiwanie kluczowych fragmentów w długich seriach wideo",
+      "whoOutro": "Oblicz dokładny czas swojej playlisty przy 2x już teraz."
+    },
+    "remainingTimeDetail": {
+      "ctaPrompt": "Chcesz obliczyć tylko czas pozostałych filmów?",
+      "ctaBtn": "Open Remaining Time Calculator",
+      "ctaHint": "Wklej link do playlisty i wybierz numer odcinka, od którego zaczynasz.",
+      "howTitle": "Jak obliczyć pozostały czas w 5 prostych krokach",
+      "s1": "Wklej link do playlisty YouTube w polu tekstowym.",
+      "s2": "Rozwiń panel Opcji zaawansowanych.",
+      "s3": "W polu 'Film początkowy' wpisz numer kolejnego filmu do obejrzenia.",
+      "s4": "Kliknij przycisk Oblicz.",
+      "s5": "Sprawdź czas trwania pozostałych filmów w tempie normalnym i przyspieszonym.",
+      "whyTitle": "Dlaczego warto liczyć pozostały czas?",
+      "whyP": "Świadomość tego, ile czasu zostało, pomaga utrzymać motywację do ukończenia kursu:",
+      "w1": "Śledź swoje postępy w nauce dzień po dniu",
+      "w2": "Wyznaczaj realne cele na każdy wieczór",
+      "w3": "Efektywnie wykorzystuj wolne chwile bez porzucania kursów w połowie",
+      "w4": "Dostosowuj prędkość oglądania, aby zdążyć przed terminem",
+      "whyOutro": "Używaj trybu Pozostałego Czasu za każdym razem, gdy wracasz do playlisty."
+    },
+    "privacyDetail": {
+      "intro": "YT Playlist Cal („my”, „nasz”, „narzędzie”) to niezależny serwis internetowy służący do obliczania długości i czasu oglądania playlist YouTube. Niniejsza Polityka prywatności wyjaśnia, jakie informacje przetwarzamy podczas korzystania z narzędzia, w jaki sposób są one wykorzystywane oraz jak dbamy o Twoją prywatność.",
+      "s1Title": "1. Informacje, które przetwarzamy",
+      "s1P1Title": "Linki do YouTube",
+      "s1P1Text": "Gdy wprowadzasz link do YouTube w celu dokonania obliczeń, adres ten jest przesyłany na nasz serwer w celu wykonania uwierzytelnionych zapytań do oficjalnego YouTube Data API v3. Nie zapisujemy ani nie przekazujemy wprowadzanych linków poza ulotną pamięć podręczną niezbędną do obsłużenia Twojego żądania.",
+      "s1P2Title": "Klucze API YouTube (opcjonalnie)",
+      "s1P2Text": "Jeśli wprowadzisz własny klucz API YouTube w Opcjach zaawansowanych, zostanie on przesłany za pośrednictwem szyfrowanego połączenia HTTPS i użyty wyłącznie do autoryzacji Twojego zapytania w ramach Twojego limitu Google Cloud. Nigdy nie zapisujemy Twojego klucza API w bazie danych.",
+      "s1P3Title": "Statystyki użytkowania",
+      "s1P3Text": "Możemy korzystać z anonimowych narzędzi analitycznych w celu zrozumienia ogólnych trendów, takich jak wyświetlenia stron czy błędy techniczne. Nie stosujemy inwazyjnych plików cookie śledzących ani nie zbieramy danych osobowych (PII).",
+      "s1P4Title": "Pamięć lokalna (Local Storage)",
+      "s1P4Text": "Używamy pamięci localStorage Twojej przeglądarki wyłącznie do zapamiętywania preferencji motywu (jasny/ciemny) oraz wybranego języka między wizytami. Dane te nigdy nie opuszczają Twojego urządzenia.",
+      "s1P5Title": "Dzienniki serwera",
+      "s1P5Text": "Nasz dostawca infrastruktury (Cloudflare) może prowadzić techniczne dzienniki dostępu obejmujące adresy IP i metadane zapytań w celach bezpieczeństwa, ochrony przed atakami DDoS oraz monitorowania sieci.",
+      "s2Title": "2. Pliki cookie",
+      "s2Text": "YT Playlist Cal nie używa plików cookie do śledzenia użytkowników ani celów reklamowych. Jedynie niezbędne pliki cookie techniczne mogą być wykorzystywane przez sieć Cloudflare do filtrowania złośliwego ruchu.",
+      "s3Title": "3. Usługi podmiotów trzecich",
+      "s3Text1": "YouTube Data API v3: Używamy API YouTube do pobierania metadanych. Twoje zapytania podlegają Warunkom korzystania z YouTube oraz Polityce prywatności Google.",
+      "s3Text2": "Cloudflare: Nasza strona jest hostowana i zabezpieczana przez sieć Cloudflare w celu ochrony i szybkiego dostarczania treści.",
+      "s3Text3": "Czcionki: Używamy Bunny Fonts (zgodnej z RODO alternatywy dla Google Fonts) do wyświetlania czcionki Inter bez rejestrowania adresów IP.",
+      "s4Title": "4. Reklamy",
+      "s4Text": "Strona może wyświetlać reklamy za pośrednictwem sieci Google AdSense. Sieci reklamowe mogą korzystać z niespersonalizowanych identyfikatorów zgodnie z przepisami prawa i zgodami użytkownika.",
+      "s5Title": "5. Prywatność dzieci",
+      "s5Text": "YT Playlist Cal nie jest skierowany do dzieci poniżej 13 roku życia. Nie zbieramy świadomie danych osobowych od dzieci.",
+      "s6Title": "6. Twoje prawa",
+      "s6Text": "Ponieważ nie zbieramy ani nie przechowujemy danych osobowych poza chwilowym przetwarzaniem zapytań, zazwyczaj nie dysponujemy żadnymi danymi pozwalającymi na Twoją identyfikację.",
+      "s7Title": "7. Zmiany w polityce",
+      "s7Text": "Zastrzegamy sobie prawo do okresowej aktualizacji niniejszej Polityki prywatności. Zmiany wchodzą w życie z chwilą opublikowania ich na tej stronie.",
+      "s8Title": "8. Kontakt",
+      "s8Text": "W przypadku pytań dotyczących niniejszej Polityki prywatności prosimy o kontakt za pośrednictwem strony Kontakt."
+    },
+    "termsDetail": {
+      "summary": "Podsumowanie: Korzystając z YT Playlist Cal, akceptujesz niniejszy Regulamin, Politykę prywatności oraz Zastrzeżenia prawne. Jest to darmowe, niezależne narzędzie do szacowania długości playlist YouTube.",
+      "s1Title": "1. Akceptacja warunków",
+      "s1Text": "Uzyskując dostęp do serwisu YT Playlist Cal („Usługa”, „Strona”, „my”) lub korzystając z niego, zobowiązujesz się do przestrzegania niniejszego Regulaminu. Jeśli nie zgadzasz się z którymkolwiek z postanowień, powinieneś natychmiast zaprzestać korzystania z serwisu.",
+      "s2Title": "2. Opis usługi",
+      "s2Text1": "YT Playlist Cal zapewnia darmowy pakiet narzędzi internetowych do analizowania publicznych playlist YouTube, sumowania czasu ich trwania oraz szacowania czasu oglądania przy różnych prędkościach.",
+      "s2Text2": "Usługa jest świadczona całkowicie bezpłatnie wyłącznie w celach informacyjnych, edukacyjnych i do osobistego planowania.",
+      "s3Title": "3. API YouTube i warunki podmiotów trzecich",
+      "s3Text": "YT Playlist Cal korzysta z YouTube Data API v3 w celu pobierania metadanych i czasu trwania filmów. Korzystając z tej usługi:",
+      "s3Li1": "Zobowiązujesz się przestrzegać Warunków korzystania z serwisu YouTube.",
+      "s3Li2": "Dane z YouTube są przetwarzane zgodnie z Polityką prywatności Google.",
+      "s3Li3": "Nie mamy wpływu na serwery YouTube, limity API ani poprawność danych dostarczanych przez podmioty trzecie.",
+      "s4Title": "4. Zasady dopuszczalnego użytkowania",
+      "s4Text": "Zgadzasz się korzystać z serwisu wyłącznie w celach zgodnych z prawem. Zobowiązujesz się do:",
+      "s4Li1": "Niewysyłania nadmiernej liczby zautomatyzowanych zapytań, botów ani skryptów obciążających naszą infrastrukturę lub API YouTube.",
+      "s4Li2": "Niepodejmowania prób łamania zabezpieczeń, inżynierii wstecznej ani obchodzenia limitów zapytań.",
+      "s4Li3": "Nieużywania strony do przesyłania treści szkodliwych, bezprawnych lub naruszających prawa innych osób.",
+      "s4Li4": "Niefałszowania tożsamości i niepodejmowania prób nieautoryzowanego dostępu do naszych serwerów.",
+      "s4Outro": "Zastrzegamy sobie prawo do czasowego lub stałego blokowania adresów IP naruszających te zasady.",
+      "s5Title": "5. Klucze API użytkownika (opcjonalnie)",
+      "s5Text": "Zaawansowani użytkownicy mogą opcjonalnie podać własny klucz YouTube Data API v3 w ustawieniach zaawansowanych:",
+      "s5Li1": "Klucz jest przesyłany bezpośrednio na serwer bezpiecznym protokołem HTTPS i używany wyłącznie do bieżących obliczeń.",
+      "s5Li2": "Nigdy nie zapisujemy, nie rejestrujemy ani nie udostępniamy Twojego klucza API nikomu innemu.",
+      "s5Li3": "Ponosisz pełną odpowiedzialność za bezpieczeństwo i zużycie limitów w swoim projekcie Google Cloud.",
+      "s6Title": "6. Własność intelektualna",
+      "s6Text1": "YouTube™, logo YouTube oraz powiązane znaki są zarejestrowanymi znakami towarowymi Google LLC. YT Playlist Cal jest niezależnym narzędziem i nie ma powiązań z Google LLC.",
+      "s6Text2": "Kod źródłowy strony, oprawa graficzna, znak („Chrono Play”) oraz artykuły pomocnicze stanowią własność intelektualną YT Playlist Cal.",
+      "s7Title": "7. Dokładność obliczeń i zastrzeżenie „Tak jak jest”",
+      "s7Text": "Wszystkie obliczenia i szacunki czasu są dostarczane w stanie „tak jak jest” wyłącznie do celów poglądowych. Rozbieżności mogą wynikać z:",
+      "s7Li1": "Niedostępnych filmów (filmy prywatne lub zablokowane zwracają 0 sekund).",
+      "s7Li2": "Transmisji na żywo bez ostatecznie zarchiwizowanego czasu trwania.",
+      "s7Li3": "Zaokrągleń w formacie ISO 8601 udostępnianym przez YouTube.",
+      "s7Li4": "Lokalnych czynników odtwarzania (buforowanie, reklamy, opóźnienia przeglądarki).",
+      "s7Outro": "Więcej informacji znajdziesz w dokumencie Zastrzeżeń prawnych.",
+      "s8Title": "8. Ograniczenie odpowiedzialności",
+      "s8Text": "W najszerszym zakresie dozwolonym przez prawo twórcy YT Playlist Cal nie ponoszą odpowiedzialności za jakiekolwiek bezpośrednie lub pośrednie szkody wynikające z korzystania z serwisu.",
+      "s9Title": "9. Zmiany regulaminu",
+      "s9Text": "Możemy zmienić niniejszy Regulamin w dowolnym momencie bez uprzedzenia. Zmiany wchodzą w życie z chwilą opublikowania ich na stronie.",
+      "s10Title": "10. Dane kontaktowe",
+      "s10Text": "W przypadku pytań dotyczących niniejszego Regulaminu prosimy o kontakt przez stronę Kontakt."
+    },
+    "disclaimerDetail": {
+      "summary": "Podsumowanie: YT Playlist Cal jest bezpłatnym i niezależnym narzędziem. Nie jesteśmy powiązani z YouTube ani Google LLC. Wszystkie wyliczenia są podawane w celach informacyjnych w stanie „tak jak jest”.",
+      "s1Title": "1. Znaki towarowe i niezależność",
+      "s1Text1": "YouTube™, logo YouTube oraz powiązane oznaczenia są znakami towarowymi Google LLC. Wszystkie znaki towarowe należą do ich prawnych właścicieli.",
+      "s1Text2": "YT Playlist Cal jest niezależną aplikacją internetową i nie jest w żaden sposób oficjalnie związana, wspierana ani autoryzowana przez YouTube lub Google LLC.",
+      "s2Title": "2. Cel informacyjny i edukacyjny",
+      "s2Text1": "Wszelkie kalkulacje, czasy trwania i plany oglądania udostępniane przez YT Playlist Cal służą wyłącznie celom edukacyjnym i osobistej wygodzie.",
+      "s2Text2": "Wyniki nie stanowią oficjalnego audytu ani wiążącego potwierdzenia długości materiałów przez YouTube.",
+      "s3Title": "3. Dokładność i kompletność danych",
+      "s3Text1": "Chociaż dokładamy wszelkich starań, aby obliczenia były bezbłędne, bazują one w całości na danych zwracanych przez YouTube Data API v3.",
+      "s3Text2": "Rozbieżności mogą wynikać z czynników niezależnych od nas:",
+      "s3Li1": "Niedostępne filmy: filmy prywatne lub usunięte często nie udostępniają danych o długości.",
+      "s3Li2": "Transmisje i premiery: transmisje na żywo nie posiadają stałego czasu trwania przed zakończeniem przetwarzania.",
+      "s3Li3": "Dynamiczne zmiany: modyfikacje listy dokonywane przez jej autora w trakcie obliczeń.",
+      "s3Li4": "Przybliżenia prędkości: proste dzielenie matematyczne nie uwzględnia opóźnień przeglądarki.",
+      "s3Li5": "Format ISO 8601: drobne zaokrąglenia sekund mogą kumulować się przy setkach filmów.",
+      "s4Title": "4. Korzystanie z API i podmioty trzecie",
+      "s4Text": "YT Playlist Cal korzysta z YouTube Data API v3 do pobierania publicznych informacji. Korzystając z narzędzia, przyjmujesz do wiadomości, że:",
+      "s4Li1": "Twoje zapytania podlegają zasadom dla programistów YouTube i warunkom Google.",
+      "s4Li2": "Działanie narzędzia zależy od dostępności serwerów i limitów zapytań YouTube.",
+      "s4Li3": "Klucze API podawane w opcjach zaawansowanych służą tylko do bieżących zapytań i nie są zapisywane.",
+      "s5Title": "5. Linki zewnętrzne",
+      "s5Text": "YT Playlist Cal może zawierać odnośniki do zewnętrznych stron internetowych. Nie ponosimy odpowiedzialności za ich zawartość.",
+      "s6Title": "6. Wyłączenie gwarancji „Tak jak jest”",
+      "s6Text1": "SERWIS YT PLAYLIST CAL ORAZ WSZYSTKIE JEGO FUNKCJE SĄ UDOSTĘPNIANE W STANIE „TAK JAK JEST”, BEZ ŻADNYCH GWARANCJI WYRAŹNYCH ANI DOROZUMIANYCH.",
+      "s6Text2": "W MAKSYMALNYM ZAKRESIE PRZEWIDZIANYM PRZEZ PRAWO ZRZEKAMY SIĘ WSZELKICH GWARANCJI PRZYDATNOŚCI DO OKREŚLONEGO CELU.",
+      "s7Title": "7. Ograniczenie odpowiedzialności",
+      "s7Text": "W ŻADNYM WYPADKU YT PLAYLIST CAL ANI JEGO TWÓRCY NIE PONOSZĄ ODPOWIEDZIALNOŚCI ZA SZKODY WYNIKAJĄCE Z:",
+      "s7Li1": "Korzystania lub niemożności korzystania z niniejszego serwisu;",
+      "s7Li2": "Ewentualnych błędów lub opóźnień w wynikach obliczeń;",
+      "s7Li3": "Decyzji podjętych na podstawie wyników wygenerowanych przez kalkulator;",
+      "s7Li4": "Usterek technicznych, awarii serwerów lub przerw w dostępie do sieci.",
+      "s7Outro": "Jedynym środkiem przysługującym w przypadku niezadowolenia jest zaprzestanie korzystania z narzędzia.",
+      "s8Title": "8. Zmiany dokumentu",
+      "s8Text": "Zastrzegamy sobie prawo do modyfikacji niniejszego Zastrzeżenia prawnego w dowolnym momencie.",
+      "s9Title": "9. Kontakt",
+      "s9Text": "W przypadku pytań dotyczących niniejszego dokumentu prosimy o kontakt przez stronę Kontakt."
+    }
+  },
+  "meta": {
+    "home": {
+      "title": "Kalkulator długości playlisty YouTube | YT Playlist Cal",
+      "desc": "Oblicz dokładny czas trwania playlisty na YouTube. Obsługa prędkości od 1.25× do 3×, zakres wybranych filmów, pozostały czas i planer nauki."
+    },
+    "tools": {
+      "title": "Narzędzia do playlist YouTube | YT Playlist Cal",
+      "desc": "Darmowe kalkulatory długości, oszczędności czasu na przyspieszeniu i planowania playlist YouTube."
+    },
+    "duration": {
+      "title": "Kalkulator długości playlisty YouTube | YT Playlist Cal",
+      "desc": "Poznaj dokładny czas trwania dowolnej playlisty na YouTube w godzinach, minutach i sekundach."
+    },
+    "watchTime": {
+      "title": "Kalkulator czasu oglądania YouTube | YT Playlist Cal",
+      "desc": "Oblicz rzeczywisty czas oglądania playlisty YouTube przy standardowej i zwiększonej prędkości."
+    },
+    "remainingTime": {
+      "title": "Kalkulator pozostałego czasu playlisty | YT Playlist Cal",
+      "desc": "Dowiedz się, ile godzin zostało do obejrzenia w playliście YouTube od wskazanego filmu."
+    },
+    "speed15x": {
+      "title": "Kalkulator playlisty przy prędkości 1.5× | YT Playlist Cal",
+      "desc": "Oblicz czas trwania playlisty YouTube przy prędkości 1.5× i sprawdź zaoszczędzony czas."
+    },
+    "speed2x": {
+      "title": "Kalkulator playlisty przy prędkości 2× | YT Playlist Cal",
+      "desc": "Skróć czas oglądania o połowę. Oblicz długość playlisty na YouTube przy prędkości 2×."
+    },
+    "howItWorks": {
+      "title": "Jak działa kalkulator playlist | YT Playlist Cal",
+      "desc": "Dowiedz się, jak krok po kroku obliczamy czas trwania playlist za pośrednictwem oficjalnego YouTube API."
+    },
+    "faq": {
+      "title": "Często zadawane pytania o playlisty YouTube | YT Playlist Cal",
+      "desc": "Odpowiedzi na najczęstsze pytania dotyczące obliczania czasu, prędkości i limitów API na YouTube."
+    },
+    "about": {
+      "title": "O nas — YT Playlist Cal",
+      "desc": "Dowiedz się więcej o YT Playlist Cal: szybkim i bezpiecznym kalkulatorze czasu playlist YouTube."
+    },
+    "contact": {
+      "title": "Kontakt — YT Playlist Cal",
+      "desc": "Skontaktuj się z zespołem YT Playlist Cal w sprawach technicznych i uwagach."
+    },
+    "privacy": {
+      "title": "Polityka prywatności | YT Playlist Cal",
+      "desc": "Zasady ochrony prywatności i bezpieczeństwa danych w serwisie YT Playlist Cal."
+    },
+    "terms": {
+      "title": "Warunki korzystania | YT Playlist Cal",
+      "desc": "Regulamin i warunki użytkowania bezpłatnego kalkulatora YT Playlist Cal."
+    },
+    "disclaimer": {
+      "title": "Zastrzeżenia prawne | YT Playlist Cal",
+      "desc": "Nota prawna i informacje o znakach towarowych platformy YT Playlist Cal."
+    },
+    "error404": {
+      "title": "Strona nie została odnaleziona — YT Playlist Cal",
+      "desc": "Szukana strona nie została znaleziona w serwisie YT Playlist Cal."
+    },
+    "error500": {
+      "title": "Błąd serwera — YT Playlist Cal",
+      "desc": "Wystąpił błąd serwera. Spróbuj ponownie za chwilę."
+    }
+  },
+  "seo": {
+    "home": {
+      "title": "Kalkulator długości playlisty YouTube | YT Playlist Cal",
+      "desc": "Oblicz dokładny czas trwania playlisty na YouTube. Obsługa prędkości od 1.25× do 3×, zakres wybranych filmów, pozostały czas i planer nauki."
+    },
+    "tools": {
+      "title": "Narzędzia do playlist YouTube | YT Playlist Cal",
+      "desc": "Darmowe kalkulatory długości, oszczędności czasu na przyspieszeniu i planowania playlist YouTube."
+    },
+    "duration": {
+      "title": "Kalkulator długości playlisty YouTube | YT Playlist Cal",
+      "desc": "Poznaj dokładny czas trwania dowolnej playlisty na YouTube w godzinach, minutach i sekundach."
+    },
+    "watchTime": {
+      "title": "Kalkulator czasu oglądania YouTube | YT Playlist Cal",
+      "desc": "Oblicz rzeczywisty czas oglądania playlisty YouTube przy standardowej i zwiększonej prędkości."
+    },
+    "remainingTime": {
+      "title": "Kalkulator pozostałego czasu playlisty | YT Playlist Cal",
+      "desc": "Dowiedz się, ile godzin zostało do obejrzenia w playliście YouTube od wskazanego filmu."
+    },
+    "speed15x": {
+      "title": "Kalkulator playlisty przy prędkości 1.5× | YT Playlist Cal",
+      "desc": "Oblicz czas trwania playlisty YouTube przy prędkości 1.5× i sprawdź zaoszczędzony czas."
+    },
+    "speed2x": {
+      "title": "Kalkulator playlisty przy prędkości 2× | YT Playlist Cal",
+      "desc": "Skróć czas oglądania o połowę. Oblicz długość playlisty na YouTube przy prędkości 2×."
+    },
+    "howItWorks": {
+      "title": "Jak działa kalkulator playlist | YT Playlist Cal",
+      "desc": "Dowiedz się, jak krok po kroku obliczamy czas trwania playlist za pośrednictwem oficjalnego YouTube API."
+    },
+    "faq": {
+      "title": "Często zadawane pytania o playlisty YouTube | YT Playlist Cal",
+      "desc": "Odpowiedzi na najczęstsze pytania dotyczące obliczania czasu, prędkości i limitów API na YouTube."
+    },
+    "about": {
+      "title": "O nas — YT Playlist Cal",
+      "desc": "Dowiedz się więcej o YT Playlist Cal: szybkim i bezpiecznym kalkulatorze czasu playlist YouTube."
+    },
+    "contact": {
+      "title": "Kontakt — YT Playlist Cal",
+      "desc": "Skontaktuj się z zespołem YT Playlist Cal w sprawach technicznych i uwagach."
+    },
+    "privacy": {
+      "title": "Polityka prywatności | YT Playlist Cal",
+      "desc": "Zasady ochrony prywatności i bezpieczeństwa danych w serwisie YT Playlist Cal."
+    },
+    "terms": {
+      "title": "Warunki korzystania | YT Playlist Cal",
+      "desc": "Regulamin i warunki użytkowania bezpłatnego kalkulatora YT Playlist Cal."
+    },
+    "disclaimer": {
+      "title": "Zastrzeżenia prawne | YT Playlist Cal",
+      "desc": "Nota prawna i informacje o znakach towarowych platformy YT Playlist Cal."
+    },
+    "error404": {
+      "title": "Strona nie została odnaleziona — YT Playlist Cal",
+      "desc": "Szukana strona nie została znaleziona w serwisie YT Playlist Cal."
+    },
+    "error500": {
+      "title": "Błąd serwera — YT Playlist Cal",
+      "desc": "Wystąpił błąd serwera. Spróbuj ponownie za chwilę."
+    }
+  },
+  "demonstrations": {
+    "badge": "Interaktywny Przewodnik",
+    "title": "Jak Korzystać z Kalkulatora",
+    "subtitle": "Przykłady krok po kroku pokazujące, jak obliczać czas trwania playlist i planować naukę.",
+    "tab1": "1. Wklej URL",
+    "tab2": "2. Oblicz",
+    "tab3": "3. Całkowity Czas",
+    "tab4": "4. Statystyki",
+    "tab5": "5. Oszczędność Czasu",
+    "step1Title": "Wklej dowolny link z YouTube",
+    "step1Desc": "Skopiuj link do playlisty YouTube lub filmu z listą i wklej go w pole tekstowe.",
+    "step2Title": "Kliknij przycisk Oblicz",
+    "step2Desc": "Naciśnij Oblicz, aby pobrać czas trwania i metadane wszystkich filmów przez YouTube Data API.",
+    "step3Title": "Natychmiast zobacz całkowity czas",
+    "step3Desc": "Zobacz dokładny łączny czas trwania wyrażony w godzinach, minutach i sekundach.",
+    "step4Title": "Sprawdź liczbę filmów i statystyki",
+    "step4Desc": "Sprawdź liczbę dostępnych filmów, średnią długość oraz najkrótszy i najdłuższy film.",
+    "step5Title": "Porównaj oszczędność przy wyższej prędkości",
+    "step5Desc": "Sprawdź czas oglądania przy prędkościach 1.25×, 1.5×, 1.75× i 2× i zobacz, ile godzin zaoszczędzisz.",
+    "prev": "Poprzedni",
+    "next": "Następny",
+    "stepOf": "Krok {current} z {total}",
+    "samplePlaylistTitle": "Kurs Tworzenia Stron WWW Masterclass",
+    "sampleChannel": "Code Academy",
+    "sampleDuration": "14 godzin 28 minut 45 sekund",
+    "sampleCount": "42 filmy",
+    "sampleAvg": "20 min 41 s",
+    "sampleShortest": "Wprowadzenie — 3 min 12 s",
+    "sampleLongest": "Lekcja zaawansowana — 1 godz. 05 min 20 s",
+    "sampleAt15x": "9 godzin 39 min 10 s",
+    "sampleSaved15x": "Zaoszczędzono 4g 49m",
+    "sampleAt2x": "7 godzin 14 min 22 s",
+    "sampleSaved2x": "Zaoszczędzono 7g 14m",
+    "step1Badge": "Krok 1 z 5",
+    "step2Badge": "Krok 2 z 5",
+    "step3Badge": "Krok 3 z 5",
+    "step4Badge": "Krok 4 z 5",
+    "step5Badge": "Krok 5 z 5",
+    "pasteHint": "Ctrl+V / Wklej",
+    "detectedBadge": "✓ Wykryto playlistę: 42 filmy",
+    "autoPlayOn": "Autoodtwarzanie włączone",
+    "autoPlayPaused": "Wstrzymano"
+  },
+  "personas": {
+    "title": "Używane przez",
+    "students": "Studentów i uczniów",
+    "onlineLearners": "Uczących się online",
+    "courseBuyers": "Kupujących kursy",
+    "developers": "Programistów",
+    "certCandidates": "Zdających egzaminy",
+    "teachers": "Nauczycieli",
+    "creators": "Twórców",
+    "bingeWatchers": "Maratończyków wideo"
+  }
+}

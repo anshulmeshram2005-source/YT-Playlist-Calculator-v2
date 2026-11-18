@@ -1,0 +1,903 @@
+{
+  "brand": {
+    "name": "YT Playlist Cal",
+    "tagline": "Công cụ tính tổng thời lượng và thời gian xem danh sách phát YouTube miễn phí.",
+    "notAffiliated": "Không liên kết với YouTube hoặc Google."
+  },
+  "nav": {
+    "home": "Trang chủ",
+    "tools": "Tất cả công cụ",
+    "howItWorks": "Cách hoạt động",
+    "faq": "Câu hỏi thường gặp",
+    "about": "Giới thiệu",
+    "contact": "Liên hệ",
+    "tryCalculator": "Dùng thử công cụ",
+    "selectLanguage": "Chọn ngôn ngữ",
+    "searchLanguage": "Tìm ngôn ngữ…",
+    "openMenu": "Mở menu điều hướng",
+    "closeMenu": "Đóng menu điều hướng",
+    "toggleTheme": "Bật/tắt giao diện tối"
+  },
+  "hero": {
+    "badge": "Công cụ YouTube nhanh chóng & miễn phí",
+    "title": "Công cụ tính thời lượng danh sách phát YouTube",
+    "subtitle": "Tính tổng thời gian, thời lượng xem ở các tốc độ từ 1.25× đến 3× và lập lịch trình học tập hoặc xem video của bạn ngay tức thì."
+  },
+  "calculator": {
+    "modeFull": "Toàn bộ danh sách",
+    "modeRange": "Khoảng video",
+    "modeRemaining": "Thời gian còn lại",
+    "urlLabel": "Đường dẫn hoặc ID danh sách phát / video YouTube",
+    "urlPlaceholder": "Dán đường dẫn danh sách phát, liên kết video hoặc ID vào đây…",
+    "pasteBtn": "Dán",
+    "demoBtn": "Xem thử mẫu",
+    "rangeStart": "Video bắt đầu",
+    "rangeEnd": "Video kết thúc",
+    "watchedThrough": "Đã xem xong đến video số",
+    "speedLabel": "Tốc độ phát",
+    "customSpeedPlaceholder": "Tùy chỉnh",
+    "advancedOptions": "Tùy chọn nâng cao",
+    "userApiKey": "Khóa API YouTube cá nhân (Tùy chọn)",
+    "userApiKeyHint": "Nhập khóa API YouTube của riêng bạn để tránh giới hạn hạn ngạch chung.",
+    "calculateBtn": "Tính thời lượng danh sách phát",
+    "calculatingBtn": "Đang tính toán…",
+    "loadingTitle": "Đang phân tích danh sách phát…",
+    "loadingStep1": "Đang kết nối với YouTube API…",
+    "loadingStep2": "Đang tải thông tin danh sách…",
+    "loadingStep3": "Đang xử lý thời lượng các video…",
+    "loadingStep4": "Gần hoàn tất…",
+    "statTotal": "Tổng thời lượng",
+    "statCount": "Số lượng video",
+    "statAvg": "Thời lượng trung bình",
+    "statSpeed": "Ở tốc độ đã chọn",
+    "statShortest": "Video ngắn nhất",
+    "statLongest": "Video dài nhất",
+    "speedTitle": "So sánh theo tốc độ phát",
+    "speedColSpeed": "Tốc độ",
+    "speedColDuration": "Thời gian xem",
+    "speedColSaved": "Thời gian tiết kiệm",
+    "speedSelected": "đang chọn",
+    "watchPlannerTitle": "Lập lịch xem mỗi ngày",
+    "watchPlannerDesc": "Nhập số phút bạn có thể xem mỗi ngày để biết chính xác ngày hoàn thành.",
+    "plannerMinutes": "Số phút mỗi ngày",
+    "plannerStartDate": "Ngày bắt đầu",
+    "plannerSpeed": "Tốc độ",
+    "plannerBtn": "Tính lịch trình",
+    "plannerResultText": "Ở tốc độ {speed}× với {minutes} phút/ngày, bạn sẽ hoàn thành sau {days} ngày.",
+    "plannerFinishDate": "Ngày dự kiến hoàn thành:",
+    "finishByTitle": "Tính theo mục tiêu ngày hết hạn",
+    "finishByDesc": "Bạn cần hoàn thành trước một ngày cụ thể? Chọn ngày để biết mỗi ngày cần xem bao nhiêu phút.",
+    "finishByDate": "Hoàn thành trước ngày",
+    "finishBySpeed": "Tốc độ",
+    "finishByBtn": "Tính thời gian mỗi ngày",
+    "finishByResultText": "Để hoàn thành trước {date} ở tốc độ {speed}×, bạn cần xem {daily} mỗi ngày trong {days} ngày tới.",
+    "finishByUnfeasible": "Mục tiêu này đòi hỏi xem hơn 23 giờ mỗi ngày và không khả thi. Vui lòng chọn ngày muộn hơn hoặc tăng tốc độ.",
+    "videoListTitle": "Danh sách video chi tiết",
+    "showVideos": "Hiển thị video",
+    "hideVideos": "Ẩn video",
+    "searchVideosPlaceholder": "Tìm kiếm tiêu đề video…",
+    "pageIndicator": "Trang {current} / {total}",
+    "prevPage": "Trước",
+    "nextPage": "Sau",
+    "privateVideo": "Riêng tư",
+    "liveVideo": "Trực tiếp",
+    "unavailableVideo": "Không khả dụng",
+    "exportTitle": "Chia sẻ & Xuất dữ liệu",
+    "copyLink": "Sao chép liên kết",
+    "copySummary": "Sao chép tóm tắt",
+    "exportCsv": "Xuất tệp CSV",
+    "exportTxt": "Xuất tệp TXT",
+    "copied": "Đã sao chép!",
+    "errors": {
+      "missingUrl": "Vui lòng nhập đường dẫn YouTube.",
+      "invalidUrl": "Không tìm thấy danh sách phát hoặc video YouTube hợp lệ.",
+      "urlTooLong": "Đường dẫn nhập vào quá dài.",
+      "invalidRange": "Số video bắt đầu phải nhỏ hơn hoặc bằng số video kết thúc.",
+      "quotaExceeded": "Đã hết hạn ngạch truy vấn YouTube API trong ngày. Vui lòng thử lại vào ngày mai hoặc nhập khóa API của bạn trong Tùy chọn nâng cao.",
+      "rateLimited": "Quá nhiều yêu cầu cùng lúc. Vui lòng đợi trong giây lát rồi thử lại.",
+      "notFound": "Không tìm thấy danh sách phát hoặc video. Hãy chắc chắn đường dẫn đúng và danh sách ở chế độ công khai.",
+      "forbidden": "Truy cập bị từ chối bởi YouTube API.",
+      "internalError": "Đã xảy ra lỗi máy chủ trong quá trình xử lý. Vui lòng thử lại sau.",
+      "networkError": "Lỗi mạng: Không thể kết nối với máy chủ tính toán."
+    },
+    "modeLabel": "Chế độ tính toán",
+    "videosUnavailable": "{count} video không khả dụng (riêng tư, đã xóa hoặc giới hạn quốc gia)",
+    "byChannel": "bởi {channel}",
+    "tryDemoBtn": "Thử danh sách phát mẫu →"
+  },
+  "features": {
+    "title": "Mọi tính năng bạn cần để lập kế hoạch xem YouTube",
+    "subtitle": "Từ tính toán thời lượng chính xác đến so sánh tốc độ xem và lập thời gian biểu học tập.",
+    "items": [
+      {
+        "icon": "clock",
+        "title": "Tổng thời lượng chính xác",
+        "desc": "Nhận thời lượng đầy đủ của bất kỳ danh sách phát công khai nào theo giờ, phút và giây."
+      },
+      {
+        "icon": "zap",
+        "title": "Bảng so sánh tốc độ",
+        "desc": "Xem rõ thời gian xem thực tế và số giờ tiết kiệm được từ tốc độ 0.5× đến 3×."
+      },
+      {
+        "icon": "crosshair",
+        "title": "Khoảng video tùy chọn",
+        "desc": "Tính chính xác thời lượng của một đoạn video cụ thể trong danh sách."
+      },
+      {
+        "icon": "play",
+        "title": "Thời gian còn lại",
+        "desc": "Điền vị trí video bạn đã xem xong để biết còn bao nhiêu giờ để hoàn thành."
+      },
+      {
+        "icon": "calendar-days",
+        "title": "Lập kế hoạch hàng ngày",
+        "desc": "Nhập thời gian rảnh mỗi ngày để tính ngày chính xác kết thúc khóa học."
+      },
+      {
+        "icon": "flag",
+        "title": "Mục tiêu theo hạn chót",
+        "desc": "Đặt mục tiêu ngày hoàn thành để nhận lịch phân bổ thời gian xem mỗi ngày."
+      }
+    ]
+  },
+  "howItWorks": {
+    "badge": "Cách hoạt động",
+    "title": "Cách tính thời lượng danh sách phát YouTube trong 3 bước",
+    "subtitle": "Tính toán tức thì mà không cần cài đặt phần mềm hay tạo tài khoản.",
+    "steps": [
+      {
+        "number": "1",
+        "title": "Sao chép liên kết danh sách phát",
+        "desc": "Trên YouTube, sao chép liên kết từ thanh địa chỉ trình duyệt hoặc nút Chia sẻ."
+      },
+      {
+        "number": "2",
+        "title": "Dán vào công cụ",
+        "desc": "Dán liên kết vào ô tìm kiếm, chọn khoảng video hoặc tốc độ phát bạn muốn."
+      },
+      {
+        "number": "3",
+        "title": "Xem thời lượng & lịch biểu",
+        "desc": "Xem ngay tổng thời lượng, bảng tốc độ và kế hoạch kết thúc danh sách phát."
+      }
+    ],
+    "supportedBadge": "Định dạng được hỗ trợ",
+    "supportedTitle": "Những liên kết YouTube nào được hỗ trợ?",
+    "supportedDesc": "Bộ phân tích của chúng tôi hỗ trợ chính xác các liên kết danh sách phát tiêu chuẩn, video có tham số danh sách phát, liên kết rút gọn (youtu.be) và ID danh sách phát trực tiếp.",
+    "links": [
+      {
+        "label": "Đường dẫn danh sách phát chuẩn",
+        "example": "youtube.com/playlist?list=PL..."
+      },
+      {
+        "label": "Liên kết video kèm danh sách",
+        "example": "youtube.com/watch?v=...&list=PL..."
+      },
+      {
+        "label": "Liên kết rút gọn youtu.be",
+        "example": "youtu.be/...&list=PL..."
+      },
+      {
+        "label": "Mã ID danh sách trực tiếp",
+        "example": "PLrAXtmErZgOdP_OalsLiL..."
+      }
+    ]
+  },
+  "faq": {
+    "badge": "Câu hỏi thường gặp",
+    "title": "Câu hỏi thường gặp về công cụ tính danh sách phát",
+    "subtitle": "Giải đáp thắc mắc về cách tính thời gian, tốc độ xem và giới hạn YouTube.",
+    "items": [
+      {
+        "q": "Làm thế nào để tính tổng thời lượng một danh sách phát YouTube?",
+        "a": "Bạn chỉ cần sao chép liên kết danh sách phát trên YouTube, dán vào ô nhập liệu trên trang web và nhấn \"Tính thời lượng danh sách phát\". Kết quả sẽ có sau chưa đầy 2 giây."
+      },
+      {
+        "q": "Công cụ có tính được thời gian khi xem tốc độ nhanh (1.25×, 1.5×, 2×) không?",
+        "a": "Có! Bảng so sánh tốc độ tự động hiển thị thời gian xem từ 0.5× đến 3× cùng số giờ và phút tiết kiệm được."
+      },
+      {
+        "q": "Công cụ có hoạt động với danh sách phát Không công khai hoặc Riêng tư không?",
+        "a": "Hoạt động tốt với danh sách Không công khai (Unlisted) nếu bạn có link; tuy nhiên danh sách Riêng tư (Private) không thể truy cập qua API."
+      },
+      {
+        "q": "Số lượng video tối đa có thể tính là bao nhiêu?",
+        "a": "Chúng tôi hỗ trợ các danh sách phát chứa hàng trăm video nhờ cơ chế phân trang tự động qua YouTube Data API v3 chính thức."
+      },
+      {
+        "q": "Các video bị xóa hoặc bị ẩn được xử lý thế nào?",
+        "a": "Những video bị xóa hoặc khóa quyền xem sẽ được hệ thống đánh dấu rõ ràng trong danh sách để đảm bảo số liệu chính xác."
+      },
+      {
+        "q": "Tôi có thể chỉ tính một phần của danh sách không?",
+        "a": "Có, bạn hãy chọn thẻ \"Khoảng video\" và điền số thứ tự video bắt đầu và video kết thúc."
+      },
+      {
+        "q": "Lập lịch xem mỗi ngày dự đoán ngày hoàn thành như thế nào?",
+        "a": "Bằng cách lấy tổng thời lượng (ở tốc độ đã chọn) chia cho số phút bạn xem mỗi ngày rồi tính toán theo lịch thực tế."
+      },
+      {
+        "q": "Công cụ này có miễn phí không?",
+        "a": "Hoàn toàn miễn phí, không yêu cầu đăng nhập và đảm bảo quyền riêng tư người dùng."
+      },
+      {
+        "q": "Tại sao YouTube không hiển thị sẵn tổng thời lượng?",
+        "a": "YouTube chỉ hiển thị số lượng video. Công cụ của chúng tôi dùng API để tổng hợp thời lượng từng video đơn lẻ."
+      },
+      {
+        "q": "Tôi có thể tải về danh sách video đã phân tích không?",
+        "a": "Có, bạn có thể sao chép văn bản tóm tắt hoặc tải về tệp bảng tính CSV để mở trên Excel hoặc Google Sheets."
+      }
+    ]
+  },
+  "footer": {
+    "desc": "Công cụ tính tổng thời lượng và thời gian xem danh sách phát YouTube miễn phí. Phân tích bất kỳ danh sách phát nào để biết tổng thời gian, thời lượng ở các tốc độ phát khác nhau và số liệu thống kê video chi tiết.",
+    "notAffiliated": "Không liên kết với YouTube hoặc Google LLC.",
+    "colTools": "Công cụ tính toán",
+    "colResources": "Tài nguyên",
+    "colCompany": "Thông tin",
+    "colLegal": "Pháp lý",
+    "allRightsReserved": "Đã đăng ký bản quyền.",
+    "trademarkNotice": "YouTube là nhãn hiệu đã đăng ký của Google LLC. Công cụ này là một tiện ích độc lập và không có mối liên hệ nào với YouTube hay Google.",
+    "links": {
+      "playlistCalculator": "Máy tính Danh sách phát YouTube",
+      "durationCalculator": "Máy tính Thời lượng Danh sách phát",
+      "watchTimeCalculator": "Máy tính Thời gian Xem",
+      "remainingTime": "Máy tính Thời gian Còn lại",
+      "watchTime15x": "Máy tính Tốc độ 1.5x",
+      "watchTime2x": "Máy tính Tốc độ 2x",
+      "howItWorks": "Cách hoạt động",
+      "faq": "Câu hỏi thường gặp",
+      "allTools": "Tất cả công cụ",
+      "about": "Giới thiệu",
+      "contact": "Liên hệ",
+      "privacy": "Chính sách quyền riêng tư",
+      "terms": "Điều khoản dịch vụ",
+      "disclaimer": "Tuyên bố miễn trừ trách nhiệm"
+    },
+    "brandDesc": "Giải pháp nhanh và chính xác nhất để tính thời lượng danh sách phát YouTube và quản lý kế hoạch học tập.",
+    "toolsTitle": "Công cụ",
+    "resourcesTitle": "Tài nguyên",
+    "legalTitle": "Pháp lý",
+    "copyright": "© {year} YT Playlist Cal (Chrono Play). Bảo lưu mọi quyền."
+  },
+  "pages": {
+    "about": {
+      "breadcrumb": "Giới thiệu",
+      "title": "Giới thiệu về YT Playlist Cal",
+      "subtitle": "Được thiết kế cho học sinh, sinh viên và những người trân trọng thời gian.",
+      "whatWeDoTitle": "Chúng tôi làm gì",
+      "whatWeDoP1": "YT Playlist Cal là một công cụ trực tuyến miễn phí và độc lập được tạo ra nhằm giúp học sinh, sinh viên, giáo viên, lập trình viên và người xem YouTube tính toán tức thì tổng thời lượng và thời gian xem của bất kỳ danh sách phát công khai nào.",
+      "whatWeDoP2": "Dù bạn đang lên kế hoạch cho một đợt học tập tập trung, sắp xếp lịch học qua video, hay muốn tiết kiệm thời gian bằng tốc độ phát 1.25x, 1.5x, 1.75x hoặc 2.0x, nền tảng của chúng tôi luôn mang lại kết quả chuẩn xác chỉ trong vài giây.",
+      "principlesTitle": "Nguyên tắc cốt lõi của chúng tôi",
+      "p1": "YT Playlist Cal ra đời để giải quyết một bất tiện: YouTube chỉ hiển thị số lượng video nhưng không cho biết tổng số giờ cần thiết để xem hết một khóa học.",
+      "p2": "Sứ mệnh của chúng tôi là đem lại công cụ tính toán tức thì, không quảng cáo làm phiền và tôn trọng quyền riêng tư.",
+      "p3": "Nhanh chóng và chuẩn xác. Truy vấn API phía máy chủ, không theo dõi, không lưu dữ liệu cá nhân. Được tối ưu cho trải nghiệm người dùng tiện lợi nhất.",
+      "trademarkTitle": "Độc lập & Nhãn hiệu thương mại",
+      "trademarkP": "YT Playlist Cal là một tiện ích độc lập. YouTube và biểu trưng YouTube là nhãn hiệu đã đăng ký của Google LLC. Công cụ này không được tài trợ hay xác nhận bởi Google LLC.",
+      "principlesAccuracy": "Độ chính xác toán học: kết nối trực tiếp với YouTube Data API v3 để cộng dồn thời gian từng video chính xác đến từng giây.",
+      "principlesSpeed": "Tốc độ và hiệu quả: kết quả tức thì nhờ hệ thống bộ nhớ đệm thông minh mà không phải chờ đợi.",
+      "principlesPrivacy": "Quyền riêng tư là trên hết: không dùng cookie theo dõi xâm phạm, không bắt buộc đăng ký tài khoản và không lưu trữ liên kết của bạn."
+    },
+    "contact": {
+      "breadcrumb": "Liên hệ",
+      "title": "Liên hệ với chúng tôi",
+      "subtitle": "Bạn có câu hỏi, góp ý hay muốn báo cáo lỗi? Hãy liên hệ với chúng tôi.",
+      "formType": "Loại thông điệp",
+      "formTypeBug": "Báo cáo lỗi kỹ thuật",
+      "formTypeFeature": "Đề xuất tính năng mới",
+      "formTypeQuestion": "Câu hỏi chung",
+      "formTypeOther": "Khác",
+      "formEmail": "Email của bạn",
+      "formEmailPlaceholder": "email.cuaban@example.com",
+      "formMessage": "Nội dung tin nhắn",
+      "formMessagePlaceholder": "Mô tả chi tiết câu hỏi hoặc vấn đề của bạn...",
+      "formSubmit": "Gửi tin nhắn",
+      "formSuccess": "Tin nhắn đã được gửi thành công! Chúng tôi sẽ phản hồi trong vòng 24-48 giờ làm việc.",
+      "faqNoteTitle": "Trước khi gửi tin nhắn",
+      "faqNoteP": "Bạn có thắc mắc về cách tính hay hạn ngạch API? Hãy ghé thăm trang Câu hỏi thường gặp của chúng tôi.",
+      "faqLink": "Vui lòng xem qua trang Câu hỏi thường gặp trước tiên.",
+      "emailLabel": "Email trực tiếp",
+      "emailValue": "support@ytplaylistcal.com",
+      "formTypeFeedback": "Góp ý hoặc đề xuất",
+      "formTypeBusiness": "Hợp tác kinh doanh",
+      "infoTitle": "Thông tin liên hệ",
+      "hoursLabel": "Thời gian phản hồi",
+      "hoursValue": "Chúng tôi thường phản hồi trong vòng 24–48 giờ làm việc.",
+      "faqNotice": "Bạn có câu hỏi nhanh về cách sử dụng công cụ tính?"
+    },
+    "tools": {
+      "breadcrumb": "Tất cả công cụ",
+      "title": "Tất cả công cụ cho Danh sách phát YouTube",
+      "subtitle": "Bộ công cụ tiện ích miễn phí giúp tối ưu hóa thời gian theo dõi YouTube của bạn."
+    },
+    "duration": {
+      "breadcrumb": "Máy tính Thời lượng",
+      "title": "Công cụ tính thời lượng danh sách phát YouTube",
+      "subtitle": "Biết chính xác tổng thời gian của bất kỳ danh sách phát YouTube nào.",
+      "whyTitle": "Tại sao nên dùng máy tính thời lượng?",
+      "whyP": "YouTube không hiển thị tổng thời gian tích lũy. Công cụ của chúng tôi quét từng video và cộng dồn từng giây trong chớp mắt.",
+      "supportedTitle": "Các định dạng liên kết hỗ trợ",
+      "beyondTitle": "Hơn cả thời lượng: số liệu thống kê chuyên sâu",
+      "ctaBtn": "Tính thời lượng danh sách phát",
+      "badge": "Tính Thời Lượng",
+      "aboutTitle": "Về Máy tính Thời lượng",
+      "aboutP1": "Máy tính Thời lượng Danh sách phát YouTube tính tổng thời gian của từng video công khai trong danh sách phát với độ chính xác toán học tuyệt đối.",
+      "aboutP2": "Bản thân YouTube không hiển thị tổng thời gian tích lũy của các danh sách phát, khiến bạn khó ước lượng thời gian cần thiết để hoàn thành một khóa học.",
+      "featuresTitle": "Tính năng nổi bật"
+    },
+    "watchTime": {
+      "breadcrumb": "Máy tính Thời gian Xem",
+      "title": "Công cụ tính thời gian xem YouTube",
+      "subtitle": "Tính thời lượng xem thực tế khi theo dõi danh sách phát trên YouTube.",
+      "ctaBtn": "Tính thời gian xem",
+      "badge": "Thời Gian Xem",
+      "aboutTitle": "Về Thời gian Xem"
+    },
+    "remainingTime": {
+      "breadcrumb": "Máy tính Thời gian Còn lại",
+      "title": "Tính thời gian còn lại của danh sách phát",
+      "subtitle": "Tính số giờ còn lại từ video bạn vừa xem xong.",
+      "ctaBtn": "Tính thời gian còn lại",
+      "badge": "Thời Gian Còn Lại",
+      "aboutTitle": "Về Thời gian Còn lại"
+    },
+    "speed15x": {
+      "breadcrumb": "Máy tính Tốc độ 1.5x",
+      "title": "Tính danh sách phát ở tốc độ 1.5×",
+      "subtitle": "Tính thời lượng và lượng thời gian tiết kiệm được khi xem ở tốc độ 1.5×.",
+      "ctaBtn": "Tính ở tốc độ 1.5x",
+      "badge": "Tốc độ 1.5×",
+      "aboutTitle": "Về Tốc độ 1.5x"
+    },
+    "speed2x": {
+      "breadcrumb": "Máy tính Tốc độ 2x",
+      "title": "Tính danh sách phát ở tốc độ 2×",
+      "subtitle": "Giảm một nửa thời gian học tập với phép tính ở tốc độ 2×.",
+      "ctaBtn": "Tính ở tốc độ 2x",
+      "badge": "Tốc độ 2×",
+      "aboutTitle": "Về Tốc độ 2x"
+    },
+    "terms": {
+      "breadcrumb": "Điều khoản dịch vụ",
+      "title": "Điều khoản dịch vụ",
+      "lastUpdated": "Cập nhật lần cuối: 31 tháng 10 năm 2026",
+      "summary": "Tóm tắt: Bằng việc sử dụng YT Playlist Cal, bạn đồng ý với các điều khoản này, Chính sách quyền riêng tư và Tuyên bố từ chối trách nhiệm của chúng tôi.",
+      "subtitle": "Điều kiện sử dụng dịch vụ YT Playlist Cal.",
+      "intro": "Bằng việc truy cập hoặc sử dụng trang web, bạn đồng ý với các điều khoản dưới đây."
+    },
+    "privacy": {
+      "breadcrumb": "Chính sách quyền riêng tư",
+      "title": "Chính sách bảo mật",
+      "lastUpdated": "Cập nhật lần cuối: 31 tháng 10 năm 2026",
+      "summary": "Chúng tôi tôn trọng quyền riêng tư của bạn. Chúng tôi không lưu trữ liên kết của bạn, không theo dõi danh tính và không bán dữ liệu.",
+      "subtitle": "Cam kết bảo vệ dữ liệu và thông tin cá nhân của bạn.",
+      "intro": "Chúng tôi tôn trọng quyền riêng tư của bạn. Chúng tôi không theo dõi thông tin cá nhân hay lưu trữ lịch sử tra cứu của bạn."
+    },
+    "disclaimer": {
+      "breadcrumb": "Tuyên bố miễn trừ trách nhiệm",
+      "title": "Tuyên bố miễn trừ trách nhiệm",
+      "lastUpdated": "Cập nhật lần cuối: 31 tháng 10 năm 2026",
+      "summary": "Tóm tắt: YT Playlist Cal là công cụ độc lập và miễn phí. Chúng tôi không liên kết với YouTube hoặc Google LLC.",
+      "subtitle": "Thông báo pháp lý và thương hiệu.",
+      "intro": "YT Playlist Cal là một công cụ độc lập và không trực thuộc YouTube hay Google LLC."
+    },
+    "error404": {
+      "code": "404",
+      "title": "Không tìm thấy trang",
+      "desc": "Trang bạn đang tìm kiếm không tồn tại hoặc đã được di chuyển.",
+      "btn": "Về trang chủ",
+      "allTools": "Tất cả công cụ",
+      "subtitle": "Trang bạn đang tìm kiếm không tồn tại hoặc đã bị di chuyển.",
+      "backHome": "Về trang chủ",
+      "exploreTools": "Khám phá tất cả công cụ"
+    },
+    "error500": {
+      "code": "500",
+      "title": "Lỗi máy chủ",
+      "desc": "Đã xảy ra lỗi bất ngờ trong khi xử lý yêu cầu của bạn.",
+      "btn": "Thử lại",
+      "reportBtn": "Báo lỗi",
+      "allTools": "Tất cả công cụ",
+      "subtitle": "Đã xảy ra sự cố tạm thời trên hệ thống máy chủ. Vui lòng thử lại sau giây lát.",
+      "backHome": "Về trang chủ",
+      "retry": "Thử lại",
+      "tryAgain": "Vui lòng thử lại sau giây lát"
+    },
+    "common": {
+      "related": "Công cụ liên quan",
+      "relatedTools": "Công cụ liên quan",
+      "playlistLengthCalc": "Máy tính Chiều dài Danh sách phát",
+      "fullPlaylistCalc": "Máy tính Toàn diện Danh sách phát",
+      "watchTimeAt15x": "Thời gian xem ở 1.5x",
+      "watchTimeAt2x": "Thời gian xem ở 2x",
+      "watchTimeCalc": "Máy tính Thời gian Xem",
+      "remainingTimeCalc": "Máy tính Thời gian Còn lại",
+      "playlistDurationCalc": "Máy tính Thời lượng Danh sách phát",
+      "howItWorks": "Cách hoạt động",
+      "faq": "Câu hỏi thường gặp",
+      "tryCalc": "Thử máy tính ngay",
+      "calculatorBadge": "Công cụ tính trực tuyến miễn phí",
+      "relatedToolsDesc": "Khám phá các máy tính miễn phí khác để lập kế hoạch xem YouTube của bạn hiệu quả hơn.",
+      "faqDesc": "Câu trả lời rõ ràng cho các câu hỏi phổ biến nhất về tính toán danh sách phát YouTube.",
+      "stillHaveQuestions": "Bạn vẫn còn thắc mắc?",
+      "stillHaveQuestionsDesc": "Đội ngũ hỗ trợ của chúng tôi luôn sẵn sàng giải đáp mọi câu hỏi hoặc tiếp nhận góp ý.",
+      "contactUs": "Liên hệ với chúng tôi",
+      "needMoreHelp": "Cần thêm trợ giúp?",
+      "needMoreHelpDesc": "Gửi tin nhắn trực tiếp cho chúng tôi để được hỗ trợ.",
+      "backToHome": "Về trang chủ",
+      "tryAnotherPlaylist": "Tính danh sách phát khác"
+    },
+    "howItWorksDetail": {
+      "breadcrumb": "Cách hoạt động",
+      "title": "Cách thức hoạt động của Máy tính Danh sách phát YouTube",
+      "subtitle": "Hướng dẫn kỹ thuật chi tiết về cách chúng tôi phân tích liên kết, gọi API YouTube và tính toán thời gian chuẩn xác.",
+      "stepsHeading": "Quy trình tính toán qua từng bước",
+      "s1Title": "1. Phân tích và kiểm tra liên kết",
+      "s1Detail": "Khi bạn dán một liên kết hoặc mã ID danh sách phát, hệ thống sẽ trích xuất mã định danh duy nhất (thường bắt đầu bằng PL, UU, FL hoặc RD).",
+      "s2Title": "2. Kết nối an toàn đến YouTube Data API v3",
+      "s2Detail": "Chúng tôi gửi các yêu cầu mã hóa đến máy chủ chính thức của YouTube API để lấy danh sách toàn bộ video.",
+      "s3Title": "3. Phân trang tự động cho danh sách phát lớn",
+      "s3Detail": "YouTube API giới hạn tối đa 50 video mỗi lần gọi. Với danh sách dài hơn, hệ thống tự động duyệt qua các trang kế tiếp cho đến khi đủ video.",
+      "s4Title": "4. Đọc thời lượng theo chuẩn ISO 8601",
+      "s4Detail": "YouTube lưu trữ thời lượng video theo chuẩn ISO 8601 (ví dụ PT1H23M45S). Bộ xử lý của chúng tôi chuyển đổi định dạng này thành số giây tuyệt đối.",
+      "s5Title": "5. Cộng dồn toán học và chuyển đổi thời gian",
+      "s5Detail": "Chúng tôi tính tổng số giây của tất cả các video và chuyển đổi kết quả thành định dạng giờ, phút và giây rõ ràng.",
+      "s6Title": "6. Ước tính ở các tốc độ phát nhanh",
+      "s6Detail": "Chúng tôi hiển thị thời gian xem nếu bạn tăng tốc độ lên 1.25x, 1.5x, 1.75x và 2.0x, đồng thời chỉ rõ số giờ bạn tiết kiệm được.",
+      "s7Title": "7. Thống kê chi tiết danh sách phát",
+      "s7Detail": "Chúng tôi tính thời lượng trung bình của video và xác định ngay lập tức video ngắn nhất cũng như dài nhất trong danh sách phát.",
+      "speedHeading": "Công thức toán học tiết kiệm thời gian",
+      "speedIntro": "Thời gian xem thực tế khi phát nhanh được tính bằng cách chia tổng thời lượng cho hệ số tốc độ đã chọn.",
+      "speedFormula": "Thời Gian Thực = Tổng Thời Lượng ÷ Tốc Độ",
+      "speedExample": "Ví dụ một danh sách phát dài 10 giờ nếu xem ở tốc độ 1.5x chỉ mất 6 giờ 40 phút, giúp bạn tiết kiệm được 3 giờ 20 phút quý giá.",
+      "missingHeading": "Cách chúng tôi xử lý các video không khả dụng",
+      "missingIntro": "Không phải video nào trong danh sách phát cũng trả về thông tin thời lượng qua API:",
+      "missing1": "Video riêng tư hoặc đã xóa: không trả về dữ liệu thời lượng và được tính là 0 giây.",
+      "missing2": "Video bị giới hạn vùng hoặc độ tuổi: có thể bị ẩn khỏi quyền truy cập API công khai.",
+      "missing3": "Video phát trực tiếp hoặc công chiếu: chưa có thời lượng cố định cho đến khi việc xử lý lưu trữ hoàn tất.",
+      "missing4": "Hạn ngạch API: nếu hạn ngạch công khai hằng ngày hết, bạn có thể tự nhập khóa API miễn phí của riêng mình.",
+      "missing5": "Sự cố kết nối mạng tạm thời: được xử lý bằng cơ chế thử lại tự động.",
+      "missingOutro": "Số lượng video không thể tính toán luôn được ghi rõ ràng trong bảng tổng kết kết quả.",
+      "cachingHeading": "Bộ nhớ đệm thông minh tốc độ cao",
+      "cachingDetail": "Để không làm quá tải máy chủ YouTube và mang lại phản hồi tức thì, chúng tôi tạm lưu dữ liệu các danh sách phát phổ biến vào bộ nhớ đệm.",
+      "tryCalc": "Trải nghiệm máy tính với danh sách phát của bạn ngay"
+    },
+    "faqDetailed": {
+      "breadcrumb": "Câu hỏi thường gặp",
+      "title": "Câu hỏi thường gặp",
+      "subtitle": "Tất cả những điều bạn cần biết về tính thời lượng danh sách phát YouTube, tốc độ xem và thông tin kỹ thuật.",
+      "catBasics": "Cơ bản về máy tính",
+      "catSpeed": "Tốc độ phát",
+      "catModes": "Chế độ tính",
+      "catMissing": "Video không khả dụng & Giới hạn",
+      "catPlanner": "Lập kế hoạch học",
+      "catPrivacy": "Bảo mật và riêng tư",
+      "catAbout": "Về công cụ",
+      "notFoundPrompt": "Chưa tìm thấy câu trả lời bạn cần?",
+      "contactUs": "Liên hệ với đội ngũ của chúng tôi",
+      "or": "hoặc",
+      "tryCalc": "Tính danh sách phát ngay",
+      "q1": "Công cụ này tính tổng thời lượng như thế nào?",
+      "a1": "Máy tính của chúng tôi truy vấn trực tiếp YouTube Data API v3 chính thức để lấy thời lượng chuẩn xác của từng video, cộng dồn từng giây và đổi ra giờ phút.",
+      "q2": "Dịch vụ này có thực sự miễn phí không?",
+      "a2": "Có, YT Playlist Cal hoàn toàn miễn phí 100%, không phí ẩn, không gói thuê bao và không yêu cầu đăng ký tài khoản.",
+      "q3": "Một danh sách phát có thể chứa tối đa bao nhiêu video?",
+      "a3": "Bạn có thể tính các danh sách chứa hàng trăm video. Hệ thống tự động phân trang để lấy đầy đủ dữ liệu từ API.",
+      "q4": "Tại sao tổng thời gian có thể khác với số liệu trên YouTube?",
+      "a4": "YouTube thường làm tròn thời gian và có thể bỏ qua các video riêng tư, video đã xóa hoặc luồng trực tiếp chưa xử lý xong.",
+      "q5": "Công cụ có dùng tốt trên điện thoại không?",
+      "a5": "Có. Giao diện được thiết kế thích ứng hoàn hảo cho mọi dòng điện thoại, máy tính bảng và máy tính để bàn.",
+      "q6": "Tôi có cần đăng nhập tài khoản Google không?",
+      "a6": "Không. Bạn không cần đăng nhập bất kỳ tài khoản nào. Chỉ cần dán liên kết danh sách phát công khai.",
+      "q7": "Thời gian tiết kiệm ở 1.25x, 1.5x hoặc 2x được tính ra sao?",
+      "a7": "Chúng tôi chia tổng số giây cho hệ số tốc độ đã chọn và trừ đi từ thời lượng ban đầu để tính ra khoảng thời gian tiết kiệm được.",
+      "q8": "Tính năng Thời gian Còn lại dùng để làm gì?",
+      "a8": "Nó cho phép bạn chọn số thứ tự video bạn vừa dừng lại để bỏ qua các tập đã xem và chỉ tính thời gian cần để hoàn thành phần còn lại.",
+      "q9": "Tôi có thể tính riêng một đoạn video nhất định không?",
+      "a9": "Có, trong mục Tùy chọn nâng cao bạn có thể đặt video bắt đầu và video kết thúc để chỉ tính đoạn danh sách phát đó.",
+      "q10": "Làm gì nếu gặp thông báo lỗi hết hạn ngạch API?",
+      "a10": "Vào giờ cao điểm, hạn ngạch chung có thể tạm thời cạn kiệt. Bạn có thể nhập khóa YouTube API miễn phí của riêng mình trong cài đặt nâng cao.",
+      "q11": "Các video đã xóa hoặc riêng tư được xử lý thế nào?",
+      "a11": "Những video này không trả về thời lượng và được tính là 0 giây, kèm thông báo rõ ràng trong bảng kết quả.",
+      "q12": "Các danh sách phát tôi tìm kiếm có bị lưu lại không?",
+      "a12": "Không. Chúng tôi không lưu lại lịch sử tìm kiếm và không liên kết danh sách phát với danh tính của bạn.",
+      "q13": "Tại sao máy tính hiển thị ít video hơn trên YouTube?",
+      "a13": "YouTube tính cả các video đã xóa hoặc riêng tư vào tổng số lượng, nhưng API không thể tiếp cận các video này.",
+      "q14": "Điều gì xảy ra với các luồng trực tiếp trong danh sách phát?",
+      "a14": "Các luồng trực tiếp chưa có thời lượng cố định nên sẽ không được cộng vào tổng thời gian.",
+      "q15": "Có thể tính các danh sách phát tự động (như Mix) không?",
+      "a15": "Có, miễn là liên kết có chứa ID danh sách phát công khai hợp lệ (như tiền tố PL hoặc RD).",
+      "q16": "Công thức tiết kiệm thời gian ở tốc độ 1.25x là gì?",
+      "a16": "Thời lượng gốc - (Thời lượng gốc / 1.25). Bạn tiết kiệm được đúng 20% thời gian.",
+      "q17": "Công thức cho tốc độ 1.75x là gì?",
+      "a17": "Thời lượng gốc - (Thời lượng gốc / 1.75), mang lại mức tiết kiệm 42.8% thời gian.",
+      "q18": "Làm thế nào để tính riêng từ video thứ 10 đến 30?",
+      "a18": "Trong Tùy chọn nâng cao, hãy đặt 'Video bắt đầu: 10' và 'Video kết thúc: 30'.",
+      "q19": "Trình lập kế hoạch học tập hoạt động như thế nào?",
+      "a19": "Nó chia tổng thời lượng cho số ngày hoặc số phút bạn rảnh mỗi ngày để lập một thời gian biểu vừa vặn.",
+      "q20": "Dữ liệu của tôi có bị bán hoặc chia sẻ không?",
+      "a20": "Hoàn toàn không. Chúng tôi không bao giờ chia sẻ hay bán thông tin của người dùng.",
+      "q21": "Tại sao nên nhập khóa API riêng?",
+      "a21": "Khóa API miễn phí của riêng bạn đảm bảo bạn luôn có thể tính toán không giới hạn kể cả khi hạn ngạch máy chủ chung bị quá tải.",
+      "q22": "Làm sao để lấy khóa YouTube Data API v3 miễn phí?",
+      "a22": "Truy cập Google Cloud Console, tạo một dự án miễn phí, kích hoạt YouTube Data API v3 và tạo khóa API chỉ mất 2 phút.",
+      "q23": "Công cụ có lưu khóa API cá nhân của tôi không?",
+      "a23": "Không. Khóa của bạn chỉ được dùng tạm thời trong bộ nhớ máy chủ để xử lý yêu cầu trực tiếp và không bao giờ lưu vào cơ sở dữ liệu.",
+      "q24": "Tôi có thể chia sẻ kết quả tính toán không?",
+      "a24": "Có, bạn có thể sao chép bảng kết quả chỉ bằng một cú nhấp chuột để gửi cho bạn bè hoặc bạn cùng học.",
+      "generalTitle": "Câu hỏi chung",
+      "speedTitle": "Tốc độ phát và Lập kế hoạch",
+      "techTitle": "Kỹ thuật và Khắc phục sự cố"
+    },
+    "durationDetail": {
+      "beyondP": "YT Playlist Cal mang đến nhiều giá trị hơn một phép cộng thời gian đơn thuần:",
+      "b1": "Tổng thời gian chuẩn xác tính theo giờ, phút và giây",
+      "b2": "Thời lượng trung bình tính trên toàn bộ các video hợp lệ",
+      "b3": "Xác định nhanh video ngắn nhất và video dài nhất",
+      "b4": "Thời gian xem ở các tốc độ 1.25x, 1.5x, 1.75x và 2.0x kèm số giờ tiết kiệm",
+      "b5": "Báo cáo rõ ràng về các video riêng tư hoặc đã bị xóa",
+      "b6": "Hỗ trợ tùy chọn khoảng video theo yêu cầu",
+      "b7": "Bảng kế hoạch học tập hằng ngày cho các đợt cày video"
+    },
+    "watchTimeDetail": {
+      "whatTitle": "Thời gian Xem YouTube là gì?",
+      "whatP": "Thời gian xem là số giờ và phút thực tế bạn cần bỏ ra để hoàn thành một danh sách phát theo tốc độ bạn đã chọn.",
+      "featuresTitle": "Các tính năng tối ưu hóa thời gian của bạn",
+      "f1": "So sánh trực quan 4 tốc độ xem cạnh nhau",
+      "f2": "Tính chuẩn xác số giờ tiết kiệm được cho mỗi tốc độ",
+      "f3": "Kế hoạch học tập chia theo ngày hoặc theo tuần",
+      "f4": "Dự kiến ngày hoàn thành khóa học dựa trên nhịp độ hằng ngày của bạn",
+      "f5": "Tùy biến bỏ qua các video đã xem trước đó",
+      "f6": "Không cần đăng ký hay cung cấp thông tin cá nhân"
+    },
+    "speed15xDetail": {
+      "ctaPrompt": "Bạn muốn biết mình tiết kiệm được bao nhiêu thời gian ở tốc độ 1.5x?",
+      "ctaBtn": "Open 1.5× Speed Calculator",
+      "ctaHint": "Dán liên kết danh sách phát để xem ngay thời gian ở tốc độ 1.5x.",
+      "savingsTitle": "Tiết kiệm bao nhiêu thời gian ở tốc độ 1.5x?",
+      "savingsP": "Ở tốc độ 1.5x, mỗi 60 phút video chỉ mất 40 phút để xem hết, giúp bạn tiết kiệm trọn vẹn 33.3% quỹ thời gian của mình.",
+      "colOriginal": "Nguyên bản (1.0x)",
+      "colAtSpeed": "Ở tốc độ 1.5x",
+      "colSaved": "Thời gian tiết kiệm",
+      "formula": "Công thức: Thời Gian = Tổng Thời Lượng ÷ 1.5",
+      "whoTitle": "Tốc độ 1.5x phù hợp nhất với những ai?",
+      "whoP": "Tốc độ 1.5x là lựa chọn yêu thích để học nhanh mà vẫn duy trì khả năng tập trung:",
+      "w1": "Sinh viên xem lại các video bài giảng và hội thảo trực tuyến",
+      "w2": "Lập trình viên xem hướng dẫn lập trình và bài nói chuyện công nghệ",
+      "w3": "Người nghe podcast và phỏng vấn có tiết tấu nói thong thả",
+      "w4": "Chuyên gia cần hoàn thành các khóa đào tạo chứng chỉ trực tuyến",
+      "whoOutro": "Tính thử danh sách phát của bạn ở tốc độ 1.5x bằng công cụ miễn phí ngay."
+    },
+    "speed2xDetail": {
+      "ctaPrompt": "Bạn muốn rút ngắn một nửa thời gian xem với tốc độ 2x?",
+      "ctaBtn": "Open 2× Speed Calculator",
+      "savingsTitle": "Tiết kiệm bao nhiêu thời gian ở tốc độ 2x?",
+      "savingsP": "Ở tốc độ 2x, thời gian xem được cắt giảm đúng một nửa. Danh sách phát 10 giờ bạn chỉ cần 5 giờ để xem xong.",
+      "colOriginal": "Nguyên bản (1.0x)",
+      "colAtSpeed": "Ở tốc độ 2x",
+      "colSaved": "Thời gian tiết kiệm",
+      "whoTitle": "Khi nào nên dùng tốc độ 2x?",
+      "whoP": "Tốc độ nhân đôi mang lại hiệu quả cao nhất trong các trường hợp thích hợp:",
+      "w1": "Ôn lại nhanh kiến thức đã nắm vững trước kỳ thi",
+      "w2": "Xem lướt qua các bài thuyết trình có nhiều slide và lời nói chậm",
+      "w3": "Các video có nhiều khoảng lặng và người nói ngắt quãng nhiều",
+      "w4": "Quét nhanh một chuỗi video dài để tìm kiếm đoạn thông tin mấu chốt",
+      "whoOutro": "Tính thời gian chính xác của danh sách phát ở tốc độ 2x ngay bây giờ."
+    },
+    "remainingTimeDetail": {
+      "ctaPrompt": "Bạn chỉ muốn tính thời gian cho những video chưa xem?",
+      "ctaBtn": "Open Remaining Time Calculator",
+      "ctaHint": "Dán liên kết và chọn tập video bạn sẽ tiếp tục xem.",
+      "howTitle": "Cách tính thời gian còn lại qua 5 bước đơn giản",
+      "s1": "Dán liên kết danh sách phát YouTube vào ô nhập liệu.",
+      "s2": "Mở rộng mục Tùy chọn nâng cao.",
+      "s3": "Tại ô 'Video bắt đầu', điền số thứ tự của video tiếp theo bạn sẽ xem.",
+      "s4": "Bấm nút Tính toán.",
+      "s5": "Xem thời gian còn lại ở tốc độ thường và các tốc độ nhanh.",
+      "whyTitle": "Tại sao nên tính thời gian còn lại?",
+      "whyP": "Biết rõ còn bao nhiêu thời gian giúp bạn duy trì động lực học tập tốt hơn:",
+      "w1": "Theo dõi tiến độ học tập từng ngày một",
+      "w2": "Đặt mục tiêu vừa sức cho mỗi buổi tối",
+      "w3": "Tận dụng thời gian rảnh rỗi mà không bỏ dở khóa học",
+      "w4": "Điều chỉnh tốc độ xem để kịp thời hạn mong muốn",
+      "whyOutro": "Sử dụng chế độ Thời gian Còn lại mỗi khi bạn quay lại một danh sách phát."
+    },
+    "privacyDetail": {
+      "intro": "YT Playlist Cal (\"chúng tôi\", \"công cụ của chúng tôi\") là một trang web tiện ích độc lập dùng để tính toán thời lượng và thời gian xem các danh sách phát YouTube. Chính sách quyền riêng tư này giải thích những thông tin chúng tôi xử lý khi bạn sử dụng công cụ, cách thông tin được dùng và cách chúng tôi bảo vệ quyền riêng tư của bạn.",
+      "s1Title": "1. Thông tin chúng tôi xử lý",
+      "s1P1Title": "Đường dẫn YouTube",
+      "s1P1Text": "Khi bạn nhập liên kết YouTube để tính toán, liên kết đó được chuyển tiếp đến máy chủ của chúng tôi để thực hiện các yêu cầu xác thực tới YouTube Data API v3 chính thức. Chúng tôi không lưu trữ hoặc chia sẻ các liên kết bạn gửi ngoài bộ nhớ đệm tạm thời cần thiết để phản hồi yêu cầu của bạn.",
+      "s1P2Title": "Khóa YouTube API (Tùy chọn)",
+      "s1P2Text": "Nếu bạn cung cấp khóa YouTube API của riêng mình trong phần Tùy chọn nâng cao, khóa đó được truyền qua kết nối HTTPS bảo mật và chỉ dùng để thực hiện các phép tính dưới hạn ngạch Google Cloud của bạn. Chúng tôi không bao giờ lưu khóa API của bạn vào cơ sở dữ liệu.",
+      "s1P3Title": "Dữ liệu phân tích sử dụng",
+      "s1P3Text": "Chúng tôi có thể sử dụng các công cụ phân tích bảo mật để hiểu xu hướng chung như lượt xem trang và lỗi kỹ thuật. Chúng tôi không dùng cookie theo dõi xâm phạm và không thu thập thông tin nhận dạng cá nhân (PII).",
+      "s1P4Title": "Bộ nhớ cục bộ (Local Storage)",
+      "s1P4Text": "Chúng tôi chỉ sử dụng localStorage trên trình duyệt của bạn để ghi nhớ tùy chọn giao diện (sáng/tối) và ngôn ngữ bạn chọn giữa các lần truy cập. Dữ liệu này không bao giờ rời khỏi thiết bị của bạn.",
+      "s1P5Title": "Nhật ký máy chủ",
+      "s1P5Text": "Nhà cung cấp hạ tầng của chúng tôi (Cloudflare) có thể lưu nhật ký truy cập kỹ thuật bao gồm địa chỉ IP và siêu dữ liệu yêu cầu để bảo mật mạng, chống tấn công DDoS và theo dõi hiệu năng.",
+      "s2Title": "2. Cookie",
+      "s2Text": "YT Playlist Cal không sử dụng cookie cho mục đích theo dõi hoặc quảng cáo. Chỉ có các cookie kỹ thuật cần thiết có thể được Cloudflare sử dụng để ngăn chặn lưu lượng truy cập độc hại.",
+      "s3Title": "3. Dịch vụ của bên thứ ba",
+      "s3Text1": "YouTube Data API v3: Chúng tôi dùng API của YouTube để lấy dữ liệu. Yêu cầu của bạn tuân theo Điều khoản dịch vụ của YouTube và Chính sách quyền riêng tư của Google.",
+      "s3Text2": "Cloudflare: Trang web được lưu trữ và bảo vệ qua Cloudflare nhằm tối ưu hóa bảo mật và tốc độ phân phối nội dung.",
+      "s3Text3": "Phông chữ: Chúng tôi sử dụng Bunny Fonts (giải pháp thay thế tuân thủ GDPR cho Google Fonts) để tải phông chữ Inter mà không ghi lại địa chỉ IP người dùng.",
+      "s4Title": "4. Quảng cáo",
+      "s4Text": "Trang web có thể hiển thị quảng cáo qua Google AdSense. Các mạng quảng cáo có thể dùng mã định danh phi cá nhân theo quy định của pháp luật và sự đồng ý của người dùng.",
+      "s5Title": "5. Quyền riêng tư của trẻ em",
+      "s5Text": "YT Playlist Cal không hướng đến trẻ em dưới 13 tuổi. Chúng tôi không cố ý thu thập thông tin cá nhân từ trẻ em.",
+      "s6Title": "6. Quyền của bạn",
+      "s6Text": "Vì chúng tôi không lưu giữ dữ liệu cá nhân ngoài việc xử lý tạm thời các yêu cầu, chúng tôi thường không có bất kỳ hồ sơ định danh nào về bạn.",
+      "s7Title": "7. Thay đổi chính sách",
+      "s7Text": "Chúng tôi có thể cập nhật Chính sách quyền riêng tư này theo thời gian. Mọi thay đổi sẽ có hiệu lực ngay khi được đăng tải trên trang này.",
+      "s8Title": "8. Liên hệ",
+      "s8Text": "Nếu bạn có câu hỏi về Chính sách quyền riêng tư này, vui lòng sử dụng trang Liên hệ."
+    },
+    "termsDetail": {
+      "summary": "Tóm tắt: Bằng việc sử dụng YT Playlist Cal, bạn đồng ý với các điều khoản này, Chính sách quyền riêng tư và Tuyên bố từ chối trách nhiệm của chúng tôi. Đây là công cụ độc lập và miễn phí để ước tính thời lượng danh sách phát YouTube.",
+      "s1Title": "1. Chấp thuận điều khoản",
+      "s1Text": "Bằng việc truy cập hoặc sử dụng YT Playlist Cal (\"Dịch vụ\", \"Trang web\", \"chúng tôi\"), bạn đồng ý chịu sự ràng buộc của các Điều khoản dịch vụ này. Nếu bạn không đồng ý, vui lòng ngừng sử dụng Dịch vụ ngay lập tức.",
+      "s2Title": "2. Mô tả dịch vụ",
+      "s2Text1": "YT Playlist Cal cung cấp bộ công cụ tính toán trực tuyến miễn phí để phân tích các danh sách phát YouTube công khai, tính tổng thời lượng và ước tính thời gian xem ở các tốc độ khác nhau.",
+      "s2Text2": "Dịch vụ được cung cấp hoàn toàn miễn phí cho mục đích thông tin, giáo dục và lập kế hoạch cá nhân.",
+      "s3Title": "3. YouTube API & Điều khoản bên thứ ba",
+      "s3Text": "YT Playlist Cal dựa vào YouTube Data API v3 để truy xuất dữ liệu video. Khi sử dụng dịch vụ này:",
+      "s3Li1": "Bạn chịu sự ràng buộc của Điều khoản dịch vụ YouTube.",
+      "s3Li2": "Dữ liệu YouTube được xử lý theo Chính sách quyền riêng tư của Google.",
+      "s3Li3": "Chúng tôi không kiểm soát máy chủ YouTube, hạn ngạch API hoặc độ chuẩn xác của dữ liệu bên thứ ba.",
+      "s4Title": "4. Quy tắc sử dụng được chấp nhận",
+      "s4Text": "Bạn đồng ý chỉ sử dụng dịch vụ cho các mục đích hợp pháp. Bạn cam kết không:",
+      "s4Li1": "Gửi các yêu cầu tự động quá mức, bot hoặc mã độc làm quá tải hệ thống của chúng tôi hoặc YouTube API.",
+      "s4Li2": "Tìm cách đảo ngược mã nguồn, xâm nhập hoặc phá vỡ các biện pháp bảo vệ và giới hạn tốc độ của máy chủ.",
+      "s4Li3": "Sử dụng trang web để gửi các dữ liệu độc hại, phi pháp hoặc xâm phạm quyền lợi của người khác.",
+      "s4Li4": "Mạo danh hoặc cố gắng truy cập trái phép vào môi trường máy chủ của chúng tôi.",
+      "s4Outro": "Chúng tôi bảo lưu quyền chặn tạm thời hoặc vĩnh viễn các địa chỉ IP vi phạm các quy định này.",
+      "s5Title": "5. Khóa API do người dùng cung cấp (Tùy chọn)",
+      "s5Text": "Người dùng nâng cao có thể tùy chọn cung cấp khóa YouTube Data API v3 của riêng mình:",
+      "s5Li1": "Khóa của bạn được gửi an toàn qua HTTPS và chỉ dùng để thực hiện yêu cầu tính toán tức thời của bạn.",
+      "s5Li2": "Chúng tôi không bao giờ lưu trữ hoặc chia sẻ khóa API của bạn với bất kỳ ai.",
+      "s5Li3": "Bạn hoàn toàn chịu trách nhiệm về tính bảo mật và việc sử dụng hạn ngạch trong dự án Google Cloud của mình.",
+      "s6Title": "6. Sở hữu trí tuệ",
+      "s6Text1": "YouTube™, logo YouTube và các nhãn hiệu liên quan là nhãn hiệu đã đăng ký của Google LLC. YT Playlist Cal là công cụ độc lập và không liên kết với Google LLC.",
+      "s6Text2": "Mã nguồn trang web, giao diện thiết kế, biểu trưng (\"Chrono Play\") và nội dung hướng dẫn là tài sản trí tuệ của YT Playlist Cal.",
+      "s7Title": "7. Độ chính xác và Tuyên bố \"Nguyên trạng\"",
+      "s7Text": "Mọi phép tính và ước lượng thời gian được cung cấp theo nguyên trạng phục vụ mục đích tham khảo thực tế. Có thể có chênh lệch nhỏ do:",
+      "s7Li1": "Các video không khả dụng (video riêng tư hoặc bị chặn theo vùng tính là 0 giây).",
+      "s7Li2": "Các luồng trực tiếp chưa có thời lượng lưu trữ cố định.",
+      "s7Li3": "Quy tắc làm tròn giây trong định dạng ISO 8601 của YouTube.",
+      "s7Li4": "Các yếu tố xem video thực tế như độ trễ mạng hoặc tải quảng cáo.",
+      "s7Outro": "Để biết thêm chi tiết, xin vui lòng đọc Tuyên bố miễn trừ trách nhiệm của chúng tôi.",
+      "s8Title": "8. Giới hạn trách nhiệm pháp lý",
+      "s8Text": "Trong phạm vi tối đa mà pháp luật cho phép, ban quản trị YT Playlist Cal không chịu trách nhiệm đối với bất kỳ thiệt hại trực tiếp hay gián tiếp nào phát sinh từ việc sử dụng công cụ này.",
+      "s9Title": "9. Sửa đổi điều khoản",
+      "s9Text": "Chúng tôi có thể sửa đổi các Điều khoản dịch vụ này bất cứ lúc nào mà không cần thông báo trước. Các thay đổi có hiệu lực ngay khi đăng trên trang.",
+      "s10Title": "10. Thông tin liên hệ",
+      "s10Text": "Nếu bạn có câu hỏi về các Điều khoản này, vui lòng liên hệ với chúng tôi qua trang Liên hệ."
+    },
+    "disclaimerDetail": {
+      "summary": "Tóm tắt: YT Playlist Cal là công cụ tiện ích miễn phí và độc lập. Chúng tôi không liên kết với YouTube hoặc Google LLC. Mọi phép tính được cung cấp theo nguyên trạng chỉ nhằm mục đích tham khảo.",
+      "s1Title": "1. Nhãn hiệu thương mại và Tính độc lập",
+      "s1Text1": "YouTube™, logo YouTube và các dấu hiệu liên quan là nhãn hiệu của Google LLC. Tất cả các nhãn hiệu trên trang web này thuộc về chủ sở hữu tương ứng.",
+      "s1Text2": "YT Playlist Cal là một ứng dụng web độc lập và không có quan hệ chính thức, không được tài trợ hay xác nhận bởi YouTube hoặc Google LLC.",
+      "s2Title": "2. Bản chất công cụ & Mục đích thông tin",
+      "s2Text1": "Các tính toán thời lượng và lịch trình xem do YT Playlist Cal cung cấp chỉ nhằm phục vụ sự tiện lợi và nhu cầu học tập cá nhân.",
+      "s2Text2": "Kết quả không phải là một cuộc kiểm toán chính thức hoặc xác nhận thời lượng có tính ràng buộc pháp lý từ YouTube.",
+      "s3Title": "3. Độ chính xác và Tính đầy đủ của dữ liệu",
+      "s3Text1": "Mặc dù chúng tôi nỗ lực áp dụng các thuật toán chuẩn xác, kết quả phụ thuộc hoàn toàn vào dữ liệu do YouTube Data API v3 trả về.",
+      "s3Text2": "Có thể phát sinh chênh lệch do các yếu tố nằm ngoài tầm kiểm soát của chúng tôi:",
+      "s3Li1": "Video không khả dụng: video riêng tư hoặc đã xóa thường không trả về dữ liệu thời lượng.",
+      "s3Li2": "Phát trực tiếp: các luồng phát trực tiếp không có thời lượng cố định cho đến khi việc lưu trữ hoàn tất.",
+      "s3Li3": "Cập nhật danh sách: người tạo danh sách thay đổi video trong khi đang tính toán.",
+      "s3Li4": "Ước lượng tốc độ: phép chia toán học không tính đến thời gian tải bộ nhớ đệm của trình duyệt.",
+      "s3Li5": "Định dạng ISO 8601: việc làm tròn từng giây có thể tích lũy thành chênh lệch nhỏ ở các danh sách hàng trăm video.",
+      "s4Title": "4. Sử dụng API & Dịch vụ bên thứ ba",
+      "s4Text": "YT Playlist Cal sử dụng YouTube Data API v3 để truy cập dữ liệu công khai. Khi sử dụng công cụ, bạn thừa nhận rằng:",
+      "s4Li1": "Yêu cầu của bạn tuân thủ các chính sách dành cho nhà phát triển của YouTube và điều khoản Google.",
+      "s4Li2": "Hoạt động của công cụ phụ thuộc vào tình trạng máy chủ và hạn ngạch của YouTube.",
+      "s4Li3": "Khóa API cá nhân chỉ được dùng cho yêu cầu tức thời của bạn và không được lưu lại.",
+      "s5Title": "5. Liên kết ngoài",
+      "s5Text": "YT Playlist Cal có thể chứa liên kết tới các trang web bên thứ ba. Chúng tôi không chịu trách nhiệm về nội dung của các trang web ngoài đó.",
+      "s6Title": "6. Miễn trừ bảo đảm \"Nguyên trạng\"",
+      "s6Text1": "YT PLAYLIST CAL VÀ TẤT CẢ TÍNH NĂNG ĐƯỢC CUNG CẤP THEO NGUYÊN TRẠNG MÀ KHÔNG CÓ BẤT KỲ SỰ BẢO ĐẢM NÀO, DÙ RÕ RÀNG HAY NGỤ Ý.",
+      "s6Text2": "TRONG PHẠM VI TỐI ĐA PHÁP LUẬT CHO PHÉP, CHÚNG TÔI TỪ CHỐI MỌI BẢO ĐẢM VỀ KHẢ NĂNG PHÙ HỢP CHO MỘT MỤC ĐÍCH CỤ THỂ.",
+      "s7Title": "7. Giới hạn trách nhiệm",
+      "s7Text": "TRONG MỌI TRƯỜNG HỢP YT PLAYLIST CAL HOẶC BAN QUẢN TRỊ KHÔNG CHỊU TRÁCH NHIỆM CHO CÁC THIỆT HẠI PHÁT SINH TỪ:",
+      "s7Li1": "Việc sử dụng hoặc không thể sử dụng trang web hay công cụ tính toán này;",
+      "s7Li2": "Bất kỳ sự thiếu chính xác hoặc chậm trễ nào trong dữ liệu thời lượng;",
+      "s7Li3": "Các quyết định được đưa ra dựa trên kết quả tính của công cụ này;",
+      "s7Li4": "Sự cố kỹ thuật, ngắt kết nối máy chủ hoặc gián đoạn dịch vụ.",
+      "s7Outro": "Biện pháp khắc phục duy nhất nếu bạn không hài lòng là ngừng sử dụng công cụ này.",
+      "s8Title": "8. Thay đổi tuyên bố",
+      "s8Text": "Chúng tôi có thể cập nhật Tuyên bố miễn trừ trách nhiệm này bất cứ lúc nào mà không cần báo trước.",
+      "s9Title": "9. Câu hỏi",
+      "s9Text": "Nếu bạn có câu hỏi về Tuyên bố này, vui lòng liên hệ với chúng tôi qua trang Liên hệ."
+    }
+  },
+  "meta": {
+    "home": {
+      "title": "Công cụ tính thời lượng danh sách phát YouTube | YT Playlist Cal",
+      "desc": "Tính chính xác thời lượng danh sách phát YouTube. Hỗ trợ tốc độ phát 1.25×-3×, chọn khoảng video, tính thời gian còn lại và lập lịch học."
+    },
+    "tools": {
+      "title": "Các công cụ danh sách phát YouTube | YT Playlist Cal",
+      "desc": "Bộ công cụ miễn phí để tính thời lượng, tiết kiệm thời gian phát và lập kế hoạch xem YouTube."
+    },
+    "duration": {
+      "title": "Công cụ tính thời lượng danh sách phát YouTube | YT Playlist Cal",
+      "desc": "Xem ngay tổng thời lượng của mọi danh sách phát YouTube theo giờ, phút và giây chuẩn xác."
+    },
+    "watchTime": {
+      "title": "Công cụ tính thời gian xem YouTube | YT Playlist Cal",
+      "desc": "Tính thời gian xem thực tế của danh sách phát YouTube ở tốc độ chuẩn và các tốc độ tăng dần."
+    },
+    "remainingTime": {
+      "title": "Tính thời gian còn lại của danh sách phát | YT Playlist Cal",
+      "desc": "Biết chính xác còn bao nhiêu giờ để hoàn thành danh sách phát từ video bạn đang xem dở."
+    },
+    "speed15x": {
+      "title": "Tính thời lượng playlist ở tốc độ 1.5× | YT Playlist Cal",
+      "desc": "Tính thời lượng xem danh sách phát YouTube ở tốc độ 1.5× và số giờ tiết kiệm được."
+    },
+    "speed2x": {
+      "title": "Tính thời lượng playlist ở tốc độ 2× | YT Playlist Cal",
+      "desc": "Rút ngắn một nửa thời gian học video. Tính thời lượng danh sách phát YouTube ở tốc độ 2×."
+    },
+    "howItWorks": {
+      "title": "Cách hoạt động của công cụ tính danh sách phát | YT Playlist Cal",
+      "desc": "Hướng dẫn từng bước cách tính toán thời lượng video YouTube thông qua YouTube Data API chính thức."
+    },
+    "faq": {
+      "title": "Câu hỏi thường gặp về danh sách phát YouTube | YT Playlist Cal",
+      "desc": "Giải đáp mọi thắc mắc về cách tính thời gian, tốc độ xem và giới hạn API YouTube."
+    },
+    "about": {
+      "title": "Giới thiệu về YT Playlist Cal — Công cụ YouTube",
+      "desc": "Tìm hiểu về YT Playlist Cal: công cụ tính thời lượng YouTube nhanh, bảo mật và miễn phí."
+    },
+    "contact": {
+      "title": "Liên hệ — YT Playlist Cal",
+      "desc": "Gửi phản hồi, thắc mắc hoặc yêu cầu hỗ trợ tới ban quản trị YT Playlist Cal."
+    },
+    "privacy": {
+      "title": "Chính sách bảo mật | YT Playlist Cal",
+      "desc": "Thông tin về bảo vệ dữ liệu và quyền riêng tư tại trang web YT Playlist Cal."
+    },
+    "terms": {
+      "title": "Điều khoản dịch vụ | YT Playlist Cal",
+      "desc": "Quy định và điều khoản sử dụng công cụ tính thời lượng YouTube YT Playlist Cal."
+    },
+    "disclaimer": {
+      "title": "Tuyên bố miễn trừ | YT Playlist Cal",
+      "desc": "Thông báo pháp lý và tuyên bố quyền sở hữu trí tuệ của YT Playlist Cal."
+    },
+    "error404": {
+      "title": "Không tìm thấy trang — YT Playlist Cal",
+      "desc": "Trang bạn đang truy cập không tồn tại trên YT Playlist Cal."
+    },
+    "error500": {
+      "title": "Lỗi máy chủ — YT Playlist Cal",
+      "desc": "Hệ thống đang gặp sự cố tạm thời. Vui lòng thử lại sau giây lát."
+    }
+  },
+  "seo": {
+    "home": {
+      "title": "Công cụ tính thời lượng danh sách phát YouTube | YT Playlist Cal",
+      "desc": "Tính chính xác thời lượng danh sách phát YouTube. Hỗ trợ tốc độ phát 1.25×-3×, chọn khoảng video, tính thời gian còn lại và lập lịch học."
+    },
+    "tools": {
+      "title": "Các công cụ danh sách phát YouTube | YT Playlist Cal",
+      "desc": "Bộ công cụ miễn phí để tính thời lượng, tiết kiệm thời gian phát và lập kế hoạch xem YouTube."
+    },
+    "duration": {
+      "title": "Công cụ tính thời lượng danh sách phát YouTube | YT Playlist Cal",
+      "desc": "Xem ngay tổng thời lượng của mọi danh sách phát YouTube theo giờ, phút và giây chuẩn xác."
+    },
+    "watchTime": {
+      "title": "Công cụ tính thời gian xem YouTube | YT Playlist Cal",
+      "desc": "Tính thời gian xem thực tế của danh sách phát YouTube ở tốc độ chuẩn và các tốc độ tăng dần."
+    },
+    "remainingTime": {
+      "title": "Tính thời gian còn lại của danh sách phát | YT Playlist Cal",
+      "desc": "Biết chính xác còn bao nhiêu giờ để hoàn thành danh sách phát từ video bạn đang xem dở."
+    },
+    "speed15x": {
+      "title": "Tính thời lượng playlist ở tốc độ 1.5× | YT Playlist Cal",
+      "desc": "Tính thời lượng xem danh sách phát YouTube ở tốc độ 1.5× và số giờ tiết kiệm được."
+    },
+    "speed2x": {
+      "title": "Tính thời lượng playlist ở tốc độ 2× | YT Playlist Cal",
+      "desc": "Rút ngắn một nửa thời gian học video. Tính thời lượng danh sách phát YouTube ở tốc độ 2×."
+    },
+    "howItWorks": {
+      "title": "Cách hoạt động của công cụ tính danh sách phát | YT Playlist Cal",
+      "desc": "Hướng dẫn từng bước cách tính toán thời lượng video YouTube thông qua YouTube Data API chính thức."
+    },
+    "faq": {
+      "title": "Câu hỏi thường gặp về danh sách phát YouTube | YT Playlist Cal",
+      "desc": "Giải đáp mọi thắc mắc về cách tính thời gian, tốc độ xem và giới hạn API YouTube."
+    },
+    "about": {
+      "title": "Giới thiệu về YT Playlist Cal — Công cụ YouTube",
+      "desc": "Tìm hiểu về YT Playlist Cal: công cụ tính thời lượng YouTube nhanh, bảo mật và miễn phí."
+    },
+    "contact": {
+      "title": "Liên hệ — YT Playlist Cal",
+      "desc": "Gửi phản hồi, thắc mắc hoặc yêu cầu hỗ trợ tới ban quản trị YT Playlist Cal."
+    },
+    "privacy": {
+      "title": "Chính sách bảo mật | YT Playlist Cal",
+      "desc": "Thông tin về bảo vệ dữ liệu và quyền riêng tư tại trang web YT Playlist Cal."
+    },
+    "terms": {
+      "title": "Điều khoản dịch vụ | YT Playlist Cal",
+      "desc": "Quy định và điều khoản sử dụng công cụ tính thời lượng YouTube YT Playlist Cal."
+    },
+    "disclaimer": {
+      "title": "Tuyên bố miễn trừ | YT Playlist Cal",
+      "desc": "Thông báo pháp lý và tuyên bố quyền sở hữu trí tuệ của YT Playlist Cal."
+    },
+    "error404": {
+      "title": "Không tìm thấy trang — YT Playlist Cal",
+      "desc": "Trang bạn đang truy cập không tồn tại trên YT Playlist Cal."
+    },
+    "error500": {
+      "title": "Lỗi máy chủ — YT Playlist Cal",
+      "desc": "Hệ thống đang gặp sự cố tạm thời. Vui lòng thử lại sau giây lát."
+    }
+  },
+  "demonstrations": {
+    "badge": "Hướng Dẫn Trực Quan",
+    "title": "Cách Sử Dụng Công Cụ Tính",
+    "subtitle": "Các bước minh họa thực tế chỉ dẫn cách tính tổng thời lượng danh sách phát và lên lịch xem.",
+    "tab1": "1. Dán URL",
+    "tab2": "2. Tính toán",
+    "tab3": "3. Tổng thời lượng",
+    "tab4": "4. Thống kê video",
+    "tab5": "5. Tiết kiệm thời gian",
+    "step1Title": "Dán bất kỳ liên kết YouTube nào",
+    "step1Desc": "Sao chép liên kết danh sách phát YouTube hoặc liên kết video có chứa danh sách và dán vào ô nhập.",
+    "step2Title": "Nhấn nút Tính thời lượng",
+    "step2Desc": "Nhấn nút Tính để máy chủ truy vấn YouTube Data API và lấy thông tin thời lượng toàn bộ video.",
+    "step3Title": "Xem ngay tổng thời lượng chính xác",
+    "step3Desc": "Nhận thời lượng tổng hiển thị rõ ràng theo giờ, phút và giây ở tốc độ phát thông thường.",
+    "step4Title": "Kiểm tra số lượng video và thống kê",
+    "step4Desc": "Xem tổng số video khả dụng, độ dài trung bình, cũng như video ngắn nhất và dài nhất.",
+    "step5Title": "So sánh mức tiết kiệm thời gian theo tốc độ",
+    "step5Desc": "So sánh thời gian xem ở các tốc độ 1.25×, 1.5×, 1.75× và 2× để biết bạn tiết kiệm được bao nhiêu giờ.",
+    "prev": "Trước",
+    "next": "Tiếp theo",
+    "stepOf": "Bước {current} / {total}",
+    "samplePlaylistTitle": "Khóa Học Lập Trình Web Toàn Diện",
+    "sampleChannel": "Code Academy",
+    "sampleDuration": "14 giờ 28 phút 45 giây",
+    "sampleCount": "42 Video",
+    "sampleAvg": "20 phút 41 giây",
+    "sampleShortest": "Giới thiệu — 3 phút 12 giây",
+    "sampleLongest": "Bài học chuyên sâu — 1 giờ 05 phút 20 giây",
+    "sampleAt15x": "9 giờ 39 phút 10 giây",
+    "sampleSaved15x": "Tiết kiệm 4g 49p",
+    "sampleAt2x": "7 giờ 14 phút 22 giây",
+    "sampleSaved2x": "Tiết kiệm 7g 14p",
+    "step1Badge": "Bước 1 trên 5",
+    "step2Badge": "Bước 2 trên 5",
+    "step3Badge": "Bước 3 trên 5",
+    "step4Badge": "Bước 4 trên 5",
+    "step5Badge": "Bước 5 trên 5",
+    "pasteHint": "Ctrl+V / Dán",
+    "detectedBadge": "✓ Đã nhận diện danh sách phát: 42 video",
+    "autoPlayOn": "Tự động phát bật",
+    "autoPlayPaused": "Đã tạm dừng"
+  },
+  "personas": {
+    "title": "Phù hợp với",
+    "students": "Học sinh & Sinh viên",
+    "onlineLearners": "Người học trực tuyến",
+    "courseBuyers": "Người mua khóa học",
+    "developers": "Lập trình viên",
+    "certCandidates": "Người luyện thi chứng chỉ",
+    "teachers": "Giáo viên & Giảng viên",
+    "creators": "Nhà sáng tạo nội dung",
+    "bingeWatchers": "Người thích xem liên tục"
+  }
+}
